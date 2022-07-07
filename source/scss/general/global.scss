@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+
+  /* For Mozilla scrollbar */
+  // scrollbar-color: $black $gray;
+  // scrollbar-width: thin;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+body {
+  // color: $black;
+
+  // background-color: $bg;
+
+  // &::-webkit-scrollbar {
+  //   width: 7px;
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //   border: 3px solid transparent;
+  //   border-radius: 9px;
+
+  //   background-color: $gray;
+
+  //   background-clip: content-box;
+  // }
+
+  // &::-webkit-scrollbar-thumb {
+  //   width: 10px;
+
+  //   border-radius: 7px;
+
+  //   background-color: $black;
+
+  //   background-clip: content-box;
+  // }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  font-family: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
