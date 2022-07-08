@@ -1,6 +1,20 @@
-.w100 {
+%w100 {
   width: 100%;
 
   margin: 0;
   padding: 0;
+
+  overflow: hidden;
+}
+
+%button-reset {
+  font: inherit;
+
+  text-decoration: none;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
 }

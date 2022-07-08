@@ -11,6 +11,8 @@ html {
 }
 
 body {
+  @include font;
+
   // color: $black;
 
   // background-color: $bg;
@@ -43,8 +45,6 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-
-  font-family: inherit;
 }
 
 *:focus {

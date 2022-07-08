@@ -1,0 +1,18 @@
+section(class="promo")
+  div(class="promo__container container")
+    div(class="promo__social")
+      ul(class="social")
+        each val, index in social
+          li(class="social__item social__item--horisontal")
+            a(class="social__link button button--white button--circle" href="#" aria-label= val)
+              if val === 'lang'
+                span= anotherLang
+              else
+                svg(width="24" height="24")
+                  use(xlink:href="img/sprites/sprite-mono.svg#icon-" + val)
+
+  div(class="promo__img")
+    picture(class="promo__picture")
+      source(media="(min-width: 1025px)" srcset="img/main/promo-bg-desktop.jpg")
+      source(media="(min-width: 500px)" srcset="img/main/promo-bg-tablet.jpg")
+      img(src="img/main/promo-bg-mobile.jpg" alt="Promo")

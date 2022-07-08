@@ -1,0 +1,113 @@
+.button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  @extend %button-reset;
+
+  @include font;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  background-color: transparent;
+
+  border-radius: 40px;
+
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  svg {
+    fill: $white;
+
+    transition: fill 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+    svg {
+      transition: fill 0.3s;
+    }
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--big {
+    padding: 18px 13px;
+
+    font-size: rem(16);
+    line-height: rem(20);
+  }
+
+  &--standart {
+    padding: 19.5px 13px;
+
+    font-size: rem(14);
+    line-height: rem(17);
+  }
+
+  &--white,
+  &--smart,
+  &--book-now {
+    color: $white;
+
+    border: 1px solid $white;
+
+    &:active {
+      color: $yellow;
+
+      background-color: $white-80;
+
+      svg {
+        fill: $yellow;
+      }
+    }
+  }
+
+  &--white {
+    &:hover:not(:active) {
+      background-color: $white-30;
+    }
+  }
+
+  &--smart {
+    &:hover:not(:active) {
+      color: $yellow;
+
+      background-color: $white-80;
+    }
+  }
+
+  &--book-now {
+    &:hover:not(:active) {
+      background-color: $yellow;
+    }
+  }
+
+  &--white-50 {
+    background-color: $white-50;
+  }
+
+  &--white-30 {
+    background-color: $white-30;
+  }
+
+  &--white-20 {
+    background-color: $white-20;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 15.5px 13px;
+
+    &--big {
+      font-size: rem(14);
+      line-height: rem(17);
+    }
+  }
+}

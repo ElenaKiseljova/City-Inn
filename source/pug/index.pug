@@ -1,38 +1,16 @@
-//- html(lang="ru")
-//-   head
-//-     meta(charset="UTF-8")
-//-     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-//-     include includes/viewport.pug
-//-     title ЛК Мой бизнес - Главная
-//-     link(rel="stylesheet", type="text/css", href="css/main.min.css")
-//-   body
-//-     div(class="container")
-//-       include includes/header-index.pug
-//-       main(class="page-main")
-//-         h1(class="visually-hidden") ЛК Мой бизнес
+- var title = "Main Page";
 
-//-         section(class="promo")
-//-           div(class="promo__wrapper")
-//-             div(class="promo__content")
-//-               div(class="promo__logo logo")
-//-                 img(width="468", height="90", src="img/logo.svg", alt="Logo")
+include includes/head.pug
 
-//-               div(class="promo__buttons")
-//-                 a(class="promo__button button button--red", href="sign-in.html") Войти
-//-                 a(class="promo__button button button--white", href="sign-up.html") Зарегистрироваться
+body
+  include includes/header.pug
 
-//-               div(class="promo__social social")
-//-                 - const socials = ['fb', 'insta', 'vk'];
-//-                   ul(class="social__list social__list--vertical")
-//-                     each val in socials
-//-                       li(class="social__item social__item--vertical")
-//-                         a(class="social__link social__link--brown", href="#", target="_blank")
-//-                           svg(width="24", height="24", aria-label= val)
-//-                               use(xlink:href="img/sprites/sprite-mono.svg#" + val)
+  main(class="page-main")
+    h1(class="visually-hidden") #{title}
 
-//-           div(class="promo__img")
-//-             img(src="img/index.jpg", alt="img")
-//-       include includes/footer-index.pug
+    include includes/main/promo.pug
+
+  include includes/footer.pug
 
 
 

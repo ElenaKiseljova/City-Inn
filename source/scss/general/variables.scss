@@ -1,1 +1,22 @@
-$bg: #F4EDE2;
+$white: #FFFFFF;
+$white-80: rgba(255, 255, 255, 0.8);
+$white-50: rgba(255, 255, 255, 0.5);
+$white-30: rgba(255, 255, 255, 0.3);
+$white-20: rgba(255, 255, 255, 0.2);
+
+$yellow: #FF9606;
+
+/* Media */
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 414px;
+
+/* Computed padding container*/
+$size-desktop: 1440px;
+$size-tablet: 768px;
+$size-mobile: 414px;
+
+$padding-desktop: 80px;
+$padding-tablet: 40px;
+$padding-mobile: 40px;
+$padding-mobile-small: 15px;

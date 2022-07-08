@@ -1,0 +1,46 @@
+.social {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  @extend %w100;
+
+  list-style: none;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    &--horisontal {
+      &:not(:first-of-type) {
+        margin-left: 18px;
+      }
+    }
+
+    &--vertical {
+      &:not(:first-of-type) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__link {
+    width: 48px;
+    height: 48px;
+
+    padding: 5px;
+
+    font-size: rem(14);
+    line-height: rem(17);
+
+    svg {
+      width: 16px;
+      height: auto;
+    }
+  }
+}

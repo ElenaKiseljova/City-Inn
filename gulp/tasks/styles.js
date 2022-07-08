@@ -14,7 +14,7 @@ const sass = gulpSass(dartSass);
 export const sassBuild = () => (
   gulp.src(`${config.src.sass}/main.scss`, { sourcemaps: config.isDev })
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(config.isProd, gcmq()))
     .pipe(gulpif(config.isProd, autoprefixer({
       grid: true,

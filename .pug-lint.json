@@ -2,8 +2,9 @@
   "validateExtensions": true,
   "valdateDivTags": true,
   "validateAttributeSeparator": {
-    "separator": ", ",
-    "multiLineSeparator": ",\n"
+    "separator": " ",
+    "allowMultiLine": true,
+    "multiLineSeparator": "\n"
   },
   "validateAttributeQuoteMarks": "\"",
   "requireClassLiteralsBeforeAttributes": true,

@@ -7,3 +7,16 @@
 @import 'general/normalize';
 @import 'general/global';
 @import 'general/visually-hidden';
+
+@import 'layout/container';
+@import 'layout/page-header';
+@import 'layout/page-main';
+@import 'layout/page-footer';
+
+@import 'blocks/button';
+
+@import 'blocks/burger';
+@import 'blocks/social';
+@import 'blocks/menu';
+
+@import 'blocks/promo';

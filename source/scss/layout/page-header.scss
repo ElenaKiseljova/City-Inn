@@ -1,0 +1,94 @@
+.page-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  @extend %w100;
+
+  overflow-y: visible;
+
+  &__container {}
+
+  &__top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      padding: 37px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 60px 0;
+    }
+  }
+
+  &__logo {
+    width: 120px;
+  }
+
+  &__right {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 20px;
+    }
+  }
+
+  &__buttons {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    @media screen and (min-width: $tablet) {
+      min-width: 190px;
+
+      &:not(:first-of-type) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 48px;
+
+    margin-left: 24px;
+  }
+
+  &__burger {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+}
