@@ -1,3 +1,4 @@
+// Обнуление отступов + 100% ширина
 %w100 {
   width: 100%;
 
@@ -7,8 +8,11 @@
   overflow: hidden;
 }
 
+// Обнуление кнопок
 %button-reset {
   font: inherit;
+
+  color: inherit;
 
   text-decoration: none;
 
@@ -17,4 +21,80 @@
   outline: none;
 
   cursor: pointer;
+}
+
+// Контейнер фонового изображения
+%img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+}
+
+// Фоновое pcture + вложенное img
+%picture {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+// Flex
+%dfacjsb {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+%dfacjc {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+%dfacjs {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%dfacje {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%dfasjs {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+%dfasjsb {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
 }

@@ -1,17 +1,75 @@
 footer(class="page-footer")
-  div(class="container")
-    div(class="page-footer__top")
-      div(class="page-footer__wrapper")
-        ul(class="page-footer__list")
-          li(class="page-footer__item")
-            a(class="page-footer__link" href="#") Политика конфиденциальности
-          li(class="page-footer__item")
-            a(class="page-footer__link" href="#") Пользовательское соглашение
-          li(class="page-footer__item")
-            a(class="page-footer__link" href="#") Согласие на обработку персональных данных
-          li(class="page-footer__item")
-            a(class="page-footer__link" href="#") Форма обратной связи
-    div(class="page-footer__bottom")
-      div(class="page-footer__wrapper")
-        p(class="page-footer__copyright") © 2021 Мой бизнес
+  div(class="page-footer__container container")
+    div(class="page-footer__left")
+      div(class="page-footer__logo logo logo--footer")
+        a(class="logo__link" href="index.html")
+          svg(width="120" height="120")
+            use(xlink:href="img/sprites/sprite-multi.svg#icon-logo")
+
+      div(class="page-footer__copyright")
+        p(class="page-footer__text")
+          | All rights reserved  © 2022
+        p(class="page-footer__text")
+          | City Inn Smart Hotel Lviv
+
+    div(class="page-footer__right")
+      div(class="page-footer__social")
+        - var social = ['map-pin', 'instagram', 'facebook'];
+        - var classSocialDirection = 'horizontal';
+        - var classSocialColor = 'light-green';
+        include social.pug
+
+      ul(class="page-footer__list")
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Terms & Service
+
+          a(class="page-footer__link" href="#")
+            | Публічна оферта
+          a(class="page-footer__link" href="#")
+            |  Політика конфіденціальності
+
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Адреса
+
+          address(class="page-footer__address")
+            | 79495 вул. Івана Франка, 53б, Винники, Львівська область
+
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Продажі
+
+          a(class="page-footer__link" href="mailto:sales@city-inn.com.ua")
+            | sales@city-inn.com.ua
+          a(class="page-footer__link" href="tel:+ 380322471551")
+            |  + 38 (032) 247-15-51
+
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Про нас
+
+          a(class="page-footer__link" href="#")
+            | Про готель
+          a(class="page-footer__link" href="#")
+            |  Чому SMART?
+
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Бронювання
+
+          a(class="page-footer__link" href="mailto:reservation@city-inn.com.ua")
+            | reservation@city-inn.com.ua
+          a(class="page-footer__link" href="tel:+ 380322471551")
+            |  + 38 (032) 247-15-51
+
+
+        li(class="page-footer__item")
+          h4(class="page-footer__title")
+            | Рецепція
+
+          a(class="page-footer__link" href="mailto:reservation@city-inn.com.ua")
+            | reservation@city-inn.com.ua
+          a(class="page-footer__link" href="tel:+ 380322471551")
+            |  + 38 (032) 247-15-51
 

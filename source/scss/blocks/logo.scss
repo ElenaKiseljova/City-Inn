@@ -1,0 +1,50 @@
+.logo {
+  &--header {
+    color: $dark-green;
+
+    transition: color 0.3s;
+
+    svg {
+      fill: $white;
+    }
+
+    &.active {
+      color: $dark-yellow;
+    }
+  }
+
+  &--footer {
+    width: 68px;
+
+    color: $dark-yellow;
+
+    transition: color 0.3s;
+
+    svg {
+      fill: $green;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &--footer {
+      width: 116px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &--footer {
+      width: 148px;
+    }
+  }
+
+  &__link {
+    width: 100%;
+
+    color: inherit;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

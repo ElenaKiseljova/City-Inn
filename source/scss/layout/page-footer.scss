@@ -1,3 +1,151 @@
 .page-footer {
   @extend %w100;
+
+  padding: 40px 0 45px 0;
+
+  @include font;
+
+  background-color: $gray;
+
+  @media screen and (min-width: $tablet) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 80px 0 106px 0;
+  }
+
+  &__container {
+    display: grid;
+
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    justify-content: space-between;
+
+    column-gap: 10px;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: calc(203 / (768 - 80) * 100%) calc((185 + 58 + 202) / (768 - 80) * 100%);
+
+      column-gap: calc(40 / (768 - 80) * 100%);
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: calc(198 / (1440 - 160) * 100%) calc((1440 - 160 - 198 - 202) / (1440 - 160) * 100%);
+
+      column-gap: calc(202 / (1440 - 160) * 100%);
+    }
+  }
+
+  &__left,
+  &__right {
+    @extend %dfasjsb;
+
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-bottom: 33px;
+  }
+
+  &__list {
+    @extend %w100;
+
+    list-style: none;
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+
+      gap: 16px 58px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      gap: 74px calc(101 / (219 + 219 + 240 + 202) * 100%);
+    }
+  }
+
+  &__item {
+    @extend %dfasjs;
+
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    &:not(:first-of-type) {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &:not(:first-of-type) {
+        display: flex;
+      }
+    }
+  }
+
+  &__title {
+    @extend %w100;
+
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: rem(24);
+
+    color: $green;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 16px;
+
+      font-size: rem(18);
+      line-height: rem(24);
+    }
+  }
+
+  &__link,
+  &__address,
+  &__text {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: rem(18);
+
+    color: $light-green;
+
+    @media screen and (min-width: $tablet) {
+      font-size: rem(12);
+      line-height: rem(22);
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: rem(14);
+      line-height: rem(25);
+    }
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__social {
+    margin-bottom: 33px;
+    padding-top: 8px;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
 }

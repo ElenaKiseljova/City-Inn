@@ -1,0 +1,83 @@
+.nav {
+  @extend %w100;
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    @extend %w100;
+
+    list-style: none;
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__item {
+    width: max-content;
+
+    margin: 0;
+    padding: 0;
+
+    @include font;
+    font-weight: 400;
+    font-size: rem(36);
+    line-height: rem(61);
+
+    text-transform: lowercase;
+
+    color: $yellow;
+
+    opacity: 0.9;
+
+    transition: font-weight 0.3s, transform 0.3s ease-out, opacity 0.3s;
+
+    &:hover {
+      font-weight: 700;
+
+      opacity: 1;
+
+      transform: translateX(40px);
+
+      transition: font-weight 0.3s, transform 0.3s ease-in, opacity 0.3s;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: rem(64);
+      line-height: rem(83);
+
+      opacity: 0.5;
+
+      &:nth-of-type(odd) {
+        text-align: left;
+      }
+
+      &:nth-of-type(even) {
+        margin-left: auto;
+
+        text-align: right;
+      }
+
+      &:hover {
+        &:nth-of-type(odd) {
+          transform: translateX(79px);
+        }
+
+        &:nth-of-type(even) {
+          transform: translateX(-79px);
+        }
+      }
+    }
+  }
+
+  &__link {
+    font: inherit;
+
+    color: inherit;
+
+    white-space: nowrap;
+  }
+}

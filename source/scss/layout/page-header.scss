@@ -4,28 +4,33 @@
   top: 0;
   left: 0;
 
-  z-index: 10;
-
   @extend %w100;
+  min-height: 100vh;
 
-  overflow-y: visible;
+  pointer-events: none;
 
-  &__container {}
+  // &__container {}
 
   &__top {
+    position: relative;
+
+    z-index: 10;
+
     display: flex;
 
     align-items: flex-start;
     justify-content: space-between;
 
-    padding: 40px 0;
+    padding: 40px 0 0 0;
+
+    pointer-events: all;
 
     @media screen and (min-width: $tablet) {
       padding: 37px 0;
     }
 
     @media screen and (min-width: $desktop) {
-      padding: 60px 0;
+      padding: 60px 0 0 0;
     }
   }
 
@@ -89,6 +94,38 @@
   &__social {
     @media screen and (min-width: $desktop) {
       display: none;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 9;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: scroll;
+
+    opacity: 0;
+
+    transform: translateY(-100vh);
+
+    transition: transform 1s, opacity 1s;
+
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+
+      transform: translateY(0);
+
+      transition: transform 1s, opacity 1s;
+
+      pointer-events: all;
     }
   }
 }

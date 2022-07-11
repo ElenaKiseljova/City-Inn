@@ -1,8 +1,5 @@
 .button {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
+  @extend %dfacjc;
 
   width: 100%;
 
@@ -25,7 +22,7 @@
     transition: fill 0.3s;
   }
 
-  &:hover,
+  &:hover:not(:active),
   &:active {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
@@ -50,6 +47,22 @@
 
     font-size: rem(14);
     line-height: rem(17);
+  }
+
+  &--light-green {
+    color: $light-green;
+
+    border: 1px solid $light-green;
+
+    &:active {
+      color: $yellow;
+
+      background-color: $white-80;
+
+      svg {
+        fill: $yellow;
+      }
+    }
   }
 
   &--white,
@@ -86,7 +99,7 @@
 
   &--book-now {
     &:hover:not(:active) {
-      background-color: $yellow;
+      background-color: $yellow-70;
     }
   }
 

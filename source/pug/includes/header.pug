@@ -1,35 +1,36 @@
 header(class="page-header")
   div(class="page-header__container container")
     div(class="page-header__top")
-      div(class="page-header__logo logo")
+      //active
+      div(class="page-header__logo logo logo--header __js")
         a(class="logo__link" href="index.html")
-          img(class="logo__img" src="img/logo-white.svg" alt="Logo")
+          svg(width="120" height="120")
+            use(xlink:href="img/sprites/sprite-multi.svg#icon-logo")
 
       div(class="page-header__right")
         div(class="page-header__buttons")
           div(class="page-header__button")
             //button--white-50
-            a(class="button button--smart " href="#") SMART ПРОПОЗИЦІЇ
+            a(class="button button--smart __js" href="#")
+              | SMART ПРОПОЗИЦІЇ
           div(class="page-header__button")
             //button--white-50
-            a(class="button button--book-now " href="#") BOOK NOW
+            a(class="button button--book-now __js" href="#")
+              | BOOK NOW
 
         div(class="page-header__links")
           //button--white-30
-          button(class="page-header__burger burger")
+          button(class="page-header__burger burger __js")
             span(class="visually-hidden") Open/Close menu
-            <div class="burger__left"></div>
-            <div class="burger__right"></div>
+            //active
+            <div class="burger__left __js"></div>
+            //active
+            <div class="burger__right __js"></div>
 
-          div(class="page-header__social")
-            ul(class="social social--vertical")
-              each val, index in social
-                li(class="social__item social__item--vertical")
-                  a(class="social__link button button--white button--circle" href="#" aria-label= val)
-                    if val === 'lang'
-                      span= anotherLang
-                    else
-                      svg(width="24" height="24")
-                        use(xlink:href="img/sprites/sprite-mono.svg#icon-" + val)
-
+          div(class="page-header__social __js")
+            - var social = ['phone', 'percent'];
+            - var classSocialDirection = 'vertical';
+            include social.pug
+  //active
+  div(class="page-header__menu __js")
     include menu.pug

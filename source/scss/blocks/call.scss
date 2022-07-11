@@ -1,0 +1,92 @@
+.call {
+  &__link {
+    position: relative;
+
+    @extend %button-reset;
+
+    @extend %dfacjs;
+
+    width: 100%;
+
+    @include font;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: rem(17);
+
+    color: $white;
+
+    &:hover:not(:active) {
+      .call__text {
+        background-color: transparent;
+
+        transition: background-color 0.3s;
+      }
+
+      .call__icon {
+        background-color: $white-30;
+
+        transition: background-color 0.3s;
+      }
+    }
+
+    &.active {
+      .call__text {
+        justify-content: flex-start;
+
+        width: 100%;
+
+        background-color: transparent;
+
+        transition: width 0.3s, background-color 0.3s;
+      }
+    }
+  }
+
+  &__text,
+  &__icon {
+    height: 48px;
+
+    border: 1px solid $white;
+  }
+
+  &__text {
+    @extend %dfacjc;
+
+    width: 210px;
+
+    padding: 15px 26px;
+
+    text-transform: uppercase;
+
+    background-color: $white-20;
+
+    border-radius: 40px;
+
+    transition: width 0.3s, background-color 0.3s;
+
+    @media screen and (min-width: $desktop) {
+      width: 144px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    @extend %dfacjc;
+
+    width: 48px;
+
+    background-color: transparent;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    svg {
+      fill: $white;
+    }
+  }
+}

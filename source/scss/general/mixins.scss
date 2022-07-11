@@ -2,3 +2,26 @@
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-style: normal;
 }
+
+@mixin before-linear-gradient($z-index: 2, $deg: 0deg) {
+  $from: var(--before-linear-gradient-from);
+  $to: var(--before-linear-gradient-to);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: $z-index;
+
+    background: linear-gradient($deg, $from, $to);
+
+    transition: background 0.3s;
+  }
+}

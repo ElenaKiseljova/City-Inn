@@ -1,0 +1,6 @@
+nav(class="nav")
+  ul(class="nav__list")
+    each navItemHeader, index in navHeader
+      if index > 0
+        li(class="nav__item")
+          a(class="nav__link" href=""+navItemHeader.link)= navItemHeader.title

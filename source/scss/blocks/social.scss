@@ -1,12 +1,13 @@
 .social {
-  display: flex;
-
-  align-items: center;
-  justify-content: flex-start;
+  @extend %dfacjs;
 
   @extend %w100;
 
   list-style: none;
+
+  &--horizontal {
+    flex-direction: row;
+  }
 
   &--vertical {
     flex-direction: column;
@@ -16,7 +17,7 @@
     margin: 0;
     padding: 0;
 
-    &--horisontal {
+    &--horizontal {
       &:not(:first-of-type) {
         margin-left: 18px;
       }

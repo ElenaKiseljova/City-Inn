@@ -71,7 +71,7 @@
       left: 0;
     }
 
-    &.open {
+    &.active {
       background: transparent;
 
       transition-duration: 0.5s;
@@ -93,7 +93,7 @@
       left: 0;
     }
 
-    &.open {
+    &.active {
       background: transparent;
 
       transition-duration: 0.5s;
@@ -108,68 +108,3 @@
     }
   }
 }
-
-// .btn1{
-//   @include btn(0px, 100px);
-
-//   .icon-left {
-//     @include icon(8px, 30px);
-//     left: 0px;
-
-//     &:before{
-//       @include icon-before(8px, 30px, -10px);
-//     }
-
-//     &:after{
-//       @include icon-after(8px, 30px, 10px);
-//     }
-
-//     &:hover{
-//       cursor: pointer;
-//     }
-//   }
-
-//   .icon-right {
-//     @include icon(8px, 30px);
-//     left: 30px;
-
-//     &:before{
-//       @include icon-before(8px, 30px, -10px);
-//     }
-
-//     &:after{
-//       @include icon-after(8px, 30px, 10px);
-//     }
-//   }
-
-//   &.open {
-//     .icon-left {
-//       transition-duration: 0.5s;
-//       background: transparent;
-
-//       &:before{
-//         transform: rotateZ(45deg) scaleX(1.4) translate(0.5px, 0.5px);
-//       }
-
-//       &:after{
-//         transform: rotateZ(-45deg) scaleX(1.4) translate(0.5px, -0.5px);
-//       }
-//     }
-
-//     .icon-right {
-//       transition-duration: 0.5s;
-//       background: transparent;
-
-//       &:before{
-//         transform: rotateZ(-45deg) scaleX(1.4) translate(-0.5px, 0.5px);
-//       }
-
-//       &:after{
-//         transform: rotateZ(45deg) scaleX(1.4) translate(-0.5px, -0.5px);
-//       }
-//     }
-//   }
-//   &:hover {
-//     cursor: pointer;
-//   }
-// }

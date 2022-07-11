@@ -1,2 +1,45 @@
-div(class="page-header__menu menu")
+//dynamic --before-linear-gradient-from, --before-linear-gradient-to
+div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gradient[0] + "; --before-linear-gradient-to: " + navHeader[0].gradient[1] + ";")
+  div(class="menu__container container")
+    div(class="menu__nav")
+      include nav.pug
+
+    div(class="menu__bottom")
+      div(class="menu__social")
+        - var social = ['map-pin', 'instagram', 'facebook'];
+        - var classSocialDirection = 'horizontal';
+        include social.pug
+
+      div(class="menu__call call")
+        a(class="call__link" href="tel:+380322471551" onclick="return false")
+          span(class="call__text")
+            |  Call us
+            //|  +38 032 247 15 51
+
+          span(class="call__icon")
+            svg(width="24" height="24")
+              use(xlink:href="img/sprites/sprite-mono.svg#icon-phone")
+
+  div(class="menu__img")
+    - var show = '';
+      each navItemHeader, index in navHeader
+        if index === 0
+          - show = 'show';
+        else
+          - show = '';
+
+        picture(class="menu__picture __js " + show)
+          if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp[0] && navItemHeader.images.webp[1]
+            source(media="(min-width: 768px)" type="image/webp" srcset="" + navItemHeader.images.webp[0])
+            source(media="(min-width: 100px)" type="image/webp" srcset="" + navItemHeader.images.webp[1])
+          else if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp[0]
+            source(type="image/webp" srcset="" + navItemHeader.images.webp[0])
+
+          if navItemHeader.images && navItemHeader.images.default && navItemHeader.images.default[0] && navItemHeader.images.default[1]
+            source(media="(min-width: 768px)" srcset="" + navItemHeader.images.default[0])
+
+            img(src="" + navItemHeader.images.default[1] alt="" + navItemHeader.title)
+          else if navItemHeader.images && navItemHeader.images.default && navItemHeader.images.default[0]
+            img(src="" + navItemHeader.images.default[0] alt="" + navItemHeader.title)
+
 
