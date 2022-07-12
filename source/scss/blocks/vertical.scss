@@ -1,0 +1,260 @@
+.vertical {
+  position: relative;
+
+  @extend %w100;
+
+  height: fit-content;
+
+  &__slider {
+    @extend %w100;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+
+    &.swiper-slide-active {
+      z-index: 1;
+    }
+  }
+
+  &__container {
+    overflow: visible;
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    width: auto;
+
+    margin: 0;
+
+    @media screen and (min-width: $tablet) {
+      // &--direct {}
+
+      &--reverse {
+        order: 2;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    padding: 0;
+
+    &::before {
+      content: '';
+
+      display: block;
+
+      width: 100%;
+
+      padding-bottom: 100%;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 50vw;
+      height: 100%;
+
+      &::before {
+        display: none;
+      }
+
+      &--direct {
+        margin: 0 0 0 calc(100% - 50vw);
+      }
+
+      &--reverse {
+        margin: 0 calc(100% - 50vw) 0 0;
+      }
+    }
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+
+      justify-content: flex-start;
+
+      flex-direction: column;
+
+      &--direct {
+        align-items: flex-end;
+
+        padding: 36px 0 36px 36px;
+      }
+
+      &--reverse {
+        order: 1;
+
+        align-items: flex-start;
+
+        padding: 36px 36px 36px 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--direct {
+        padding: 80px 0 80px 80px;
+      }
+
+      &--reverse {
+        padding: 80px 80px 80px 0;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+
+    z-index: 3;
+
+    width: fit-content;
+
+    white-space: nowrap;
+
+    &--tr {
+      top: 0;
+      right: 0;
+
+      padding-top: 40px;
+
+      text-align: right;
+    }
+
+    &--bl {
+      bottom: 0;
+      left: 0;
+
+      padding-bottom: 40px;
+
+      text-align: left;
+    }
+
+    &--desktop {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      position: static;
+
+      padding: 0;
+
+      margin-bottom: 91.5px;
+
+      text-align: left;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: -60px;
+      margin-bottom: 111px;
+    }
+  }
+
+  &__content {
+    @extend %w100;
+
+    margin-bottom: 40px;
+
+    @include font(24, 29, 400);
+
+    // text-transform: uppercase;
+
+    color: $white;
+
+    p {
+      @extend %w100;
+    }
+
+    strong,
+    b {
+      font-weight: 700;
+    }
+
+    p+p {
+      margin-top: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 124px;
+
+      p+p {
+        margin-top: 27px;
+      }
+    }
+  }
+
+  &__buttons {
+    @extend %w100;
+
+    &--direct {
+      @extend %dfacje;
+    }
+
+    &--reverse {
+      @extend %dfacjs;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    &--book-now {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-width: 200px;
+
+      &--book-now {
+        display: flex;
+
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &__pagination {
+    position: static;
+
+    @extend %w100;
+
+    margin-bottom: 40px;
+
+    .swiper-pagination-bullet {
+      background-color: $white-40;
+
+      &-active {
+        background-color: $white-90;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}

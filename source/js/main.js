@@ -1,13 +1,5 @@
-// import user from './user';
-// import about from './about';
-// import faq from './faq';
-// import range from './range';
-// import form from './form';
+import swipers from './swipers';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   user();
-//   about();
-//   faq();
-//   range();
-//   form();
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  swipers();
+});

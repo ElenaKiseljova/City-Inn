@@ -1,12 +1,11 @@
 .button {
   @extend %dfacjc;
 
-  width: 100%;
+  width: auto;
 
   @extend %button-reset;
 
-  @include font;
-  font-weight: 500;
+  @include font(14, 17, 500);
 
   text-transform: uppercase;
 
@@ -113,6 +112,10 @@
 
   &--white-20 {
     background-color: $white-20;
+  }
+
+  &--white-10 {
+    background-color: $white-10;
   }
 
   @media screen and (min-width: $tablet) {

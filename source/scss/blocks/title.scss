@@ -1,0 +1,19 @@
+.title {
+  @extend %w100;
+
+  @include font(64, 70, 400);
+
+  text-transform: lowercase;
+
+  color: $white;
+
+  @media screen and (min-width: $tablet) {
+    @include font(96, 86, 300);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include font(200, 156, 500);
+
+    color: $white-60;
+  }
+}

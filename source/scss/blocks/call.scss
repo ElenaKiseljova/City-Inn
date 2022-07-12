@@ -8,10 +8,7 @@
 
     width: 100%;
 
-    @include font;
-    font-weight: 500;
-    font-size: rem(14);
-    line-height: rem(17);
+    @include font(14, 17, 500);
 
     color: $white;
 

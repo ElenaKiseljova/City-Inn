@@ -144,6 +144,13 @@
     margin-bottom: 33px;
     padding-top: 8px;
 
+    @media screen and (max-width: $small-mobile) {
+      .social__link {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
     @media screen and (min-width: $tablet) {
       display: none;
     }

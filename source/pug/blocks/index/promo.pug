@@ -1,0 +1,17 @@
+section(class="promo")
+  div(class="promo__container container")
+    div(class="promo__social")
+      - social = ['lang', 'map-pin', 'instagram', 'facebook'];
+      - classSocialDirection = 'horizontal';
+      include ../social.pug
+
+  div(class="promo__img")
+    picture(class="promo__picture")
+      source(media="(min-width: 1025px)" type="image/webp" srcset="img/index/promo-bg-desktop.webp")
+      source(media="(min-width: 500px)" srcset="img/index/promo-bg-tablet.webp")
+      source(media="(min-width: 100px)" type="image/webp" srcset="img/index/promo-bg-mobile.webp")
+
+      source(media="(min-width: 1025px)" srcset="img/index/promo-bg-desktop.jpg")
+      source(media="(min-width: 500px)" srcset="img/index/promo-bg-tablet.jpg")
+
+      img(src="img/index/promo-bg-mobile.jpg" alt="Promo")

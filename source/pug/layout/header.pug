@@ -9,17 +9,15 @@ header(class="page-header")
 
       div(class="page-header__right")
         div(class="page-header__buttons")
-          div(class="page-header__button")
-            //button--white-50
-            a(class="button button--smart __js" href="#")
-              | SMART ПРОПОЗИЦІЇ
-          div(class="page-header__button")
-            //button--white-50
-            a(class="button button--book-now __js" href="#")
-              | BOOK NOW
+          //button--white-50
+          a(class="page-header__button button button--big button--smart __js" href="#")
+            | smart пропозиції
+
+          //button--white-50
+          a(class="page-header__button button button--big button--book-now __js" href="#")
+            | book now
 
         div(class="page-header__links")
-          //button--white-30
           button(class="page-header__burger burger __js")
             span(class="visually-hidden") Open/Close menu
             //active
@@ -28,9 +26,9 @@ header(class="page-header")
             <div class="burger__right __js"></div>
 
           div(class="page-header__social __js")
-            - var social = ['phone', 'percent'];
-            - var classSocialDirection = 'vertical';
-            include social.pug
+            - social = ['phone', 'percent'];
+            - classSocialDirection = 'vertical';
+            include ../blocks/social.pug
   //active
   div(class="page-header__menu __js")
-    include menu.pug
+    include ../blocks/menu.pug

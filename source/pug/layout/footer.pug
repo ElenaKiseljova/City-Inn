@@ -14,10 +14,10 @@ footer(class="page-footer")
 
     div(class="page-footer__right")
       div(class="page-footer__social")
-        - var social = ['map-pin', 'instagram', 'facebook'];
-        - var classSocialDirection = 'horizontal';
-        - var classSocialColor = 'light-green';
-        include social.pug
+        - social = ['map-pin', 'instagram', 'facebook'];
+        - classSocialDirection = 'horizontal';
+        - classSocialColor = 'light-green';
+        include ../blocks/social.pug
 
       ul(class="page-footer__list")
         li(class="page-footer__item")

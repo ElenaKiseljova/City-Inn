@@ -3,6 +3,7 @@ import debug from 'gulp-debug';
 import changed from 'gulp-changed';
 import gulpif from 'gulp-if';
 import imagemin from 'gulp-imagemin';
+import imageminJpegRecompress from 'imagemin-jpeg-recompress';
 import imageminPngquant from 'imagemin-pngquant';
 import imageminWebp from 'imagemin-webp';
 import rename from 'gulp-rename';
@@ -12,7 +13,7 @@ const copyImages = () => (
   gulp.src(`${config.src.img}/**/*`)
     .pipe(changed(config.dest.img))
     .pipe(gulpif(config.isProd, imagemin([
-      imagemin.mozjpeg({ quality: 80 }),
+      imageminJpegRecompress({ quality: 75, progressive: true }),
       imageminPngquant({ quality: [0.8, 0.9] }),
       imagemin.svgo(),
     ], {

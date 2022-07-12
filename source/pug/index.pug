@@ -1,16 +1,23 @@
 - var title = "Main Page";
 
-include includes/head.pug
+include layout/head.pug
 
 body
-  include includes/header.pug
+  include layout/header.pug
 
   main(class="page-main")
     h1(class="visually-hidden") #{title}
 
-    include includes/main/promo.pug
+    include blocks/index/promo.pug
+    include blocks/index/smart.pug
+    include blocks/index/conference.pug
+    include blocks/index/group.pug
+    include blocks/index/star.pug
+    include blocks/index/about.pug
 
-  include includes/footer.pug
+  include layout/footer.pug
+
+  include includes/scripts.pug
 
 
 

@@ -1,6 +1,7 @@
-@mixin font {
-  font-family: 'Montserrat', 'Arial', sans-serif;
-  font-style: normal;
+@mixin font($size: 14, $line: 17, $weight: 400) {
+  font-weight: $weight;
+  font-size: rem($size);
+  line-height: rem($line);
 }
 
 @mixin before-linear-gradient($z-index: 2, $deg: 0deg) {

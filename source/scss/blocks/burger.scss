@@ -11,8 +11,7 @@
 
   @extend %button-reset;
 
-  @include font;
-  font-weight: 500;
+  @include font(14, 17, 500);
 
   background-color: transparent;
 

@@ -22,10 +22,7 @@
     margin: 0;
     padding: 0;
 
-    @include font;
-    font-weight: 400;
-    font-size: rem(36);
-    line-height: rem(61);
+    @include font(36, 61, 400);
 
     text-transform: lowercase;
 

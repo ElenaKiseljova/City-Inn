@@ -6,8 +6,8 @@ div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gra
 
     div(class="menu__bottom")
       div(class="menu__social")
-        - var social = ['map-pin', 'instagram', 'facebook'];
-        - var classSocialDirection = 'horizontal';
+        - social = ['map-pin', 'instagram', 'facebook'];
+        - classSocialDirection = 'horizontal';
         include social.pug
 
       div(class="menu__call call")
@@ -21,7 +21,7 @@ div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gra
               use(xlink:href="img/sprites/sprite-mono.svg#icon-phone")
 
   div(class="menu__img")
-    - var show = '';
+    - let show = '';
       each navItemHeader, index in navHeader
         if index === 0
           - show = 'show';
