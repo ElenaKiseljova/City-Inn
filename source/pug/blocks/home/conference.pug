@@ -1,59 +1,56 @@
 -
   slides = [
     {
-      image: 'conference',
+      sectionName: 'conference',
       titlePosition: 'tr',
       title: `
         conference
         <br />
         service
       `,
-      content: `
-        <p>ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.</p>
-        <p><strong>БУДЕ SMART!</strong></p>
-      `,
+      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
+      contentBottom: 'БУДЕ SMART!',
       //book: '#',
       more: {
         title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#'
+        link: '#',
+        hideMobile: 0
       },
     },
     {
-      image: 'conference',
+      sectionName: 'conference',
       titlePosition: 'tr',
       title: `
         conference
         <br />
         service
       `,
-      content: `
-        <p>ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД. 2</p>
-        <p><strong>БУДЕ SMART! 2</strong></p>
-      `,
+      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
+      contentBottom: 'БУДЕ SMART!',
       //book: '#',
       more: {
         title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#'
+        link: '#',
+        hideMobile: 0
       },
     },
     {
-      image: 'conference',
+      sectionName: 'conference',
       titlePosition: 'tr',
       title: `
         conference
         <br />
         service
       `,
-      content: `
-        <p>ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД. 3</p>
-        <p><strong>БУДЕ SMART! 3</strong></p>
-      `,
+      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
+      contentBottom: 'БУДЕ SMART!',
       //book: '#',
       more: {
         title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#'
+        link: '#',
+        hideMobile: 0
       },
     },
   ];
 
-+vertical(slides, beige, 'reverse')
++home(slides, beige, 'reverse', 'start', 1)

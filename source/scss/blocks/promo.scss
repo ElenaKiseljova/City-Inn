@@ -41,6 +41,24 @@
     }
   }
 
+  &__buttons {
+    position: relative;
+
+    z-index: 4;
+
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__button {
+    &:first-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
   &__img {
     @extend %img;
   }

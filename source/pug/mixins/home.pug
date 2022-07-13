@@ -1,0 +1,88 @@
+- let slides = [];
+
+//Colors
+- const darkBlue = '#2A394D';
+- const blue = '#48586C';
+- const starfit = '#FFBD4D';
+- const beige = '#C4A282';
+- const green = '#858569';
+- const gray = '#363530';
+
+mixin home(slides, bgColor, mode = 'direct', buttonsJustify = 'end', navigation = 0)
+  section(class="home" style="background-color: " + bgColor + ";")
+    div.home__slider.swiper
+      div.home__slider-wrapper.swiper-wrapper
+
+        each slide in slides
+          - const sectionName = slide.sectionName ?? 'smart';
+          - const title = slide.title ?? '';
+          - const titlePosition = slide.titlePosition ?? 'tr';
+          - const imageName = slide.sectionName ?? 'smart';//заглушка для верстки
+          - const contentTop = slide.contentTop ?? '';
+          - const contentBottom = slide.contentBottom ?? '';
+          - const more = slide.more ?? {};
+          - const book = slide.book ?? {};
+          div(class="home__slide swiper-slide home__slide--" + sectionName style="background-color: " + bgColor + ";")
+            div(class="home__container container home__container--" + mode)
+              div(class="home__top home__top--" + mode)
+                h2(class="home__title home__title--mobile title home__title--" + titlePosition + " home__title--" + mode + " home__title--" + sectionName)
+                  | !{title}
+
+                div(class="home__img home__img--" + mode)
+                  picture.home__picture
+                    source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/" + imageName + "-desktop.webp")
+                    source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.webp")
+                    source(media="(min-width: 100px)" type="image/webp" srcset="img/home/" + imageName + "-mobile.webp")
+
+                    source(media="(min-width: 1025px)" srcset="img/home/" + imageName + "-desktop.jpg")
+                    source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.jpg")
+
+                    img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
+
+              div(class="home__bottom home__bottom--" + mode + " home__bottom--" + sectionName)
+                h2(class=" home__title home__title--desktop title home__title--" + mode)
+                  | !{title}
+                div(class="home__content home__content--" + sectionName + " home__content--" + mode)
+                  p(class="home__text home__text--top home__text--" + sectionName)
+                    | #{contentTop}
+
+                  p(class="home__text home__text--bottom")
+                    | #{contentBottom}
+
+                div(class="home__buttons home__buttons--" + buttonsJustify + " home__buttons--" + mode)
+                  if block
+                    block
+
+                  if more && more.link && more.title
+                    - const hideMobile = more.hideMobile ?? 0;
+
+                    - let hideButtonMobile = '';
+                    if hideMobile === 1
+                      - hideButtonMobile = ' home__button--hidemobile';
+
+                    a(class="home__button button button--white" + hideButtonMobile + " home__button--" + sectionName href= more.link download)
+                      | #{more.title}
+
+                  if book && book.link && book.title
+                    - const hideMobile = book.hideMobile ?? 0;
+
+                    - let hideButtonMobile = '';
+                    if hideMobile === 1
+                      - hideButtonMobile = ' home__button--hidemobile';
+
+                    a(class="home__button button button--white-10 button--book-now" + hideButtonMobile + " home__button--" + sectionName href= book.link download)
+                      | #{book.title}
+
+                  if navigation === 1
+                    div.home__navigation
+                      button.home__prev.button.button--circle.button--white.swiper-button-prev
+                        svg(width="24" height="24")
+                          use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-prev")
+                      button.home__next.button.button--circle.button--white.swiper-button-next
+                        svg(width="24" height="24")
+                          use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-next")
+
+      div.home__pagination.swiper-pagination
+
+
+

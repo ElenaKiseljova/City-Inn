@@ -1,0 +1,24 @@
+section(class="promo")
+  div(class="promo__container container")
+    div(class="promo__social")
+      - social = ['lang', 'map-pin', 'instagram', 'facebook'];
+      - classSocialDirection = 'horizontal';
+      include ../social.pug
+
+    div(class="promo__buttons")
+      a(class="promo__button button button--big button--smart" href="#")
+        | smart пропозиції
+
+      a(class="promo__button button button--big button--book-now" href="#")
+        | book now
+
+  div(class="promo__img")
+    picture(class="promo__picture")
+      source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/promo-bg-desktop.webp")
+      source(media="(min-width: 500px)" srcset="img/home/promo-bg-tablet.webp")
+      source(media="(min-width: 100px)" type="image/webp" srcset="img/home/promo-bg-mobile.webp")
+
+      source(media="(min-width: 1025px)" srcset="img/home/promo-bg-desktop.jpg")
+      source(media="(min-width: 500px)" srcset="img/home/promo-bg-tablet.jpg")
+
+      img(src="img/home/promo-bg-mobile.jpg" alt="Promo")

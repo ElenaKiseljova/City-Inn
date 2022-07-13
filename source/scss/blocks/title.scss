@@ -1,11 +1,19 @@
 .title {
   @extend %w100;
 
-  @include font(64, 70, 400);
+  @include font(50, 56, 400);
 
   text-transform: lowercase;
 
   color: $white;
+
+  &--light-green {
+    color: $light-green-40;
+  }
+
+  @media screen and (min-width: $small-mobile) {
+    @include font(64, 70, 400);
+  }
 
   @media screen and (min-width: $tablet) {
     @include font(96, 86, 300);
@@ -15,5 +23,9 @@
     @include font(200, 156, 500);
 
     color: $white-60;
+
+    &--light-green {
+      color: $light-green-40;
+    }
   }
 }

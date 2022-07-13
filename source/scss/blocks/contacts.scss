@@ -1,0 +1,145 @@
+.contacts {
+  @extend %w100;
+
+  background-color: $dark-gray;
+
+  &__container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(414px, max-content);
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+
+      min-height: calc(585 / 768 * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-height: calc(840 / 1440 * 100vw);
+    }
+  }
+
+  &__map {
+    width: 100vw;
+    height: 100%;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    @media screen and (min-width: $tablet) {
+      width: 50vw;
+
+      margin: 0 calc(100% - 50vw);
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @extend %dfasjs;
+
+    flex-direction: column;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      padding: 36px 0 100px 36px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 211px 25px 200px 114px;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+
+      bottom: -10px;
+      left: 0;
+
+      z-index: 1;
+
+      margin-bottom: 0;
+
+      transform: translateX(-10%);
+    }
+
+    @media screen and (min-width: $desktop) {}
+  }
+
+  &__address {
+    flex-grow: 1;
+
+    margin-bottom: 40px;
+
+    font-style: normal;
+  }
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    gap: 27px 70px;
+
+    @extend %w100;
+
+    list-style: none;
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__item {
+    @extend %dfasjs;
+
+    flex-direction: column;
+
+    @extend %w100;
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    margin-bottom: 8px;
+
+    @include font(18, 24, 500);
+
+    text-transform: uppercase;
+
+    color: $yellow;
+  }
+
+  &__text,
+  &__link {
+    @extend %w100;
+
+    @include font(14, 25, 400);
+
+    color: $white;
+  }
+
+  &__link {
+    opacity: 1;
+
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+  }
+}
