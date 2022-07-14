@@ -1,0 +1,26 @@
+mixin promo(imageName, sectionName = '', title = 'Promo section')
+  section(class="promo promo--" + sectionName)
+    if title === 'Promo section'
+      h1.visually-hidden
+        | !{titlePage}
+
+    div(class="promo__container container")
+      div(class="promo__img-wrapper promo__img-wrapper--" + sectionName)
+        if title !== 'Promo section'
+          h1(class="promo__title promo__title--" + sectionName)
+            | !{title}
+
+        div(class="promo__img promo__img--" + sectionName)
+          picture(class="promo__picture")
+            source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + imageName + "-desktop.webp")
+            source(media="(min-width: 500px)" srcset="img/" + imageName + "-tablet.webp")
+            source(media="(min-width: 100px)" type="image/webp" srcset="img/" + imageName + "-mobile.webp")
+
+            source(media="(min-width: 1025px)" srcset="img/" + imageName + "-desktop.jpg")
+            source(media="(min-width: 500px)" srcset="img/" + imageName + "-tablet.jpg")
+
+            img(src="img/" + imageName + "-mobile.jpg" alt="Promo")
+
+      if block
+        div(class="promo__content promo__content--" + sectionName)
+          block

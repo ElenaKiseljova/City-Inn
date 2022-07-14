@@ -2,20 +2,20 @@ header(class="page-header")
   div(class="page-header__container container")
     div(class="page-header__top")
       //active
-      div(class="page-header__logo logo logo--header __js")
+      div(class="page-header__logo logo logo--header __js " + headerLogoClass)
         a(class="logo__link" href="index.html")
           svg(width="120" height="120")
             use(xlink:href="img/sprites/sprite-multi.svg#icon-logo")
 
       div(class="page-header__right")
         div(class="page-header__buttons")
-          //button--white-50
-          a(class="page-header__button button button--smart __js" href="#")
-            | smart пропозиції
+          //button--white-50-js
+          a(class="page-header__button button button--smart __js " + whiteHeaderButtonsClass href="#")
+            span smart пропозиції
 
-          //button--white-50
-          a(class="page-header__button button button--book-now __js" href="#")
-            | book now
+          //button--white-50-js
+          a(class="page-header__button button button--book-now __js " + whiteHeaderButtonsClass href="#")
+            span book now
 
         div(class="page-header__links")
           button(class="page-header__burger burger __js")

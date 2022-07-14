@@ -1,17 +1,17 @@
 include includes/variables.pug
 include includes/mixins.pug
 
-- titlePage = 'ресторан Святослав';
+- titlePage = 'lobby bar';
 - whiteHeaderButtonsClass = 'button--white-50';
 - headerLogoClass = 'logo--yellow';
 
 include layout/head.pug
 
-body(style="--color-page: var(--color-restaurant); background-color: var(--dark-green);")
+body(style="--color-page: var(--color-about); background-color: var(--green);")
   include layout/header.pug
 
   main(class="page-main")
-    include pages/restaurant/promo.pug
+    include pages/about/promo.pug
     include pages/contacts.pug
 
   include layout/footer.pug

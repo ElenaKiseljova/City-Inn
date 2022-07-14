@@ -21,8 +21,9 @@ export default () => {
 
   const burger = document.querySelector('.burger');
   const pageHeaderMenu = document.querySelector('.page-header__menu');
+  const logoHeader = document.querySelector('.logo--header');
 
-  if (burger && pageHeaderMenu) {
+  if (burger && pageHeaderMenu && logoHeader) {
     const burgerLeft = burger.querySelector('.burger__left');
     const burgerRight = burger.querySelector('.burger__right');
 
@@ -37,11 +38,15 @@ export default () => {
           burgerRight.classList.remove('active');
           burger.classList.remove('active');
 
-          changeActiveClass(pageHeaderButtons, 'remove', 'button--white-50');
+          logoHeader.classList.remove('active');
+
+          changeActiveClass(pageHeaderButtons, 'remove', 'button--white-50-js');
 
           rootElement.classList.remove('active');
         } else {
-          changeActiveClass(pageHeaderButtons, 'add', 'button--white-50');
+          changeActiveClass(pageHeaderButtons, 'add', 'button--white-50-js');
+
+          logoHeader.classList.add('active');
 
           pageHeaderMenu.classList.add('active');
 

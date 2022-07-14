@@ -21,6 +21,10 @@
     }
   }
 
+  &__left {
+    position: relative;
+  }
+
   &__map {
     width: 100vw;
     height: 100%;
@@ -44,7 +48,7 @@
     padding: 40px 0;
 
     @media screen and (min-width: $tablet) {
-      padding: 36px 0 100px 36px;
+      padding: 234px 0 40px 40px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -55,28 +59,54 @@
   &__title {
     width: fit-content;
 
-    margin-bottom: 24px;
+    &--desktop {
+      display: none;
+    }
 
-    @media screen and (min-width: $tablet) {
+    &--mobile {
       position: absolute;
 
-      bottom: -10px;
+      bottom: 0;
       left: 0;
 
       z-index: 1;
 
-      margin-bottom: 0;
-
-      transform: translateX(-10%);
+      padding-bottom: 40px;
     }
 
-    @media screen and (min-width: $desktop) {}
+    @media screen and (min-width: $tablet) {
+      &--mobile {
+        top: 0;
+        bottom: auto;
+
+        padding: 40px 0 0 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--desktop {
+        position: absolute;
+
+        bottom: -10px;
+        left: 0;
+
+        display: block;
+
+        padding: 0;
+
+        transform: translateX(-10%);
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
   }
 
   &__address {
     flex-grow: 1;
 
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 
     font-style: normal;
   }
@@ -87,14 +117,14 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 
-    gap: 27px 70px;
+    gap: 40px 70px;
 
     @extend %w100;
 
     list-style: none;
 
     @media screen and (min-width: $desktop) {
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -141,5 +171,9 @@
 
   &__button {
     min-width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      min-width: 219px;
+    }
   }
 }

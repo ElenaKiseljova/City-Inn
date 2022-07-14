@@ -277,7 +277,7 @@ export default () => {
     rotateControl: false,
     fullscreenControl: false,
     disableDefaultUI: false,
-    styles: styles
+    styles,
   };
 
   const loader = new Loader(KEY, {
@@ -286,6 +286,10 @@ export default () => {
   });
 
   loader.load().then((google) => {
-    const map = new google.maps.Map(document.querySelector('#map'), options);
+    const mapEl = document.querySelector('#map');
+
+    if (mapEl) {
+      const map = new google.maps.Map(document.querySelector('#map'), options);
+    }
   });
 };

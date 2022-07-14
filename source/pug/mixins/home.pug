@@ -1,28 +1,17 @@
-- let slides = [];
-
-//Colors
-- const darkBlue = '#2A394D';
-- const blue = '#48586C';
-- const starfit = '#FFBD4D';
-- const beige = '#C4A282';
-- const green = '#858569';
-- const gray = '#363530';
-
-mixin home(slides, bgColor, mode = 'direct', buttonsJustify = 'end', navigation = 0)
-  section(class="home" style="background-color: " + bgColor + ";")
+mixin home(slides = [], mode = 'direct', buttonsJustify = 'end', navigation = 0, sectionName = 'smart')
+  section(class="home home--" + sectionName)
     div.home__slider.swiper
       div.home__slider-wrapper.swiper-wrapper
 
         each slide in slides
-          - const sectionName = slide.sectionName ?? 'smart';
           - const title = slide.title ?? '';
           - const titlePosition = slide.titlePosition ?? 'tr';
-          - const imageName = slide.sectionName ?? 'smart';//заглушка для верстки
+          - const imageName = sectionName ?? 'smart';//заглушка для верстки
           - const contentTop = slide.contentTop ?? '';
           - const contentBottom = slide.contentBottom ?? '';
           - const more = slide.more ?? {};
           - const book = slide.book ?? {};
-          div(class="home__slide swiper-slide home__slide--" + sectionName style="background-color: " + bgColor + ";")
+          div(class="home__slide swiper-slide home__slide--" + sectionName)
             div(class="home__container container home__container--" + mode)
               div(class="home__top home__top--" + mode)
                 h2(class="home__title home__title--mobile title home__title--" + titlePosition + " home__title--" + mode + " home__title--" + sectionName)
@@ -54,24 +43,12 @@ mixin home(slides, bgColor, mode = 'direct', buttonsJustify = 'end', navigation 
                     block
 
                   if more && more.link && more.title
-                    - const hideMobile = more.hideMobile ?? 0;
-
-                    - let hideButtonMobile = '';
-                    if hideMobile === 1
-                      - hideButtonMobile = ' home__button--hidemobile';
-
-                    a(class="home__button button button--white" + hideButtonMobile + " home__button--" + sectionName href= more.link download)
-                      | #{more.title}
+                    a(class="home__button home__button--more button button--white home__button--" + sectionName href= more.link download)
+                      span #{more.title}
 
                   if book && book.link && book.title
-                    - const hideMobile = book.hideMobile ?? 0;
-
-                    - let hideButtonMobile = '';
-                    if hideMobile === 1
-                      - hideButtonMobile = ' home__button--hidemobile';
-
-                    a(class="home__button button button--white-10 button--book-now" + hideButtonMobile + " home__button--" + sectionName href= book.link download)
-                      | #{book.title}
+                    a(class="home__button home__button--book-now button button--white-10 button--book-now home__button--" + sectionName href= book.link download)
+                      span #{book.title}
 
                   if navigation === 1
                     div.home__navigation

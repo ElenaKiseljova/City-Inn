@@ -1,0 +1,12 @@
++promo('home/promo-bg', 'home')
+  div(class="promo__social")
+    - social = ['lang', 'map-pin', 'instagram', 'facebook'];
+    - classSocialDirection = 'horizontal';
+    include ../../blocks/social.pug
+
+  div(class="promo__buttons")
+    a(class="promo__button button button--big button--smart" href="#")
+      span smart пропозиції
+
+    a(class="promo__button button button--big button--book-now" href="#")
+      span book now

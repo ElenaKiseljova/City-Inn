@@ -1,4 +1,7 @@
-- var title = "Home Page";
+include includes/variables.pug
+include includes/mixins.pug
+
+- titlePage = 'Home Page';
 
 include layout/head.pug
 
@@ -6,17 +9,15 @@ body
   include layout/header.pug
 
   main(class="page-main")
-    h1(class="visually-hidden") #{title}
-
-    include blocks/home/promo.pug
-    include blocks/home/smart.pug
-    include blocks/home/lobby.pug
-    include blocks/home/conference.pug
-    include blocks/home/group.pug
-    include blocks/home/restaurant.pug
-    include blocks/home/star.pug
-    include blocks/home/about.pug
-    include blocks/home/contacts.pug
+    include pages/home/promo.pug
+    include pages/home/smart.pug
+    include pages/home/lobby.pug
+    include pages/home/conference.pug
+    include pages/home/group.pug
+    include pages/home/restaurant.pug
+    include pages/home/star.pug
+    include pages/home/about.pug
+    include pages/contacts.pug
 
   include layout/footer.pug
 

@@ -1,7 +1,13 @@
 .logo {
-  &--header {
+  &--black {
     color: $dark-green;
+  }
 
+  &--yellow {
+    color: $dark-yellow;
+  }
+
+  &--header {
     transition: color 0.3s;
 
     svg {
@@ -10,6 +16,8 @@
 
     &.active {
       color: $dark-yellow;
+
+      transition: color 0.3s;
     }
   }
 

@@ -5,12 +5,48 @@
 
   height: fit-content;
 
+  &--smart {
+    background-color: $dark-blue;
+  }
+
+  &--lobby {
+    background-color: $gray;
+  }
+
+  &--conference {
+    background-color: $beige;
+  }
+
+  &--group {
+    background-color: $blue;
+  }
+
+  &--restaurant {
+    background-color: $dark-green;
+  }
+
+  &--star {
+    background-color: $starfit;
+  }
+
+  &--about {
+    background-color: $green;
+  }
+
   &__slider {
     @extend %w100;
+
+    background-color: inherit;
+  }
+
+  &__slider-wrapper {
+    background-color: inherit;
   }
 
   &__slide {
     display: flex;
+
+    background-color: inherit;
 
     box-sizing: border-box;
 
@@ -228,6 +264,12 @@
           display: none;
         }
       }
+
+      &--lobby {
+        br {
+          display: none;
+        }
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -345,8 +387,10 @@
       margin-left: 0;
     }
 
-    &--hidemobile {
-      display: none;
+    &--book-now {
+      &.home__button--smart {
+        display: none;
+      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -360,8 +404,10 @@
 
       min-width: 200px;
 
-      &--hidemobile {
-        display: flex;
+      &--book-now {
+        &.home__button--smart {
+          display: flex;
+        }
       }
 
       &--restaurant {
@@ -408,36 +454,10 @@
   }
 
   &__worktime {
-    @extend %dfacjs;
-
-    width: fit-content;
-
     margin-right: 24px;
-
-    @include font(14, 20, 400);
-
-    color: $white;
 
     @media screen and (min-width: $desktop) {
       margin-right: 40px;
-    }
-  }
-
-  &__clock {
-    @extend %dfacjc;
-
-    width: 48px;
-    height: 48px;
-
-    margin-right: 24px;
-    padding: 5px;
-
-    border: 1px solid $white;
-
-    border-radius: 50%;
-
-    svg {
-      fill: $white;
     }
   }
 

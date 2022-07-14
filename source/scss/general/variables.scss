@@ -1,3 +1,13 @@
+:root {
+  --dark-green: #1E2927;
+  --gray: #363530;
+  --green: #858569;
+
+  --color-restaurant: #FBF8E4;
+  --color-lobby: #FBF8E4;
+  --color-about: #FBF8E4;
+}
+
 $white: #FFFFFF;
 $white-90: rgba(255, 255, 255, 0.9);
 $white-80: rgba(255, 255, 255, 0.8);
@@ -8,7 +18,14 @@ $white-30: rgba(255, 255, 255, 0.3);
 $white-20: rgba(255, 255, 255, 0.2);
 $white-10: rgba(255, 255, 255, 0.1);
 
+$blue: #48586C;
 $dark-blue: #2A394D;
+
+$beige: #C4A282;
+
+$starfit: #FFBD4D;
+
+$restaurant: #FBF8E4;
 
 $yellow: #FF9606;
 $yellow-70: rgba(255, 150, 6, 0.7);

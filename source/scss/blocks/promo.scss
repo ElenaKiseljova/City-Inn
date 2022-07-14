@@ -10,23 +10,408 @@
 
   min-height: 100vh;
 
-  padding-bottom: 40px;
+  overflow: visible;
+
+  &--home {
+    padding-bottom: 40px;
+  }
 
   @media screen and (min-width: $tablet) {
-    min-height: 384px;
+    min-height: calc(384 / 768 * 100vw);
   }
 
   @media screen and (min-width: $desktop) {
     min-height: 100vh;
 
-    padding-bottom: 61px;
+    &--home {
+      padding-bottom: 61px;
+    }
   }
 
   &__container {
     display: flex;
 
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    overflow: visible;
+  }
+
+  &__img-wrapper {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    width: 100vw;
+    height: 100%;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    &--restaurant,
+    &--lobby,
+    &--about {
+      position: relative;
+
+      height: 100vw;
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-height: calc(384 / 768 * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--home {
+        max-height: 100vw;
+      }
+
+      &--restaurant,
+      &--lobby {
+        max-height: calc(580 / 1440 * 100vw);
+      }
+
+      &--about,
+      &--group {
+        max-height: calc(560 / 1440 * 100vw);
+      }
+
+      &--starfit,
+      &--smart {
+        max-height: calc(520 / 1440 * 100vw);
+      }
+
+      &--rooms {
+        max-height: calc(514 / 1440 * 100vw);
+      }
+
+      &--double,
+      &--conference {
+        max-height: calc(805 / 1440 * 100vw);
+      }
+
+      &--conference-service {
+        max-height: calc(555 / 1440 * 100vw);
+      }
+    }
+  }
+
+  &__img {
+    @extend %img;
+
+    &--home,
+    &--restaurant,
+    &--lobby,
+    &--about {
+      --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+      --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+      @include before-linear-gradient();
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--home {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__content {
+    position: relative;
+
+    z-index: 3;
+
+    flex-grow: 1;
+
+    display: flex;
+
     align-items: flex-end;
     justify-content: flex-start;
+
+    @extend %w100;
+
+    &--restaurant,
+    &--lobby,
+    &--about {
+      flex-direction: column;
+    }
+
+    &--restaurant {
+      padding: 71px 0 40px 0;
+    }
+
+    &--lobby,
+    &--about {
+      padding: 85px 0 40px 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        width: calc(500 / 694 * 100%);
+
+        margin-left: auto;
+      }
+
+      &--restaurant {
+        padding: 175px 0 80px 0;
+      }
+
+      &--lobby,
+      &--about {
+        padding: 56px 0 42px 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        display: grid;
+
+        column-gap: 112px;
+
+        width: 100%;
+
+        margin: 0;
+      }
+
+      &--restaurant {
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+
+        padding: 203px 0 150px 0;
+      }
+
+      &--lobby,
+      &--about {
+        grid-template-columns: 1fr calc(805 / (1440 - 160) * 100%);
+
+        align-items: start;
+
+        padding: 100px 0 127px 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    @include font(24, 29, 700);
+
+    color: var(--color-page);
+
+    &--lobby {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--lobby {
+        margin-bottom: 8px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--lobby {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__top {
+    @extend %w100;
+
+    &--restaurant {
+      margin-bottom: 80px;
+    }
+
+    &--lobby,
+    &--about {
+      margin-bottom: 90px;
+    }
+
+    @media screen and (min-width: $tablet) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        order: 2;
+
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    @extend %w100;
+
+    @include font(14, 21, 400);
+
+    color: var(--color-page);
+  }
+
+  &__bottom {
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        display: flex;
+
+        align-items: center;
+        justify-content: start;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+
+      &--restaurant,
+      &--lobby,
+      &--about {
+        order: 1;
+      }
+    }
+  }
+
+  &__btn {
+    &--restaurant {
+      min-width: 240px;
+    }
+
+    &--lobby {
+      min-width: 200px;
+
+      margin: 0 auto;
+    }
+
+    &--about {
+      min-width: 208px;
+
+      margin: 0 auto 0 0;
+    }
+  }
+
+  &__worktime {
+
+    &--restaurant {
+      margin-bottom: 35px;
+    }
+
+    @media screen and (min-width: $tablet) {
+
+      &--restaurant {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+
+      &--restaurant {
+        margin-right: 59px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    z-index: 3;
+
+    width: fit-content;
+
+    margin: 0;
+    padding: 0;
+
+    @include font(64, 58, 600);
+
+    opacity: 0.6;
+
+    color: var(--color-page);
+
+    &--restaurant {
+      transform: translate(10px, 6px);
+    }
+
+    &--lobby,
+    &--about {
+      transform: translate(10px, 40px);
+    }
+
+    @media screen and (min-width: $mobile) {
+
+      &--restaurant {
+        transform: translate(36px, 6px);
+      }
+
+      &--lobby,
+      &--about {
+        transform: translate(40px, 40px);
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      @include font(96, 86, 600);
+
+      opacity: 0.5;
+
+      &--restaurant {
+        transform: translate(37px, 45%);
+      }
+
+      &--lobby,
+      &--about {
+        transform: translate(37px, 9px);
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(144, 140, 600);
+
+      opacity: 0.6;
+
+      &--restaurant {
+        transform: translate(74px, 45%);
+      }
+
+      &--lobby,
+      &--about {
+        transform: translate(74px, 50px);
+      }
+    }
   }
 
   &__social {
@@ -57,13 +442,5 @@
     &:first-of-type {
       margin-bottom: 40px;
     }
-  }
-
-  &__img {
-    @extend %img;
-  }
-
-  &__picture {
-    @extend %picture;
   }
 }
