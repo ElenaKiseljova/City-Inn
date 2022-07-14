@@ -4,6 +4,8 @@
   width: 100%;
   height: fit-content;
 
+  min-height: 100vh;
+
   padding: calc(218 / 896 * 100vh) 0 calc(68 / 896 * 100vh) 0;
 
   background-color: $dark-gray;
@@ -25,8 +27,6 @@
 
     align-items: flex-start;
     justify-content: flex-end;
-
-    height: 100%;
   }
 
   &__img {
@@ -40,7 +40,7 @@
 
     transition: opacity 0.3s;
 
-    &.show {
+    &.active {
       opacity: 1;
 
       transition: opacity 0.3s;

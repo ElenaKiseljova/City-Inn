@@ -1,10 +1,6 @@
 html {
   box-sizing: border-box;
 
-  /* For Mozilla scrollbar */
-  // scrollbar-color: $black $gray;
-  // scrollbar-width: thin;
-
   &.active {
     overflow: hidden;
   }
@@ -12,33 +8,36 @@ html {
 
 body {
   box-sizing: border-box;
+}
 
-  // color: $black;
+* {
+  @media screen and (min-width: $small-desktop) {
+    /* For Mozilla scrollbar */
+    scrollbar-color: $dark-blue $light-green;
+    scrollbar-width: thin;
 
-  // background-color: $bg;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
 
-  // &::-webkit-scrollbar {
-  //   width: 7px;
-  // }
+    &::-webkit-scrollbar-track {
+      border-radius: 9px;
 
-  // &::-webkit-scrollbar-track {
-  //   border: 3px solid transparent;
-  //   border-radius: 9px;
+      background-color: $light-green;
 
-  //   background-color: $gray;
+      background-clip: content-box;
+    }
 
-  //   background-clip: content-box;
-  // }
+    &::-webkit-scrollbar-thumb {
+      width: 10px;
 
-  // &::-webkit-scrollbar-thumb {
-  //   width: 10px;
+      border-radius: 7px;
 
-  //   border-radius: 7px;
+      background-color: $dark-blue;
 
-  //   background-color: $black;
-
-  //   background-clip: content-box;
-  // }
+      background-clip: content-box;
+    }
+  }
 }
 
 *,

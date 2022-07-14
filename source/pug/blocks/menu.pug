@@ -11,10 +11,9 @@ div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gra
         include social.pug
 
       div(class="menu__call call")
-        a(class="call__link" href="tel:+380322471551" onclick="return false")
+        a(class="call__link" href="tel:+380322471551" data-text="Call us" data-phone="+38 032 247 15 51")
           span(class="call__text")
-            |  Call us
-            //|  +38 032 247 15 51
+            | Call us
 
           span(class="call__icon")
             svg(width="24" height="24")
@@ -24,7 +23,7 @@ div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gra
     - let show = '';
       each navItemHeader, index in navHeader
         if index === 0
-          - show = 'show';
+          - show = 'active';
         else
           - show = '';
 

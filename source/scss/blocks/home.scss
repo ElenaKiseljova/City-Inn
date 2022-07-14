@@ -10,6 +10,8 @@
   }
 
   &__slide {
+    display: flex;
+
     box-sizing: border-box;
 
     &.swiper-slide-active {
@@ -30,8 +32,6 @@
   }
 
   &__container {
-    height: 100%;
-
     overflow: visible;
 
     @media screen and (min-width: $tablet) {

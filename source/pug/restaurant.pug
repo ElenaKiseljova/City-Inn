@@ -1,0 +1,25 @@
+- var title = "Home Page";
+
+include layout/head.pug
+
+body
+  include layout/header.pug
+
+  main(class="page-main")
+    h1(class="visually-hidden") #{title}
+
+    include blocks/home/promo.pug
+    include blocks/home/smart.pug
+    include blocks/home/lobby.pug
+    include blocks/home/conference.pug
+    include blocks/home/group.pug
+    include blocks/home/restaurant.pug
+    include blocks/home/star.pug
+    include blocks/home/about.pug
+    include blocks/home/contacts.pug
+
+  include layout/footer.pug
+
+
+
+
