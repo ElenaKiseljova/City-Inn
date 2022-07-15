@@ -1,13 +1,14 @@
 include includes/variables.pug
-include includes/mixins.pug
 
 - titlePage = 'lobby bar';
 - whiteHeaderButtonsClass = 'button--white-50';
 - headerLogoClass = 'logo--yellow';
 
+include includes/mixins.pug
+
 include layout/head.pug
 
-body(style="--color-page: var(--color-lobby); background-color: var(--gray);")
+body(style="--color-button:  var(--light-yellow); --border-color-button:  var(--light-yellow); --color-page: var(--light-yellow); background-color: var(--gray);")
   include layout/header.pug
 
   main(class="page-main")

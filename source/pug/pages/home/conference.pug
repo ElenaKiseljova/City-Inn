@@ -1,53 +1,27 @@
 -
-  slides = [
-    {
-      titlePosition: 'tr',
-      title: `
-        conference
-        <br />
-        service
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //book: '#',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
-
-      },
+  attr = {
+    sectionName: 'conference',
+    title: `
+      conference
+      <br />
+      service
+    `,
+    contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
+    contentBottom: 'БУДЕ SMART!',
+    buttonsJustify: 'start',
+    book: {
+      title: '',
+      link: '',
     },
-    {
-      titlePosition: 'tr',
-      title: `
-        conference
-        <br />
-        service
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //book: '#',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
-
-      },
+    more: {
+      title: 'ДІЗНАТИСЬ БІЛЬШЕ',
+      link: '#',
     },
-    {
-      titlePosition: 'tr',
-      title: `
-        conference
-        <br />
-        service
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //book: '#',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
+    navigation: 1,
+    images: [
+      'conference', 'conference'
+    ],
+    mode: 'reverse',
+  };
 
-      },
-    },
-  ];
-
-+home(slides, 'reverse', 'start', 1, 'conference')
++home(attr)

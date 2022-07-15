@@ -25,7 +25,7 @@ header(class="page-header")
             //active
             <div class="burger__right __js"></div>
 
-          div(class="page-header__social __js")
+          div(class="page-header__social __js page-header__social--" + showSocialMobile)
             - social = ['phone', 'percent'];
             - classSocialDirection = 'vertical';
             include ../blocks/social.pug

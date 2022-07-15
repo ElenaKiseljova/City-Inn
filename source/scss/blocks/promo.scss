@@ -1,19 +1,18 @@
 .promo {
   position: relative;
 
-  display: flex;
-
-  align-items: stretch;
-  justify-content: flex-start;
-
   @extend %w100;
 
   min-height: 100vh;
 
   overflow: visible;
 
-  &--home {
-    padding-bottom: 40px;
+  &--home,
+  &--smart {
+    display: flex;
+
+    align-items: stretch;
+    justify-content: flex-start;
   }
 
   @media screen and (min-width: $tablet) {
@@ -22,28 +21,20 @@
 
   @media screen and (min-width: $desktop) {
     min-height: 100vh;
-
-    &--home {
-      padding-bottom: 61px;
-    }
   }
 
   &__container {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-    justify-content: flex-start;
+    position: relative;
 
     overflow: visible;
+
+    &--image {
+      z-index: 3;
+    }
   }
 
   &__img-wrapper {
-    position: absolute;
-
-    top: 0;
-    left: 0;
+    position: relative;
 
     display: flex;
 
@@ -52,26 +43,44 @@
     align-items: flex-start;
     justify-content: flex-end;
 
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: auto;
 
-    margin: 0 calc((100% - 100vw) / 2);
+    &--home,
+    &--smart {
+      padding-bottom: 40px;
+
+      overflow: hidden;
+    }
 
     &--restaurant,
     &--lobby,
-    &--about {
-      position: relative;
-
+    &--about,
+    &--starfit,
+    &--rooms,
+    &--standart {
       height: 100vw;
+    }
+
+    &--group,
+    &--conference,
+    &--conference-service {
+      height: 820px;
     }
 
     @media screen and (min-width: $tablet) {
       max-height: calc(384 / 768 * 100vw);
+
+      &--smart {
+        overflow: visible;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       &--home {
         max-height: 100vw;
+
+        padding-bottom: 61px;
       }
 
       &--restaurant,
@@ -80,8 +89,14 @@
       }
 
       &--about,
-      &--group {
+      &--group,
+      &--conference,
+      &--conference-service {
         max-height: calc(560 / 1440 * 100vw);
+      }
+
+      &--about {
+        padding-bottom: 43px;
       }
 
       &--starfit,
@@ -93,12 +108,14 @@
         max-height: calc(514 / 1440 * 100vw);
       }
 
-      &--double,
-      &--conference {
+      &--standart,
+      &--conference,
+      &--conference-service {
         max-height: calc(805 / 1440 * 100vw);
       }
 
-      &--conference-service {
+      &--conference,
+      &--conference-service-service {
         max-height: calc(555 / 1440 * 100vw);
       }
     }
@@ -110,9 +127,18 @@
     &--home,
     &--restaurant,
     &--lobby,
-    &--about {
+    &--about,
+    &--starfit {
       --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
       --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+      @include before-linear-gradient();
+    }
+
+    &--rooms,
+    &--standart {
+      --before-linear-gradient-from: rgba(0, 0, 0, 0.7);
+      --before-linear-gradient-to: rgba(0, 0, 0, 0.7);
 
       @include before-linear-gradient();
     }
@@ -146,24 +172,51 @@
 
     &--restaurant,
     &--lobby,
-    &--about {
+    &--about,
+    &--starfit,
+    &--rooms,
+    &--standart,
+    &--group,
+    &--conference,
+    &--conference-service {
       flex-direction: column;
     }
 
     &--restaurant {
-      padding: 71px 0 40px 0;
+      padding: 71px 0 40px;
     }
 
-    &--lobby,
+    &--lobby {
+      padding: 85px 0 40px;
+    }
+
     &--about {
-      padding: 85px 0 40px 0;
+      padding: 144px 0 40px;
+    }
+
+    &--starfit {
+      padding: 187px 0 93px;
+    }
+
+    &--rooms,
+    &--standart,
+    &--group,
+    &--conference,
+    &--conference-service {
+      padding: 127px 0 90px;
     }
 
     @media screen and (min-width: $tablet) {
 
       &--restaurant,
       &--lobby,
-      &--about {
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
         width: calc(500 / 694 * 100%);
 
         margin-left: auto;
@@ -177,21 +230,28 @@
       &--about {
         padding: 56px 0 42px 0;
       }
+
+      &--starfit {
+        padding: 261px 0 80px;
+      }
+
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
+        padding: 175px 0 80px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
+      display: grid;
 
-      &--restaurant,
-      &--lobby,
-      &--about {
-        display: grid;
+      column-gap: 112px;
 
-        column-gap: 112px;
+      width: 100%;
 
-        width: 100%;
-
-        margin: 0;
-      }
+      margin: 0;
 
       &--restaurant {
         grid-template-columns: 1fr 1fr;
@@ -201,13 +261,40 @@
         padding: 203px 0 150px 0;
       }
 
-      &--lobby,
-      &--about {
+      &--lobby {
         grid-template-columns: 1fr calc(805 / (1440 - 160) * 100%);
 
         align-items: start;
 
         padding: 100px 0 127px 0;
+      }
+
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
+        grid-template-columns: 1fr calc(719 / (1440 - 160) * 100%);
+
+        align-items: center;
+      }
+
+      &--about {
+        padding: 116px 0 112px 0;
+      }
+
+      &--starfit {
+        padding: 237px 0 142px;
+      }
+
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
+        padding: 236px 0 90px;
       }
     }
   }
@@ -261,7 +348,13 @@
 
       &--restaurant,
       &--lobby,
-      &--about {
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
         order: 2;
 
         margin-bottom: 0;
@@ -284,7 +377,13 @@
 
       &--restaurant,
       &--lobby,
-      &--about {
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
         display: flex;
 
         align-items: center;
@@ -296,7 +395,13 @@
 
       &--restaurant,
       &--lobby,
-      &--about {
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--group,
+      &--conference,
+      &--conference-service {
         order: 1;
       }
     }
@@ -359,23 +464,65 @@
     color: var(--color-page);
 
     &--restaurant {
-      transform: translate(10px, 6px);
+      transform: translate(-5px, 6px);
     }
 
-    &--lobby,
+    &--lobby {
+      transform: translate(-5px, 40px);
+    }
+
     &--about {
-      transform: translate(10px, 40px);
+      transform: translate(-5px, 6px);
+    }
+
+    &--starfit {
+      transform: translate(-5px, calc((122 / 174) * 100%));
+    }
+
+    &--rooms {
+      transform: translate(0, calc((64 / 232) * 100%));
+    }
+
+    &--standart {
+      transform: translate(0, calc((64 / 116) * 100%));
+    }
+
+    &--group,
+    &--conference,
+    &--conference-service {
+      @include font(96, 86, 700);
+
+      writing-mode: vertical-rl;
+
+      transform: rotate(-180deg) translate(0px, 40px);
+    }
+
+    &--smart {
+      margin-bottom: 41px;
+
+      @include font(90, 80, 700);
     }
 
     @media screen and (min-width: $mobile) {
 
       &--restaurant {
-        transform: translate(36px, 6px);
+        transform: translate(-4px, 6px);
       }
 
-      &--lobby,
+      &--lobby {
+        transform: translate(0, 40px);
+      }
+
       &--about {
-        transform: translate(40px, 40px);
+        transform: translate(0, 6px);
+      }
+
+      &--starfit {
+        transform: translate(0, calc((122 / 174) * 100%));
+      }
+
+      &--smart {
+        @include font(96, 86, 700);
       }
     }
 
@@ -384,18 +531,61 @@
 
       opacity: 0.5;
 
-      &--restaurant {
-        transform: translate(37px, 45%);
-      }
-
-      &--lobby,
-      &--about {
-        transform: translate(37px, 9px);
-
+      &--about,
+      &--rooms {
         br {
           display: none;
         }
       }
+
+      &--restaurant {
+        transform: translate(0, 45%);
+      }
+
+      &--lobby,
+      &--about {
+        transform: translate(0, 9px);
+      }
+
+      &--starfit {
+        transform: translate(0, calc((181 / 258) * 100%));
+      }
+
+      &--rooms {
+        transform: translate(0, calc((85 / 172) * 100%));
+      }
+
+      &--standart {
+        transform: translate(0, calc((85 / 172) * 100%));
+      }
+
+      &--group,
+      &--conference,
+      &--conference-service {
+        writing-mode: horizontal-tb;
+      }
+
+      &--group {
+        transform: translate(-3px, calc((42 / 172) * 100%));
+      }
+
+      &--conference {
+        transform: translate(-3px, calc((95 / 258) * 100%));
+      }
+
+      &--conference-service {
+        transform: translate(-3px, calc((95 / 172) * 100%));
+      }
+
+      &--smart {
+        margin: 0;
+
+        @include font(112, 90, 700);
+
+        transform: translate(0, 45px);
+      }
+
+
     }
 
     @media screen and (min-width: $desktop) {
@@ -404,13 +594,53 @@
       opacity: 0.6;
 
       &--restaurant {
-        transform: translate(74px, 45%);
+        transform: translate(-6px, 45%);
       }
 
-      &--lobby,
-      &--about {
-        transform: translate(74px, 50px);
+      &--lobby {
+        transform: translate(-6px, 50px);
       }
+
+      &--about {
+        transform: translate(-7px, 161px);
+      }
+
+      &--starfit {
+        transform: translate(0, calc((195 / 420) * 100%));
+      }
+
+      &--rooms {
+        transform: translate(0, calc((146 / 280) * 100%));
+      }
+
+      &--standart {
+        transform: translate(0, calc((121 / 280) * 100%));
+      }
+
+      &--group {
+        transform: translate(-6px, calc((70 / 140) * 100%));
+
+        br {
+          display: none;
+        }
+      }
+
+      &--conference,
+      &--conference-service {
+        transform: translate(-3px, calc((78 / 280) * 100%));
+      }
+
+      &--conference-service {
+        transform: translate(-3px, calc((136 / 260) * 100%));
+      }
+
+      &--smart {
+        @include font(200, 140, 700);
+
+        transform: translate(-112px, 37px);
+      }
+
+
     }
   }
 
@@ -418,20 +648,25 @@
     display: none;
 
     @media screen and (min-width: $desktop) {
-      position: relative;
+      display: flex;
 
-      z-index: 4;
+      &--home {
+        justify-content: flex-start;
+      }
 
-      display: block;
+      &--about {
+        --color-button: #{$starfit};
+        --border-color-button: #{$starfit};
+
+        justify-content: flex-end;
+      }
     }
   }
 
   &__buttons {
-    position: relative;
-
-    z-index: 4;
-
-    @extend %w100;
+    @media screen and (min-width: $mobile) {
+      // width: calc(100% - 80px);
+    }
 
     @media screen and (min-width: $tablet) {
       display: none;

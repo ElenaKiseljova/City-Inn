@@ -4,18 +4,19 @@ export default () => {
   const swipers = document.querySelectorAll('.swiper');
 
   swipers.forEach((swiperItem) => {
-    const prevButton = swiperItem.querySelector('.home__prev');
-    const nextButton = swiperItem.querySelector('.home__next');
+    const prevButton = swiperItem.closest('section').querySelector('.home__prev');
+    const nextButton = swiperItem.closest('section').querySelector('.home__next');
+    const pagination = swiperItem.closest('section').querySelector('.home__pagination');
 
     const swiperArgs = {
       slidesPerView: 1,
       spaceBetween: 0,
-      autoHeight: true,
+      // autoHeight: true,
       resizeObserver: true,
 
       // If we need pagination
       pagination: {
-        el: '.swiper-pagination',
+        el: pagination,
         clickable: true,
       },
     };

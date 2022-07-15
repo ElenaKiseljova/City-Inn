@@ -1,65 +1,33 @@
 -
-  slides = [
-    {
-      titlePosition: 'bl',
-      title: `
-        restaurant
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      //- more: {
-      //-   title: 'MENU',
-      //-   link: '#',
-      //-
-      //- },
-      book: {
-        title: 'забронювати',
-        link: '#',
-
-      },
+  attr = {
+    sectionName: 'restaurant',
+    title: `
+      restaurant
+    `,
+    contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
+    contentBottom: 'БУДЕ СМАЧНО!',
+    buttonsJustify: 'start',
+    book: {
+      title: 'забронювати',
+      link: '#',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        restaurant
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      //- more: {
-      //-   title: 'MENU',
-      //-   link: '#',
-      //-
-      //- },
-      book: {
-        title: 'забронювати',
-        link: '#',
-
-      },
+    more: {
+      title: '',
+      link: '',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        restaurant
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      //- more: {
-      //-   title: 'MENU',
-      //-   link: '#',
-      //-
-      //- },
-      book: {
-        title: 'забронювати',
-        link: '#',
+    navigation: 0,
+    images: [
+      'restaurant', 'restaurant'
+    ],
+    mode: 'horizontal',
+  };
 
-      },
-    },
-  ];
-
-+home(slides, 'horizontal', 'start', 0, 'restaurant')
++home(attr)
   div.home__worktime.worktime
     div.worktime__clock
       svg(width="24" height="24")
         use(xlink:href="img/sprites/sprite-mono.svg#icon-clock")
 
     span 7:00 до 22:00.
+
+

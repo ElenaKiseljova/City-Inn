@@ -1,7 +1,13 @@
 .social {
-  @extend %dfacjs;
+  display: flex;
 
-  @extend %w100;
+  align-items: center;
+  justify-content: start;
+
+  width: fit-content;
+
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 
@@ -39,9 +45,23 @@
     font-size: rem(14);
     line-height: rem(17);
 
+    color: var(--color-social, #ffffff);
+
+    border-color: var(--color-social, #ffffff);
+
     svg {
       width: 16px;
       height: auto;
+
+      fill: var(--color-social, #ffffff);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__link {
+      svg {
+        width: 24px;
+      }
     }
   }
 }

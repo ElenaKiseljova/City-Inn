@@ -1,0 +1,22 @@
+include includes/variables.pug
+
+- titlePage = 'smart пропозиції';
+- whiteHeaderButtonsClass = 'button--white-50';
+- headerLogoClass = 'logo--black';
+
+include includes/mixins.pug
+
+include layout/head.pug
+
+body(style="--color-button:  var(--white); --border-color-button:  var(--white); --color-page: var(--white); background-color: var(--dark-gray);")
+  include layout/header.pug
+
+  main(class="page-main")
+    include pages/smart/promo.pug
+    include pages/contacts.pug
+
+  include layout/footer.pug
+
+
+
+

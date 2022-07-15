@@ -1,17 +1,20 @@
 .container {
-  @extend %w100;
+  width: 100%;
+  max-width: $size-desktop;
+
+  margin: 0 auto;
 
   padding: 0 $padding-mobile-small;
 
   @media screen and (min-width: $mobile) {
-    padding: 0 calc($padding-mobile / $size-mobile * 100vw);
+    padding: 0 $padding-mobile;
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 0 calc($padding-tablet / $size-tablet * 100vw);
+    padding: 0 $padding-tablet;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 0 calc($padding-desktop / $size-desktop * 100vw);
+    padding: 0 $padding-desktop;
   }
 }

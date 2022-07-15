@@ -25,46 +25,12 @@
     background-color: $dark-green;
   }
 
-  &--star {
+  &--starfit {
     background-color: $starfit;
   }
 
   &--about {
     background-color: $green;
-  }
-
-  &__slider {
-    @extend %w100;
-
-    background-color: inherit;
-  }
-
-  &__slider-wrapper {
-    background-color: inherit;
-  }
-
-  &__slide {
-    display: flex;
-
-    background-color: inherit;
-
-    box-sizing: border-box;
-
-    &.swiper-slide-active {
-      z-index: 1;
-    }
-
-    @media screen and (min-width: $tablet) {
-      min-height: calc(585 / 768 * 100vw);
-    }
-
-    @media screen and (min-width: $desktop) {
-      min-height: calc(840 / 1440 * 100vw);
-
-      &--star {
-        min-height: calc(600 / 1440 * 100vw);
-      }
-    }
   }
 
   &__container {
@@ -107,7 +73,7 @@
     }
   }
 
-  &__img {
+  &__slider {
     position: relative;
 
     width: 100vw;
@@ -116,22 +82,9 @@
 
     padding: 0;
 
-    &::before {
-      content: '';
-
-      display: block;
-
-      width: 100%;
-
-      padding-bottom: 100%;
-    }
+    background-color: inherit;
 
     @media screen and (min-width: $tablet) {
-      height: 100%;
-
-      &::before {
-        display: none;
-      }
 
       &--direct,
       &--reverse {
@@ -152,6 +105,42 @@
         margin: 0 calc((100% - 100vw)/ 2);
       }
     }
+  }
+
+  &__slider-wrapper {
+    height: 100%;
+
+    background-color: inherit;
+  }
+
+  &__slide {
+    height: 100vw;
+
+    background-color: inherit;
+
+    box-sizing: border-box;
+
+    &.swiper-slide-active {
+      z-index: 1;
+    }
+
+    @media screen and (min-width: $tablet) {
+      height: 100%;
+
+      min-height: calc(585 / 768 * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-height: calc(840 / 1440 * 100vw);
+
+      &--starfit {
+        min-height: calc(600 / 1440 * 100vw);
+      }
+    }
+  }
+
+  &__img {
+    @extend %img;
   }
 
   &__picture {
@@ -215,7 +204,10 @@
 
     white-space: nowrap;
 
-    &--tr {
+    &--smart,
+    &--conference,
+    &--restaurant,
+    &--about {
       top: 0;
       right: 0;
 
@@ -224,7 +216,9 @@
       text-align: right;
     }
 
-    &--bl {
+    &--lobby,
+    &--group,
+    &--starfit {
       bottom: 0;
       left: 0;
 
@@ -302,20 +296,70 @@
     margin-bottom: 40px;
 
     @media screen and (min-width: $tablet) {
-      flex-grow: 1;
+
+      // flex-grow: 1;
+      &--smart,
+      &--conference,
+      &--group {
+        margin-bottom: 91.5px;
+        ;
+      }
+
+      &--lobby,
+      &--restaurant {
+        margin-bottom: 39px;
+        ;
+      }
+
+      &--starfit {
+        margin-bottom: 105.5px;
+        ;
+      }
+
+      &--about {
+        margin-bottom: 117.5px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
 
-      &--direct,
-      &--reverse {
-        margin-bottom: 124px;
-      }
+      // &--direct,
+      // &--reverse {
+      //   margin-bottom: 124px;
+      // }
 
       &--horizontal {
         max-width: calc(717 / (1440 - 160)) * 100%;
 
         align-self: flex-end;
+      }
+
+      &--smart {
+        margin-bottom: 124px;
+      }
+
+      &--lobby {
+        margin-bottom: 42px;
+      }
+
+      &--conference {
+        margin-bottom: 95px;
+      }
+
+      &--group {
+        margin-bottom: 40px;
+      }
+
+      &--restaurant {
+        margin-bottom: 89px;
+      }
+
+      &--starfit {
+        margin-bottom: 79px;
+      }
+
+      &--about {
+        margin-bottom: 101px;
       }
     }
   }
@@ -349,13 +393,22 @@
   }
 
   &__buttons {
-    @extend %dfacjsb;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
 
     @extend %w100;
 
+    &--restaurant {
+      flex-direction: column;
+
+      align-items: flex-start;
+    }
+
     @media screen and (min-width: $tablet) {
       &--end {
-        justify-content: flex-end
+        justify-content: flex-end;
       }
 
       &--start {
@@ -367,6 +420,18 @@
 
         align-self: flex-end;
       }
+
+      &--restaurant {
+        flex-direction: row;
+
+        align-items: center;
+      }
+
+
+      &--starfitt {
+        justify-content: flex-start;
+      }
+
     }
 
     @media screen and (min-width: $desktop) {
@@ -393,10 +458,18 @@
       }
     }
 
+    &--restaurant {
+      margin-top: 30px;
+    }
+
     @media screen and (min-width: $tablet) {
       min-width: 155px;
 
       margin-left: 24px;
+
+      &--restaurant {
+        margin-top: 0;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -437,7 +510,12 @@
 
   &__prev,
   &__next {
-    position: static;
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
 
     width: 48px;
     height: 48px;
@@ -447,7 +525,6 @@
 
     transform: none;
 
-    &::before,
     &::after {
       display: none;
     }

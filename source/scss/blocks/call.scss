@@ -4,7 +4,10 @@
 
     @extend %button-reset;
 
-    @extend %dfacjs;
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
 
     width: 100%;
 
@@ -47,7 +50,10 @@
   }
 
   &__text {
-    @extend %dfacjc;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     width: 210px;
 
@@ -72,7 +78,10 @@
     top: 50%;
     right: 0;
 
-    @extend %dfacjc;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     width: 48px;
 

@@ -41,7 +41,10 @@
 
   &__left,
   &__right {
-    @extend %dfasjsb;
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
 
     flex-direction: column;
   }
@@ -72,7 +75,10 @@
   }
 
   &__item {
-    @extend %dfasjs;
+    display: flex;
+
+    align-items: start;
+    justify-content: start;
 
     flex-direction: column;
 

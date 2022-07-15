@@ -1,0 +1,23 @@
+include includes/variables.pug
+
+- titlePage = 'standart double';
+- whiteHeaderButtonsClass = 'button--white-50';
+- headerLogoClass = 'logo--yellow';
+- showSocialMobile = 'show';
+
+include includes/mixins.pug
+
+include layout/head.pug
+
+body(style="--color-button:  var(--white); --border-color-button:  var(--white); --color-page: var(--white); background-color: var(--blue);")
+  include layout/header.pug
+
+  main(class="page-main")
+    include pages/group/promo.pug
+    include pages/contacts.pug
+
+  include layout/footer.pug
+
+
+
+

@@ -1,65 +1,28 @@
 -
-  slides = [
-    {
-      titlePosition: 'tr',
-      title: `
-        smart
-        <br />
-        номера
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ВИСПАЛИСЬ',
-      contentBottom: 'БУДЕ ТЕПЛО!',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
-
-      },
-      book: {
-        title: 'BOOK NOW',
-        link: '#',
-
-      },
+  attr = {
+    sectionName: 'smart',
+    title: `
+      smart
+      <br />
+      номера
+    `,
+    contentTop: 'ЩОБ ВИ ГАРНО ВИСПАЛИСЬ',
+    contentBottom: 'БУДЕ ТЕПЛО!',
+    buttonsJustify: 'end',
+    book: {
+      title: 'BOOK NOW',
+      link: '#',
     },
-    {
-      titlePosition: 'tr',
-      title: `
-        smart
-        <br />
-        номера
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ВИСПАЛИСЬ',
-      contentBottom: 'БУДЕ ТЕПЛО!',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
-
-      },
-      book: {
-        title: 'BOOK NOW',
-        link: '#',
-
-      },
+    more: {
+      title: 'ДІЗНАТИСЬ БІЛЬШЕ',
+      link: '#',
     },
-    {
-      titlePosition: 'tr',
-      title: `
-        smart
-        <br />
-        номера
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ВИСПАЛИСЬ',
-      contentBottom: 'БУДЕ ТЕПЛО!',
-      more: {
-        title: 'ДІЗНАТИСЬ БІЛЬШЕ',
-        link: '#',
+    navigation: 0,
+    images: [
+      'smart', 'smart', 'smart'
+    ],
+    mode: 'direct',
+  };
 
-      },
-      book: {
-        title: 'BOOK NOW',
-        link: '#',
++home(attr)
 
-      },
-    },
-  ];
-
-+home(slides, 'direct', 'end', 0, 'smart')

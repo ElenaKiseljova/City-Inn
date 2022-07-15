@@ -1,53 +1,28 @@
 -
-  slides = [
-    {
-      titlePosition: 'bl',
-      title: `
-        group
-        <br />
-        request
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //more: '#',
-      book: {
-        title: 'GROUP BOOKING',
-        link: '#',
-
-      },
+  attr = {
+    sectionName: 'group',
+    title: `
+      group
+      <br />
+      request
+    `,
+    contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
+    contentBottom: 'БУДЕ SMART!',
+    buttonsJustify: 'end',
+    book: {
+      title: 'GROUP BOOKING',
+      link: '#',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        group
-        <br />
-        request
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //more: '#',
-      book: {
-        title: 'GROUP BOOKING',
-        link: '#',
-
-      },
+    more: {
+      title: '',
+      link: '',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        group
-        <br />
-        request
-      `,
-      contentTop: 'ЩОБ ВИ ПРОВЕЛИ ГАРНИЙ ЗАХІД.',
-      contentBottom: 'БУДЕ SMART!',
-      //more: '#',
-      book: {
-        title: 'GROUP BOOKING',
-        link: '#',
+    navigation: 0,
+    images: [
+      'group', 'group'
+    ],
+    mode: 'direct',
+  };
 
-      },
-    },
-  ];
++home(attr)
 
-+home(slides, 'direct', 'end', 0, 'group')

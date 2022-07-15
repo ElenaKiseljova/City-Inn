@@ -1,59 +1,26 @@
 -
-  slides = [
-    {
-      titlePosition: 'bl',
-      title: `
-        lobby <br />bar
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      more: {
-        title: 'MENU',
-        link: '#',
-
-      },
-      book: {
-        title: 'RESERVE',
-        link: '#',
-
-      },
+  attr = {
+    sectionName: 'lobby',
+    title: `
+      lobby <br />bar
+    `,
+    contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
+    contentBottom: 'БУДЕ СМАЧНО!',
+    buttonsJustify: 'start',
+    book: {
+      title: 'RESERVE',
+      link: '#',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        lobby <br />bar
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      more: {
-        title: 'MENU',
-        link: '#',
-
-      },
-      book: {
-        title: 'RESERVE',
-        link: '#',
-
-      },
+    more: {
+      title: 'MENU',
+      link: '#',
     },
-    {
-      titlePosition: 'bl',
-      title: `
-        lobby <br />bar
-      `,
-      contentTop: 'ЩОБ ВИ ГАРНО ПРОВОДИЛИ ВІЛЬНИЙ ЧАС.',
-      contentBottom: 'БУДЕ СМАЧНО!',
-      more: {
-        title: 'MENU',
-        link: '#',
+    navigation: 0,
+    images: [
+      'lobby', 'lobby'
+    ],
+    mode: 'horizontal',
+  };
 
-      },
-      book: {
-        title: 'RESERVE',
-        link: '#',
++home(attr)
 
-      },
-    },
-  ];
-
-+home(slides, 'horizontal', 'start', 0, 'lobby')

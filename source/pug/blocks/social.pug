@@ -1,7 +1,7 @@
-ul(class="social social--"+classSocialDirection)
+ul(class="social social--" + classSocialDirection)
   each val, index in social
     li(class="social__item social__item--" + classSocialDirection)
-      a(class="social__link button button--circle button--" + classSocialColor href="#" aria-label= val)
+      a(class="social__link button button--circle" href="#" aria-label= val)
         if val === 'lang'
           span= anotherLang
         else

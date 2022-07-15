@@ -41,7 +41,10 @@
   &__content {
     position: relative;
 
-    @extend %dfasjs;
+    display: flex;
+
+    align-items: start;
+    justify-content: start;
 
     flex-direction: column;
 
@@ -104,11 +107,19 @@
   }
 
   &__address {
-    flex-grow: 1;
+    // flex-grow: 1;
 
     margin-bottom: 32px;
 
     font-style: normal;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 98px;
+    }
   }
 
   &__list {
@@ -129,7 +140,10 @@
   }
 
   &__item {
-    @extend %dfasjs;
+    display: flex;
+
+    align-items: start;
+    justify-content: start;
 
     flex-direction: column;
 

@@ -1,9 +1,16 @@
+import gsapAnimations from './gsap-animations';
 import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
 import map from './map';
 
 document.addEventListener('DOMContentLoaded', () => {
+  try {
+    gsapAnimations();
+  } catch (error) {
+    console.log(error.message);
+  }
+
   try {
     menu();
   } catch (error) {

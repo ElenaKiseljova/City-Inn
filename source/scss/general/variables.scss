@@ -1,16 +1,7 @@
-:root {
-  --dark-green: #1E2927;
-  --gray: #363530;
-  --green: #858569;
-
-  --color-restaurant: #FBF8E4;
-  --color-lobby: #FBF8E4;
-  --color-about: #FBF8E4;
-}
-
 $white: #FFFFFF;
 $white-90: rgba(255, 255, 255, 0.9);
 $white-80: rgba(255, 255, 255, 0.8);
+$white-70: rgba(255, 255, 255, 0.7);
 $white-60: rgba(255, 255, 255, 0.6);
 $white-50: rgba(255, 255, 255, 0.5);
 $white-40: rgba(255, 255, 255, 0.4);
@@ -25,9 +16,8 @@ $beige: #C4A282;
 
 $starfit: #FFBD4D;
 
-$restaurant: #FBF8E4;
-
 $yellow: #FF9606;
+$light-yellow: #FBF8E4;
 $yellow-70: rgba(255, 150, 6, 0.7);
 $dark-yellow: #D78C4E;
 
@@ -40,6 +30,27 @@ $light-green: #DEE4D1;
 $light-green-40: rgba(222, 228, 209, 0.4);
 
 // $black-20: rgba(0, 0, 0, 0.2);
+
+:root {
+  --green: #{$green};
+  --dark-green: #{$dark-green};
+
+  --gray: #{$gray};
+  --dark-gray: #{$dark-gray};
+
+  --blue: #{$blue};
+  --dark-blue: #{$dark-blue};
+
+  --beige: #{$beige};
+
+  --light-yellow: #{$light-yellow};
+  --starfit: #{$starfit};
+  --white: #{$white};
+
+  --color-button: #{$white};
+  --border-color-button: #{$white};
+  --background-color-button: transparent;
+}
 
 /* Media */
 $desktop: 1440px;
