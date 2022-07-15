@@ -1,6 +1,6 @@
 include includes/variables.pug
 
-- titlePage = 'group request';
+- titlePage = 'smart конференц-зал';
 - whiteHeaderButtonsClass = 'button--white-50';
 - headerLogoClass = 'logo--yellow';
 - showSocialMobile = 'show';
@@ -9,11 +9,11 @@ include includes/mixins.pug
 
 include layout/head.pug
 
-body(style="--color-button:  var(--white); --border-color-button:  var(--white); --color-page: var(--white); background-color: var(--green);")
+body(style="--color-button:  var(--white); --border-color-button:  var(--white); --color-page: var(--white); background-color: var(--beige);")
   include layout/header.pug
 
   main(class="page-main")
-    include pages/conference/promo.pug
+    include pages/conference-service/promo.pug
     include pages/contacts.pug
 
   include layout/footer.pug
