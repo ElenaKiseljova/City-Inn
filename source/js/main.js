@@ -3,6 +3,7 @@ import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
 import map from './map';
+import cards from './cards';
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -31,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   try {
     map();
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  try {
+    cards();
   } catch (error) {
     console.log(error.message);
   }

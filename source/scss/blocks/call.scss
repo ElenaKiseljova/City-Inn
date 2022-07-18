@@ -92,7 +92,9 @@
     transform: translateY(-50%);
 
     svg {
-      fill: $white;
+      fill: none;
+
+      stroke: $white;
     }
   }
 }

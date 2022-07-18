@@ -21,6 +21,10 @@
 
   @media screen and (min-width: $desktop) {
     min-height: 100vh;
+
+    &--smart {
+      min-height: calc(520 / 1440 * 100vw);
+    }
   }
 
   &__container {

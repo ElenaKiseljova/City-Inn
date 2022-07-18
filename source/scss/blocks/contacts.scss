@@ -51,7 +51,7 @@
     padding: 40px 0;
 
     @media screen and (min-width: $tablet) {
-      padding: 234px 0 40px 40px;
+      padding: 234px 4px 40px 40px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -107,8 +107,6 @@
   }
 
   &__address {
-    // flex-grow: 1;
-
     margin-bottom: 32px;
 
     font-style: normal;
