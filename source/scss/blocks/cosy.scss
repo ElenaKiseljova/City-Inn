@@ -1,0 +1,231 @@
+.cosy {
+  @extend %w100;
+
+  &__container {
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+
+      align-items: stretch;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+
+    height: 100vw;
+
+    overflow: visible;
+
+    @media screen and (min-width: $tablet) {
+      height: auto;
+      min-height: 478px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-height: 840px;
+    }
+  }
+
+  &__title {
+    @extend %w100;
+
+    margin-top: 29px;
+
+    @include font(64, 78, 300);
+
+    color: var(--color-page, #ffffff);
+
+    &--mobile {
+      position: absolute;
+
+      z-index: 3;
+    }
+
+    &--desktop {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: fit-content;
+      min-width: 538px;
+
+      margin-top: 0;
+      margin-right: calc((114px + 100%) - 538px);
+      margin-bottom: 60px;
+      margin-left: -114px;
+
+      @include font(96, 86, 300);
+
+      opacity: 0.8;
+
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-width: 720px;
+
+      margin-right: calc(100% - 720px);
+      margin-bottom: 100px;
+      margin-left: 0;
+
+      @include font(144, 140, 300);
+
+      opacity: 0.6;
+    }
+  }
+
+  &__slider {
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    @media screen and (min-width: $tablet) {
+      width: 50vw;
+
+      margin: 0 0 0 calc(100% - 50vw);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__slide {
+    box-sizing: border-box;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @extend %w100;
+
+    min-height: 100vw;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      position: relative;
+
+      z-index: 1;
+
+      height: auto;
+      min-height: auto;
+
+      padding: 54px 0 54px 37px;
+
+      overflow: visible;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 34px 114px 70px 105px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    @extend %w100;
+  }
+
+  &__text {
+    @extend %w100;
+
+    color: var(--color-page, #ffffff);
+
+    &--top {
+      @include font(14, 21, 400);
+    }
+
+    &--bottom {
+      margin-top: 20px;
+
+      @include font(14, 20, 600);
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--top {
+        @include font(12, 20, 400);
+      }
+
+      &--bottom {
+        @include font(12, 20, 600);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(14, 20, 400);
+
+      opacity: 0.6;
+
+      &--bottom {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      margin-top: 65px;
+
+      opacity: 0.6;
+    }
+  }
+
+  &__pagination {
+    &--mobile {
+      position: static;
+
+      margin-top: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--mobile {
+        display: none;
+      }
+
+      &--tablet {
+        &.swiper-pagination {
+          bottom: 44px;
+
+          margin-left: calc((100% - 50vw) / 2);
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+}

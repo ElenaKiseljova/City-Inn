@@ -1,0 +1,30 @@
+.navigation {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 120px;
+
+  &__prev,
+  &__next {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0;
+    padding: 5px;
+
+    transform: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

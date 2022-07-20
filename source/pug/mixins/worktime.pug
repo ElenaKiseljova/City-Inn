@@ -1,0 +1,9 @@
+mixin worktime(sectionName = 'promo', sectionModificator = '', time = '7:00 до 22:00.')
+  - const additionalClassesWorktime = sectionName + '__worktime ' + ((sectionModificator !== '') ? sectionName + '__worktime--' + sectionModificator : '');
+  div(class="worktime " + additionalClassesWorktime)
+    div.worktime__clock
+      svg(width="48" height="48")
+        use(xlink:href="img/sprites/sprite-mono.svg#icon-clock")
+
+    span
+      | #{time}

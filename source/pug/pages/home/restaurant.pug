@@ -23,11 +23,6 @@
   };
 
 +home(attr)
-  div.home__worktime.worktime
-    div.worktime__clock
-      svg(width="48" height="48")
-        use(xlink:href="img/sprites/sprite-mono.svg#icon-clock")
-
-    span 7:00 до 22:00.
+  +worktime('home', '', '7:00 до 22:00.')
 
 

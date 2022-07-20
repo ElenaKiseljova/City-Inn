@@ -24,6 +24,8 @@ export default () => {
   const logoHeader = document.querySelector('.logo--header');
 
   if (burger && pageHeaderMenu && logoHeader) {
+    pageHeaderMenu.classList.add('loaded');
+
     const burgerLeft = burger.querySelector('.burger__left');
     const burgerRight = burger.querySelector('.burger__right');
 

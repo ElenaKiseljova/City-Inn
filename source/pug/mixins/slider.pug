@@ -1,0 +1,12 @@
+mixin slider(sectionName = 'home', sectionModificator = '')
+  - const additionalClassesSwiper = sectionName + '__slider ' + ((sectionModificator !== '') ? (sectionName + '__slider--' + sectionModificator ): '');
+  - const additionalClassesSwiperWrapper = sectionName + '__slider-wrapper ' + ((sectionModificator !== '') ? (sectionName + '__slider-wrapper--' + sectionModificator) : '');
+  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
+
+  div(class="swiper " +  additionalClassesSwiper)
+    div(class="swiper-wrapper " + additionalClassesSwiperWrapper)
+      if block
+        block
+      else
+        div(class="swiper-slide " + additionalClassesSwiperSlide)
+          | Empty slide

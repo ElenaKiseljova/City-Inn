@@ -1,0 +1,11 @@
+.pagination {
+  @extend %w100;
+
+  .swiper-pagination-bullet {
+    background-color: $white-40;
+
+    &-active {
+      background-color: $white-90;
+    }
+  }
+}

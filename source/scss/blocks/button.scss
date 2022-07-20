@@ -110,9 +110,6 @@
   &--white,
   &--smart,
   &--book-now {
-    --color-button: #{$white};
-    --border-color-button: #{$white};
-
     &:active {
       --color-button: #{$yellow};
       --background-color-button: #{$white-80};

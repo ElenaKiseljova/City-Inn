@@ -26,6 +26,8 @@
     margin: 0;
     padding: 0;
 
+    cursor: pointer;
+
     transition: height 0.5s;
 
     @media screen and (min-width: $desktop) {
@@ -214,16 +216,10 @@
   &__pagination {
     position: static;
 
-    @extend %w100;
+    margin-bottom: 40px;
 
-    padding-bottom: 40px;
-
-    .swiper-pagination-bullet {
-      background-color: $white-40;
-
-      &-active {
-        background-color: $white-90;
-      }
+    @media screen and (min-width: $desktop) {
+      display: none;
     }
   }
 
@@ -345,7 +341,7 @@
 
   &__button {
     @media screen and (min-width: $desktop) {
-      min-width: 272px;
+      min-width: calc(272 / 560 * 100%);
     }
   }
 }

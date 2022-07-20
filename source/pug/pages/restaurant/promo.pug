@@ -5,12 +5,7 @@
       | Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
 
   div(class="promo__bottom promo__bottom--" + sectionName)
-    div(class="promo__worktime worktime promo__worktime--" + sectionName)
-      div.worktime__clock
-        svg(width="24" height="24")
-          use(xlink:href="img/sprites/sprite-mono.svg#icon-clock")
-
-      span 7:00 до 22:00.
+    +worktime('promo', 'restaurant', '7:00 до 22:00.')
 
     a(class="promo__btn button button--white promo__btn--" + sectionName href="#")
       span забронювати

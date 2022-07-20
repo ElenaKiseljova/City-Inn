@@ -226,49 +226,48 @@ section.cards
 
         div(class="cards__bottom cards__bottom--" + oddEven)
           if slides.length > 0
-            div(class="cards__slider swiper")
-              div.cards__slider-wrapper.swiper-wrapper
-                each slide in slides
-                  - const slideImage = slide.image ?? '';
-                  - const slideTitle = slide.title ?? '';
-                  - const slideSubtitle = slide.subTitle ?? '';
-                  - const slideDescription = slide.description ?? '';
-                  - const slideServices = slide.services ?? [];
-                  - const slideBook = slide.book ?? {};
+            +slider('cards')
+              each slide in slides
+                - const slideImage = slide.image ?? '';
+                - const slideTitle = slide.title ?? '';
+                - const slideSubtitle = slide.subTitle ?? '';
+                - const slideDescription = slide.description ?? '';
+                - const slideServices = slide.services ?? [];
+                - const slideBook = slide.book ?? {};
 
-                  div(class="cards__slide swiper-slide")
-                    div(class="cards__img-wrapper")
-                      div.cards__img
-                        picture.cards__picture
-                          source(media="(min-width: 100px)" type="image/webp" srcset="img/smart/cards-" + slideImage + ".webp")
+                +slide('cards')
+                  div(class="cards__img-wrapper")
+                    div.cards__img
+                      picture.cards__picture
+                        source(media="(min-width: 100px)" type="image/webp" srcset="img/smart/cards-" + slideImage + ".webp")
 
-                          img(src="img/smart/cards-" + slideImage + ".jpg" alt="cards")
+                        img(src="img/smart/cards-" + slideImage + ".jpg" alt="cards")
 
-                    div.cards__content.cards__content--mobile
-                      if slideTitle.length > 0
-                        h4.cards__subtitle
-                          | !{slideTitle}
+                  div.cards__content.cards__content--mobile
+                    if slideTitle.length > 0
+                      h4.cards__subtitle
+                        | !{slideTitle}
 
-                      if slideDescription.length > 0
-                        div.cards__description
-                          | !{slideDescription}
+                    if slideDescription.length > 0
+                      div.cards__description
+                        | !{slideDescription}
 
-                      if slideServices.length > 0
-                        ul.cards__services.services
-                          for slideService in slideServices
-                            li.services__item
-                              div.services__icon
-                                svg(width="40" height="40")
-                                  use(xlink:href="img/sprites/sprite-mono.svg#icon-" + slideService.icon)
+                    if slideServices.length > 0
+                      ul.cards__services.services
+                        for slideService in slideServices
+                          li.services__item
+                            div.services__icon
+                              svg(width="40" height="40")
+                                use(xlink:href="img/sprites/sprite-mono.svg#icon-" + slideService.icon)
 
-                              h5.services__name
-                                | #{slideService.title}
+                            h5.services__name
+                              | #{slideService.title}
 
-                      if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
-                        a(class="cards__button button button--white" href="" + slideBook.link)
-                          span #{slideBook.title}
+                    if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
+                      a(class="cards__button button button--white" href="" + slideBook.link)
+                        span #{slideBook.title}
 
-              div.cards__pagination.swiper-pagination
+            div.cards__pagination.pagination.swiper-pagination
 
           div(class="cards__content " + cardsContentClass)
             h4.cards__subtitle

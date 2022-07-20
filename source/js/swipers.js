@@ -1,15 +1,13 @@
 import Swiper from './swiper-bundle.min';
 
 export default () => {
-  // const DEVICE_WIDTH = window.innerWidth && document.documentElement.clientWidth
-  //   ? Math.min(window.innerWidth, document.documentElement.clientWidth)
-  //   : window.innerWidth
-  //   || document.documentElement.clientWidth
-  //   || document.getElementsByTagName('body')[0].clientWidth;
+  const DEVICE_WIDTH = window.innerWidth && document.documentElement.clientWidth
+    ? Math.min(window.innerWidth, document.documentElement.clientWidth)
+    : window.innerWidth
+    || document.documentElement.clientWidth
+    || document.getElementsByTagName('body')[0].clientWidth;
 
-  const swipers = document.querySelectorAll('.swiper');
-
-  swipers.forEach((swiperItem) => {
+  const swiperInit = (swiperItem, attr = {}) => {
     let prevButton = null;
     let nextButton = null;
     let pagination = null;
@@ -21,18 +19,42 @@ export default () => {
       resizeObserver: true,
     };
 
+    prevButton = swiperItem.closest('section').querySelector('.swiper-button-prev');
+    nextButton = swiperItem.closest('section').querySelector('.swiper-button-next');
+
     // Smart sliders
     if (swiperItem.classList.contains('cards__slider')) {
-      // swiperArgs.spaceBetween = parseInt(((DEVICE_WIDTH - swiperItem.offsetWidth) / 2), 10);
+      pagination = swiperItem.closest('.cards__item').querySelector('.swiper-pagination');
+    }
 
-      pagination = swiperItem.querySelector('.swiper-pagination');
+    // Restaurant sliders
+    if (swiperItem.classList.contains('cosy__slider')) {
+      if (DEVICE_WIDTH < 768) {
+        pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--mobile');
+      } else {
+        pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--tablet');
+      }
+    }
+
+    if (swiperItem.classList.contains('food__slider')) {
+      if (DEVICE_WIDTH < 768) {
+        pagination = swiperItem.closest('.food').querySelector('.food__pagination--mobile');
+      } else {
+        pagination = swiperItem.closest('.food').querySelector('.food__pagination--tablet');
+      }
+
+      if (DEVICE_WIDTH > 768) {
+        swiperArgs.spaceBetween = 75;
+      }
+    }
+
+    if (swiperItem.classList.contains('banquet__slider')) {
+      pagination = swiperItem.closest('.banquet').querySelector('.swiper-pagination');
     }
 
     // Home sliders
     if (swiperItem.classList.contains('home__slider')) {
-      prevButton = swiperItem.closest('section').querySelector('.swiper-button-prev');
-      nextButton = swiperItem.closest('section').querySelector('.swiper-button-next');
-      pagination = swiperItem.closest('section').querySelector('.swiper-pagination');
+      pagination = swiperItem.closest('.home').querySelector('.swiper-pagination');
     }
 
     if (pagination) {
@@ -45,7 +67,7 @@ export default () => {
     if (prevButton && nextButton) {
       swiperArgs.breakpoints = {
         // when window width is >= 1440px
-        1440: {
+        1366: {
           navigation: {
             nextEl: nextButton,
             prevEl: prevButton,
@@ -54,8 +76,74 @@ export default () => {
       };
     }
 
-    const swiperSlider = new Swiper(swiperItem, swiperArgs);
+    const swiperArgsMerged = {
+      ...swiperArgs,
+      ...attr,
+    };
 
-    // console.log(swiperSlider);
+    const swiperSlider = new Swiper(swiperItem, swiperArgsMerged);
+
+    return swiperSlider;
+  };
+
+  const swipers = document.querySelectorAll('.swiper:not(.event__slider)');
+
+  swipers.forEach((swiperItem) => {
+    swiperInit(swiperItem);
+  });
+
+  const eventSliderImages = document.querySelector('.event__slider--images');
+  const eventSliderText = document.querySelector('.event__slider--text');
+
+  if (eventSliderImages && eventSliderText) {
+    const attrText = {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      breakpoints: {
+        // when window width is >= 1440px
+        1366: {
+        },
+      },
+    };
+
+    const textEventSlider = swiperInit(eventSliderText, attrText);
+
+    const pagination = eventSliderImages.closest('section').querySelector('.swiper-pagination');
+
+    const attrImages = {
+      pagination: {
+        el: pagination,
+        clickable: true,
+      },
+    };
+
+    if (DEVICE_WIDTH > 1366) {
+      attrImages.spaceBetween = 280;
+    }
+
+    const imagesEventSlider = swiperInit(eventSliderImages, attrImages);
+
+    textEventSlider.on('slideChange', () => {
+      imagesEventSlider.slideTo(textEventSlider.activeIndex);
+    });
+
+    imagesEventSlider.on('slideChange', () => {
+      textEventSlider.slideTo(imagesEventSlider.activeIndex);
+    });
+  }
+
+  // Reloader
+  window.addEventListener('resize', () => {
+    const DEVICE_WIDTH_RESIZE = window.innerWidth && document.documentElement.clientWidth
+      ? Math.min(window.innerWidth, document.documentElement.clientWidth)
+      : window.innerWidth
+      || document.documentElement.clientWidth
+      || document.getElementsByTagName('body')[0].clientWidth;
+
+    if (DEVICE_WIDTH !== DEVICE_WIDTH_RESIZE) {
+      document.location.reload();
+    }
   });
 };

@@ -1,0 +1,37 @@
+- const cosyImages = ['cosy-1', 'cosy-1', 'cosy-1'];
+section.cosy
+  div.cosy__container.container
+    div.cosy__top
+      h2.cosy__title.cosy__title--mobile
+        | затишно
+
+      if cosyImages.length > 0
+        +slider('cosy')
+          each image in cosyImages
+            +slide('cosy')
+              div.cosy__img
+                picture.cosy__picture
+                  source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
+                  source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
+                  source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
+
+                  source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
+                  source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
+
+                  img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+
+        div.cosy__pagination.cosy__pagination--tablet.pagination.swiper-pagination
+    div.cosy__bottom
+      h2.cosy__title.cosy__title--desktop
+        | затишно
+
+      div.cosy__content
+        p.cosy__text.cosy__text--top
+          | Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни
+        p.cosy__text.cosy__text--bottom
+          | Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.
+
+      +navigation('cosy')
+
+      if cosyImages.length > 0
+        div.cosy__pagination.cosy__pagination--mobile.pagination.swiper-pagination

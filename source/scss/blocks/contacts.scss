@@ -185,7 +185,7 @@
     min-width: 100%;
 
     @media screen and (min-width: $desktop) {
-      min-width: 219px;
+      min-width: calc(219 / 501 * 100%);
     }
   }
 }

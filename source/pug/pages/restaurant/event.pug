@@ -1,0 +1,85 @@
+- const eventImages = ['event-1', 'food-1', 'food-2'];
+-
+  const eventText = [
+    {
+      title: 'ВЕСІЛЛЯ',
+      topText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+      bottomText: 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
+      button: {
+        text: 'ЗАБРОНЮВАТИ',
+        link: '#',
+      }
+    },
+    {
+      title: 'бенкет',
+      topText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+      bottomText: '',
+      button: {
+        text: 'ЗАБРОНЮВАТИ',
+        link: '#',
+      }
+    },
+    {
+      title: 'корпоратив',
+      topText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+      bottomText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+      button: {
+        text: 'ЗАБРОНЮВАТИ',
+        link: '#',
+      }
+    },
+  ];
+section.event
+  div.event__container.container
+    div.event__top
+      h2.event__title.event__title--mobile
+        | проведіть
+        br
+        | захід
+
+      if eventImages.length > 0
+        div.event__slider-container
+          +slider('event', 'images')
+            each image in eventImages
+              +slide('event', 'images')
+                div.event__img
+                  picture.event__picture
+                    source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
+                    source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
+                    source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
+
+                    source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
+                    source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
+
+                    img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+
+          div.event__pagination.pagination.swiper-pagination
+    div.event__bottom
+      h2.event__title.event__title--desktop
+        | проведіть
+        br
+        | захід
+
+      +navigation('event')
+
+      if eventText.length > 0
+        +slider('event', 'text')
+          each eventTextItem in eventText
+            +slide('event', 'text')
+              div.event__content
+                h3.event__subtitle
+                  | !{eventTextItem.title}
+
+                if eventTextItem.topText && eventTextItem.topText !== ''
+                  p.event__text.event__text--top
+                    | !{eventTextItem.topText}
+
+                if eventTextItem.bottomText && eventTextItem.bottomText !== ''
+                  p.event__text.event__text--bottom
+                    | !{eventTextItem.bottomText}
+
+              if eventTextItem.button && eventTextItem.button.text && eventTextItem.button.text !== '' && eventTextItem.button.link && eventTextItem.button.link !== ''
+                a(class="event__button button button--white-20  button--book-now" href="" + eventTextItem.button.link)
+                  span
+                    | !{eventTextItem.button.text}
+

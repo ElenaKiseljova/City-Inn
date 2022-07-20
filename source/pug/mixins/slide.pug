@@ -1,0 +1,8 @@
+mixin slide(sectionName = 'home', sectionModificator = '')
+  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
+
+  div(class="swiper-slide " + additionalClassesSwiperSlide)
+    if block
+      block
+    else
+      | Empty slide

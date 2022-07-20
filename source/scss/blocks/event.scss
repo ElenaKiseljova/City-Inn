@@ -1,0 +1,220 @@
+.event {
+  @extend %w100;
+
+  @media screen and (min-width: $desktop) {
+    padding: 140px 0 168px;
+
+    overflow: visible;
+  }
+
+  &__container {
+    @extend .cosy__container;
+  }
+
+  &__top {
+    @extend .cosy__top;
+  }
+
+  &__title {
+    @extend .cosy__title;
+
+    margin-top: 40px;
+
+    color: var(--color-page, #ffffff);
+
+    &--mobile {
+      @extend .cosy__title--mobile;
+    }
+
+    &--desktop {
+      @extend .cosy__title--desktop;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--desktop {
+        margin-top: 0;
+        margin-right: calc((100% + 117px) - 538px);
+        margin-bottom: 87px;
+        margin-left: -117px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--desktop {
+        margin-top: -70px;
+        margin-right: calc((100% + 184px) - 720px);
+        margin-bottom: 275px;
+        margin-left: -184px;
+      }
+    }
+  }
+
+  &__slider-container {
+    position: relative;
+
+    @extend .cosy__slider;
+
+    @media screen and (min-width: $desktop) {
+      height: auto;
+      min-height: 840px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      &--images {
+        overflow: visible;
+      }
+    }
+  }
+
+  &__slide {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $desktop) {
+      &--images {
+        &.swiper-slide-active {
+          .event__img {
+            transform-origin: left top;
+            transform: scale(1);
+
+            transition: transform 0.3s;
+          }
+        }
+
+        &.swiper-slide-next {
+          .event__img {
+            transform-origin: left top;
+            transform: scale(0.5);
+
+            transition: transform 0.3s;
+          }
+
+          &~.swiper-slide {
+            opacity: 0;
+
+            pointer-events: none;
+          }
+        }
+      }
+
+      &--text {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__bottom {
+    @extend .cosy__bottom;
+
+    padding-top: 95px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 53px 0 40px 39px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 0 0 87px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    @extend %w100;
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    margin-bottom: 20px;
+
+    @include font(24, 29, 700);
+
+    text-transform: uppercase;
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 44px;
+
+      @include font(30, 37, 700);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    @extend .cosy__text;
+
+    color: var(--color-page, #ffffff);
+
+    &--top {
+      @extend .cosy__text--top;
+    }
+
+    &--bottom {
+      @extend .cosy__text--bottom;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    margin-top: 40px;
+
+    @media screen and (min-width: $desktop) {
+      min-width: calc(200 / 554 * 100%);
+
+      margin-top: 67px;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      margin-bottom: 55px;
+      margin-left: 193px;
+    }
+  }
+
+  &__pagination {
+    @extend .cosy__pagination;
+
+    position: absolute;
+
+    &.swiper-pagination {
+      bottom: 39px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &.swiper-pagination {
+        bottom: 38px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+}

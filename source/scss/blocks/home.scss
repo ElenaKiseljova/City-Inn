@@ -440,6 +440,10 @@
       &--horizontal {
         align-self: flex-start;
       }
+
+      &--restaurant {
+        min-width: 448px;
+      }
     }
   }
 
@@ -465,7 +469,7 @@
     }
 
     @media screen and (min-width: $tablet) {
-      min-width: 155px;
+      min-width: calc(155 / 347 * 100%);
 
       margin-left: 24px;
 
@@ -486,11 +490,11 @@
       }
 
       &--restaurant {
-        min-width: 240px;
+        min-width: calc(240 / 448 * 100%);
       }
 
       &--group {
-        min-width: 269px;
+        min-width: calc(269 / 560 * 100%);
       }
     }
   }
@@ -501,34 +505,7 @@
     @media screen and (min-width: $desktop) {
       display: flex;
 
-      align-items: center;
-      justify-content: space-between;
-
-      width: 120px;
-
       margin-left: 48px;
-    }
-  }
-
-  &__prev,
-  &__next {
-    position: relative;
-
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-
-    width: 48px;
-    height: 48px;
-
-    margin: 0;
-    padding: 5px;
-
-    transform: none;
-
-    &::after {
-      display: none;
     }
   }
 
@@ -543,17 +520,7 @@
   &__pagination {
     position: static;
 
-    @extend %w100;
-
-    padding-bottom: 40px;
-
-    .swiper-pagination-bullet {
-      background-color: $white-40;
-
-      &-active {
-        background-color: $white-90;
-      }
-    }
+    margin-top: 40px;
 
     @media screen and (min-width: $tablet) {
       display: none;

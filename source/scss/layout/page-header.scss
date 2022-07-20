@@ -121,9 +121,11 @@
 
     transform: translateY(-100vh);
 
-    transition: transform 1s, opacity 1s;
-
     pointer-events: none;
+
+    &.loaded {
+      transition: transform 1s, opacity 1s;
+    }
 
     &.active {
       opacity: 1;

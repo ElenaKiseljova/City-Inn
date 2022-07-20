@@ -22,21 +22,20 @@ mixin home(attr = {})
         h2(class="home__title home__title--mobile title home__title--" + mode + " home__title--" + sectionName)
           | !{title}
 
-        div(class="home__slider swiper home__slider--" + mode)
-          div.home__slider-wrapper.swiper-wrapper
-            each image in images
-              - const imageName = image ?? 'smart';//заглушка для верстки потом надо переделать под реальные URLs
-              div(class="home__slide swiper-slide home__slide--" + sectionName)
-                div(class="home__img")
-                  picture.home__picture
-                    source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/" + imageName + "-desktop.webp")
-                    source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.webp")
-                    source(media="(min-width: 100px)" type="image/webp" srcset="img/home/" + imageName + "-mobile.webp")
+        +slider('home', mode)
+          each image in images
+            - const imageName = image ?? 'smart';//заглушка для верстки потом надо переделать под реальные URLs
+            +slide('home', sectionName)
+              div(class="home__img")
+                picture.home__picture
+                  source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/" + imageName + "-desktop.webp")
+                  source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.webp")
+                  source(media="(min-width: 100px)" type="image/webp" srcset="img/home/" + imageName + "-mobile.webp")
 
-                    source(media="(min-width: 1025px)" srcset="img/home/" + imageName + "-desktop.jpg")
-                    source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.jpg")
+                  source(media="(min-width: 1025px)" srcset="img/home/" + imageName + "-desktop.jpg")
+                  source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.jpg")
 
-                    img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
+                  img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
 
       div(class="home__bottom home__bottom--" + mode + " home__bottom--" + sectionName)
         h2(class=" home__title home__title--desktop title home__title--" + mode)
@@ -61,18 +60,9 @@ mixin home(attr = {})
               span #{book.title}
 
           if navigation === 1
-            div.home__navigation
-              button.home__prev.button.button--circle.button--white.swiper-button-prev
-                span.visually-hidden Prev
-                svg(width="48" height="48")
-                  use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-prev")
+            +navigation('home')
 
-              button.home__next.button.button--circle.button--white.swiper-button-next
-                span.visually-hidden Next
-                svg(width="48" height="48")
-                  use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-next")
-
-      div.home__pagination.swiper-pagination
+        div.home__pagination.pagination.swiper-pagination
 
 
 

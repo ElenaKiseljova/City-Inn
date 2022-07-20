@@ -258,7 +258,7 @@
       margin: 0;
 
       &--restaurant {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr calc(690 / (1440 - 160) * 100%);
 
         align-items: center;
 
@@ -372,6 +372,14 @@
     @include font(14, 21, 400);
 
     color: var(--color-page);
+
+    @media screen and (min-width: $tablet) {
+      @include font(18, 27, 400);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(24, 36, 400);
+    }
   }
 
   &__bottom {
@@ -413,7 +421,7 @@
 
   &__btn {
     &--restaurant {
-      min-width: 240px;
+      min-width: calc(240 / 478 * 100%);
     }
 
     &--lobby {

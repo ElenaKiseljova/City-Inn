@@ -1,0 +1,83 @@
+.banquet {
+  @extend %w100;
+
+  height: 100vw;
+
+  overflow: visible;
+
+  @media screen and (min-width: $tablet) {
+    height: 585px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: calc(440 / 1440 * 100vw);
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+
+    bottom: 42px;
+    left: 15px;
+
+    z-index: 2;
+
+    @extend %w100;
+
+    @include font(50, 74, 300);
+
+    color: var(--color-page);
+
+    @media screen and (min-width: $mobile) {
+      left: 40px;
+
+      @include font(64, 58, 300);
+    }
+
+    @media screen and (min-width: $tablet) {
+      top: 80px;
+      bottom: auto;
+      left: 38px;
+
+      @include font(96, 86, 300);
+
+      opacity: 0.8;
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: -70px;
+      left: 67px;
+
+      @include font(144, 140, 300);
+
+      opacity: 0.6;
+    }
+  }
+
+  &__slider {
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__pagination {
+    z-index: 2;
+
+    @media screen and (min-width: $tablet) {
+      &.swiper-pagination {
+        bottom: 38px;
+      }
+    }
+  }
+}

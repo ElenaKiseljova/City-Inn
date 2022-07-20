@@ -1,0 +1,241 @@
+.food {
+  @extend %w100;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 140px;
+
+    overflow: visible;
+  }
+
+  &__container {
+    @extend .cosy__container;
+  }
+
+  &__top {
+    @extend .cosy__top;
+
+
+    @media screen and (min-width: $tablet) {
+      order: 2;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    @extend .cosy__title;
+
+    margin-top: 42px;
+
+    color: var(--color-page, #ffffff);
+
+    &--mobile {
+      @extend .cosy__title--mobile;
+    }
+
+    &--desktop {
+      @extend .cosy__title--desktop;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--desktop {
+        margin-top: 0;
+        margin-right: calc(100% - 538px);
+        margin-bottom: 128px;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--desktop {
+        margin-right: calc(100% - 720px);
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &__slider-container {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      flex-direction: column;
+
+      align-content: flex-start;
+      justify-content: flex-start;
+
+      width: 50vw;
+      height: auto;
+      min-height: 840px;
+
+      margin: 0 calc(100% - 50vw) 0 0;
+
+      margin-top: -14px;
+      padding-top: 154px;
+      padding-bottom: 129px;
+
+      overflow: hidden;
+    }
+  }
+
+  &__slider {
+    @extend .cosy__slider;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 calc(100% - 50vw) 0 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 360px;
+      height: 420px;
+
+      margin: 0;
+
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $desktop) {
+      &.swiper-slide-active {
+        .food__img {
+          transform-origin: left top;
+          transform: translateY(0) scale(1);
+
+          transition: transform 0.3s;
+        }
+      }
+
+      &.swiper-slide-next {
+        .food__img {
+          transform-origin: left top;
+          transform: translateY(-154px) scale(2);
+
+          transition: transform 0.3s;
+        }
+
+        &~.swiper-slide {
+          opacity: 0;
+
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__bottom {
+    @extend .cosy__bottom;
+
+    @media screen and (min-width: $tablet) {
+      order: 1;
+
+      padding: 40px 34px 38px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 165px 203px 129px 0;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    @extend %w100;
+  }
+
+  &__text {
+    @extend .cosy__text;
+
+    color: var(--color-page, #ffffff);
+
+    &--top {
+      @extend .cosy__text--top;
+    }
+
+    &--bottom {
+      @extend .cosy__text--bottom;
+    }
+  }
+
+  &__buttons {
+    @extend %w100;
+
+    margin-top: 45px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 71px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      margin-top: 123px;
+    }
+  }
+
+  &__worktime {}
+
+  &__button {
+    min-width: 100%;
+
+    margin-top: 56px;
+
+    @media screen and (min-width: $desktop) {
+      min-width: calc(200 / 437 * 100%);
+
+      margin-top: 0;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__pagination {
+    @extend .cosy__pagination;
+
+    &--mobile {
+      @extend .cosy__pagination--mobile;
+    }
+
+    &--tablet {
+      @extend .cosy__pagination--tablet;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--tablet {
+        &.swiper-pagination {
+          left: auto;
+          right: 0;
+
+          margin-left: auto;
+          margin-right: calc((100% - 50vw) / 2);
+        }
+      }
+    }
+  }
+}
