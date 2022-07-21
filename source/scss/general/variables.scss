@@ -30,9 +30,12 @@ $light-green: #DEE4D1;
 $light-green-40: rgba(222, 228, 209, 0.4);
 $dirty-green: #858569;
 
+$black: #242424;
 // $black-20: rgba(0, 0, 0, 0.2);
 
 :root {
+  --background-color-page: #{$starfit};
+
   --green: #{$green};
   --dark-green: #{$dark-green};
 

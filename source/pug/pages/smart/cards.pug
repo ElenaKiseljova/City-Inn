@@ -264,7 +264,7 @@ section.cards
                               | #{slideService.title}
 
                     if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
-                      a(class="cards__button button button--white" href="" + slideBook.link)
+                      a(class="cards__button button" href="" + slideBook.link)
                         span #{slideBook.title}
 
             div.cards__pagination.pagination.swiper-pagination
@@ -288,5 +288,5 @@ section.cards
                       | #{cardService.title}
 
             if cardBook.title && cardBook.title.length > 0 && cardBook.link && cardBook.link.length
-              a(class="cards__button button button--white" href="" + cardBook.link)
+              a(class="cards__button button" href="" + cardBook.link)
                 span #{cardBook.title}

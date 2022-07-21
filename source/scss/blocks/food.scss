@@ -5,6 +5,10 @@
     padding-bottom: 140px;
 
     overflow: visible;
+
+    &--lobby {
+      padding: 0;
+    }
   }
 
   &__container {
@@ -16,7 +20,9 @@
 
 
     @media screen and (min-width: $tablet) {
-      order: 2;
+      &--direct {
+        order: 2;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -24,6 +30,10 @@
 
       align-items: stretch;
       justify-content: flex-start;
+
+      &--reverse {
+        order: 2;
+      }
     }
   }
 
@@ -49,6 +59,14 @@
         margin-bottom: 128px;
         margin-left: 0;
       }
+
+      &--lobby {
+        margin-right: calc((100% + 102px) - 538px);
+        margin-bottom: 47px;
+        margin-left: -102px;
+
+        opacity: 0.6;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -56,10 +74,30 @@
         margin-right: calc(100% - 720px);
         margin-bottom: 100px;
       }
+
+      &--lobby {
+        min-width: 1018px;
+
+        margin-right: calc(100% - 1018px);
+        margin-bottom: 48px;
+        margin-left: 0;
+
+        opacity: 0.8;
+      }
     }
   }
 
   &__slider-container {
+    @extend .cosy__slider;
+
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+      &--direct {
+        margin: 0 calc(100% - 50vw) 0 0;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       display: flex;
 
@@ -68,26 +106,29 @@
       align-content: flex-start;
       justify-content: flex-start;
 
-      width: 50vw;
+      width: calc(50vw - 105px);
       height: auto;
       min-height: 840px;
 
-      margin: 0 calc(100% - 50vw) 0 0;
+      margin: -14px calc(100% - 50vw) 0 105px;
 
-      margin-top: -14px;
       padding-top: 154px;
       padding-bottom: 129px;
 
       overflow: hidden;
+
+      &--lobby {
+        width: calc(50vw - 165px);
+
+        margin: 0 calc(100% - 50vw) 0 165px;
+
+        padding-bottom: 169px;
+      }
     }
   }
 
   &__slider {
-    @extend .cosy__slider;
-
-    @media screen and (min-width: $tablet) {
-      margin: 0 calc(100% - 50vw) 0 0;
-    }
+    width: 100%;
 
     @media screen and (min-width: $desktop) {
       width: 360px;
@@ -141,13 +182,31 @@
     @extend .cosy__bottom;
 
     @media screen and (min-width: $tablet) {
-      order: 1;
+      &--direct {
+        order: 1;
 
-      padding: 40px 34px 38px 0;
+        padding: 40px 34px 38px 0;
+      }
+
+      &--reverse {
+        padding: 40px 0 38px 34px;
+      }
+
+      &--lobby {
+        padding: 25px 0 38px 35px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 165px 203px 129px 0;
+
+      &--reverse {
+        order: 1;
+      }
+
+      &--lobby {
+        padding: 101px 88px 169px 0;
+      }
     }
   }
 
@@ -178,6 +237,10 @@
 
     @media screen and (min-width: $tablet) {
       margin-top: 71px;
+
+      &--lobby {
+        margin-top: 51px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -187,6 +250,10 @@
       justify-content: space-between;
 
       margin-top: 123px;
+
+      &--lobby {
+        margin-top: 32px;
+      }
     }
   }
 
@@ -201,6 +268,10 @@
       min-width: calc(200 / 437 * 100%);
 
       margin-top: 0;
+
+      &--breakfast {
+        --background-color-button: #{$white-20};
+      }
     }
   }
 

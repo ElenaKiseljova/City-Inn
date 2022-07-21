@@ -52,7 +52,7 @@
 
     @media screen and (min-width: $desktop) {
       &--horizontal {
-        grid-template-rows: calc(440 / 1440 * 100vw) calc(440 / 1440 * 100vw);
+        grid-template-rows: calc(440 / 1440 * 100vw) auto;
       }
     }
   }
@@ -235,59 +235,127 @@
 
     @media screen and (min-width: $tablet) {
       &--desktop {
+        position: static;
 
-        &.home__title--direct,
-        &.home__title--reverse {
-          display: block;
+        display: block;
 
-          position: static;
+        padding: 0;
 
-          padding: 0;
-
-          margin-bottom: 91.5px;
-
-          text-align: left;
+        &.home__title--lobby,
+        &.home__title--restaurant {
+          display: none;
         }
       }
 
       &--mobile {
-        &.home__title--horizontal {
+        display: none;
+
+        &.home__title--lobby,
+        &.home__title--restaurant {
+          display: block;
+
           padding-bottom: 38px;
         }
 
-        &.home__title--direct,
-        &.home__title--reverse {
-          display: none;
+        &.home__title--lobby {
+          br {
+            display: none;
+          }
+        }
+
+        &.home__title--restaurant {
+          top: auto;
+          right: auto;
+          bottom: 0;
+          left: 0;
         }
       }
 
-      &--lobby {
-        br {
-          display: none;
-        }
+      &--smart,
+      &--group,
+      &--starfit {
+        min-width: 419px;
+
+        margin-right: calc((100% + 105px) - 419px);
+        margin-left: -105px;
+        margin-bottom: 91.5px;
+
+        text-align: left;
+      }
+
+      &--starfit {
+        margin-bottom: 105.5px;
+      }
+
+      &--conference,
+      &--about {
+        min-width: 696px;
+
+        margin-right: calc(100% - 696px);
+        margin-left: 0;
+        margin-bottom: 91.5px;
+
+        text-align: left;
+      }
+
+      &--about {
+        margin-bottom: 117.5px;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      min-width: 779px; //star-fit section
+      &--mobile {
+        &.home__title--lobby {
+          margin-bottom: -94px;
 
-      &--desktop {
-        margin-right: -60px;
-        margin-bottom: 111px;
+          padding-bottom: 0;
+        }
+
+        &.home__title--restaurant {
+          margin-bottom: -16px;
+
+          padding-bottom: 0;
+        }
       }
 
-      &--mobile {
-        &.home__title--horizontal {
-          padding-bottom: 0;
+      &--smart {
+        min-width: 858px;
 
-          &.home__title--lobby {
-            margin-bottom: -90px;
-          }
+        margin-right: calc((100% + 247px) - 858px);
+        margin-bottom: 111px;
+        margin-left: -247px;
+      }
 
-          &.home__title--restaurant {
-            margin-bottom: -16px;
-          }
-        }
+      &--conference {
+        min-width: 1142px;
+
+        margin-right: calc(100% - 1142px);
+        margin-bottom: 111px;
+        margin-left: 0;
+      }
+
+      &--group {
+        min-width: 847px;
+
+        margin-right: calc((100% + 273px) - 847px);
+        margin-bottom: 95px;
+        margin-left: 273px;
+      }
+
+      &--starfit {
+        min-width: 779px;
+
+        margin-right: calc((100% + 159px) - 779px);
+        margin-bottom: 59px;
+        margin-left: -159px;
+      }
+
+      &--about {
+        min-width: 1023px;
+
+        margin-right: calc(100% - 1023px);
+        margin-bottom: 100px;
+        margin-left: 0;
       }
     }
   }
@@ -299,23 +367,22 @@
 
     @media screen and (min-width: $tablet) {
 
-      // flex-grow: 1;
       &--smart,
       &--conference,
       &--group {
         margin-bottom: 91.5px;
-        ;
+
       }
 
       &--lobby,
       &--restaurant {
         margin-bottom: 39px;
-        ;
+
       }
 
       &--starfit {
         margin-bottom: 105.5px;
-        ;
+
       }
 
       &--about {
@@ -324,12 +391,6 @@
     }
 
     @media screen and (min-width: $desktop) {
-
-      // &--direct,
-      // &--reverse {
-      //   margin-bottom: 124px;
-      // }
-
       &--horizontal {
         max-width: calc(717 / (1440 - 160)) * 100%;
 
@@ -434,6 +495,13 @@
         justify-content: flex-start;
       }
 
+      &--lobby {
+        min-width: 340px;
+      }
+
+      &--restaurant {
+        min-width: 350px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -443,6 +511,10 @@
 
       &--restaurant {
         min-width: 448px;
+      }
+
+      &--lobby {
+        min-width: 424px;
       }
     }
   }

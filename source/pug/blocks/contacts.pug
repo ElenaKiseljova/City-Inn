@@ -1,11 +1,11 @@
-section.contacts
+section(class="contacts contacts--" + pageName)
   div.contacts__container.container
     div(class="contacts__left")
       h2.contacts__title.contacts__title--mobile.title.title--light-green
         | contacts
       div(class="contacts__map" id="map")
 
-    div.contacts__content
+    div(class="contacts__content contacts__content--" + pageName)
       h2.contacts__title.contacts__title--desktop.title.title--light-green
         | contacts
 
@@ -46,6 +46,6 @@ section.contacts
             a(class="contacts__link" href="tel:+380322471551")
               |  + 38 (032) 247-15-51
 
-      a(class="contacts__button button button--white-10 button--book-now" href="#")
+      a(class="contacts__button button contacts__button--" + pageName href="#")
         span BOOK NOW
 

@@ -97,66 +97,6 @@
     line-height: rem(20);
   }
 
-  &--light-green {
-    --color-button: #{$light-green};
-    --border-color-button: #{$light-green};
-
-    &:active {
-      --color-button: #{$yellow};
-      --background-color-button: #{$white-80};
-    }
-  }
-
-  &--white,
-  &--smart,
-  &--book-now {
-    &:active {
-      --color-button: #{$yellow};
-      --background-color-button: #{$white-80};
-    }
-  }
-
-  &--white,
-  &--restaurant {
-    &:hover:not(:active) {
-      --background-color-button: #{$white-30};
-    }
-  }
-
-  &--smart {
-    &:hover:not(:active) {
-      --color-button: #{$yellow};
-      --background-color-button: #{$white-80};
-    }
-  }
-
-  &--book-now {
-    &:hover:not(:active) {
-      --background-color-button: #{$white-70};
-    }
-  }
-
-  &--white-50,
-  &--white-50-js {
-    --background-color-button: #{$white-50};
-
-    &::before {
-      opacity: 0.7;
-    }
-  }
-
-  &--white-30 {
-    --background-color-button: #{$white-30};
-  }
-
-  &--white-20 {
-    --background-color-button: #{$white-20};
-  }
-
-  &--white-10 {
-    --background-color-button: #{$white-10};
-  }
-
   @media screen and (min-width: $tablet) {
     padding: 14.5px 13px;
 

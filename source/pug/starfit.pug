@@ -1,7 +1,7 @@
 include includes/variables.pug
 
 - titlePage = 'Starfit';
-- whiteHeaderButtonsClass = 'button--white-50';
+- pageName = 'starfit';;
 - headerLogoClass = 'logo--black';
 - showSocialMobile = 'show';
 
@@ -9,7 +9,7 @@ include includes/mixins.pug
 
 include layout/head.pug
 
-body(style="--color-button:  var(--starfit); --border-color-button:  var(--starfit); --color-page: var(--starfit); background-color: var(--dark-gray);")
+body(style="--color-button:  var(--starfit); --border-color-button:  var(--starfit); --color-page: var(--starfit); --background-color-page: var(--dark-gray);")
   include layout/header.pug
 
   main(class="page-main")

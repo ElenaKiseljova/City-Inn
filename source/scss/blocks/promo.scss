@@ -523,6 +523,10 @@
 
       &--lobby {
         transform: translate(0, 40px);
+
+        br {
+          display: none;
+        }
       }
 
       &--about {

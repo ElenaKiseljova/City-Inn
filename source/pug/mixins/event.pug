@@ -1,0 +1,78 @@
+mixin event(attr = {})
+  - const title = attr.title ?? '';
+
+  - const eventImages = attr.eventImages ?? [];
+  - const eventText = attr.eventText ?? [];
+  - const eventContent = attr.eventContent ?? null;
+
+  section(class="event event--" + pageName)
+    div.event__container.container
+      div(class="event__top event__top--" + pageName)
+        h2(class="event__title event__title--mobile event__title--" + pageName)
+          | !{title}
+
+        if eventImages.length > 0
+          div(class="event__slider-container event__slider-container--" + pageName)
+            +slider('event', 'images')
+              each image in eventImages
+                +slide('event', 'images')
+                  div.event__img
+                    picture.event__picture
+                      source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
+                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
+                      source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
+
+                      source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
+                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
+
+                      img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+
+            div.event__pagination.pagination.swiper-pagination
+      div(class="event__bottom event__bottom--" + pageName)
+        h2(class="event__title event__title--desktop event__title--" + pageName)
+          | !{title}
+
+        +navigation('event', pageName)
+
+        if eventText.length > 0
+          +slider('event', 'text')
+            each eventTextItem in eventText
+              +slide('event', 'text')
+                div.event__content
+                  if eventTextItem.title && eventTextItem.title !== ''
+                    h3.event__subtitle
+                      | !{eventTextItem.title}
+
+                  if eventTextItem.topText && eventTextItem.topText !== ''
+                    p.event__text.event__text--top
+                      | !{eventTextItem.topText}
+
+                  if eventTextItem.bottomText && eventTextItem.bottomText !== ''
+                    p.event__text.event__text--bottom
+                      | !{eventTextItem.bottomText}
+
+                if eventTextItem.button && eventTextItem.button.text && eventTextItem.button.text !== '' && eventTextItem.button.link && eventTextItem.button.link !== ''
+                  a(class="button event__button event__button--restaurant" href="" + eventTextItem.button.link)
+                    span
+                      | !{eventTextItem.button.text}
+
+        else if eventContent
+          div.event__content
+            if eventContent.title && eventContent.title !== ''
+              h3.event__subtitle
+                | !{eventContent.title}
+
+            if eventContent.topText && eventContent.topText !== ''
+              p.event__text.event__text--top
+                | !{eventContent.topText}
+
+            if eventContent.bottomText && eventContent.bottomText !== ''
+              p.event__text.event__text--bottom
+                | !{eventContent.bottomText}
+
+          if eventContent.button && eventContent.button.text && eventContent.button.text !== '' && eventContent.button.link && eventContent.button.link !== ''
+            a(class="button event__button event__button--restaurant" href="" + eventContent.button.link)
+              span
+                | !{eventContent.button.text}
+
+

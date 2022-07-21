@@ -1,0 +1,69 @@
+mixin food(attr = {})
+  - const foodImages = attr.foodImages ?? [];
+  - const foodTitle = attr.foodTitle ?? '';
+  - const foodTextTop = attr.foodTextTop ?? '';
+  - const foodTextBottom  = attr.foodTextBottom ?? '';
+
+  - const foodModificator = pageName ?? '';
+
+  - const foodMode = attr.foodMode ?? 'reverse';
+
+  - const foodModificateSectionClass = (foodModificator !== '') ? ' food--' + foodModificator : '';
+  - const foodModificateTopClass = (foodModificator !== '') ? ' food__top--' + foodModificator : '';
+  - const foodModificateBottomClass = (foodModificator !== '') ? ' food__bottom--' + foodModificator : '';
+  - const foodModificateTitleClass = (foodModificator !== '') ? ' food__title--' + foodModificator : '';
+  - const foodModificateSliderContainerClass = (foodModificator !== '') ? ' food__slider-container--' + foodModificator : '';
+
+  - const foodModeSectionClass = (foodMode !== '') ? ' food--' + foodMode : '';
+  - const foodModeTopClass = (foodMode !== '') ? ' food__top--' + foodMode : '';
+  - const foodModeBottomClass = (foodMode !== '') ? ' food__bottom--' + foodMode : '';
+  - const foodModeTitleClass = (foodMode !== '') ? ' food__title--' + foodMode : '';
+  - const foodModeSliderContainerClass = (foodMode !== '') ? ' food__slider-container--' + foodMode : '';
+
+  section(class="food " + foodModeSectionClass + foodModificateSectionClass)
+    div.food__container.container
+      div(class="food__top " + foodModeTopClass + foodModificateTopClass)
+        h2(class="food__title food__title--mobile " + foodModeTitleClass + foodModificateTitleClass)
+          | !{foodTitle}
+
+        if foodImages.length > 0
+          div(class="food__slider-container " + foodModeSliderContainerClass + foodModificateSliderContainerClass)
+
+            +slider('food')
+              each image in foodImages
+                +slide('food')
+                  div.food__img
+                    picture.food__picture
+                      source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
+                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
+                      source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
+
+                      source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
+                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
+
+                      img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+
+            +navigation('food')
+
+            div.food__pagination.food__pagination--tablet.pagination.swiper-pagination
+
+
+
+      div(class="food__bottom " + foodModeBottomClass + foodModificateBottomClass)
+        h2(class="food__title food__title--desktop " + foodModeTitleClass + foodModificateTitleClass)
+          | !{foodTitle}
+
+        div.food__content
+          if foodTextTop !== ''
+            p.food__text.food__text--top
+              | !{foodTextTop}
+
+          if foodTextBottom !== ''
+            p.food__text.food__text--bottom
+              | !{foodTextBottom}
+
+        if block
+          block
+
+        if foodImages.length > 0
+          div.food__pagination.food__pagination--mobile.pagination.swiper-pagination

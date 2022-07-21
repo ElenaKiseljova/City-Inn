@@ -86,30 +86,17 @@ export default () => {
     return swiperSlider;
   };
 
+  // Swipers not Events slider
   const swipers = document.querySelectorAll('.swiper:not(.event__slider)');
 
   swipers.forEach((swiperItem) => {
     swiperInit(swiperItem);
   });
 
+  // Events slider
   const eventSliderImages = document.querySelector('.event__slider--images');
-  const eventSliderText = document.querySelector('.event__slider--text');
 
-  if (eventSliderImages && eventSliderText) {
-    const attrText = {
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
-      breakpoints: {
-        // when window width is >= 1440px
-        1366: {
-        },
-      },
-    };
-
-    const textEventSlider = swiperInit(eventSliderText, attrText);
-
+  if (eventSliderImages) {
     const pagination = eventSliderImages.closest('section').querySelector('.swiper-pagination');
 
     const attrImages = {
@@ -125,13 +112,31 @@ export default () => {
 
     const imagesEventSlider = swiperInit(eventSliderImages, attrImages);
 
-    textEventSlider.on('slideChange', () => {
-      imagesEventSlider.slideTo(textEventSlider.activeIndex);
-    });
+    const eventSliderText = document.querySelector('.event__slider--text');
 
-    imagesEventSlider.on('slideChange', () => {
-      textEventSlider.slideTo(imagesEventSlider.activeIndex);
-    });
+    if (eventSliderText) {
+      const attrText = {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        breakpoints: {
+          // when window width is >= 1440px
+          1366: {
+          },
+        },
+      };
+
+      const textEventSlider = swiperInit(eventSliderText, attrText);
+
+      textEventSlider.on('slideChange', () => {
+        imagesEventSlider.slideTo(textEventSlider.activeIndex);
+      });
+
+      imagesEventSlider.on('slideChange', () => {
+        textEventSlider.slideTo(imagesEventSlider.activeIndex);
+      });
+    }
   }
 
   // Reloader

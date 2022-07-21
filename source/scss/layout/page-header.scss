@@ -61,6 +61,16 @@
   }
 
   &__button {
+    --background-color-button: #{$white-50};
+
+    &--home {
+      --background-color-button: transparent;
+    }
+
+    &.active {
+      --background-color-button: #{$white-50};
+    }
+
     @media screen and (min-width: $tablet) {
       min-width: 190px;
 

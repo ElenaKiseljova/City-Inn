@@ -19,7 +19,7 @@ mixin home(attr = {})
 
     div(class="home__container container home__container--" + mode)
       div(class="home__top home__top--" + mode)
-        h2(class="home__title home__title--mobile title home__title--" + mode + " home__title--" + sectionName)
+        h2(class="home__title home__title--mobile title home__title--" + sectionName)
           | !{title}
 
         +slider('home', mode)
@@ -38,7 +38,7 @@ mixin home(attr = {})
                   img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
 
       div(class="home__bottom home__bottom--" + mode + " home__bottom--" + sectionName)
-        h2(class=" home__title home__title--desktop title home__title--" + mode)
+        h2(class=" home__title home__title--desktop title home__title--" + sectionName)
           | !{title}
         div(class="home__content home__content--" + sectionName + " home__content--" + mode)
           p(class="home__text home__text--top home__text--" + sectionName)
@@ -52,11 +52,11 @@ mixin home(attr = {})
             block
 
           if more && more.link !== '' && more.title !== ''
-            a(class="home__button home__button--more button button--white home__button--" + sectionName href= more.link download)
+            a(class="button home__button home__button--more home__button--" + sectionName href= more.link download)
               span #{more.title}
 
           if book && book.link !== '' && book.title !== ''
-            a(class="home__button home__button--book-now button button--white-10 button--book-now home__button--" + sectionName href= book.link download)
+            a(class="button home__button home__button--book-now home__button--" + sectionName href= book.link download)
               span #{book.title}
 
           if navigation === 1

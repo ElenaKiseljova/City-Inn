@@ -42,11 +42,11 @@ export default () => {
 
           logoHeader.classList.remove('active');
 
-          changeActiveClass(pageHeaderButtons, 'remove', 'button--white-50-js');
+          changeActiveClass(pageHeaderButtons, 'remove', 'active');
 
           rootElement.classList.remove('active');
         } else {
-          changeActiveClass(pageHeaderButtons, 'add', 'button--white-50-js');
+          changeActiveClass(pageHeaderButtons, 'add', 'active');
 
           logoHeader.classList.add('active');
 

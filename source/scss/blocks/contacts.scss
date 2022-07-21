@@ -3,6 +3,17 @@
 
   background-color: $dark-gray;
 
+  &--restaurant {
+    background-color: $gray;
+  }
+
+  &--lobby,
+  &--group,
+  &--conference,
+  &--conference-service {
+    background-color: var(--background-color-page);
+  }
+
   &__container {
     display: grid;
 

@@ -1,5 +1,5 @@
 mixin slide(sectionName = 'home', sectionModificator = '')
-  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
+  - const additionalClassesSwiperSlide = sectionName + '__slide ' + sectionName + '__slide--' + pageName + ' ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
 
   div(class="swiper-slide " + additionalClassesSwiperSlide)
     if block

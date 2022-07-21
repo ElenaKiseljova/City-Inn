@@ -13,6 +13,18 @@
 
   &__top {
     @extend .cosy__top;
+
+    @media screen and (min-width: $tablet) {
+      &--lobby {
+        order: 2;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--lobby {
+        order: 1;
+      }
+    }
   }
 
   &__title {
@@ -37,6 +49,19 @@
         margin-bottom: 87px;
         margin-left: -117px;
       }
+
+      &--lobby {
+        margin-top: 0;
+        margin-right: calc((100% + 9px) - 538px);
+        margin-bottom: 47px;
+        margin-left: -9px;
+
+        opacity: 0.6;
+
+        br {
+          display: none;
+        }
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -46,6 +71,17 @@
         margin-bottom: 275px;
         margin-left: -184px;
       }
+
+      &--lobby {
+        min-width: 784px;
+
+        margin-top: 0;
+        margin-right: calc((100% + 106px) - 784px);
+        margin-bottom: 235px;
+        margin-left: -106px;
+
+        opacity: 0.8;
+      }
     }
   }
 
@@ -54,9 +90,19 @@
 
     @extend .cosy__slider;
 
+    @media screen and (min-width: $tablet) {
+      &--lobby {
+        margin: 0 calc(100% - 50vw) 0 0;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       height: auto;
       min-height: 840px;
+
+      &--lobby {
+        margin: 0 0 0 calc(100% - 50vw);
+      }
     }
   }
 
@@ -74,22 +120,29 @@
     box-sizing: border-box;
 
     @media screen and (min-width: $desktop) {
+      --width-img: 360px;
+      --height-img: 420px;
+
+      &--lobby {
+        --height-img: 360px;
+      }
+
       &--images {
         &.swiper-slide-active {
           .event__img {
-            transform-origin: left top;
-            transform: scale(1);
+            width: 100%;
+            height: 100%;
 
-            transition: transform 0.3s;
+            transition: height 0.3s, width 0.3s;
           }
         }
 
         &.swiper-slide-next {
           .event__img {
-            transform-origin: left top;
-            transform: scale(0.5);
+            width: var(--width-img);
+            height: var(--height-img);
 
-            transition: transform 0.3s;
+            transition: height 0.3s, width 0.3s;
           }
 
           &~.swiper-slide {
@@ -124,12 +177,28 @@
 
     padding-top: 95px;
 
+    &--lobby {
+      padding-top: 40px;
+    }
+
     @media screen and (min-width: $tablet) {
       padding: 53px 0 40px 39px;
+
+      &--lobby {
+        order: 1;
+
+        padding: 47px 31px 38px 0;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 0 0 0 87px;
+
+      &--lobby {
+        order: 2;
+
+        padding: 35px 78px 40px 42px;
+      }
     }
   }
 
@@ -195,6 +264,10 @@
 
       margin-bottom: 55px;
       margin-left: 193px;
+
+      &--lobby {
+        margin-left: 238px;
+      }
     }
   }
 

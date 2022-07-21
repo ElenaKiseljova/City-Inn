@@ -7,6 +7,15 @@
 
   background-color: $gray;
 
+  &--restaurant,
+  &--lobby,
+  &--about,
+  &--conference-service,
+  &--conference,
+  &--group {
+    background-color: $black;
+  }
+
   @media screen and (min-width: $tablet) {
     padding: 40px 0;
   }

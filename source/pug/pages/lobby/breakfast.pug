@@ -1,16 +1,14 @@
 -
   const foodAttr = {
     foodImages: ['food-1', 'food-2', 'cosy-1'],
-    foodTitle: `меню`,
+    foodTitle: `про <br /> завтраки`,
     foodTextTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
     foodTextBottom : 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
 
-    foodMode: 'direct',
+    foodMode: 'reverse',
   };
 
 +food(foodAttr)
-  div.food__buttons
-    +worktime('food', '', '7:00 до 22:00.')
-
-    a(class="food__button button")
-      span меню
+  div.food__buttons.food__buttons--lobby
+    a(class="button food__button food__button--breakfast")
+      span MENU

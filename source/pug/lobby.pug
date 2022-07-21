@@ -1,18 +1,20 @@
 include includes/variables.pug
 
 - titlePage = 'lobby bar';
-- whiteHeaderButtonsClass = 'button--white-50';
+- pageName = 'lobby';;
 - headerLogoClass = 'logo--yellow';
 
 include includes/mixins.pug
 
 include layout/head.pug
 
-body(style="--color-button:  var(--light-yellow); --border-color-button:  var(--light-yellow); --color-page: var(--light-yellow); background-color: var(--gray);")
+body(style="--color-button:  var(--light-yellow); --border-color-button:  var(--light-yellow); --color-page: var(--light-yellow); --background-color-page: var(--gray);")
   include layout/header.pug
 
   main(class="page-main")
     include pages/lobby/promo.pug
+    include pages/lobby/kitchen.pug
+    include pages/lobby/breakfast.pug
     include blocks/contacts.pug
 
   include layout/footer.pug
