@@ -48,7 +48,7 @@
       padding-bottom: 0;
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       width: calc(730 / 1440 * 100%);
 
       min-height: auto;
