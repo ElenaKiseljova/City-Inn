@@ -1,3 +1,4 @@
+import gsap from './gsap.min';
 import Swiper from './swiper-bundle.min';
 
 export default () => {
@@ -7,6 +8,44 @@ export default () => {
     || document.documentElement.clientWidth
     || document.getElementsByTagName('body')[0].clientWidth;
 
+  const animationSlideElements = (swiperSlider, selector1, selector2) => {
+    const el1 = swiperSlider.slides[swiperSlider.activeIndex].querySelector(selector1);
+    const el2 = swiperSlider.slides[swiperSlider.activeIndex].querySelector(selector2);
+
+    if (el1 && el2) {
+      gsap.to(el1, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      });
+
+      gsap.to(el2, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      });
+    }
+
+    if (swiperSlider.previousIndex !== undefined) {
+      const el3 = swiperSlider.slides[swiperSlider.previousIndex].querySelector(selector1);
+      const el4 = swiperSlider.slides[swiperSlider.previousIndex].querySelector(selector2);
+
+      if (el3 && el4) {
+        gsap.to(el3, {
+          x: '-100%',
+          opacity: 0,
+          duration: 1,
+        });
+
+        gsap.to(el4, {
+          x: '100%',
+          opacity: 0,
+          duration: 1,
+        });
+      }
+    }
+  };
+
   const swiperInit = (swiperItem, attr = {}) => {
     let prevButton = null;
     let nextButton = null;
@@ -15,12 +54,16 @@ export default () => {
     const swiperArgs = {
       slidesPerView: 1,
       spaceBetween: 0,
-      // autoHeight: true,
       resizeObserver: true,
     };
 
     prevButton = swiperItem.closest('section').querySelector('.swiper-button-prev');
     nextButton = swiperItem.closest('section').querySelector('.swiper-button-next');
+
+    // Home sliders
+    if (swiperItem.classList.contains('home__slider')) {
+      pagination = swiperItem.closest('.home').querySelector('.swiper-pagination');
+    }
 
     // Smart sliders
     if (swiperItem.classList.contains('cards__slider')) {
@@ -52,9 +95,13 @@ export default () => {
       pagination = swiperItem.closest('.banquet').querySelector('.swiper-pagination');
     }
 
-    // Home sliders
-    if (swiperItem.classList.contains('home__slider')) {
-      pagination = swiperItem.closest('.home').querySelector('.swiper-pagination');
+    // Lobby sliders
+    if (swiperItem.classList.contains('doings__slider')) {
+      pagination = swiperItem.closest('.doings').querySelector('.swiper-pagination');
+
+      if (DEVICE_WIDTH > 1366) {
+        swiperArgs.spaceBetween = 270;
+      }
     }
 
     if (pagination) {
@@ -66,7 +113,7 @@ export default () => {
 
     if (prevButton && nextButton) {
       swiperArgs.breakpoints = {
-        // when window width is >= 1440px
+        // when window width is >= 1366px
         1366: {
           navigation: {
             nextEl: nextButton,
@@ -82,6 +129,17 @@ export default () => {
     };
 
     const swiperSlider = new Swiper(swiperItem, swiperArgsMerged);
+
+    // Lobby sliders
+    if (swiperItem.classList.contains('doings__slider')) {
+      if (DEVICE_WIDTH >= 768 && DEVICE_WIDTH < 1366) {
+        animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
+
+        swiperSlider.on('beforeTransitionStart', () => {
+          animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
+        });
+      }
+    }
 
     return swiperSlider;
   };

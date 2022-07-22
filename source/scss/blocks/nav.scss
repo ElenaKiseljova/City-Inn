@@ -30,7 +30,7 @@
 
     opacity: 0.9;
 
-    transition: font-weight 0.3s, transform 0.3s ease-out, opacity 0.3s;
+    transition: font-weight 0.7s, transform 0.7s ease-in, opacity 0.7s;
 
     &:hover {
       font-weight: 700;
@@ -39,7 +39,7 @@
 
       transform: translateX(40px);
 
-      transition: font-weight 0.3s, transform 0.3s ease-in, opacity 0.3s;
+      transition: font-weight 0.7s, transform 0.7s ease-out, opacity 0.7s;
     }
 
     @media screen and (min-width: $desktop) {

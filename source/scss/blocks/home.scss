@@ -73,10 +73,11 @@
     }
   }
 
-  &__slider {
+  &__img-wrapper {
     position: relative;
 
     width: 100vw;
+    height: 100vw;
 
     margin: 0 calc((100% - 100vw) / 2);
 
@@ -85,10 +86,13 @@
     background-color: inherit;
 
     @media screen and (min-width: $tablet) {
+      height: 100%;
 
       &--direct,
       &--reverse {
         width: 50vw;
+
+        min-height: calc(585 / 768 * 100vw);
       }
 
       &--direct {
@@ -102,38 +106,22 @@
       &--horizontal {
         width: 100vw;
 
+        min-height: calc(384 / 768 * 100vw);
+
         margin: 0 calc((100% - 100vw)/ 2);
       }
     }
-  }
-
-  &__slider-wrapper {
-    height: 100%;
-
-    background-color: inherit;
-  }
-
-  &__slide {
-    height: 100vw;
-
-    background-color: inherit;
-
-    box-sizing: border-box;
-
-    cursor: pointer;
-
-    &.swiper-slide-active {
-      z-index: 1;
-    }
-
-    @media screen and (min-width: $tablet) {
-      height: 100%;
-
-      min-height: calc(585 / 768 * 100vw);
-    }
 
     @media screen and (min-width: $desktop) {
-      min-height: calc(840 / 1440 * 100vw);
+
+      &--direct,
+      &--reverse {
+        min-height: calc(840 / 1440 * 100vw);
+      }
+
+      &--horizontal {
+        min-height: calc(440 / 1440 * 100vw);
+      }
 
       &--starfit {
         min-height: calc(600 / 1440 * 100vw);

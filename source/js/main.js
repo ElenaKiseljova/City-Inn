@@ -1,4 +1,5 @@
 import gsapAnimations from './gsap-animations';
+import geo from './geo';
 import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
@@ -8,6 +9,12 @@ import cards from './cards';
 document.addEventListener('DOMContentLoaded', () => {
   try {
     gsapAnimations();
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  try {
+    geo();
   } catch (error) {
     console.log(error.message);
   }

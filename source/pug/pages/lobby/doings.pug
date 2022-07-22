@@ -1,0 +1,98 @@
+-
+  const doingsAttr = {
+    title: `
+      події
+    `,
+    slides: [
+      {
+        image: {
+          webp: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+          jpg: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+        },
+        title: `кино`,
+        text: `Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros. In hac habitasse platea dictumst. Nunc convallis felis ac fermentum volutpat. Phasellus at scelerisque est. In sit amet pulvinar mi. Pellentesque ut condimentum ante, et gravida mi. In erat felis, laoreet nec porta eu, vehicula nec diam. `,
+      },
+      {
+        image: {
+          webp: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+          jpg: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+        },
+        title: `гастро-вечера`,
+        text: `Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. `,
+      },
+      {
+        image: {
+          webp: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+          jpg: {
+            mobile: 'doings-1',
+            tablet: 'doings-1',
+            desktop: 'doings-1',
+          },
+        },
+        title: `кино-вечера`,
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat.
+          <br />
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat.
+        `,
+      },
+    ],
+  };
+
+section(class="doings")
+  h2(class="doings__title")
+    | !{doingsAttr.title}
+
+  if doingsAttr.slides && doingsAttr.slides.length > 0
+    div(class="doings__slider-container")
+      +slider('doings', '')
+        each slide in doingsAttr.slides
+          +slide('doings', '')
+            - const image = slide.image ?? {};
+            - const subTitle = slide.title ?? '';
+            - const text = slide.text ?? '';
+
+            div.doings__img-wrapper
+              div.doings__img
+                picture.doings__picture
+                  source(media="(min-width: 1025px)" type="image/webp" srcset="img/lobby/" + image.webp.desktop + "-desktop.webp")
+                  source(media="(min-width: 500px)" srcset="img/lobby/" + image.webp.tablet + "-tablet.webp")
+                  source(media="(min-width: 100px)" type="image/webp" srcset="img/lobby/" + image.webp.mobile + "-mobile.webp")
+
+                  source(media="(min-width: 1025px)" srcset="img/lobby/" + image.jpg.desktop + "-desktop.jpg")
+                  source(media="(min-width: 500px)" srcset="img/lobby/" + image.jpg.tablet + "-tablet.jpg")
+
+                  img(src="img/lobby/" + image.jpg.mobile + "-mobile.jpg" alt="" + slide.title)
+
+            div.doings__content
+              if subTitle && subTitle !== ''
+                h3.doings__subtitle
+                  | !{subTitle}
+
+              if text && text !== ''
+                p.doings__text
+                  | !{text}
+
+      +navigation('doings')
+
+      div.doings__pagination.doings__pagination.pagination.swiper-pagination

@@ -9,11 +9,23 @@ mixin home(attr = {})
   - const more = attr.more ?? {};
   - const book = attr.book ?? {};
 
-  - const navigation = attr.navigation ?? 0;
-
-  - const images = attr.images ?? [];
+  - const imageName = attr.image ?? 'smart';//в проде тут будет объект
+  //- image: {
+  //-     webp: {
+  //-       mobile: '',
+  //- tablet: '',
+  //- desktop: '',
+  //-     },
+  //-     jpg: {
+  //-       mobile: '',
+  //- tablet: '',
+  //- desktop: '',
+  //-     },
+  //-   },
 
   - const mode = attr.mode ?? 'direct';
+
+  - const worktime = attr.worktime ?? '';
 
   section(class="home home--" + sectionName)
 
@@ -22,20 +34,17 @@ mixin home(attr = {})
         h2(class="home__title home__title--mobile title home__title--" + sectionName)
           | !{title}
 
-        +slider('home', mode)
-          each image in images
-            - const imageName = image ?? 'smart';//заглушка для верстки потом надо переделать под реальные URLs
-            +slide('home', sectionName)
-              div(class="home__img")
-                picture.home__picture
-                  source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/" + imageName + "-desktop.webp")
-                  source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.webp")
-                  source(media="(min-width: 100px)" type="image/webp" srcset="img/home/" + imageName + "-mobile.webp")
+        div(class="home__img-wrapper home__img-wrapper--" + mode)
+          div(class="home__img")
+            picture.home__picture
+              source(media="(min-width: 1025px)" type="image/webp" srcset="img/home/" + imageName + "-desktop.webp")
+              source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.webp")
+              source(media="(min-width: 100px)" type="image/webp" srcset="img/home/" + imageName + "-mobile.webp")
 
-                  source(media="(min-width: 1025px)" srcset="img/home/" + imageName + "-desktop.jpg")
-                  source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.jpg")
+              source(media="(min-width: 1025px)" srcset="img/home/" + imageName + "-desktop.jpg")
+              source(media="(min-width: 500px)" srcset="img/home/" + imageName + "-tablet.jpg")
 
-                  img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
+              img(src="img/home/" + imageName + "-mobile.jpg" alt="" + title)
 
       div(class="home__bottom home__bottom--" + mode + " home__bottom--" + sectionName)
         h2(class=" home__title home__title--desktop title home__title--" + sectionName)
@@ -48,21 +57,16 @@ mixin home(attr = {})
             | #{contentBottom}
 
         div(class="home__buttons home__buttons--" + buttonsJustify + " home__buttons--" + mode + " home__buttons--"  + sectionName)
-          if block
-            block
+          if worktime !== ''
+            +worktime(pageName, '', worktime)
 
           if more && more.link !== '' && more.title !== ''
-            a(class="button home__button home__button--more home__button--" + sectionName href= more.link download)
+            a(class="button home__button home__button--more home__button--" + sectionName href= more.link)
               span #{more.title}
 
           if book && book.link !== '' && book.title !== ''
-            a(class="button home__button home__button--book-now home__button--" + sectionName href= book.link download)
+            a(class="button home__button home__button--book-now home__button--" + sectionName href= book.link)
               span #{book.title}
-
-          if navigation === 1
-            +navigation('home')
-
-        div.home__pagination.pagination.swiper-pagination
 
 
 
