@@ -1,0 +1,64 @@
+{
+  "status": "success",
+  "content": {
+    "language": "ua",
+    "columns": [
+      {
+        "title": "Terms & Service",
+        "items": [
+          {"text": "Публічна оферта",
+          "link": "#",//пустое для адреса},
+          {"text": "Політика конфіденціальності",
+          "link": "#",//пустое для адреса},
+        ]
+      },
+      {
+        "title": "Адреса",
+        "items": [
+          {"text": "79495 вул. Івана Франка, 53б, Винники, Львівська область",
+          "link": "",//пустое для адреса},
+        ]
+      },
+      {
+        "title": "Продажі",
+        "items": [
+          {"text": "sales@city-inn.com.ua",
+          "link": "mailto:sales@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+      {
+        "title": "Про нас",
+        "items": [
+          {"text": "Про готель",
+          "link": "#",//пустое для адреса},
+          {"text": "Чому SMART?",
+          "link": "#",//пустое для адреса}
+        ]
+      },
+      {
+        "title": "Бронювання",
+        "items": [
+          {"text": "reservation@city-inn.com.ua",
+          "link": "mailto:reservation@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+      {
+        "title": "Рецепція",
+        "items": [
+          {"text": "reservation@city-inn.com.ua",
+          "link": "mailto:reservation@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+    ],
+    "copyright": [
+      "All rights reserved  © 2022",
+      "City Inn Smart Hotel Lviv"
+    ],
+  }
+}

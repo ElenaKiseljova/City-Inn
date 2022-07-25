@@ -5,6 +5,10 @@
     padding: 140px 0 168px;
 
     overflow: visible;
+
+    &--lobby {
+      padding: 98px 0;
+    }
   }
 
   &__container {
@@ -253,6 +257,10 @@
       min-width: calc(200 / 554 * 100%);
 
       margin-top: 67px;
+
+      &--lobby {
+        --background-color-button: #{$white-20};
+      }
     }
   }
 

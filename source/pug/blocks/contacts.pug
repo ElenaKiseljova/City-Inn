@@ -1,5 +1,5 @@
 section(class="contacts contacts--" + pageName)
-  div.contacts__container.container
+  div(class="container contacts__container contacts__container--" + pageName)
     div(class="contacts__left")
       h2.contacts__title.contacts__title--mobile.title.title--light-green
         | contacts
@@ -9,16 +9,16 @@ section(class="contacts contacts--" + pageName)
       h2.contacts__title.contacts__title--desktop.title.title--light-green
         | contacts
 
-      address.contacts__address
-        ul.contacts__list
-          li(class="contacts__item")
+      address(class="contacts__address contacts__address--" + pageName)
+        ul(class="contacts__list contacts__list--" + pageName)
+          li(class="contacts__item contacts__item--" + pageName)
             h4(class="contacts__subtitle")
               | Адреса
 
             p(class="contacts__text")
               | 79495 вул. Івана Франка, 53б, Винники, Львівська область
 
-          li(class="contacts__item")
+          li(class="contacts__item contacts__item--" + pageName)
             h4(class="contacts__subtitle")
               | Продажі
 
@@ -27,7 +27,7 @@ section(class="contacts contacts--" + pageName)
             a(class="contacts__link" href="tel:+380322471551")
               |  + 38 (032) 247-15-51
 
-          li(class="contacts__item")
+          li(class="contacts__item contacts__item--" + pageName)
             h4(class="contacts__subtitle")
               | Бронювання
 
@@ -37,7 +37,7 @@ section(class="contacts contacts--" + pageName)
               |  + 38 (032) 247-15-51
 
 
-          li(class="contacts__item")
+          li(class="contacts__item contacts__item--" + pageName)
             h4(class="contacts__subtitle")
               | Рецепція
 

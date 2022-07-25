@@ -39,19 +39,26 @@
     @media screen and (min-width: $tablet) {
       display: grid;
 
-      &--direct,
-      &--reverse {
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit,
+      &--conference,
+      &--about {
         grid-template-columns: 50% 50%;
       }
 
-      &--horizontal {
+      &--lobby,
+      &--restaurant {
         grid-template-columns: 100%;
         grid-template-rows: calc(384 / 768 * 100vw) auto;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      &--horizontal {
+
+      &--lobby,
+      &--restaurant {
         grid-template-rows: calc(440 / 1440 * 100vw) auto;
       }
     }
@@ -65,9 +72,9 @@
     margin: 0;
 
     @media screen and (min-width: $tablet) {
-      // &--direct {}
 
-      &--reverse {
+      &--conference,
+      &--about {
         order: 2;
       }
     }
@@ -85,41 +92,68 @@
 
     background-color: inherit;
 
+    &--why {
+      --before-linear-gradient-from: rgba(0, 0, 0, 0.1);
+      --before-linear-gradient-to: rgba(0, 0, 0, 0.1);
+
+      @include before-linear-gradient();
+    }
+
     @media screen and (min-width: $tablet) {
       height: 100%;
 
-      &--direct,
-      &--reverse {
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit,
+      &--conference,
+      &--about {
         width: 50vw;
 
         min-height: calc(585 / 768 * 100vw);
       }
 
-      &--direct {
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit {
         margin: 0 0 0 calc(100% - 50vw);
       }
 
-      &--reverse {
+      &--conference,
+      &--about {
         margin: 0 calc(100% - 50vw) 0 0;
       }
 
-      &--horizontal {
+      &--lobby,
+      &--restaurant {
         width: 100vw;
 
         min-height: calc(384 / 768 * 100vw);
 
         margin: 0 calc((100% - 100vw)/ 2);
       }
+
+      &--why {
+        &::before {
+          display: none;
+        }
+      }
     }
 
     @media screen and (min-width: $desktop) {
 
-      &--direct,
-      &--reverse {
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit,
+      &--conference,
+      &--about {
         min-height: calc(840 / 1440 * 100vw);
       }
 
-      &--horizontal {
+      &--lobby,
+      &--restaurant {
         min-height: calc(440 / 1440 * 100vw);
       }
 
@@ -140,6 +174,10 @@
   &__bottom {
     padding: 40px 0;
 
+    &--why {
+      padding: 40px 0 60px;
+    }
+
     @media screen and (min-width: $tablet) {
       display: flex;
 
@@ -147,13 +185,20 @@
 
       flex-direction: column;
 
-      &--direct {
+      &--smart,
+      &--group,
+      &--starfit {
         align-items: flex-end;
 
         padding: 36px 0 36px 36px;
       }
 
-      &--reverse {
+      &--why {
+        padding: 112px 2px 112px 35px;
+      }
+
+      &--conference,
+      &--about {
         order: 1;
 
         align-items: flex-start;
@@ -163,15 +208,21 @@
     }
 
     @media screen and (min-width: $desktop) {
-      &--direct {
+
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit {
         padding: 80px 0 80px 80px;
       }
 
-      &--reverse {
+      &--conference,
+      &--about {
         padding: 80px 80px 80px 0;
       }
 
-      &--horizontal {
+      &--lobby,
+      &--restaurant {
         padding: 80px 0;
       }
 
@@ -215,6 +266,13 @@
       padding-bottom: 40px;
 
       text-align: left;
+    }
+
+    &--why {
+      bottom: 0;
+      left: 0;
+
+      padding-bottom: 55px;
     }
 
     &--desktop {
@@ -289,6 +347,14 @@
       &--about {
         margin-bottom: 117.5px;
       }
+
+      &--why {
+        min-width: 538px;
+
+        margin-right: calc(100% - 538px);
+        margin-left: 0;
+        margin-bottom: 47px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -345,6 +411,16 @@
         margin-bottom: 100px;
         margin-left: 0;
       }
+
+      &--why {
+        margin-bottom: 80px;
+
+        @include font(144, 140, 300);
+
+        color: var(--color-page, #ffffff);
+
+        opacity: 1;
+      }
     }
   }
 
@@ -353,24 +429,25 @@
 
     margin-bottom: 40px;
 
+    &--why {
+      margin-bottom: 0;
+    }
+
     @media screen and (min-width: $tablet) {
 
       &--smart,
       &--conference,
       &--group {
         margin-bottom: 91.5px;
-
       }
 
       &--lobby,
       &--restaurant {
         margin-bottom: 39px;
-
       }
 
       &--starfit {
         margin-bottom: 105.5px;
-
       }
 
       &--about {
@@ -379,13 +456,16 @@
     }
 
     @media screen and (min-width: $desktop) {
-      &--horizontal {
+
+      &--lobby,
+      &--restaurant {
         max-width: calc(717 / (1440 - 160)) * 100%;
 
         align-self: flex-end;
       }
 
-      &--smart {
+      &--smart,
+      &--why {
         margin-bottom: 124px;
       }
 
@@ -436,9 +516,27 @@
       @include font(14, 21, 400);
     }
 
+    &--why {
+      &.home__text--top {
+        margin-bottom: 20px;
+
+        @include font(14, 20, 400);
+      }
+
+      &.home__text--bottom {
+        @include font(14, 20, 600);
+
+        text-transform: none;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       &--about {
         margin-bottom: 45px;
+      }
+
+      &--why {
+        color: var(--color-page, #ffffff);
       }
     }
   }
@@ -458,15 +556,9 @@
     }
 
     @media screen and (min-width: $tablet) {
-      &--end {
-        justify-content: flex-end;
-      }
 
-      &--start {
-        justify-content: flex-start;
-      }
-
-      &--horizontal {
+      &--lobby,
+      &--restaurant {
         width: auto;
 
         align-self: flex-end;
@@ -493,7 +585,21 @@
     }
 
     @media screen and (min-width: $desktop) {
-      &--horizontal {
+
+      &--smart,
+      &--why,
+      &--group,
+      &--starfit,
+      &--about {
+        justify-content: flex-end;
+      }
+
+      &--conference {
+        justify-content: flex-start;
+      }
+
+      &--lobby,
+      &--restaurant {
         align-self: flex-start;
       }
 

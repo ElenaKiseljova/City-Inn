@@ -1,0 +1,160 @@
+{
+  "status": "success",
+  "content": {
+    "language": "en",
+    "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+    "offer": {
+      "title": "SPECIAL OFFER",
+      "link": "google.com"
+    },
+    "menu": [
+      {
+        title: 'Menu default background',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-0-mobile.webp',
+            desktop: 'img/menu-bg-0-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-0-mobile.jpg',
+            desktop: 'img/menu-bg-0-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'про нас',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-1-mobile.webp',
+            desktop: 'img/menu-bg-1-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-1-mobile.jpg',
+            desktop: 'img/menu-bg-1-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'lobby bar',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-2-mobile.webp',
+            desktop: 'img/menu-bg-2-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-2-mobile.jpg',
+            desktop: 'img/menu-bg-2-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'restaurant',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-3-mobile.webp',
+            desktop: 'img/menu-bg-3-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-3-mobile.jpg',
+            desktop: 'img/menu-bg-3-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'conferenceservice',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-4-mobile.webp',
+            desktop: 'img/menu-bg-4-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-4-mobile.jpg',
+            desktop: 'img/menu-bg-4-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'smart пропозиція',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-1-mobile.webp',
+            desktop: 'img/menu-bg-1-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-1-mobile.jpg',
+            desktop: 'img/menu-bg-1-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'group request',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-2-mobile.webp',
+            desktop: 'img/menu-bg-2-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-2-mobile.jpg',
+            desktop: 'img/menu-bg-2-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'star fit',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-3-mobile.webp',
+            desktop: 'img/menu-bg-3-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-3-mobile.jpg',
+            desktop: 'img/menu-bg-3-desktop.jpg',
+          }
+        },
+      },
+      {
+        title: 'контакти',
+        link: '#',
+        images: {
+          webp: {
+            mobile: 'img/menu-bg-4-mobile.webp',
+            desktop: 'img/menu-bg-4-desktop.webp',
+          },
+          jpg: {
+            mobile: 'img/menu-bg-4-mobile.jpg',
+            desktop: 'img/menu-bg-4-desktop.jpg',
+          }
+        },
+      },
+    ],
+    "call": {
+      text: 'Call us',
+      phone: '+38 032 247 15 51',
+      link: 'tel:+380322471551',
+    },
+    "address": {
+      "icon": "map-pin",
+      "link": "google.maps/....."
+    },
+    "social": [
+      {
+          "icon": "instagram",
+          "link": "google.com"
+      },
+      {
+          "icon": "facebook",
+          "link": "google.com"
+      },
+    ],
+  }
+}

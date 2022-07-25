@@ -1,0 +1,62 @@
+-
+  const bar = {
+    title: `
+      про бар
+    `,
+    image: {
+      webp: {
+        mobile: 'bar-bg',
+        tablet: 'bar-bg',
+        desktop: 'bar-bg',
+      },
+      jpg: {
+        mobile: 'bar-bg',
+        tablet: 'bar-bg',
+        desktop: 'bar-bg',
+      },
+    },
+    text: `
+      Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.
+      Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни
+    `,
+    more: {
+      text: 'меню',
+      link: '#',
+    },
+    book: {
+      text: 'забронювати',
+      link: '#',
+    },
+  };
+
+section.bar
+  div.bar__container.container
+    div.bar__top
+      h2.bar__title
+        | !{bar.title}
+
+      div.bar__img-wrapper
+        div.bar__img
+          picture.bar__picture
+            source(media="(min-width: 1025px)" type="image/webp" srcset="img/lobby/" + bar.image.webp.desktop + "-desktop.webp")
+            source(media="(min-width: 500px)" srcset="img/lobby/" + bar.image.webp.tablet + "-tablet.webp")
+            source(media="(min-width: 100px)" type="image/webp" srcset="img/lobby/" + bar.image.webp.mobile + "-mobile.webp")
+
+            source(media="(min-width: 1025px)" srcset="img/lobby/" + bar.image.jpg.desktop + "-desktop.jpg")
+            source(media="(min-width: 500px)" srcset="img/lobby/" + bar.image.jpg.tablet + "-tablet.jpg")
+
+            img(src="img/lobby/" + bar.image.jpg.mobile + "-mobile.jpg" alt="" + bar.title)
+
+    div.bar__bottom
+      div.bar__content
+        p.bar__text
+          | !{bar.text}
+
+      div.bar__buttons
+        if bar.more.text !== ''
+          a(class="bar__button button" href="" + bar.more.link)
+            | !{bar.more.text}
+
+        if bar.book.text !== ''
+          a(class="bar__button button" href="" + bar.book.link)
+            | !{bar.book.text}

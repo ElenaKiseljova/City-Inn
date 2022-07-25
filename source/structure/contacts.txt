@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "content": {
+    "language": "ua",
+    "title": "Contacts",
+    "map": {
+      "center": {
+        "lat": 49.81173756211972,
+        "lng": 24.141566493630982
+      },
+      "zoom": 13,
+    },
+    "columns": [
+      {
+        "title": "Адреса",
+        "items": [
+          {"text": "79495 вул. Івана Франка, 53б, Винники, Львівська область",
+          "link": "",//пустое для адреса},
+        ]
+      },
+      {
+        "title": "Продажі",
+        "items": [
+          {"text": "sales@city-inn.com.ua",
+          "link": "mailto:sales@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+      {
+        "title": "Бронювання",
+        "items": [
+          {"text": "reservation@city-inn.com.ua",
+          "link": "mailto:reservation@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+      {
+        "title": "Рецепція",
+        "items": [
+          {"text": "reservation@city-inn.com.ua",
+          "link": "mailto:reservation@city-inn.com.ua",//пустое для адреса},
+          {"text": "+ 38 (032) 247-15-51",
+          "link": "tel:+380322471551",//пустое для адреса}
+        ]
+      },
+    ],
+    "book": {
+      "title": "BOOK NOW",
+      "link": "google.com"
+    },
+  }
+}

@@ -1,5 +1,4 @@
-//dynamic --before-linear-gradient-from, --before-linear-gradient-to
-div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gradient[0] + "; --before-linear-gradient-to: " + navHeader[0].gradient[1] + ";")
+div(class="menu")
   div(class="menu__container container")
     div(class="menu__nav")
       include nav.pug
@@ -28,17 +27,17 @@ div(class="menu __js" style="--before-linear-gradient-from: " + navHeader[0].gra
           - show = '';
 
         picture(class="menu__picture __js " + show)
-          if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp[0] && navItemHeader.images.webp[1]
-            source(media="(min-width: 768px)" type="image/webp" srcset="" + navItemHeader.images.webp[0])
-            source(media="(min-width: 100px)" type="image/webp" srcset="" + navItemHeader.images.webp[1])
-          else if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp[0]
-            source(type="image/webp" srcset="" + navItemHeader.images.webp[0])
+          if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop && navItemHeader.images.webp.mobile
+            source(media="(min-width: 768px)" type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
+            source(media="(min-width: 100px)" type="image/webp" srcset="" + navItemHeader.images.webp.mobile)
+          else if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop
+            source(type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
 
-          if navItemHeader.images && navItemHeader.images.default && navItemHeader.images.default[0] && navItemHeader.images.default[1]
-            source(media="(min-width: 768px)" srcset="" + navItemHeader.images.default[0])
+          if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop && navItemHeader.images.jpg.mobile
+            source(media="(min-width: 768px)" srcset="" + navItemHeader.images.jpg.desktop)
 
-            img(src="" + navItemHeader.images.default[1] alt="" + navItemHeader.title)
-          else if navItemHeader.images && navItemHeader.images.default && navItemHeader.images.default[0]
-            img(src="" + navItemHeader.images.default[0] alt="" + navItemHeader.title)
+            img(src="" + navItemHeader.images.jpg.mobile alt="" + navItemHeader.title)
+          else if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop
+            img(src="" + navItemHeader.images.jpg.desktop alt="" + navItemHeader.title)
 
 

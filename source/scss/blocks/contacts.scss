@@ -29,6 +29,10 @@
 
     @media screen and (min-width: $desktop) {
       min-height: calc(840 / 1440 * 100vw);
+
+      &--lobby {
+        min-height: calc(540 / 1440 * 100vw);
+      }
     }
   }
 
@@ -67,6 +71,10 @@
 
     @media screen and (min-width: $desktop) {
       padding: 211px 25px 200px 114px;
+
+      &--lobby {
+        padding: 65px 25px 205px 165px;
+      }
     }
   }
 
@@ -128,6 +136,10 @@
 
     @media screen and (min-width: $desktop) {
       margin-bottom: 98px;
+
+      &--lobby {
+        margin-bottom: 57px;
+      }
     }
   }
 
@@ -145,6 +157,10 @@
 
     @media screen and (min-width: $desktop) {
       grid-template-columns: 1fr 1fr;
+
+      &--lobby {
+        grid-template-columns: 230px;
+      }
     }
   }
 
@@ -157,6 +173,12 @@
     flex-direction: column;
 
     @extend %w100;
+
+    &--lobby {
+      &:nth-of-type(even) {
+        display: none;
+      }
+    }
   }
 
   &__subtitle {
@@ -196,6 +218,8 @@
     min-width: 100%;
 
     @media screen and (min-width: $desktop) {
+      --background-color-button: #{$white-20};
+
       min-width: calc(219 / 501 * 100%);
     }
   }

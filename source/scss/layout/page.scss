@@ -1,0 +1,71 @@
+.page {
+  &--about {
+    --color-button: var(--light-yellow);
+    --border-color-button: var(--light-yellow);
+    --color-page: var(--light-yellow);
+    --background-color-page: var(--green);
+  }
+
+  &--conference-service {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--beige);
+  }
+
+  &--conference {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--green);
+  }
+
+  &--group {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--blue);
+  }
+
+  &--lobby {
+    --color-button: var(--light-yellow);
+    --border-color-button: var(--light-yellow);
+    --color-page: var(--light-yellow);
+    --background-color-page: var(--gray);
+  }
+
+  &--restaurant {
+    --color-button: var(--light-yellow);
+    --border-color-button: var(--light-yellow);
+    --color-page: var(--light-yellow);
+    --background-color-page: var(--dark-green);
+  }
+
+  &--rooms {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--dark-blue);
+  }
+
+  &--smart {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--dark-gray);
+  }
+
+  &--standart {
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+    --color-page: var(--white);
+    --background-color-page: var(--dark-blue);
+  }
+
+  &--starfit {
+    --color-button: var(--starfit);
+    --border-color-button: var(--starfit);
+    --color-page: var(--starfit);
+    --background-color-page: var(--dark-gray);
+  }
+}

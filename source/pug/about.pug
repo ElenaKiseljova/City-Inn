@@ -8,11 +8,15 @@ include includes/mixins.pug
 
 include layout/head.pug
 
-body(style="--color-button:  var(--light-yellow); --border-color-button:  var(--light-yellow); --color-page: var(--light-yellow); --background-color-page: var(--green);")
+body.page.page--about
   include layout/header.pug
 
   main(class="page-main")
     include pages/about/promo.pug
+
+    include pages/about/why.pug
+    include pages/about/around.pug
+
     include blocks/contacts.pug
 
   include layout/footer.pug

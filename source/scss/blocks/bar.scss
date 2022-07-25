@@ -1,0 +1,170 @@
+.bar {
+  @extend %w100;
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+
+    overflow: visible;
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 42px;
+    left: 0;
+
+    z-index: 2;
+
+    @extend %w100;
+
+    @include font(64, 78, 300);
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      top: auto;
+      bottom: 17px;
+      left: 6px;
+
+      @include font(96, 86, 300);
+
+      opacity: 0.6;
+    }
+
+    @media screen and (min-width: $desktop) {
+      bottom: -78px;
+      left: 15px;
+
+      @include font(144, 140, 300);
+
+      opacity: 0.8;
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    width: 100vw;
+    height: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    @media screen and (min-width: $tablet) {
+      height: calc(448 / 768 * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      height: calc(440 / 1440 * 100vw);
+    }
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @extend %w100;
+
+    min-height: 100vw;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      min-height: auto;
+
+      padding: 49px 0 42px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 135px 0 166px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    @extend %w100;
+
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 47px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-grow: 0;
+
+      max-width: 560px;
+
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @extend %w100;
+
+    @include font(14, 20, 400);
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      @include font(12, 20, 400);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(14, 21, 400);
+    }
+  }
+
+  &__buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: calc(24 / 414 * 100%);
+
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+      column-gap: calc(70 / 390 * 100%);
+
+      max-width: 390px;
+
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      column-gap: calc(24 / 424 * 100%);
+
+      max-width: 424px;
+
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    @media screen and (min-width: $desktop) {
+      &:first-of-type {
+        --background-color-button: #{$white-20};
+      }
+    }
+  }
+}

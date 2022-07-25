@@ -1,0 +1,223 @@
+{
+  "status": "success",
+  "content": {
+    "language": "en",
+    "seoTitle": "Cyty Inn",
+    "seoDescription": "Cyty Inn the Best!!!",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-2.webp",
+        "tablet": "/storage/media/2022/07/alesha-2.webp",
+        "desktop": "/storage/media/2022/07/alesha-2.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-1.jpg",
+        "tablet": "/storage/media/2022/07/alesha-1.jpg",
+        "desktop": "/storage/media/2022/07/alesha-1.jpg"
+      }
+    },
+    "address": {
+	"icon": "map-pin",
+         "link": "google.maps/....."
+    },
+    "social": [
+      {
+          "icon": "instagram",
+          "link": "google.com"
+      },
+      {
+          "icon": "facebook",
+          "link": "google.com"
+      },
+    ],
+    "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+    "offer": {
+      "title": "SPECIAL OFFER",
+      "link": "google.com"
+    },
+    "sections": [
+      {
+        "id": 2,
+        "sectionName": "smart",
+        "title": "smart номера",
+        "contentTop": "Щоб ви гарно виспались",
+        "contentBottom": "Буде тепло!",
+   
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "Дізнатись більше",
+          "link": "google.com"
+        },
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 3,
+        "sectionName": "lobby",
+        "title": "lobby bar",
+        "contentTop": "Щоб ви гарно проводили вільний час",
+        "contentBottom": "Буде смачно!",
+
+        "book": {
+          "title": "Reserve",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "Menu",
+          "link": "google.com"
+        },
+        //1440 на 440 - десктоп, 768 га 384 - планшет, 414 на 414 - мобила
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 4,
+        "sectionName": "conference",
+        "title": "Conference service",
+        "contentTop": "Щоб ви провели гарний захід",
+        "contentBottom": "Буде SMART",
+ 
+        "more": {
+          "title": "View more",
+          "link": "google.com"
+        },
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 5,
+        "sectionName": "group",
+        "title": "group request",
+        "contentTop": "Щоб ви провели гарний захід",
+        "contentBottom": "Буде smart",
+
+        "book": {
+          "title": "group booking",
+          "link": "google.com"
+        },
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "sectionName": "restaurant",
+        "title": "restaurant",
+        "contentTop": "Щоб ви гарно проводили вільний час",
+        "contentBottom": "Буде смачно",
+
+        "book": {
+          "title": "Забронювати",
+          "link": "google.com"
+        },
+        "worktime": "07:00 до 22:00",
+         //1440 на 440 - десктоп, 768 га 384 - планшет, 414 на 414 - мобила
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 7,
+        "sectionName": "starfit",
+        "title": "star fit",
+        "contentTop": "Щоб ви відволіклись і перезавантажились",
+        "contentBottom": "Буде СПА! Буде СПОРТ!",
+  
+        "more": {
+          "title": "Дізнатись більше",
+          "link": "google.com"
+        },
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      },
+      {
+        "id": 8,
+        "sectionName": "about",
+        "title": "про нас",
+        "contentTop": "Ми створили для вас концепцію SMART готель, щоб все було розумно і швидко, але обов'язково з високим сервісом.",
+        "contentBottom": "Беду професійно! Буде SMART",
+ 
+        "more": {
+          "title": "Дізнатись більше",
+          "link": "google.com"
+        },
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -424,16 +424,28 @@
       min-width: calc(240 / 478 * 100%);
     }
 
-    &--lobby {
-      min-width: 200px;
-
-      margin: 0 auto;
-    }
-
     &--about {
       min-width: 208px;
 
       margin: 0 auto 0 0;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--lobby {
+        min-width: 162px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--lobby {
+        min-width: 200px;
+
+        margin: 0 auto;
+      }
+
+      &--about {
+        --background-color-button: #{$white-20};
+      }
     }
   }
 

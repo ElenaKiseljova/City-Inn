@@ -52,7 +52,7 @@ mixin event(attr = {})
                       | !{eventTextItem.bottomText}
 
                 if eventTextItem.button && eventTextItem.button.text && eventTextItem.button.text !== '' && eventTextItem.button.link && eventTextItem.button.link !== ''
-                  a(class="button event__button event__button--restaurant" href="" + eventTextItem.button.link)
+                  a(class="button event__button event__button--" + pageName href="" + eventTextItem.button.link)
                     span
                       | !{eventTextItem.button.text}
 
@@ -71,7 +71,7 @@ mixin event(attr = {})
                 | !{eventContent.bottomText}
 
           if eventContent.button && eventContent.button.text && eventContent.button.text !== '' && eventContent.button.link && eventContent.button.link !== ''
-            a(class="button event__button event__button--restaurant" href="" + eventContent.button.link)
+            a(class="button event__button event__button--" + pageName href="" + eventContent.button.link)
               span
                 | !{eventContent.button.text}
 
