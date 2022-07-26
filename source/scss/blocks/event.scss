@@ -1,6 +1,13 @@
 .event {
   @extend %w100;
 
+  &--around,
+  &--attraction {
+    --color-page: var(--white);
+    --color-button: var(--white);
+    --border-color-button: var(--white);
+  }
+
   @media screen and (min-width: $desktop) {
     padding: 140px 0 168px;
 
@@ -8,6 +15,15 @@
 
     &--lobby {
       padding: 98px 0;
+    }
+
+    &--around,
+    &--attraction {
+      --color-page: var(--light-yellow);
+      --color-button: var(--light-yellow);
+      --border-color-button: var(--light-yellow);
+
+      padding: 0;
     }
   }
 
@@ -19,14 +35,22 @@
     @extend .cosy__top;
 
     @media screen and (min-width: $tablet) {
-      &--lobby {
+
+      &--lobby,
+      &--attraction {
         order: 2;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      &--lobby {
+
+      &--lobby,
+      &--attraction {
         order: 1;
+      }
+
+      &--around {
+        order: 2;
       }
     }
   }
@@ -36,14 +60,22 @@
 
     margin-top: 40px;
 
-    color: var(--color-page, #ffffff);
-
     &--mobile {
       @extend .cosy__title--mobile;
     }
 
     &--desktop {
       @extend .cosy__title--desktop;
+    }
+
+    &--around {
+      margin-top: 33px;
+
+      @include font(64, 58, 300);
+    }
+
+    &--attraction {
+      margin-top: 28px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -66,6 +98,31 @@
           display: none;
         }
       }
+
+      &--around,
+      &--attraction {
+        --color-page: var(--light-yellow);
+
+        min-width: 617px;
+
+        margin-top: 0;
+
+        opacity: 1;
+      }
+
+      &--around {
+        margin-right: calc((100% + 243px) - 617px);
+        margin-bottom: -48px;
+        margin-left: -243px;
+
+        @include font(96, 86, 300);
+      }
+
+      &--attraction {
+        margin-right: calc(100% - 617px);
+        margin-bottom: 40px;
+        margin-left: 0;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -86,6 +143,31 @@
 
         opacity: 0.8;
       }
+
+      &--around,
+      &--attraction {
+        opacity: 1;
+      }
+
+      &--around {
+        min-width: 878px;
+
+        margin-top: 0;
+        margin-right: calc(100% - 878px);
+        margin-bottom: 100px;
+        margin-left: 0;
+
+        @include font(144, 140, 300);
+      }
+
+      &--attraction {
+        min-width: 961px;
+
+        margin-top: 0;
+        margin-right: calc((100% + 318px) - 961px);
+        margin-bottom: 81px;
+        margin-left: -318px;
+      }
     }
   }
 
@@ -94,8 +176,17 @@
 
     @extend .cosy__slider;
 
+    &--around,
+    &--attraction {
+      &::before {
+        display: none;
+      }
+    }
+
     @media screen and (min-width: $tablet) {
-      &--lobby {
+
+      &--lobby,
+      &--attraction {
         margin: 0 calc(100% - 50vw) 0 0;
       }
     }
@@ -104,8 +195,19 @@
       height: auto;
       min-height: 840px;
 
-      &--lobby {
+      &--lobby,
+      &--attraction {
         margin: 0 0 0 calc(100% - 50vw);
+      }
+
+      &--around {
+        margin: 0 calc(100% - 50vw) 0 0;
+
+        overflow: hidden;
+      }
+
+      &--attraction {
+        overflow: hidden;
       }
     }
   }
@@ -117,10 +219,27 @@
       &--images {
         overflow: visible;
       }
+
+      &--text {
+        flex-grow: 1;
+      }
     }
   }
 
+  &__slider-wrapper {
+    align-items: stretch;
+  }
+
   &__slide {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    height: auto;
+
     box-sizing: border-box;
 
     @media screen and (min-width: $desktop) {
@@ -131,7 +250,7 @@
         --height-img: 360px;
       }
 
-      &--images {
+      &--images:not(.event__slide--around):not(.event__slide--attraction) {
         &.swiper-slide-active {
           .event__img {
             width: 100%;
@@ -185,6 +304,14 @@
       padding-top: 40px;
     }
 
+    &--around {
+      padding-top: 46px;
+    }
+
+    &--attraction {
+      padding-top: 71px;
+    }
+
     @media screen and (min-width: $tablet) {
       padding: 53px 0 40px 39px;
 
@@ -192,6 +319,16 @@
         order: 1;
 
         padding: 47px 31px 38px 0;
+      }
+
+      &--around {
+        padding: 16px 0 38px 41px;
+      }
+
+      &--attraction {
+        order: 1;
+
+        padding: 13px 36px 38px 0;
       }
     }
 
@@ -202,6 +339,20 @@
         order: 2;
 
         padding: 35px 78px 40px 42px;
+      }
+
+      &--around {
+        order: 1;
+
+        position: relative;
+
+        padding: 31px 80px 80px 0;
+      }
+
+      &--attraction {
+        order: 2;
+
+        padding: 44px 25px 136px 119px;
       }
     }
   }
@@ -261,6 +412,14 @@
       &--lobby {
         --background-color-button: #{$white-20};
       }
+
+      &--around {
+        margin: 40px 168px 0 auto;
+      }
+
+      &--attraction {
+        margin: 40px auto 0 168px;
+      }
     }
   }
 
@@ -275,6 +434,24 @@
 
       &--lobby {
         margin-left: 238px;
+      }
+
+      &--around {
+        position: absolute;
+
+        bottom: 80px;
+        right: 80px;
+
+        margin: 0;
+      }
+
+      &--attraction {
+        position: absolute;
+
+        bottom: 136px;
+        left: 119px;
+
+        margin: 0;
       }
     }
   }

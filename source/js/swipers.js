@@ -1,5 +1,6 @@
 import gsap from './gsap.min';
 import Swiper from './swiper-bundle.min';
+import changeActiveClass from './changeActiveClass';
 
 export default () => {
   const DEVICE_WIDTH = window.innerWidth && document.documentElement.clientWidth
@@ -46,6 +47,18 @@ export default () => {
     }
   };
 
+  const changeFoodTab = (swiperSlider, numbers = [], texts = []) => {
+    const index = swiperSlider.activeIndex ?? 0;
+
+    if (numbers[index] && texts[index]) {
+      changeActiveClass(numbers);
+      numbers[index].classList.add('active');
+
+      changeActiveClass(texts);
+      texts[index].classList.add('active');
+    }
+  };
+
   const swiperInit = (swiperItem, attr = {}) => {
     let prevButton = null;
     let nextButton = null;
@@ -59,11 +72,6 @@ export default () => {
 
     prevButton = swiperItem.closest('section').querySelector('.swiper-button-prev');
     nextButton = swiperItem.closest('section').querySelector('.swiper-button-next');
-
-    // Home sliders
-    if (swiperItem.classList.contains('home__slider')) {
-      pagination = swiperItem.closest('.home').querySelector('.swiper-pagination');
-    }
 
     // Smart sliders
     if (swiperItem.classList.contains('cards__slider')) {
@@ -91,17 +99,15 @@ export default () => {
       }
     }
 
-    if (swiperItem.classList.contains('banquet__slider')) {
-      pagination = swiperItem.closest('.banquet').querySelector('.swiper-pagination');
-    }
-
     // Lobby sliders
     if (swiperItem.classList.contains('doings__slider')) {
-      pagination = swiperItem.closest('.doings').querySelector('.swiper-pagination');
-
       if (DEVICE_WIDTH > 1366) {
         swiperArgs.spaceBetween = 270;
       }
+    }
+
+    if (!pagination) {
+      pagination = swiperItem.closest('section').querySelector('.swiper-pagination');
     }
 
     if (pagination) {
@@ -141,6 +147,20 @@ export default () => {
       }
     }
 
+    // Food sliders
+    if (swiperItem.classList.contains('food__slider')) {
+      if (swiperItem.closest('.food--about')) {
+        const foodNumberTabs = swiperItem.closest('.food--about').querySelectorAll('.food__tab-number');
+        const foodTextTabs = swiperItem.closest('.food--about').querySelectorAll('.food__tab-text');
+
+        changeFoodTab(swiperSlider, foodNumberTabs, foodTextTabs);
+
+        swiperSlider.on('slideChange', () => {
+          changeFoodTab(swiperSlider, foodNumberTabs, foodTextTabs);
+        });
+      }
+    }
+
     return swiperSlider;
   };
 
@@ -151,50 +171,45 @@ export default () => {
     swiperInit(swiperItem);
   });
 
-  // Events slider
-  const eventSliderImages = document.querySelector('.event__slider--images');
+  // Events sliders
+  const eventSlidersImages = document.querySelectorAll('.event__slider--images');
 
-  if (eventSliderImages) {
-    const pagination = eventSliderImages.closest('section').querySelector('.swiper-pagination');
+  if (eventSlidersImages.length > 0) {
+    eventSlidersImages.forEach((eventSliderImages) => {
+      const attrImages = {};
 
-    const attrImages = {
-      pagination: {
-        el: pagination,
-        clickable: true,
-      },
-    };
+      if (DEVICE_WIDTH > 1366) {
+        attrImages.spaceBetween = 280;
+      }
 
-    if (DEVICE_WIDTH > 1366) {
-      attrImages.spaceBetween = 280;
-    }
+      const imagesEventSlider = swiperInit(eventSliderImages, attrImages);
 
-    const imagesEventSlider = swiperInit(eventSliderImages, attrImages);
+      const eventSliderText = eventSliderImages.closest('.event').querySelector('.event__slider--text');
 
-    const eventSliderText = document.querySelector('.event__slider--text');
-
-    if (eventSliderText) {
-      const attrText = {
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true,
-        },
-        breakpoints: {
-          // when window width is >= 1440px
-          1366: {
+      if (eventSliderText) {
+        const attrText = {
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true,
           },
-        },
-      };
+          breakpoints: {
+            // when window width is >= 1440px
+            1366: {
+            },
+          },
+        };
 
-      const textEventSlider = swiperInit(eventSliderText, attrText);
+        const textEventSlider = swiperInit(eventSliderText, attrText);
 
-      textEventSlider.on('slideChange', () => {
-        imagesEventSlider.slideTo(textEventSlider.activeIndex);
-      });
+        textEventSlider.on('slideChange', () => {
+          imagesEventSlider.slideTo(textEventSlider.activeIndex);
+        });
 
-      imagesEventSlider.on('slideChange', () => {
-        textEventSlider.slideTo(imagesEventSlider.activeIndex);
-      });
-    }
+        imagesEventSlider.on('slideChange', () => {
+          textEventSlider.slideTo(imagesEventSlider.activeIndex);
+        });
+      }
+    });
   }
 
   // Reloader

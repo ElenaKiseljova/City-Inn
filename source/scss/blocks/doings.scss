@@ -11,18 +11,8 @@
 
     z-index: 2;
 
-    @extend %w100;
-
-    @include font(64, 78, 300);
-
-    text-transform: lowercase;
-
-    color: var(--color-page, #ffffff);
-
     @media screen and (min-width: $tablet) {
       left: calc(353 / 768 * 100vw);
-
-      @include font(96, 140, 300);
 
       opacity: 0.8;
     }
@@ -30,8 +20,6 @@
     @media screen and (min-width: $desktop) {
       top: 13px;
       left: calc(764 / 1440 * 100vw);
-
-      @include font(144, 140, 300);
     }
   }
 

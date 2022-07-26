@@ -5,39 +5,41 @@ mixin event(attr = {})
   - const eventText = attr.eventText ?? [];
   - const eventContent = attr.eventContent ?? null;
 
-  section(class="event event--" + pageName)
+  - const eventSection = attr.eventSection ?? pageName;
+
+  section(class="event event--" + eventSection)
     div.event__container.container
-      div(class="event__top event__top--" + pageName)
-        h2(class="event__title event__title--mobile event__title--" + pageName)
+      div(class="event__top event__top--" + eventSection)
+        h2(class="title-inner event__title event__title--mobile event__title--" + eventSection)
           | !{title}
 
         if eventImages.length > 0
-          div(class="event__slider-container event__slider-container--" + pageName)
+          div(class="event__slider-container event__slider-container--" + eventSection)
             +slider('event', 'images')
               each image in eventImages
-                +slide('event', 'images')
+                +slide('event', eventSection, 'images')
                   div.event__img
                     picture.event__picture
-                      source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
-                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
-                      source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
+                      source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-desktop.webp")
+                      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.webp")
+                      source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-mobile.webp")
 
-                      source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
-                      source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
+                      source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + image + "-desktop.jpg")
+                      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.jpg")
 
-                      img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+                      img(src="img/" + pageName + "/" + image + "-mobile.jpg" alt="" + title)
 
             div.event__pagination.pagination.swiper-pagination
-      div(class="event__bottom event__bottom--" + pageName)
-        h2(class="event__title event__title--desktop event__title--" + pageName)
+      div(class="event__bottom event__bottom--" + eventSection)
+        h2(class="title-inner event__title event__title--desktop event__title--" + eventSection)
           | !{title}
 
-        +navigation('event', pageName)
+        +navigation('event', eventSection)
 
         if eventText.length > 0
           +slider('event', 'text')
             each eventTextItem in eventText
-              +slide('event', 'text')
+              +slide('event', eventSection, 'text')
                 div.event__content
                   if eventTextItem.title && eventTextItem.title !== ''
                     h3.event__subtitle
@@ -52,7 +54,7 @@ mixin event(attr = {})
                       | !{eventTextItem.bottomText}
 
                 if eventTextItem.button && eventTextItem.button.text && eventTextItem.button.text !== '' && eventTextItem.button.link && eventTextItem.button.link !== ''
-                  a(class="button event__button event__button--" + pageName href="" + eventTextItem.button.link)
+                  a(class="button event__button event__button--" + eventSection href="" + eventTextItem.button.link)
                     span
                       | !{eventTextItem.button.text}
 
@@ -71,7 +73,7 @@ mixin event(attr = {})
                 | !{eventContent.bottomText}
 
           if eventContent.button && eventContent.button.text && eventContent.button.text !== '' && eventContent.button.link && eventContent.button.link !== ''
-            a(class="button event__button event__button--" + pageName href="" + eventContent.button.link)
+            a(class="button event__button event__button--" + eventSection href="" + eventContent.button.link)
               span
                 | !{eventContent.button.text}
 

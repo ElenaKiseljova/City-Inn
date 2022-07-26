@@ -1,0 +1,180 @@
+-
+  const spa = {
+    title: `
+      БУДЕ СПА
+    `,
+    slides: [
+      {
+        image: 'slide-1',
+        description: `
+          Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.
+          <br />
+          Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни
+        `,
+        services: [
+          {
+            icon: 'swimming-cap',
+            title: 'шапочка'
+          },
+          {
+            icon: 'shower',
+            title: 'душ'
+          },
+          {
+            icon: 'slippers',
+            title: 'тапочки'
+          },
+        ],
+        worktime: '',
+        rules: {
+          text: '',
+          link: ''
+        },
+      },
+      {
+        image: 'slide-2',
+        description: `
+          Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.
+        `,
+        services: [],
+        worktime: '7:00 - 22:00',
+        rules: {
+          text: 'правила відвідування',
+          link: '#'
+        },
+      },
+      {
+        image: 'slide-3',
+        description: ``,
+        services: [],
+        worktime: '',
+        rules: {
+          text: '',
+          link: ''
+        },
+      },
+    ],
+    content: {
+      textTop: `
+        Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.
+        <br />
+        Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни
+
+      `,
+      textBottom: `
+        Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.
+      `,
+      services: [
+        {
+          icon: 'swimming-cap',
+          title: 'шапочка'
+        },
+        {
+          icon: 'shower',
+          title: 'душ'
+        },
+        {
+          icon: 'slippers',
+          title: 'тапочки'
+        },
+        ],
+        worktime: '7:00 до 22:00.',
+        rules: {
+          text: 'правила відвідування',
+          link: '#'
+        },
+    }
+  };
+
+section.spa
+  div.spa__left
+    h2.title-inner.spa__title
+      | !{spa.title}
+
+    +slider('spa')
+      for slide in spa.slides
+        - const image = slide.image ?? '';
+        - const description = slide.description ?? '';
+        - const services = slide.services ?? [];
+        - const worktime = slide.worktime ?? '';
+        - const rules = slide.rules ?? {};
+
+        +slide('spa')
+          div.spa__top
+            div(class="spa__img")
+              picture.spa__picture
+                source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-desktop.webp")
+                source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.webp")
+                source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-mobile.webp")
+
+                source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + image + "-desktop.jpg")
+                source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.jpg")
+
+                img(src="img/" + pageName + "/" + image + "-mobile.jpg" alt="" + spa.title)
+
+          div.spa__bottom
+            if description !== ''
+              p.spa__text
+                |  !{description}
+
+            if services.length > 0
+              ul.spa__services.services.services--spa
+                for service in services
+                  li.services__item
+                    div.services__icon
+                      svg(width="40" height="40")
+                        use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
+
+                    h5.services__name
+                      | #{service.title}
+
+            if worktime !== ''
+              +worktime('spa', '', worktime)
+
+            if rules && rules.text && rules.text !== '' && rules.link && rules.link !== ''
+              a(class="button spa__button" href="" + rules.link)
+                span !{rules.text}
+
+    div.spa__pagination.pagination.swiper-pagination
+
+  div.spa__right
+    - const textTop = spa.content.textTop ?? '';
+    - const textBottom = spa.content.textBottom ?? '';
+    - const services = spa.content.services ?? [];
+    - const worktime = spa.content.worktime ?? '';
+    - const rules = spa.content.rules ?? {};
+
+    if textTop !== ''
+      p.spa__text.spa__text--top
+        | !{textTop}
+
+    if textBottom !== ''
+      p.spa__text.spa__text--bottom
+        | !{textBottom}
+
+    if services.length > 0
+      ul.spa__services.services.services--spa
+        for service in services
+          li.services__item.services__item--spa
+            div.services__icon.services__icon--spa
+              svg(width="40" height="40")
+                use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
+
+            h5.services__name
+              | #{service.title}
+
+        if worktime !== ''
+          li.services__item.services__item--worktime
+            +worktime('spa', 'tablet', worktime)
+
+    div.spa__buttons
+      if worktime !== ''
+        +worktime('spa', 'desktop', worktime)
+
+      if rules && rules.text && rules.text !== '' && rules.link && rules.link !== ''
+        a(class="button spa__button" href="" + rules.link)
+          span !{rules.text}
+
+        div.spa__arrow-top
+          svg(width="48" height="48")
+            use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-top")

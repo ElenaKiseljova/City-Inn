@@ -253,7 +253,7 @@ section.cards
                         | !{slideDescription}
 
                     if slideServices.length > 0
-                      ul.cards__services.services
+                      ul.cards__services.services.services--cards
                         for slideService in slideServices
                           li.services__item
                             div.services__icon
@@ -277,7 +277,7 @@ section.cards
               | !{cardDescription}
 
             if cardServices.length > 0
-              ul.cards__services.services
+              ul.cards__services.services.services--smart
                 for cardService in cardServices
                   li.services__item
                     div.services__icon

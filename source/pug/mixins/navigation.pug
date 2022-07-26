@@ -1,12 +1,12 @@
 mixin navigation(sectionName = 'home', sectionModificator = '')
   - const additionalClassesNavigation = sectionName + '__navigation ' + ((sectionModificator !== '') ? sectionName + '__navigation--' + sectionModificator : '');
   div(class="navigation " + additionalClassesNavigation)
-    button.navigation__prev.button.button--circle.button--white.swiper-button-prev
+    button.navigation__prev.button.button--circle.swiper-button-prev
       span.visually-hidden Prev
       svg(width="48" height="48")
         use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-prev")
 
-    button.navigation__next.button.button--circle.button--white.swiper-button-next
+    button.navigation__next.button.button--circle.swiper-button-next
       span.visually-hidden Next
       svg(width="48" height="48")
         use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-next")

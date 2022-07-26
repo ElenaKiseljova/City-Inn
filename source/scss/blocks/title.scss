@@ -7,6 +7,8 @@
 
   color: $white;
 
+  pointer-events: none;
+
   &--light-green {
     color: $white-80;
   }

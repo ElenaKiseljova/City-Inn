@@ -1,0 +1,37 @@
+-
+  const mission = {
+    title: `
+      Місія
+    `,
+    text: `
+      Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros. In hac habitasse platea dictumst. Nunc convallis felis ac fermentum volutpat. Phasellus at scelerisque est. In sit amet pulvinar mi. Pellentesque ut condimentum ante, et gravida mi. In erat felis, laoreet nec porta eu, vehicula nec diam.
+    `,
+    images: ['mission-1', 'mission-1', 'mission-1'],
+  };
+
+section.mission
+  div.mission__container.container
+    h2.title-inner.mission__title
+      | !{mission.title}
+
+    div.mission__content
+      p.mission__text
+        | !{mission.text}
+
+    +navigation('mission')
+
+    +slider('mission')
+      for imageName in mission.images
+        +slide('mission')
+          div(class="mission__img")
+            picture.mission__picture
+              source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + imageName + "-desktop.webp")
+              source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + imageName + "-tablet.webp")
+              source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + imageName + "-mobile.webp")
+
+              source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + imageName + "-desktop.jpg")
+              source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + imageName + "-tablet.jpg")
+
+              img(src="img/" + pageName + "/" + imageName + "-mobile.jpg" alt="" + title)
+
+    div.mission__pagination.pagination.swiper-pagination

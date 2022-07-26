@@ -16,16 +16,14 @@
     white-space: nowrap;
   }
 
-  @media screen and (min-width: $desktop) {}
-
   &__clock {
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 
     margin-right: 24px;
 
@@ -34,7 +32,19 @@
     border-radius: 50%;
 
     svg {
+      width: 100%;
+      height: auto;
+
       fill: var(--color-page, #ffffff);
+    }
+
+    &--spa {
+      margin-right: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 48px;
+      height: 48px;
     }
   }
 }

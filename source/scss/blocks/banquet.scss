@@ -25,11 +25,7 @@
 
     z-index: 2;
 
-    @extend %w100;
-
     @include font(50, 74, 300);
-
-    color: var(--color-page);
 
     @media screen and (min-width: $mobile) {
       left: 40px;
@@ -74,8 +70,12 @@
   &__pagination {
     z-index: 2;
 
-    @media screen and (min-width: $tablet) {
-      &.swiper-pagination {
+    &.swiper-pagination {
+      bottom: auto;
+      top: 40px;
+
+      @media screen and (min-width: $tablet) {
+        top: auto;
         bottom: 38px;
       }
     }

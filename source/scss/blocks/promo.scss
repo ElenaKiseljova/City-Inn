@@ -15,6 +15,15 @@
     justify-content: flex-start;
   }
 
+  &--home {
+    background-color: $yellow;
+  }
+
+  &--smart {
+    background-color: $starfit;
+  }
+
+
   @media screen and (min-width: $tablet) {
     min-height: calc(384 / 768 * 100vw);
   }
@@ -372,6 +381,10 @@
     @include font(14, 21, 400);
 
     color: var(--color-page);
+
+    &--starfit {
+      --color-page: #{$dark-starfit};
+    }
 
     @media screen and (min-width: $tablet) {
       @include font(18, 27, 400);

@@ -1,6 +1,10 @@
 .food {
   @extend %w100;
 
+  &--about {
+    --color-page: var(--white);
+  }
+
   @media screen and (min-width: $desktop) {
     padding-bottom: 140px;
 
@@ -8,6 +12,12 @@
 
     &--lobby {
       padding: 0;
+    }
+
+    &--about {
+      --color-page: var(--light-yellow);
+
+      padding: 0 0 137px;
     }
   }
 
@@ -20,7 +30,9 @@
 
 
     @media screen and (min-width: $tablet) {
-      &--direct {
+
+      &--restaurant,
+      &--about {
         order: 2;
       }
     }
@@ -31,7 +43,7 @@
       align-items: stretch;
       justify-content: flex-start;
 
-      &--reverse {
+      &--lobby {
         order: 2;
       }
     }
@@ -42,14 +54,16 @@
 
     margin-top: 42px;
 
-    color: var(--color-page, #ffffff);
-
     &--mobile {
       @extend .cosy__title--mobile;
     }
 
     &--desktop {
       @extend .cosy__title--desktop;
+    }
+
+    &--about {
+      margin-top: 33px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -66,6 +80,12 @@
         margin-left: -102px;
 
         opacity: 0.6;
+      }
+
+      &--about {
+        margin-bottom: 19px;
+
+        opacity: 1;
       }
     }
 
@@ -84,6 +104,12 @@
 
         opacity: 0.8;
       }
+
+      &--about {
+        margin-bottom: 89px;
+
+        opacity: 1;
+      }
     }
   }
 
@@ -93,7 +119,9 @@
     position: relative;
 
     @media screen and (min-width: $tablet) {
-      &--direct {
+
+      &--restaurant,
+      &--about {
         margin: 0 calc(100% - 50vw) 0 0;
       }
     }
@@ -123,6 +151,15 @@
         margin: 0 calc(100% - 50vw) 0 165px;
 
         padding-bottom: 169px;
+      }
+
+      &--about {
+        width: calc(50vw - 80px);
+
+        margin-top: 0;
+        margin-left: 80px;
+
+        padding: 288px 0 0;
       }
     }
   }
@@ -154,6 +191,12 @@
       }
 
       &.swiper-slide-next {
+        &~.swiper-slide {
+          opacity: 0;
+
+          pointer-events: none;
+        }
+
         .food__img {
           transform-origin: left top;
           transform: translateY(-154px) scale(2);
@@ -161,10 +204,10 @@
           transition: transform 0.3s;
         }
 
-        &~.swiper-slide {
-          opacity: 0;
-
-          pointer-events: none;
+        &.food__slide--about {
+          .food__img {
+            transform: translateY(-288px) scale(2);
+          }
         }
       }
     }
@@ -182,30 +225,40 @@
     @extend .cosy__bottom;
 
     @media screen and (min-width: $tablet) {
-      &--direct {
+
+      &--restaurant,
+      &--about {
         order: 1;
 
         padding: 40px 34px 38px 0;
       }
 
-      &--reverse {
+      &--lobby {
         padding: 40px 0 38px 34px;
       }
 
       &--lobby {
         padding: 25px 0 38px 35px;
       }
+
+      &--about {
+        padding: 57px 36px 38px 0;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 165px 203px 129px 0;
 
-      &--reverse {
+      &--lobby {
         order: 1;
       }
 
       &--lobby {
         padding: 101px 88px 169px 0;
+      }
+
+      &--about {
+        padding: 57px 90px 0 12px;
       }
     }
   }
@@ -227,6 +280,109 @@
 
     &--bottom {
       @extend .cosy__text--bottom;
+    }
+  }
+
+  &__tabs {
+    display: grid;
+
+    grid-template-areas: "a b c d""e e e e";
+
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-template-rows: 40px auto;
+
+    justify-content: space-between;
+
+    row-gap: 63px;
+
+    @extend %w100;
+
+    list-style: none;
+
+    @media screen and (min-width: $tablet) {
+      row-gap: 116px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-areas: "a e""b f""c d""d h";
+
+      grid-template-columns: 48px auto;
+      grid-template-rows: auto;
+
+      align-items: center;
+
+      gap: 41px 47px;
+    }
+  }
+
+  &__tab-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    @include font(14, 17, 500);
+
+    color: var(--color-page, #ffffff);
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-page, #ffffff);
+
+    border-radius: 50%;
+
+    transition: background-color 0.3s;
+
+    $areas: ('a', 'b', 'c', 'd');
+
+    @for $i from 0 to length($areas) {
+      &--#{$i+1} {
+        grid-area: unquote(nth($areas, $i+1));
+      }
+    }
+
+    &.active {
+      background-color: $white-20;
+
+      transition: background-color 0.3s;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__tab-text {
+    grid-area: e;
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+
+    &.active {
+      opacity: 1;
+
+      transition: opacity 0.3s;
+    }
+
+    @media screen and (min-width: $desktop) {
+      opacity: 1;
+
+      $areas: ('e', 'f', 'g', 'h');
+
+      @for $i from 0 to length($areas) {
+        &--#{$i+1} {
+          grid-area: unquote(nth($areas, $i+1));
+        }
+      }
+
+      p {
+        opacity: 1;
+      }
     }
   }
 
@@ -257,7 +413,7 @@
     }
   }
 
-  &__worktime {}
+  // &__worktime {}
 
   &__button {
     min-width: 100%;

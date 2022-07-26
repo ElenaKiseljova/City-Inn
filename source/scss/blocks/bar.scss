@@ -17,18 +17,10 @@
 
     z-index: 2;
 
-    @extend %w100;
-
-    @include font(64, 78, 300);
-
-    color: var(--color-page, #ffffff);
-
     @media screen and (min-width: $tablet) {
       top: auto;
       bottom: 17px;
       left: 6px;
-
-      @include font(96, 86, 300);
 
       opacity: 0.6;
     }
@@ -36,8 +28,6 @@
     @media screen and (min-width: $desktop) {
       bottom: -78px;
       left: 15px;
-
-      @include font(144, 140, 300);
 
       opacity: 0.8;
     }

@@ -60,7 +60,7 @@
   };
 
 section(class="doings")
-  h2(class="doings__title")
+  h2(class="title-inner doings__title")
     | !{doingsAttr.title}
 
   if doingsAttr.slides && doingsAttr.slides.length > 0
@@ -95,4 +95,4 @@ section(class="doings")
 
       +navigation('doings')
 
-      div.doings__pagination.doings__pagination.pagination.swiper-pagination
+      div.doings__pagination.pagination.swiper-pagination

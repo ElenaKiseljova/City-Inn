@@ -1,19 +1,41 @@
 .services {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc(154 / 334 * 100%) calc(154 / 334 * 100%);
   grid-template-rows: auto;
 
-  gap: 27px 13px;
+  gap: 27px 5px;
+
+  justify-content: space-between;
 
   @extend %w100;
 
   list-style: none;
 
-  @media screen and (min-width: $desktop) {
-    grid-template-columns: repeat(4, 1fr);
+  &--spa {
+    row-gap: 16px;
+  }
 
-    gap: 27px 5px;
+  @media screen and (min-width: $tablet) {
+    &--spa {
+      grid-template-columns: calc(151 / 310 * 100%) calc(151 / 310 * 100%);
+
+      row-gap: 24px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &--cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &--spa {
+      grid-template-columns: repeat(3, auto);
+
+      column-gap: 56px;
+
+      justify-content: flex-start;
+    }
   }
 
   &__item {
@@ -30,6 +52,14 @@
 
     @media screen and (min-width: $desktop) {
       flex-direction: column;
+
+      &--spa {
+        flex-direction: row;
+      }
+
+      &--worktime {
+        display: none;
+      }
     }
   }
 
@@ -46,14 +76,17 @@
 
     margin-right: 16px;
 
-    border: 1px solid $white;
+    border: 1px solid var(--color-page, #ffffff);
 
     border-radius: 50%;
 
     overflow: hidden;
 
     svg {
-      fill: $white;
+      width: 100%;
+      height: auto;
+
+      fill: var(--color-page, #ffffff);
     }
 
     @media screen and (min-width: $desktop) {
@@ -62,6 +95,11 @@
 
       margin-right: 0;
       margin-bottom: 24px;
+
+      &--spa {
+        margin-right: 24px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -73,6 +111,6 @@
 
     text-transform: lowercase;
 
-    color: $white;
+    color: var(--color-page, #ffffff);
   }
 }

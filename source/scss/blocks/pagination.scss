@@ -2,10 +2,12 @@
   @extend %w100;
 
   .swiper-pagination-bullet {
-    background-color: $white-40;
+    background-color: var(--color-pagination, #ffffff);
+
+    opacity: 0.4;
 
     &-active {
-      background-color: $white-90;
+      opacity: 0.9;
     }
   }
 }

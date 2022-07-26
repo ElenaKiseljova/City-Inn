@@ -1,5 +1,5 @@
-mixin slide(sectionName = 'home', sectionModificator = '')
-  - const additionalClassesSwiperSlide = sectionName + '__slide ' + sectionName + '__slide--' + pageName + ' ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
+mixin slide(sectionName = 'home', sectionModificator = pageName, typeContent = '')
+  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((typeContent !== '') ? (sectionName + '__slide--' + typeContent) : '') + ' ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
 
   div(class="swiper-slide " + additionalClassesSwiperSlide)
     if block

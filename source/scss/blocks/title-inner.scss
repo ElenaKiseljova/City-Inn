@@ -1,0 +1,23 @@
+.title-inner {
+  width: fit-content;
+
+  margin: 0;
+
+  padding: 0;
+
+  @include font(64, 78, 300);
+
+  text-transform: lowercase;
+
+  color: var(--color-page, #ffffff);
+
+  pointer-events: none;
+
+  @media screen and (min-width: $tablet) {
+    @include font(96, 86, 300);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include font(144, 140, 300);
+  }
+}
