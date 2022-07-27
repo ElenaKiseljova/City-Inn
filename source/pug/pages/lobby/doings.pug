@@ -73,16 +73,7 @@ section(class="doings")
             - const text = slide.text ?? '';
 
             div.doings__img-wrapper
-              div.doings__img
-                picture.doings__picture
-                  source(media="(min-width: 1025px)" type="image/webp" srcset="img/lobby/" + image.webp.desktop + "-desktop.webp")
-                  source(media="(min-width: 500px)" srcset="img/lobby/" + image.webp.tablet + "-tablet.webp")
-                  source(media="(min-width: 100px)" type="image/webp" srcset="img/lobby/" + image.webp.mobile + "-mobile.webp")
-
-                  source(media="(min-width: 1025px)" srcset="img/lobby/" + image.jpg.desktop + "-desktop.jpg")
-                  source(media="(min-width: 500px)" srcset="img/lobby/" + image.jpg.tablet + "-tablet.jpg")
-
-                  img(src="img/lobby/" + image.jpg.mobile + "-mobile.jpg" alt="img")
+              +img('doings', '', image.jpg.mobile, subTitle)
 
             div.doings__content
               if subTitle && subTitle !== ''

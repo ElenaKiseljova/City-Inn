@@ -101,16 +101,7 @@ section.spa
 
         +slide('spa')
           div.spa__top
-            div(class="spa__img")
-              picture.spa__picture
-                source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-desktop.webp")
-                source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.webp")
-                source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-mobile.webp")
-
-                source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + image + "-desktop.jpg")
-                source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.jpg")
-
-                img(src="img/" + pageName + "/" + image + "-mobile.jpg" alt="" + spa.title)
+            +img('spa', '', image, spa.title)
 
           div.spa__bottom
             if description !== ''
@@ -175,6 +166,6 @@ section.spa
         a(class="button spa__button" href="" + rules.link)
           span !{rules.text}
 
-        div.spa__arrow-top
+        div.spa__arrow-top.arrow-top
           svg(width="48" height="48")
             use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-top")

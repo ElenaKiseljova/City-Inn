@@ -21,17 +21,17 @@
     grid-template-rows: minmax(414px, max-content);
 
     @media screen and (min-width: $tablet) {
-      grid-template-columns: 50% 50%;
-      grid-template-rows: auto;
-
-      min-height: calc(585 / 768 * 100vw);
+      grid-template-rows: calc(293 / 768 * 100vw) auto;
     }
 
     @media screen and (min-width: $desktop) {
-      min-height: calc(840 / 1440 * 100vw);
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+
+      min-height: calc(600 / 1440 * 100vw);
 
       &--lobby {
-        min-height: calc(540 / 1440 * 100vw);
+        min-height: calc(561 / 1440 * 100vw);
       }
     }
   }
@@ -46,7 +46,7 @@
 
     margin: 0 calc((100% - 100vw) / 2);
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       width: 50vw;
 
       margin: 0 calc(100% - 50vw);
@@ -58,23 +58,23 @@
 
     display: flex;
 
+    flex-direction: column;
+
     align-items: start;
     justify-content: start;
 
-    flex-direction: column;
+    height: fit-content;
 
     padding: 40px 0;
 
     @media screen and (min-width: $tablet) {
-      padding: 234px 4px 40px 40px;
+      align-items: flex-end;
     }
 
     @media screen and (min-width: $desktop) {
-      padding: 211px 25px 200px 114px;
+      align-items: flex-start;
 
-      &--lobby {
-        padding: 65px 25px 205px 165px;
-      }
+      padding: 80px 58px 201px 80px;
     }
   }
 
@@ -135,11 +135,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-      margin-bottom: 98px;
-
-      &--lobby {
-        margin-bottom: 57px;
-      }
+      margin-bottom: 80px;
     }
   }
 
@@ -155,11 +151,13 @@
 
     list-style: none;
 
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
       grid-template-columns: 1fr 1fr;
+    }
 
+    @media screen and (min-width: $desktop) {
       &--lobby {
-        grid-template-columns: 230px;
+        grid-template-columns: 1fr;
       }
     }
   }
@@ -191,6 +189,10 @@
     text-transform: uppercase;
 
     color: $yellow;
+
+    &--conference-service {
+      color: $white;
+    }
   }
 
   &__text,
@@ -200,6 +202,10 @@
     @include font(14, 25, 400);
 
     color: $white;
+
+    &--conference-service {
+      color: $dark-gray;
+    }
   }
 
   &__link {
@@ -216,6 +222,10 @@
 
   &__button {
     min-width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      min-width: 308px;
+    }
 
     @media screen and (min-width: $desktop) {
       --background-color-button: #{$white-20};

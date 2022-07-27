@@ -18,16 +18,7 @@ mixin food(attr = {})
             +slider('food')
               each image in foodImages
                 +slide('food')
-                  div.food__img
-                    picture.food__picture
-                      source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-desktop.webp")
-                      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.webp")
-                      source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-mobile.webp")
-
-                      source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + image + "-desktop.jpg")
-                      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.jpg")
-
-                      img(src="img/" + pageName + "/" + image + "-mobile.jpg" alt="" + title)
+                  +img('food', '', image, foodTitle)
 
             +navigation('food')
 

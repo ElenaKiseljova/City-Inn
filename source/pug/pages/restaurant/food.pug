@@ -4,11 +4,18 @@
     foodTitle: `меню`,
     foodTextTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
     foodTextBottom : 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
+    worktime: '7:00 до 22:00.',
+    menu: {
+      text: 'Menu',
+      link: '#'
+    }
   };
 
 +food(foodAttr)
   div.food__buttons
-    +worktime('food', '', '7:00 до 22:00.')
+    if foodAttr.worktime !== ''
+      +worktime('food', '', foodAttr.worktime)
 
-    a(class="food__button button")
-      span меню
+    a(class="food__button button" href="" + foodAttr.menu.link)
+      span
+        | !{foodAttr.menu.text}

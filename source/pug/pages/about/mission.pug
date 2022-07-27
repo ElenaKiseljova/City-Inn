@@ -23,15 +23,6 @@ section.mission
     +slider('mission')
       for imageName in mission.images
         +slide('mission')
-          div(class="mission__img")
-            picture.mission__picture
-              source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + imageName + "-desktop.webp")
-              source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + imageName + "-tablet.webp")
-              source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + imageName + "-mobile.webp")
-
-              source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + imageName + "-desktop.jpg")
-              source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + imageName + "-tablet.jpg")
-
-              img(src="img/" + pageName + "/" + imageName + "-mobile.jpg" alt="" + title)
+          +img('mission', '', imageName, mission.title)
 
     div.mission__pagination.pagination.swiper-pagination

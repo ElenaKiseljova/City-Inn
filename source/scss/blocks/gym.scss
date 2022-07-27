@@ -1,0 +1,187 @@
+.gym {
+  @extend %w100;
+
+  &__container {
+    @media screen and (min-width: $desktop) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+
+    overflow: visible;
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 40px;
+    left: 0;
+
+    z-index: 2;
+
+    @media screen and (min-width: $desktop) {
+      top: 118px;
+      left: 254px;
+    }
+  }
+
+  &__slider {
+    width: 100vw;
+    height: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    @media screen and (min-width: $tablet) {
+      height: calc(448 / 768 * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 50vw;
+
+      height: auto;
+      min-height: 840px;
+
+      margin: 0 0 0 calc(100% - 50vw);
+    }
+  }
+
+  &__img {
+    @extend %img;
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.5);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.5);
+
+    @include before-linear-gradient();
+
+    @media screen and (min-width: $tablet) {
+      --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+      --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      --before-linear-gradient-from: rgba(0, 0, 0, 0.3);
+      --before-linear-gradient-to: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      bottom: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin: 0 0 0 calc((100% - 50vw) / 2);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @extend %w100;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-areas:
+        "a b"
+        "a c";
+
+      grid-template-columns: calc(312 / (768 - 72) * 100%) calc(312 / (768 - 72) * 100%);
+
+      justify-content: space-between;
+
+      padding: 40px 0 76px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-areas:
+        "a a"
+        "b c";
+
+      padding: 517px 0 80px 78px;
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+
+    @extend %w100;
+
+    margin-bottom: 46px;
+
+    @include font(14, 21, 400);
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      grid-area: a;
+
+      margin-bottom: 0;
+
+      @include font(14, 20, 400);
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 116px;
+    }
+  }
+
+  &__worktime {
+    margin-bottom: 45px;
+
+    @media screen and (min-width: $tablet) {
+      grid-area: b;
+
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__buttons {
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+      grid-area: c;
+
+      align-self: end;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+  }
+
+  &__arrow-top {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      margin-left: 24px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.arrow-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid var(--color-page, #ffffff);
+
+  border-radius: 50%;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    fill: var(--color-page, #ffffff);
+  }
+}

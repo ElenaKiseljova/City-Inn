@@ -1,0 +1,14 @@
+mixin img(sectionName = 'home', modificator = pageName, image = '',  alt = 'img')
+  - const img = sectionName + '__img ' + sectionName + '__img--' + modificator;
+  - const picture = sectionName + '__picture ' + sectionName + '__picture--' + modificator;
+
+  div(class="" + img)
+    picture(class="" + picture)
+      source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-desktop.webp")
+      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.webp")
+      source(media="(min-width: 100px)" type="image/webp" srcset="img/" + pageName + "/" + image + "-mobile.webp")
+
+      source(media="(min-width: 1025px)" srcset="img/" + pageName + "/" + image + "-desktop.jpg")
+      source(media="(min-width: 500px)" srcset="img/" + pageName + "/" + image + "-tablet.jpg")
+
+      img(src="img/" + pageName + "/" + image + "-mobile.jpg" alt="" + alt)

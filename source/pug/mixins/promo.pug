@@ -22,16 +22,7 @@ mixin promo(imageName, sectionName = '', title = '', social = [])
             a(class="promo__button button button--big button--book-now" href="#")
               span book now
 
-      div(class="promo__img promo__img--" + sectionName)
-        picture(class="promo__picture")
-          source(media="(min-width: 1025px)" type="image/webp" srcset="img/" + imageName + "-desktop.webp")
-          source(media="(min-width: 500px)" srcset="img/" + imageName + "-tablet.webp")
-          source(media="(min-width: 100px)" type="image/webp" srcset="img/" + imageName + "-mobile.webp")
-
-          source(media="(min-width: 1025px)" srcset="img/" + imageName + "-desktop.jpg")
-          source(media="(min-width: 500px)" srcset="img/" + imageName + "-tablet.jpg")
-
-          img(src="img/" + imageName + "-mobile.jpg" alt="Promo")
+      +img('promo', sectionName, imageName, title)
 
     if block
       div(class="promo__container promo__container--content container")

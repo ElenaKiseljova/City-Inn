@@ -1,0 +1,123 @@
+{
+  "status": "success",
+  "content": {
+    "language": "en",
+    "seoTitle": "smart пропозиції",
+    "seoDescription": "smart пропозиції the Best!!!",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-2.webp",
+        "tablet": "/storage/media/2022/07/alesha-2.webp",
+        "desktop": "/storage/media/2022/07/alesha-2.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-1.jpg",
+        "tablet": "/storage/media/2022/07/alesha-1.jpg",
+        "desktop": "/storage/media/2022/07/alesha-1.jpg"
+      }
+    },
+    "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+    "offer": {
+      "title": "SPECIAL OFFER",
+      "link": "google.com"
+    },
+    cards: [
+      {
+        title: `
+          корпоративна співпраця
+        `,
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-2.webp",
+            "tablet": "/storage/media/2022/07/alesha-2.webp",
+            "desktop": "/storage/media/2022/07/alesha-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-1.jpg",
+            "tablet": "/storage/media/2022/07/alesha-1.jpg",
+            "desktop": "/storage/media/2022/07/alesha-1.jpg"
+          }
+        },
+        subTitle: `
+          корпоративна співпраця
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
+          },
+          {
+            icon: 'spa',
+            title: '6 видів саун'
+          },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
+        },
+        slides: [
+          {
+            image: 'slide-1',
+            description: `
+              Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+              <br />
+              <br />
+              Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+            `,
+          },
+          {
+            image: 'slide-2',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            services: [
+              {
+                icon: 'pool',
+                title: 'бассейн'
+              },
+              {
+                icon: 'spa',
+                title: '6 видів саун'
+              },
+              {
+                icon: 'gym',
+                title: 'тренажерний зал'
+              },
+              {
+                icon: 'mini-bar',
+                title: 'фітобар'
+              },
+            ],
+          },
+          {
+            image: 'slide-3',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            book: {
+              title: 'Book now',
+              link: '#'
+            },
+          }
+        ]
+      },
+    ],
+  }
+}

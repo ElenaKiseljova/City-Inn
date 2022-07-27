@@ -215,14 +215,7 @@ section.cards
             | !{cardTitle}
 
           div(class="cards__img-wrapper")
-            div.cards__img
-              picture.cards__picture
-                source(media="(min-width: 1025px)" type="image/webp" srcset="img/smart/cards-" + cardImage + "-desktop.webp")
-                source(media="(min-width: 100px)" type="image/webp" srcset="img/smart/cards-" + cardImage + "-mobile.webp")
-
-                source(media="(min-width: 1025px)" srcset="img/smart/cards-" + cardImage + "-desktop.jpg")
-
-                img(src="img/smart/cards-" + cardImage + "-mobile.jpg" alt="cards")
+            +img('cards', '', ('cards-' + cardImage), cardTitle)
 
         div(class="cards__bottom cards__bottom--" + oddEven)
           if slides.length > 0
@@ -237,11 +230,7 @@ section.cards
 
                 +slide('cards')
                   div(class="cards__img-wrapper")
-                    div.cards__img
-                      picture.cards__picture
-                        source(media="(min-width: 100px)" type="image/webp" srcset="img/smart/cards-" + slideImage + ".webp")
-
-                        img(src="img/smart/cards-" + slideImage + ".jpg" alt="cards")
+                    +img('cards', '', ('cards-' + slideImage), slideTitle)
 
                   div.cards__content.cards__content--mobile
                     if slideTitle.length > 0

@@ -1,24 +1,21 @@
-- const banquetImages = ['banquet-1', 'banquet-1', 'banquet-1'];
+-
+  const banquet = {
+    title: `
+      банкетний
+      <br />
+      зал
+    `,
+    images: ['banquet-1', 'banquet-1', 'banquet-1'],
+  };
 section.banquet
   div.banquet__container.container
     h2.title-inner.banquet__title
-      | банкетний
-      br
-      | зал
+      | !{banquet.title}
 
-    if banquetImages.length > 0
+    if banquet.images.length > 0
       +slider('banquet')
-        each image in banquetImages
+        each image in banquet.images
           +slide('banquet')
-            div.banquet__img
-              picture.banquet__picture
-                source(media="(min-width: 1025px)" type="image/webp" srcset="img/restaurant/" + image + "-desktop.webp")
-                source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.webp")
-                source(media="(min-width: 100px)" type="image/webp" srcset="img/restaurant/" + image + "-mobile.webp")
-
-                source(media="(min-width: 1025px)" srcset="img/restaurant/" + image + "-desktop.jpg")
-                source(media="(min-width: 500px)" srcset="img/restaurant/" + image + "-tablet.jpg")
-
-                img(src="img/restaurant/" + image + "-mobile.jpg" alt="" + title)
+            +img('banquet', '', image, banquet.title)
 
       div.banquet__pagination.pagination.swiper-pagination

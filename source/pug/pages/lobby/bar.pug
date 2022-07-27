@@ -36,16 +36,7 @@ section.bar
         | !{bar.title}
 
       div.bar__img-wrapper
-        div.bar__img
-          picture.bar__picture
-            source(media="(min-width: 1025px)" type="image/webp" srcset="img/lobby/" + bar.image.webp.desktop + "-desktop.webp")
-            source(media="(min-width: 500px)" srcset="img/lobby/" + bar.image.webp.tablet + "-tablet.webp")
-            source(media="(min-width: 100px)" type="image/webp" srcset="img/lobby/" + bar.image.webp.mobile + "-mobile.webp")
-
-            source(media="(min-width: 1025px)" srcset="img/lobby/" + bar.image.jpg.desktop + "-desktop.jpg")
-            source(media="(min-width: 500px)" srcset="img/lobby/" + bar.image.jpg.tablet + "-tablet.jpg")
-
-            img(src="img/lobby/" + bar.image.jpg.mobile + "-mobile.jpg" alt="" + bar.title)
+        +img('bar', '', bar.image.jpg.mobile, bar.title)
 
     div.bar__bottom
       div.bar__content

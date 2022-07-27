@@ -1,3 +1,4 @@
+// General
 @import 'general/variables';
 @import 'general/mixins';
 @import 'general/functions';
@@ -8,37 +9,53 @@
 @import 'general/global';
 @import 'general/visually-hidden';
 
+// Layout
 @import 'layout/page';
 @import 'layout/container';
 @import 'layout/page-header';
 @import 'layout/page-main';
 @import 'layout/page-footer';
 
+// Global
 @import 'blocks/button';
 @import 'blocks/title';
 @import 'blocks/title-inner';
 
 @import 'blocks/logo';
-@import 'blocks/burger';
 @import 'blocks/social';
-@import 'blocks/menu';
-@import 'blocks/nav';
-@import 'blocks/call';
 @import 'blocks/worktime';
 @import 'blocks/services';
+@import 'blocks/arrow-top';
+
+// Sliders
 @import 'blocks/navigation';
 @import 'blocks/pagination';
 
+// Header
+@import 'blocks/menu';
+@import 'blocks/nav';
+@import 'blocks/call';
+@import 'blocks/burger';
+
+// Home
 @import 'blocks/promo';
 @import 'blocks/home';
 @import 'blocks/contacts';
+
+// Smart
 @import 'blocks/cards';
+
+// Restaurant
 @import 'blocks/cosy';
 @import 'blocks/food';
 @import 'blocks/banquet';
 @import 'blocks/event';
+
+// Lobby
 @import 'blocks/doings';
 @import 'blocks/bar';
 @import 'blocks/mission';
 
+// Starfit
 @import 'blocks/spa';
+@import 'blocks/gym';

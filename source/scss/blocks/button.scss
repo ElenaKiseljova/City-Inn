@@ -10,9 +10,9 @@
 
   width: auto;
 
-  padding: 19.5px 13px;
+  padding: 18px 13px;
 
-  @include font(14, 17, 500);
+  @include font(16, 20, 500);
 
   text-transform: uppercase;
 
@@ -90,19 +90,9 @@
     }
   }
 
-  &--big {
-    padding: 18px 13px;
-
-    font-size: rem(16);
-    line-height: rem(20);
-  }
-
   @media screen and (min-width: $tablet) {
-    padding: 14.5px 13px;
+    padding: 15.5px 13px;
 
-    &--big {
-      font-size: rem(14);
-      line-height: rem(17);
-    }
+    @include font(14, 17, 500)
   }
 }
