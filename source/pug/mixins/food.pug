@@ -1,24 +1,25 @@
 mixin food(attr = {})
-  - const foodImages = attr.foodImages ?? [];
-  - const foodTitle = attr.foodTitle ?? '';
-  - const foodTextTop = attr.foodTextTop ?? '';
-  - const foodTextBottom  = attr.foodTextBottom ?? '';
+  - const images = attr.images ?? [];
+  - const title = attr.title ?? '';
+  - const textTop = attr.textTop ?? '';
+  - const textBottom  = attr.textBottom ?? '';
+  - const sectionName = attr.sectionName ?? pageName;
 
-  - const foodTabs  = attr.foodTabs ?? [];
+  - const tabs  = attr.tabs ?? [];
 
-  section(class="food food--" + pageName)
+  section(class="food food--" + sectionName)
     div.food__container.container
-      div(class="food__top food__top--" + pageName)
-        h2(class="title-inner food__title food__title--mobile food__title--" + pageName)
-          | !{foodTitle}
+      div(class="food__top food__top--" + sectionName)
+        h2(class="title-inner food__title food__title--mobile food__title--" + sectionName)
+          | !{title}
 
-        if foodImages.length > 0
-          div(class="food__slider-container food__slider-container--" + pageName)
+        if images.length > 0
+          div(class="food__slider-container food__slider-container--" + sectionName)
 
             +slider('food')
-              each image in foodImages
+              each image in images
                 +slide('food')
-                  +img('food', '', image, foodTitle)
+                  +img('food', '', image, title)
 
             +navigation('food')
 
@@ -26,36 +27,44 @@ mixin food(attr = {})
 
 
 
-      div(class="food__bottom food__bottom--" + pageName)
-        h2(class="title-inner food__title food__title--desktop food__title--" + pageName)
-          | !{foodTitle}
+      div(class="food__bottom food__bottom--" + sectionName)
+        h2(class="title-inner food__title food__title--desktop food__title--" + sectionName)
+          | !{title}
 
         div.food__content
-          if foodTextTop !== ''
+          if textTop !== ''
             p.food__text.food__text--top
-              | !{foodTextTop}
+              | !{textTop}
 
-          if foodTextBottom !== ''
+          if textBottom !== ''
             p.food__text.food__text--bottom
-              | !{foodTextBottom}
+              | !{textBottom}
 
-          if foodTabs.length > 0
+          if tabs.length > 0
             ul.food__tabs
-              for foodTab, index in foodTabs
+              for foodTab, index in tabs
                 li(class="food__tab-number food__tab-number--" + (index + 1))
                   | !{index + 1}
 
-              for foodTab, index in foodTabs
+              for foodTab, index in tabs
                 li(class="food__tab-text food__tab-text--" + (index + 1))
-                  if foodTab.foodTextTop !== ''
+                  if foodTab.textTop !== ''
                     p.food__text.food__text--top
-                      | !{foodTab.foodTextTop}
+                      | !{foodTab.textTop}
 
-                  if foodTab.foodTextBottom !== ''
+                  if foodTab.textBottom !== ''
                     p.food__text.food__text--bottom
-                      | !{foodTab.foodTextBottom}
-        if block
-          block
+                      | !{foodTab.textBottom}
 
-        if foodImages.length > 0
+        if attr.worktime || attr.menu
+          div(class="food__buttons food__buttons--" + sectionName)
+            if attr.worktime && attr.worktime !== ''
+              +worktime('food', '', attr.worktime)
+
+            if attr.menu && attr.menu.link !== '' && attr.menu.text !== ''
+              a(class="food__button button food__button--" + sectionName href="" + attr.menu.link)
+                span
+                  | !{attr.menu.text}
+
+        if images.length > 0
           div.food__pagination.food__pagination--mobile.pagination.swiper-pagination

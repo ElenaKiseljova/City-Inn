@@ -37,6 +37,10 @@
     z-index: 2;
 
     margin-bottom: 40px;
+
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+    }
   }
 
   &__content {

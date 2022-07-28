@@ -35,36 +35,50 @@
     top: 40px;
     left: 15px;
 
+    &--desktop {
+      display: none;
+    }
+
     @media screen and (min-width: $mobile) {
       left: 40px;
     }
 
     @media screen and (min-width: $tablet) {
+      position: static;
+
       min-width: 538px;
 
-      top: 0;
-      left: calc(192 / 768 * 100vw);
+      margin-left: calc((100% + 228px) - 538px);
+      margin-bottom: 61px;
+      margin-left: -228px;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       min-width: 720px;
 
-      top: 66px;
-      left: calc(641 / 1440 * 100vw);
+      margin-left: calc((100% + 159px) - 720px);
+      margin-bottom: 58px;
+      margin-left: -159px;
     }
   }
 
   &__slider {
     @extend %w100;
 
-    height: auto;
-
-    padding-bottom: 40px;
+    height: fit-content;
 
     @media screen and (min-width: $tablet) {
-      min-height: 100%;
+      height: auto;
 
-      padding: 0;
+      min-height: 100%;
     }
   }
 
@@ -96,10 +110,10 @@
 
     min-height: 100vw;
 
-    padding: 40px 15px;
+    padding: 40px 15px 88px 15px;
 
     @media screen and (min-width: $mobile) {
-      padding: 40px 40px;
+      padding: 40px 40px 88px 40px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -200,14 +214,14 @@
 
       width: 50vw;
 
-      padding: 147px 38px 44px 36px;
+      padding: 0 38px 44px 36px;
     }
 
     @media screen and (min-width: $desktop) {
       max-width: 720px;
 
       margin: 0 auto 0 0;
-      padding: 264px 80px 80px;
+      padding: 66px 80px 80px;
     }
   }
 

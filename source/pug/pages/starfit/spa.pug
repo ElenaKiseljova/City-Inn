@@ -88,7 +88,7 @@
 
 section.spa
   div.spa__left
-    h2.title-inner.spa__title
+    h2.title-inner.spa__title.spa__title--mobile
       | !{spa.title}
 
     +slider('spa')
@@ -134,6 +134,9 @@ section.spa
     - const services = spa.content.services ?? [];
     - const worktime = spa.content.worktime ?? '';
     - const rules = spa.content.rules ?? {};
+
+    h2.title-inner.spa__title.spa__title--desktop
+      | !{spa.title}
 
     if textTop !== ''
       p.spa__text.spa__text--top

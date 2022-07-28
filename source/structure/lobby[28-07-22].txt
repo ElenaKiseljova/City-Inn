@@ -28,7 +28,7 @@ const bar = {
     },
   };
 
-  const doingsAttr = {
+  const doings = {
     title: `
       події
     `,
@@ -94,9 +94,8 @@ const bar = {
       <br />
       кухню
     `,
-    eventImages: ['food-1', 'event-1', 'food-2'],
-    eventText: [],
-    eventContent: {
+    images: ['food-1', 'event-1', 'food-2'],
+    content: {
       title: ``,
       topText: `
         Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros. In hac habitasse platea dictumst. Nunc convallis felis ac fermentum volutpat. Phasellus at scelerisque est. In sit amet pulvinar mi. Pellentesque ut condimentum ante, et gravida mi. In erat felis, laoreet nec porta eu, vehicula nec diam.
@@ -110,12 +109,12 @@ const bar = {
   };
 
   const breakfast = {
-    foodImages: ['food-1', 'food-2', 'cosy-1'],
-    foodTitle: `про <br /> завтраки`,
-    foodTextTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
-    foodTextBottom : 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
+    images: ['food-1', 'food-2', 'cosy-1'],
+    title: `про <br /> завтраки`,
+    textTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
+    textBottom : 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
     menu: {
       text: 'Menu',
       link: '#'
-    }
+    },
   };

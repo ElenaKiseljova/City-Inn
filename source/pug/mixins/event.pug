@@ -1,71 +1,83 @@
 mixin event(attr = {})
   - const title = attr.title ?? '';
 
-  - const eventImages = attr.eventImages ?? [];
-  - const eventText = attr.eventText ?? [];
-  - const eventContent = attr.eventContent ?? null;
+  - const images = attr.images ?? [];
+  - const texts = attr.texts ?? [];
+  - const content = attr.content ?? null;
 
-  - const eventSection = attr.eventSection ?? pageName;
+  - const sectionName = attr.sectionName ?? pageName;
 
-  section(class="event event--" + eventSection)
-    div.event__container.container
-      div(class="event__top event__top--" + eventSection)
-        h2(class="title-inner event__title event__title--mobile event__title--" + eventSection)
+  section(class="event event--" + sectionName)
+    div(class="event__container container event__container--" + sectionName)
+      div(class="event__top event__top--" + sectionName)
+        h2(class="title-inner event__title event__title--mobile event__title--" + sectionName)
           | !{title}
 
-        if eventImages.length > 0
-          div(class="event__slider-container event__slider-container--" + eventSection)
+        if images.length > 0
+          div(class="event__slider-container event__slider-container--" + sectionName)
             +slider('event', 'images')
-              each image in eventImages
-                +slide('event', eventSection, 'images')
+              each image in images
+                +slide('event', sectionName, 'images')
                   +img('event', '', image, title)
 
-            div.event__pagination.pagination.swiper-pagination
-      div(class="event__bottom event__bottom--" + eventSection)
-        h2(class="title-inner event__title event__title--desktop event__title--" + eventSection)
+            +pagination('event')
+
+      div(class="event__bottom event__bottom--" + sectionName)
+        h2(class="title-inner event__title event__title--desktop event__title--" + sectionName)
           | !{title}
 
-        +navigation('event', eventSection)
+        +navigation('event', sectionName)
 
-        if eventText.length > 0
+        if texts.length > 0
           +slider('event', 'text')
-            each eventTextItem in eventText
-              +slide('event', eventSection, 'text')
+            each textsItem in texts
+              +slide('event', sectionName, 'text')
                 div.event__content
-                  if eventTextItem.title && eventTextItem.title !== ''
-                    h3.event__subtitle
-                      | !{eventTextItem.title}
+                  if textsItem.title && textsItem.title !== ''
+                    h3(class="event__subtitle event__subtitle--" + sectionName)
+                      | !{textsItem.title}
 
-                  if eventTextItem.topText && eventTextItem.topText !== ''
+                  if textsItem.topText && textsItem.topText !== ''
                     p.event__text.event__text--top
-                      | !{eventTextItem.topText}
+                      | !{textsItem.topText}
 
-                  if eventTextItem.bottomText && eventTextItem.bottomText !== ''
+                  if textsItem.bottomText && textsItem.bottomText !== ''
                     p.event__text.event__text--bottom
-                      | !{eventTextItem.bottomText}
+                      | !{textsItem.bottomText}
 
-                if eventTextItem.button && eventTextItem.button.text && eventTextItem.button.text !== '' && eventTextItem.button.link && eventTextItem.button.link !== ''
-                  a(class="button event__button event__button--" + eventSection href="" + eventTextItem.button.link)
-                    span
-                      | !{eventTextItem.button.text}
+                if textsItem.worktime && textsItem.worktime !== ''
+                  +worktime('event', pageName, worktime)
 
-        else if eventContent
+                if textsItem.services && textsItem.services.length > 0
+                  +services('event', '', textsItem.services)
+
+                if textsItem.button && textsItem.button.text && textsItem.button.text !== '' && textsItem.button.link && textsItem.button.link !== ''
+                  div(class="event__buttons event__buttons--" + sectionName)
+                    a(class="button event__button event__button--" + sectionName href="" + textsItem.button.link)
+                      span
+                        | !{textsItem.button.text}
+
+                    div(class="event__arrow-top arrow-top event__arrow-top--" + sectionName)
+                      svg(width="48" height="48")
+                        use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-top")
+
+
+        else if content
           div.event__content
-            if eventContent.title && eventContent.title !== ''
-              h3.event__subtitle
-                | !{eventContent.title}
+            if content.title && content.title !== ''
+              h3(class="event__subtitle event__subtitle--" + sectionName)
+                | !{content.title}
 
-            if eventContent.topText && eventContent.topText !== ''
+            if content.topText && content.topText !== ''
               p.event__text.event__text--top
-                | !{eventContent.topText}
+                | !{content.topText}
 
-            if eventContent.bottomText && eventContent.bottomText !== ''
+            if content.bottomText && content.bottomText !== ''
               p.event__text.event__text--bottom
-                | !{eventContent.bottomText}
+                | !{content.bottomText}
 
-          if eventContent.button && eventContent.button.text && eventContent.button.text !== '' && eventContent.button.link && eventContent.button.link !== ''
-            a(class="button event__button event__button--" + eventSection href="" + eventContent.button.link)
+          if content.button && content.button.text && content.button.text !== '' && content.button.link && content.button.link !== ''
+            a(class="button event__button event__button--" + sectionName href="" + content.button.link)
               span
-                | !{eventContent.button.text}
-
+                | !{content.button.text}
 

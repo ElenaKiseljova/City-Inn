@@ -1,5 +1,5 @@
 -
-  const doingsAttr = {
+  const doings = {
     title: `
       події
     `,
@@ -61,12 +61,12 @@
 
 section(class="doings")
   h2(class="title-inner doings__title")
-    | !{doingsAttr.title}
+    | !{doings.title}
 
-  if doingsAttr.slides && doingsAttr.slides.length > 0
+  if doings.slides && doings.slides.length > 0
     div(class="doings__slider-container")
       +slider('doings', '')
-        each slide in doingsAttr.slides
+        each slide in doings.slides
           +slide('doings', '')
             - const image = slide.image ?? {};
             - const subTitle = slide.title ?? '';

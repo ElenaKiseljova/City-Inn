@@ -25,24 +25,52 @@
 
       padding: 0;
     }
+
+    &--starfit {
+      padding: 140px 0;
+    }
   }
 
   &__container {
-    @extend .cosy__container;
+    &--starfit {
+      position: relative;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+
+      align-items: stretch;
+    }
   }
 
   &__top {
-    @extend .cosy__top;
+    position: relative;
+
+    @extend %w100;
+
+    height: 100vw;
+
+    overflow: visible;
+
+    &--starfit {
+      position: static;
+    }
 
     @media screen and (min-width: $tablet) {
+      height: auto;
+      min-height: 478px;
 
       &--lobby,
-      &--attraction {
+      &--attraction,
+      &--starfit {
         order: 2;
       }
     }
 
     @media screen and (min-width: $desktop) {
+      min-height: 840px;
 
       &--lobby,
       &--attraction {
@@ -52,20 +80,24 @@
       &--around {
         order: 2;
       }
+
+      &--starfit {
+        min-height: auto;
+      }
     }
   }
 
   &__title {
-    @extend .cosy__title;
-
     margin-top: 40px;
 
     &--mobile {
-      @extend .cosy__title--mobile;
+      position: absolute;
+
+      z-index: 3;
     }
 
     &--desktop {
-      @extend .cosy__title--desktop;
+      display: none;
     }
 
     &--around {
@@ -79,7 +111,23 @@
     }
 
     @media screen and (min-width: $tablet) {
+      width: fit-content;
+      min-width: 538px;
+
+      margin-top: 0;
+      margin-right: calc((114px + 100%) - 538px);
+      margin-bottom: 60px;
+      margin-left: -114px;
+
+      opacity: 0.8;
+
+      &--mobile {
+        display: none;
+      }
+
       &--desktop {
+        display: block;
+
         margin-top: 0;
         margin-right: calc((100% + 117px) - 538px);
         margin-bottom: 87px;
@@ -123,9 +171,26 @@
         margin-bottom: 40px;
         margin-left: 0;
       }
+
+      &--starfit {
+        min-width: 538px;
+
+        margin-top: 0;
+        margin-right: calc(100% - 538px);
+        margin-bottom: 128px;
+        margin-left: 0;
+      }
     }
 
     @media screen and (min-width: $desktop) {
+      min-width: 720px;
+
+      margin-right: calc(100% - 720px);
+      margin-bottom: 100px;
+      margin-left: 0;
+
+      opacity: 0.6;
+
       &--desktop {
         margin-top: -70px;
         margin-right: calc((100% + 184px) - 720px);
@@ -168,13 +233,35 @@
         margin-bottom: 81px;
         margin-left: -318px;
       }
+
+      &--starfit {
+        min-width: 719px;
+
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: calc(100% - 719px);
+        margin-bottom: 80px;
+
+        opacity: 1;
+      }
     }
   }
 
   &__slider-container {
     position: relative;
 
-    @extend .cosy__slider;
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    &--starfit {
+      position: static;
+    }
 
     &--around,
     &--attraction {
@@ -184,10 +271,26 @@
     }
 
     @media screen and (min-width: $tablet) {
+      width: 50vw;
+
+      margin: 0 0 0 calc(100% - 50vw);
+
+      &::before {
+        display: none;
+      }
 
       &--lobby,
-      &--attraction {
+      &--attraction,
+      &--starfit {
         margin: 0 calc(100% - 50vw) 0 0;
+      }
+
+      &--starfit {
+        position: relative;
+      }
+
+      &--starfit {
+        min-height: 580px;
       }
     }
 
@@ -206,8 +309,18 @@
         overflow: hidden;
       }
 
-      &--attraction {
+      &--attraction,
+      &--starfit {
         overflow: hidden;
+      }
+
+      &--starfit {
+        width: 360px;
+        height: 420px;
+
+        min-height: unset;
+
+        margin-left: 80px;
       }
     }
   }
@@ -215,13 +328,19 @@
   &__slider {
     width: 100%;
 
+    &--text {
+      height: fit-content;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--text {
+        flex-grow: 1;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       &--images {
         overflow: visible;
-      }
-
-      &--text {
-        flex-grow: 1;
       }
     }
   }
@@ -242,6 +361,16 @@
 
     box-sizing: border-box;
 
+    &--text {
+      height: fit-content;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--text {
+        height: auto;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       --width-img: 360px;
       --height-img: 420px;
@@ -250,7 +379,7 @@
         --height-img: 360px;
       }
 
-      &--images:not(.event__slide--around):not(.event__slide--attraction) {
+      &--images:not(.event__slide--around):not(.event__slide--attraction):not(.event__slide--starfit) {
         &.swiper-slide-active {
           .event__img {
             width: 100%;
@@ -284,6 +413,12 @@
         align-items: flex-start;
         justify-content: flex-start;
       }
+
+      &--starfit {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -296,11 +431,21 @@
   }
 
   &__bottom {
-    @extend .cosy__bottom;
+    display: flex;
 
-    padding-top: 95px;
+    flex-direction: column;
 
-    &--lobby {
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @extend %w100;
+
+    min-height: 100vw;
+
+    padding: 95px 0 40px 0;
+
+    &--lobby,
+    &--starfit {
       padding-top: 40px;
     }
 
@@ -312,10 +457,24 @@
       padding-top: 71px;
     }
 
+    &--starfit {
+      padding-bottom: 97px;
+    }
+
     @media screen and (min-width: $tablet) {
+      position: relative;
+
+      z-index: 1;
+
+      height: auto;
+      min-height: auto;
+
       padding: 53px 0 40px 39px;
 
-      &--lobby {
+      overflow: visible;
+
+      &--lobby,
+      &--starfit {
         order: 1;
 
         padding: 47px 31px 38px 0;
@@ -329,6 +488,10 @@
         order: 1;
 
         padding: 13px 36px 38px 0;
+      }
+
+      &--starfit {
+        padding: 40px 36px 40px 0;
       }
     }
 
@@ -354,6 +517,12 @@
 
         padding: 44px 25px 136px 119px;
       }
+
+      &--starfit {
+        position: static;
+
+        padding: 80px 80px 0 0;
+      }
     }
   }
 
@@ -374,10 +543,18 @@
 
     color: var(--color-page, #ffffff);
 
+    &--starfit {
+      margin-bottom: 40px;
+    }
+
     @media screen and (min-width: $tablet) {
       margin-bottom: 44px;
 
       @include font(30, 37, 700);
+
+      &--starfit {
+        margin-bottom: 24px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -386,32 +563,53 @@
   }
 
   &__text {
-    @extend .cosy__text;
+    @extend %w100;
 
     color: var(--color-page, #ffffff);
 
     &--top {
-      @extend .cosy__text--top;
+      @include font(14, 21, 400);
     }
 
     &--bottom {
-      @extend .cosy__text--bottom;
+      margin-top: 20px;
+
+      @include font(14, 20, 600);
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--top {
+        @include font(12, 20, 400);
+      }
+
+      &--bottom {
+        @include font(12, 20, 600);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(14, 20, 400);
+
+      opacity: 0.6;
+
+      &--bottom {
+        margin-top: 36px;
+      }
     }
   }
 
-  &__button {
-    min-width: 100%;
+  &__buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    @extend %w100;
 
     margin-top: 40px;
 
     @media screen and (min-width: $desktop) {
-      min-width: calc(200 / 554 * 100%);
-
       margin-top: 67px;
-
-      &--lobby {
-        --background-color-button: #{$white-20};
-      }
 
       &--around {
         margin: 40px 168px 0 auto;
@@ -419,6 +617,36 @@
 
       &--attraction {
         margin: 40px auto 0 168px;
+      }
+
+      &--starfit {
+        width: fit-content;
+
+        margin: 83px 0 0 59px;
+      }
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      min-width: calc(200 / 554 * 100%);
+
+      &--lobby {
+        --background-color-button: #{$white-20};
+      }
+    }
+  }
+
+  &__arrow-top {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      &--starfit {
+        display: flex;
+
+        margin-left: 24px;
       }
     }
   }
@@ -453,16 +681,23 @@
 
         margin: 0;
       }
+
+      &--starfit {
+        position: absolute;
+
+        bottom: 0;
+        right: 80px;
+
+        margin: 0;
+      }
     }
   }
 
   &__pagination {
-    @extend .cosy__pagination;
-
     position: absolute;
 
     &.swiper-pagination {
-      bottom: 39px;
+      bottom: 40px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -473,6 +708,20 @@
 
     @media screen and (min-width: $desktop) {
       display: none;
+    }
+  }
+
+  &__services {
+    margin-top: 49px;
+  }
+
+  &__worktime {
+    margin-top: 45px;
+
+    @media screen and (min-width: $desktop) {
+      &--starfit {
+        margin-top: 83px;
+      }
     }
   }
 }

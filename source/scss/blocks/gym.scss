@@ -25,9 +25,28 @@
 
     z-index: 2;
 
+    &--desktop {
+      display: none;
+    }
+
     @media screen and (min-width: $desktop) {
-      top: 118px;
-      left: 254px;
+      position: static;
+
+      grid-area: d;
+
+      min-width: 1026px;
+
+      margin-right: calc((100% + 464px) - 1026);
+      margin-bottom: 119px;
+      margin-left: -464px;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
   }
 
@@ -112,10 +131,15 @@
 
     @media screen and (min-width: $desktop) {
       grid-template-areas:
+        "d d"
         "a a"
         "b c";
 
-      padding: 517px 0 80px 78px;
+      grid-template-columns: calc((168 / 560)* 100%) calc((312 / 560)* 100%);
+
+      padding: 118px 0 80px 78px;
+
+      overflow: visible;
     }
   }
 
@@ -173,6 +197,10 @@
 
   &__button {
     min-width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      min-width: calc((240 / 312) * 100%);
+    }
   }
 
   &__arrow-top {

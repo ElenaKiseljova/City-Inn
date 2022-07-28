@@ -1,0 +1,146 @@
+.room {
+  @extend %w100;
+
+  &__container {}
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+
+    overflow: visible;
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 29px;
+    left: 0;
+
+    z-index: 2;
+
+    &--desktop {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      position: static;
+
+      min-width: 536px;
+
+      &--desktop {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
+
+      &--odd {
+        margin-right: calc((100% + 232px) - 536px);
+        margin-bottom: 92px;
+        margin-left: -232px;
+      }
+
+      &--even {
+        margin-right: -235px;
+        margin-bottom: 52px;
+        margin-left: calc((100% + 235px) - 536px);
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    width: 100vw;
+    height: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    @extend %w100;
+
+    min-height: 100vw;
+
+    padding: 40px 0 48px;
+  }
+
+  &__services {
+    margin-bottom: 40px;
+  }
+
+  &__price {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    @extend %w100;
+
+    margin-bottom: 56px;
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 41px 0 0;
+    }
+  }
+
+  &__price-title {
+    margin: 0;
+    padding: 0;
+
+    margin-right: 24px;
+
+    @include font(12, 18, 400);
+  }
+
+  &__price-number {
+    @include font(40, 40, 600);
+
+    @media screen and (min-width: $desktop) {
+      @include font(48, 48, 600);
+    }
+  }
+
+  &__buttons {
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 24px;
+      }
+    }
+  }
+}

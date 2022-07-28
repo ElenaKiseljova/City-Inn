@@ -67,8 +67,17 @@
       --background-color-button: transparent;
     }
 
+    &--starfit {
+      --color-button: #{$white};
+      --border-color-button: #{$white};
+    }
+
     &.active {
       --background-color-button: #{$white-50};
+    }
+
+    &::before {
+      opacity: 0.7;
     }
 
     @media screen and (min-width: $tablet) {

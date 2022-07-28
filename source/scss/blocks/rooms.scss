@@ -1,0 +1,31 @@
+.rooms {
+  @extend %w100;
+
+  &__slider {
+    @extend %w100;
+  }
+
+  &__slide {
+    padding-bottom: 64px;
+
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 120px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 160px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      bottom: 56px;
+    }
+  }
+}
