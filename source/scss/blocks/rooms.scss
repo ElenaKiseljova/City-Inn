@@ -1,8 +1,18 @@
 .rooms {
+  position: relative;
+
   @extend %w100;
 
   &__slider {
     @extend %w100;
+
+    height: fit-content;
+  }
+
+  &__slider-wrapper {
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
   }
 
   &__slide {

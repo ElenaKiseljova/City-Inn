@@ -1,0 +1,188 @@
+// About
+  const promo = {
+    title: `
+      про нас
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {
+        book: {
+          title: 'CALL US',
+          link: 'tel:111111111'
+        },
+      },
+      top: {
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
+        `,
+      }
+    }
+
+  };
+
+// Conference
+  const promo = {
+    title: `
+      smart <br />конференц-<br />зал
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {},
+      top: {
+        text: `
+          Заради наших гостей ми зробили колоборацію з рестораном Святослав.  Наші гості їможуть смачно поїсти а також забронювати ресторан для події.
+        `,
+      }
+    }
+
+  };
+
+// Conference service
+  const promo = {
+    title: `
+      conference <br />service
+    `,
+    image: 'promo-bg',
+    content: {}
+
+  };
+
+// Group
+  const promo = {
+    title: `
+      group <br />request
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {},
+      top: {
+        text: `
+          Заради наших гостей ми зробили колоборацію з рестораном Святослав.  Наші гості їможуть смачно поїсти а також забронювати ресторан для події.
+        `,
+      }
+    }
+
+  };
+
+// Home
+  const promo = {
+    image: 'promo-bg',
+    book: {
+      title: 'BOOK NOW',
+      link: '#'
+    },
+    offer: {
+      title: 'SPECIAL OFFER',
+      link: '#'
+    },
+    content: {},
+  };
+
+// Lobby
+  const promo = {
+    title: `
+      lobby <br>bar
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {
+        book: {
+          title: 'RESERVE TABLE',
+          link: '#'
+        },
+      },
+      top: {
+        subTitle: 'Про место и миссию',
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
+        `,
+      }
+    }
+
+  };
+
+// Restaurant
+  const promo = {
+    title: `
+      ресторан <br> Святослав
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {
+        worktime: '7:00 до 22:00.',
+        book: {
+          title: 'забронювати',
+          link: '#'
+        },
+      },
+      top: {
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
+        `,
+      }
+    }
+
+  };
+
+// Rooms
+  const promo = {
+    title: `
+      номери<br /> та <br />апарта&shy;менти
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {},
+      top: {
+        text: `
+          Тепло, затишно, безпечно, комфортно. Ми можемо продовжувати цей список до безкінечності, але одна справа читати, а зовсім інша це відчути. Ми станемо вашим домом, а не просто готелем.  82 номера, 4 категорії, площа від 22 до 85 квадратних метрів, номери з 1,2,3 ліжками. Хочете з душем - це легко. Хочете з ванною - організуємо. Ми можемо майже все!
+        `,
+      }
+    }
+
+  };
+
+// Smart
+  const promo = {
+    title: `
+      smart <br />пропо&shy;зиції
+    `,
+    image: 'promo-bg',
+    book: {
+      title: 'BOOK NOW',
+      link: '#'
+    },
+    offer: {
+      title: 'SPECIAL OFFER',
+      link: '#'
+    },
+    content: {}
+  };
+
+// Standart
+  const promo = {
+    title: `
+      standart <br />double
+    `,
+    image: 'promo-bg',
+  };
+
+// Starfit
+  const promo = {
+    title: `
+      Спортивний <br />комплекс <br />Starfit
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {},
+      top: {
+        text: `
+          Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.
+          <br />
+          Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни
+        `,
+      }
+    }
+
+  };
+
+// ----

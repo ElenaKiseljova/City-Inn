@@ -2,7 +2,7 @@ mixin services(sectionName = 'cards', modificator = pageName, services = [])
   ul(class="" + sectionName + "__services services services--" + modificator)
     for service in services
       li(class="services__item services__item--" + modificator)
-        div.services__icon
+        div(class="services__icon services__icon--" + modificator)
           svg(width="40" height="40")
             use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
 

@@ -23,11 +23,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -53,11 +53,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -83,11 +83,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -113,11 +113,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -143,11 +143,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -173,11 +173,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
     {
@@ -203,11 +203,11 @@
       priceNumber: 3100,
       book: {
         title: 'book now',
-        linl: '#'
+        link: '#'
       },
       more: {
         title: 'дізнатись більше',
-        linl: '#'
+        link: '#'
       },
     },
   ];
@@ -221,18 +221,43 @@ section.rooms
         - const priceTitle = room.priceTitle ?? '';
         - const priceNumber = room.priceNumber ?? '';
         - const services = room.services ?? [];
+        - const book = room.book ?? {};
+        - const more = room.more ?? {};
 
         - const mode = ((index + 1) % 2 === 0) ? 'even' : 'odd';
 
         +slide('rooms')
           div.room
-            div.room__container.container
-              div.room__top
-                h2(class="title-inner room__title room__title--" + mode)
+            div(class="room__container container room__container--" + mode)
+              div(class="room__top room__top--" + mode)
+                h2(class="title-inner room__title room__title--mobile room__title--" + mode)
                   | !{title}
 
-                div(class="room__img-wrapper room__image-wrapper--" + mode)
+                div(class="room__img-wrapper room__img-wrapper--" + mode)
                   +img('room', mode, image, title)
+
+              div(class="room__bottom room__bottom--" + mode)
+                h2(class="title-inner room__title room__title--desktop room__title--" + mode)
+                  | !{title}
+
+                if services.length > 0
+                  div(class="room__services-wrapper room__services-wrapper--" + mode)
+                    +services('room', 'rooms', services)
+
+                div(class="room__buttons room__buttons--" + mode)
+                  div(class="price room__price room__price--" + mode)
+                    h4.price__title
+                      | #{priceTitle}
+                    p.price__number
+                      | #{priceNumber} ₴
+
+                  a(class="room__button button" href="" + book.link)
+                    span
+                      | #{book.title}
+
+                  a(class="room__button button" href="" + more.link)
+                    span
+                      | #{more.title}
 
     +pagination('rooms')
 

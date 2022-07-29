@@ -1,8 +1,11 @@
-- let sectionName = 'conference-service';
+-
+  const promo = {
+    title: `
+      conference <br />service
+    `,
+    image: 'promo-bg',
+    content: {}
 
-+promo('promo-bg', sectionName, 'conference <br />service')
-  div(class="promo__top promo__top--" + sectionName)
-    p(class="promo__text promo__text--" + sectionName)
-      | Заради наших гостей ми зробили колоборацію з рестораном Святослав.  Наші гості їможуть смачно поїсти а також забронювати ресторан для події.
+  };
 
-  div(class="promo__bottom promo__bottom--" + sectionName)
++promo(promo)

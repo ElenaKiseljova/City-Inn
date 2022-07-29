@@ -1,4 +1,12 @@
-mixin promo(imageName, sectionName = '', title = '', social = [])
+mixin promo(attr)
+  - const title = attr.title ?? '';
+  - const image = attr.image ?? '';
+  - const book = attr.book ?? {};
+  - const offer = attr.offer ?? {};
+  - const content = attr.content ?? {};
+
+  - const sectionName = attr.sectionName ?? pageName;
+
   section(class="promo promo--" + sectionName)
     if title === ''
       h1.visually-hidden
@@ -6,25 +14,49 @@ mixin promo(imageName, sectionName = '', title = '', social = [])
 
     div(class="promo__img-wrapper promo__img-wrapper--" + sectionName)
       div(class="promo__container promo__container--image container")
-        if title !== 'Promo section'
+        if title !== ''
           h1(class="promo__title promo__title--" + sectionName)
             | !{title}
 
         if social.length > 0
           div(class="promo__social promo__social--" + sectionName)
+            if sectionName === 'home'
+              a(class="promo__lang lang button button--circle" href="#")
+                span en
+
             include ../blocks/social.pug
 
         if sectionName === 'home' || sectionName === 'smart'
           div(class="promo__buttons")
-            a(class="promo__button button button--big button--smart" href="#")
-              span smart пропозиції
+            if offer && offer.title && offer.title !== '' && offer.link && offer.link !== ''
+              a(class="promo__button button button--big button--book-now" href="" + offer.link)
+                span
+                  |  #{offer.title}
 
-            a(class="promo__button button button--big button--book-now" href="#")
-              span book now
+            if book && book.title && book.title !== '' && book.link && book.link !== ''
+              a(class="promo__button button" href="" + book.link)
+                span
+                  |  #{book.title}
 
-      +img('promo', sectionName, imageName, title)
+      +img('promo', sectionName, image, title)
 
-    if block
+    if content && content.top && content.bottom
       div(class="promo__container promo__container--content container")
         div(class="promo__content promo__content--" + sectionName)
-          block
+          div(class="promo__top promo__top--" + sectionName)
+            if content.top.subTitle && content.top.subTitle !== ''
+              h3(class="promo__subtitle promo__subtitle--" + sectionName)
+                | !{content.top.subTitle}
+
+            if content.top.text && content.top.text !== ''
+              p(class="promo__text promo__text--" + sectionName)
+                | !{content.top.text}
+
+          div(class="promo__bottom promo__bottom--" + sectionName)
+            if content.bottom.worktime && content.bottom.worktime !== ''
+              +worktime('promo', sectionName, content.bottom.worktime)
+
+            if content.bottom.book && content.bottom.book.title && content.bottom.book.title !== '' && content.bottom.book.link && content.bottom.book.link !== ''
+              a(class="button promo__btn promo__btn--" + sectionName href="" + content.bottom.book.link)
+                span
+                  | #{content.bottom.book.title}

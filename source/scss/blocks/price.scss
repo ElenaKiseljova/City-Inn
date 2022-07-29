@@ -1,0 +1,43 @@
+.price {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  @extend %w100;
+
+  color: var(--color-page, #ffffff);
+
+  @media screen and (min-width: $tablet) {
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    justify-content: flex-start;
+
+    width: fit-content;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-grow: 0;
+
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 24px 0 0;
+    padding: 0;
+
+    @include font(12, 18, 400);
+  }
+
+  &__number {
+    margin: 0;
+    padding: 0;
+
+    @include font(40, 40, 600);
+
+    @media screen and (min-width: $desktop) {
+      @include font(48, 48, 600);
+    }
+  }
+}

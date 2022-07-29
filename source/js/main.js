@@ -1,10 +1,11 @@
 import gsapAnimations from './gsap-animations';
-import geo from './geo';
+// import geo from './geo';
 import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
 import map from './map';
 import cards from './cards';
+import readMore from './read-more';
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -14,10 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   try {
-    geo();
+    readMore();
   } catch (error) {
     console.log(error.message);
   }
+
+  // try {
+  //   geo();
+  // } catch (error) {
+  //   console.log(error.message);
+  // }
 
   try {
     menu();

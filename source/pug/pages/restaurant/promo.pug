@@ -1,11 +1,25 @@
-- let sectionName = 'restaurant';
-+promo('promo-bg', sectionName, 'ресторан <br> Святослав')
-  div(class="promo__top promo__top--" + sectionName)
-    p(class="promo__text promo__text--" + sectionName)
-      | Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
+-
+  const promo = {
+    title: `
+      ресторан <br> Святослав
+    `,
+    image: 'promo-bg',
+    content: {
+      bottom: {
+        worktime: '7:00 до 22:00.',
+        book: {
+          title: 'забронювати',
+          link: '#'
+        },
+      },
+      top: {
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.
+        `,
+      }
+    }
 
-  div(class="promo__bottom promo__bottom--" + sectionName)
-    +worktime('promo', 'restaurant', '7:00 до 22:00.')
+  };
 
-    a(class="button promo__btn promo__btn--" + sectionName href="#")
-      span забронювати
++promo(promo)
+

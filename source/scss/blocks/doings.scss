@@ -76,6 +76,8 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      height: fit-content;
+
       &.swiper-slide-active {
         .doings__img-wrapper {
           width: 100%;
@@ -87,7 +89,7 @@
         .doings__content {
           max-width: 730px;
 
-          margin: 0 0 auto 0;
+          margin: 0;
 
           padding: 0 75px 90px 106px;
 

@@ -3,6 +3,9 @@ import Swiper from './swiper-bundle.min';
 import changeActiveClass from './changeActiveClass';
 
 export default () => {
+  const TABLET_WIDTH = 768;
+  const DESKTOP_WIDTH = 1366;
+
   const DEVICE_WIDTH = window.innerWidth && document.documentElement.clientWidth
     ? Math.min(window.innerWidth, document.documentElement.clientWidth)
     : window.innerWidth
@@ -60,6 +63,11 @@ export default () => {
   };
 
   const swiperInit = (swiperItem, attr = {}) => {
+    // Rooms sliders
+    if (swiperItem.classList.contains('rooms__slider') && (DEVICE_WIDTH >= TABLET_WIDTH)) {
+      return;
+    }
+
     let prevButton = null;
     let nextButton = null;
     let pagination = null;
@@ -80,7 +88,7 @@ export default () => {
 
     // Restaurant sliders
     if (swiperItem.classList.contains('cosy__slider')) {
-      if (DEVICE_WIDTH < 768) {
+      if (DEVICE_WIDTH < TABLET_WIDTH) {
         pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--mobile');
       } else {
         pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--tablet');
@@ -88,20 +96,20 @@ export default () => {
     }
 
     if (swiperItem.classList.contains('food__slider')) {
-      if (DEVICE_WIDTH < 768) {
+      if (DEVICE_WIDTH < TABLET_WIDTH) {
         pagination = swiperItem.closest('.food').querySelector('.food__pagination--mobile');
       } else {
         pagination = swiperItem.closest('.food').querySelector('.food__pagination--tablet');
       }
 
-      if (DEVICE_WIDTH > 768) {
+      if (DEVICE_WIDTH > TABLET_WIDTH) {
         swiperArgs.spaceBetween = 75;
       }
     }
 
     // Lobby sliders
     if (swiperItem.classList.contains('doings__slider')) {
-      if (DEVICE_WIDTH > 1366) {
+      if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 270;
       }
     }
@@ -119,8 +127,8 @@ export default () => {
 
     if (prevButton && nextButton) {
       swiperArgs.breakpoints = {
-        // when window width is >= 1366px
-        1366: {
+        // when window width is >= DESKTOP_WIDTHpx
+        DESKTOP_WIDTH: {
           navigation: {
             nextEl: nextButton,
             prevEl: prevButton,
@@ -138,12 +146,22 @@ export default () => {
 
     // Lobby sliders
     if (swiperItem.classList.contains('doings__slider')) {
-      if (DEVICE_WIDTH >= 768 && DEVICE_WIDTH < 1366) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
         animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
 
         swiperSlider.on('beforeTransitionStart', () => {
           animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
         });
+      } else if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
+        let maxHeightSlide = 0;
+
+        swiperSlider.slides.forEach((slide) => {
+          if (slide.offsetHeight > maxHeightSlide) {
+            maxHeightSlide = slide.offsetHeight;
+          }
+        });
+
+        swiperSlider.el.style.minHeight = `${maxHeightSlide} px`;
       }
     }
 
@@ -178,7 +196,7 @@ export default () => {
     eventSlidersImages.forEach((eventSliderImages) => {
       const attrImages = {};
 
-      if (DEVICE_WIDTH > 1366) {
+      if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         attrImages.spaceBetween = 280;
       }
 
@@ -193,8 +211,8 @@ export default () => {
             crossFade: true,
           },
           breakpoints: {
-            // when window width is >= 1440px
-            1366: {
+            // when window width is >= DESKTOP_WIDTHpx
+            DESKTOP_WIDTH: {
             },
           },
         };

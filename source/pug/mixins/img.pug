@@ -1,4 +1,6 @@
 mixin img(sectionName = 'home', modificator = pageName, image = '',  alt = 'img')
+  - modificator = (modificator === '') ? pageName : modificator;
+
   - const img = sectionName + '__img ' + sectionName + '__img--' + modificator;
   - const picture = sectionName + '__picture ' + sectionName + '__picture--' + modificator;
 

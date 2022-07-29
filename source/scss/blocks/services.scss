@@ -1,7 +1,7 @@
 .services {
   display: grid;
 
-  grid-template-columns: calc(154 / 334 * 100%) calc(154 / 334 * 100%);
+  grid-template-columns: repeat(auto-fit, calc(154 / 334 * 100%));
   grid-template-rows: auto;
 
   gap: 27px 5px;
@@ -18,7 +18,13 @@
 
   @media screen and (min-width: $tablet) {
     &--spa {
-      grid-template-columns: calc(151 / 310 * 100%) calc(151 / 310 * 100%);
+      grid-template-columns: repeat(auto-fit, calc(151 / 310 * 100%));
+
+      row-gap: 24px;
+    }
+
+    &--info {
+      grid-template-columns: repeat(auto-fit, calc(151 / 696 * 100%));
 
       row-gap: 24px;
     }
@@ -36,6 +42,18 @@
 
       justify-content: flex-start;
     }
+
+    &--rooms {
+      grid-template-columns: repeat(3, auto);
+
+      column-gap: 24px;
+
+      justify-content: flex-start;
+    }
+
+    &--info {
+      grid-template-columns: repeat(auto-fit, calc(142 / 300 * 100%));
+    }
   }
 
   &__item {
@@ -44,16 +62,12 @@
     align-items: center;
     justify-content: flex-start;
 
-    // &--vertical {
-    //   flex-direction: column;
-    // }
-
-    // &--horizontal {}
-
     @media screen and (min-width: $desktop) {
       flex-direction: column;
 
-      &--spa {
+      &--spa,
+      &--rooms,
+      &--info {
         flex-direction: row;
       }
 
@@ -96,7 +110,9 @@
       margin-right: 0;
       margin-bottom: 24px;
 
-      &--spa {
+      &--spa,
+      &--rooms,
+      &--info {
         margin-right: 24px;
         margin-bottom: 0;
       }

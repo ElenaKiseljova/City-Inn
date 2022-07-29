@@ -21,6 +21,7 @@
 @import 'blocks/title';
 @import 'blocks/title-inner';
 
+@import 'blocks/lang';
 @import 'blocks/logo';
 @import 'blocks/social';
 @import 'blocks/worktime';
@@ -63,3 +64,8 @@
 // Rooms
 @import 'blocks/rooms';
 @import 'blocks/room';
+@import 'blocks/price';
+
+// Room
+@import 'blocks/info';
+// @import 'blocks/room';

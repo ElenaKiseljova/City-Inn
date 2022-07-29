@@ -1,7 +1,13 @@
 .room {
   @extend %w100;
 
-  &__container {}
+  &__container {
+    @media screen and (min-width: $desktop) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+    }
+  }
 
   &__top {
     position: relative;
@@ -9,6 +15,12 @@
     @extend %w100;
 
     overflow: visible;
+
+    @media screen and (min-width: $desktop) {
+      &--even {
+        order: 2;
+      }
+    }
   }
 
   &__title {
@@ -25,6 +37,8 @@
 
     @media screen and (min-width: $tablet) {
       position: static;
+
+      grid-area: a;
 
       min-width: 536px;
 
@@ -43,9 +57,26 @@
       }
 
       &--even {
-        margin-right: -235px;
+        margin-right: calc(100% - 536px);
         margin-bottom: 52px;
-        margin-left: calc((100% + 235px) - 536px);
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--odd {
+        min-width: 720px;
+
+        margin-right: calc((100% + 159px) - 720px);
+        margin-bottom: 83px;
+        margin-left: -159px;
+      }
+
+      &--even {
+        min-width: 1125px;
+
+        margin-right: calc(100% - 1125px);
+        margin-bottom: 46px;
       }
     }
   }
@@ -62,6 +93,55 @@
     --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
 
     @include before-linear-gradient();
+
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+
+      top: 0;
+
+      z-index: 1;
+
+      &--odd {
+        left: 0;
+
+        width: 50vw;
+        height: 448px;
+
+        margin: 0 0 0 calc((100% - 100vw) / 2);
+      }
+
+      &--even {
+        right: 0;
+
+        width: calc((305 / 696) * 100%);
+        height: 356px;
+
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: relative;
+
+      &--odd {
+        height: 100%;
+
+        min-height: calc((840 / 1440) * 100vw);
+
+        margin-left: calc(100% - 50vw);
+      }
+
+      &--even {
+        right: 0;
+
+        width: calc(100% - 80px);
+        height: 100%;
+
+        min-height: 420px;
+
+        margin-left: 80px;
+      }
+    }
   }
 
   &__img {
@@ -78,54 +158,114 @@
     min-height: 100vw;
 
     padding: 40px 0 48px;
-  }
-
-  &__services {
-    margin-bottom: 40px;
-  }
-
-  &__price {
-    display: flex;
-
-    align-items: center;
-    justify-content: flex-end;
-
-    @extend %w100;
-
-    margin-bottom: 56px;
-
-    color: var(--color-page, #ffffff);
 
     @media screen and (min-width: $tablet) {
-      margin: 0 41px 0 0;
+      display: grid;
+
+      column-gap: 40px;
+
+      min-height: auto;
+
+      padding: 0;
+
+      &--odd {
+        grid-template-areas:
+          ". a"
+          ". b"
+          "c c";
+
+        grid-template-columns: 50% calc(50% - 40px);
+        grid-template-rows: minmax(264px, max-content) minmax(184px, max-content) max-content;
+
+
+      }
+
+      &--even {
+        grid-template-areas:
+          "a ."
+          "b ."
+          "c c";
+
+        grid-template-columns: calc(50% - 40px) 50%;
+        grid-template-rows: minmax(224px, max-content) minmax(134px, max-content) max-content;
+      }
     }
-  }
-
-  &__price-title {
-    margin: 0;
-    padding: 0;
-
-    margin-right: 24px;
-
-    @include font(12, 18, 400);
-  }
-
-  &__price-number {
-    @include font(40, 40, 600);
 
     @media screen and (min-width: $desktop) {
-      @include font(48, 48, 600);
+      position: relative;
+
+      z-index: 2;
+
+      display: block;
+
+      overflow: visible;
+
+      &--odd {
+        padding: 80px 0 80px 80px;
+      }
+
+      &--even {
+        order: 1;
+
+        padding: 0;
+      }
     }
   }
+
+  &__services-wrapper {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      grid-area: b;
+
+      margin-bottom: 0;
+    }
+  }
+
+  &__services {}
 
   &__buttons {
     @extend %w100;
 
     @media screen and (min-width: $tablet) {
+      grid-area: c;
+
       display: flex;
 
       align-items: center;
       justify-content: flex-end;
+
+      margin-top: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: wrap;
+
+      &--odd {
+        margin-top: 86px;
+      }
+
+      &--even {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 56px;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 41px 0 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--odd {
+        margin: 0 0 86px 0;
+      }
+
+      &--even {
+        margin: 0 0 44px 0;
+      }
     }
   }
 
@@ -137,6 +277,8 @@
     }
 
     @media screen and (min-width: $tablet) {
+      min-width: 200px;
+
       &:not(:last-of-type) {
         margin-bottom: 0;
         margin-right: 24px;

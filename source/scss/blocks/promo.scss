@@ -23,6 +23,9 @@
     background-color: $starfit;
   }
 
+  &--standart {
+    min-height: fit-content;
+  }
 
   @media screen and (min-width: $tablet) {
     min-height: calc(384 / 768 * 100vw);
@@ -148,12 +151,20 @@
       @include before-linear-gradient();
     }
 
-    &--rooms,
-    &--standart {
+    &--rooms {
       --before-linear-gradient-from: rgba(0, 0, 0, 0.7);
       --before-linear-gradient-to: rgba(0, 0, 0, 0.7);
 
       @include before-linear-gradient();
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--standart {
+        --before-linear-gradient-from: rgba(0, 0, 0, 0.7);
+        --before-linear-gradient-to: rgba(0, 0, 0, 0.7);
+
+        @include before-linear-gradient();
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -685,11 +696,19 @@
     }
   }
 
+  &__lang {
+    margin-right: 18px;
+  }
+
   &__social {
     display: none;
 
     @media screen and (min-width: $desktop) {
-      display: flex;
+
+      &--home,
+      &--about {
+        display: flex;
+      }
 
       &--home {
         justify-content: flex-start;
