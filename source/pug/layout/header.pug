@@ -2,7 +2,7 @@ header(class="page-header")
   div(class="page-header__container container")
     div(class="page-header__top")
       //active
-      div(class="page-header__logo logo logo--header __js " + headerLogoClass)
+      div(class="page-header__logo logo logo--header __js logo--" + pageName)
         a(class="logo__link" href="index.html")
           svg(width="120" height="120")
             use(xlink:href="img/sprites/sprite-multi.svg#icon-logo")
@@ -25,7 +25,7 @@ header(class="page-header")
             //active
             <div class="burger__right __js"></div>
 
-          div(class="page-header__social __js page-header__social--" + showSocialMobile)
+          div(class="page-header__social __js page-header__social--" + pageName)
             - social = ['phone', 'offer'];
             - classSocialDirection = 'vertical';
             include ../blocks/social.pug

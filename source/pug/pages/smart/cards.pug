@@ -242,15 +242,7 @@ section.cards
                         | !{slideDescription}
 
                     if slideServices.length > 0
-                      ul.cards__services.services.services--cards
-                        for slideService in slideServices
-                          li.services__item
-                            div.services__icon
-                              svg(width="40" height="40")
-                                use(xlink:href="img/sprites/sprite-mono.svg#icon-" + slideService.icon)
-
-                            h5.services__name
-                              | #{slideService.title}
+                      +services('cards', 'cards', slideServices)
 
                     if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
                       a(class="cards__button button" href="" + slideBook.link)
@@ -266,15 +258,7 @@ section.cards
               | !{cardDescription}
 
             if cardServices.length > 0
-              ul.cards__services.services.services--smart
-                for cardService in cardServices
-                  li.services__item
-                    div.services__icon
-                      svg(width="40" height="40")
-                        use(xlink:href="img/sprites/sprite-mono.svg#icon-" + cardService.icon)
-
-                    h5.services__name
-                      | #{cardService.title}
+              +services('cards', 'cards', cardServices)
 
             if cardBook.title && cardBook.title.length > 0 && cardBook.link && cardBook.link.length
               a(class="cards__button button" href="" + cardBook.link)

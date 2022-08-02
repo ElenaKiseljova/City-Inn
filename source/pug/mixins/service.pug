@@ -1,0 +1,10 @@
+mixin service(service = {}, modificator = '', additionalClass = '')
+  - modificator = modificator === '' ? pageName : modificator;
+
+  li(class="services__item services__item--" + modificator + " " + additionalClass)
+    div(class="services__icon services__icon--" + modificator)
+      svg(width="40" height="40")
+        use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
+
+    h5(class="services__name services__name--" + modificator)
+      | #{service.title}

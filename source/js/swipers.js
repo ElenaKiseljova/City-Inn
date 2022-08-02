@@ -230,6 +230,29 @@ export default () => {
     });
   }
 
+  // Standart
+  const featuresIconsSlider = document.querySelector('.features__icons');
+
+  if (featuresIconsSlider && DEVICE_WIDTH < TABLET_WIDTH) {
+    const pagination = featuresIconsSlider.querySelector('.swiper-pagination');
+
+    const swiperArgs = {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+      pagination: {
+        el: pagination,
+        clickable: true,
+      },
+    };
+
+    const featuresIconsSwiper = new Swiper(featuresIconsSlider, swiperArgs);
+  }
+
+
   // Reloader
   window.addEventListener('resize', () => {
     const DEVICE_WIDTH_RESIZE = window.innerWidth && document.documentElement.clientWidth

@@ -1,0 +1,55 @@
+-
+  const features = {
+    services: [
+      {
+        icon: 'bed-2',
+        title: '2 ліжка',
+      },
+      {
+        icon: 'bath',
+        title: 'міні парфюмерія',
+      },
+      {
+        icon: 'wi-fi',
+        title: 'WI - FI',
+      },
+      {
+        icon: 'gym',
+        title: 'тренажерний зал',
+      },
+      {
+        icon: 'tv',
+        title: 'ТВ',
+      },
+      {
+        icon: 'conditioner',
+        title: 'КОНДИЦІОНЕР',
+      },
+      {
+        icon: 'pool',
+        title: 'БАСЕЙН',
+      },
+      {
+        icon: 'water',
+        title: 'вода',
+      },
+      {
+        icon: 'mini-bar',
+        title: 'Міні холодильник ',
+      },
+      {
+        icon: 'hairdryer',
+        title: 'фен',
+      },
+    ],
+  };
+
+section.features
+  div.features__container.container
+    div.features__icons
+      ul.features__wrapper.swiper-wrapper
+        for service in features.services
+          +service(service, 'features', 'swiper-slide features__icons-slide')
+
+      +pagination('features')
+

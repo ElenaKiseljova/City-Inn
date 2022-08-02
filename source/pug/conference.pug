@@ -1,15 +1,13 @@
 include includes/variables.pug
 
 - titlePage = 'Conference hall';
-- pageName = 'conference';;
-- headerLogoClass = 'logo--yellow';
-- showSocialMobile = 'show';
+- pageName = 'conference';
 
 include includes/mixins.pug
 
 include layout/head.pug
 
-body.page.page--conference
+body(class="page page--" + pageName)
   include layout/header.pug
 
   main(class="page-main")

@@ -2,13 +2,12 @@ include includes/variables.pug
 
 - titlePage = 'About';
 - pageName = 'about';
-- headerLogoClass = 'logo--black';
 
 include includes/mixins.pug
 
 include layout/head.pug
 
-body.page.page--about
+body(class="page page--" + pageName)
   include layout/header.pug
 
   main(class="page-main")

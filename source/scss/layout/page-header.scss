@@ -114,7 +114,8 @@
     --color-button: #{$white};
     --border-color-button: #{$white};
 
-    &--hide {
+    &--home,
+    &--smart {
       transform: translateX(50vw);
     }
 

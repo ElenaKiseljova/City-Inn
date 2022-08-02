@@ -1,8 +1,7 @@
 include includes/variables.pug
 
 - titlePage = 'smart пропозиції';
-- pageName = 'smart';;
-- headerLogoClass = 'logo--black';
+- pageName = 'smart';
 
 include includes/mixins.pug
 
@@ -11,7 +10,7 @@ include layout/head.pug
 body.page.page--smart
   include layout/header.pug
 
-  main(class="page-main")
+  main(class="page-main page-main--" + pageName)
     include pages/smart/promo.pug
     include pages/smart/cards.pug
     //- include pages/contacts.pug

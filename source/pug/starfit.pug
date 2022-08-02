@@ -1,15 +1,13 @@
 include includes/variables.pug
 
 - titlePage = 'Starfit';
-- pageName = 'starfit';;
-- headerLogoClass = 'logo--black';
-- showSocialMobile = 'show';
+- pageName = 'starfit';
 
 include includes/mixins.pug
 
 include layout/head.pug
 
-body.page.page--starfit
+body(class="page page--" + pageName)
   include layout/header.pug
 
   main(class="page-main")

@@ -1,4 +1,6 @@
 export default () => {
+  let lastTimeout;
+
   const cards = document.querySelectorAll('.cards__item');
 
   if (cards.length > 0) {
@@ -9,6 +11,8 @@ export default () => {
       if (cardTop && cardBottom) {
         card.addEventListener('click', (evt) => {
           if (!evt.target.classList.contains('swiper-pagination-bullet')) {
+            card.classList.add('active');
+
             if (cardTop.classList.contains('active')) {
               cardTop.classList.remove('active');
               cardBottom.classList.remove('active');
@@ -17,6 +21,12 @@ export default () => {
               cardBottom.classList.add('active');
             }
           }
+
+          if (lastTimeout) {
+            clearTimeout(lastTimeout);
+          }
+
+          lastTimeout = setTimeout(() => card.classList.remove('active'), 1000);
         });
       }
     });

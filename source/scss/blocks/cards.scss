@@ -28,7 +28,13 @@
 
     cursor: pointer;
 
+    perspective: 100vw;
+
     transition: height 0.5s;
+
+    &.active {
+      z-index: 100;
+    }
 
     @media screen and (min-width: $desktop) {
       display: flex;
@@ -50,20 +56,22 @@
   &__top {
     position: relative;
 
-    transform-origin: center top;
+    backface-visibility: hidden;
+
+    transform-origin: center;
 
     transform: rotateX(0deg);
 
-    transition: transform 0.5s;
+    transition: transform 1s;
 
     &.active {
       position: absolute;
 
       width: 100%;
 
-      transform: rotateX(-90deg);
+      transform: rotateY(180deg);
 
-      transition: transform 0.5s;
+      transition: transform 1s;
     }
 
     @media screen and (min-width: $desktop) {
@@ -171,20 +179,26 @@
 
     margin: 0;
 
-    opacity: 0;
+    background-color: $dirty-green;
 
     pointer-events: none;
 
-    transition: opacity 0.5s;
+    backface-visibility: hidden;
+
+    transform-origin: center;
+
+    transform: rotateY(180deg);
+
+    transition: transform 1s;
 
     &.active {
       position: relative;
 
-      opacity: 1;
-
       pointer-events: all;
 
-      transition: opacity 0.5s;
+      transform: rotateY(360deg);
+
+      transition: transform 1s;
     }
 
     @media screen and (min-width: $tablet) {

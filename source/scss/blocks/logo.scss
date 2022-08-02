@@ -1,10 +1,11 @@
 .logo {
-  &--black {
-    color: $dark-green;
-  }
+  color: $dark-yellow;
 
-  &--yellow {
-    color: $dark-yellow;
+  &--home,
+  &--smart,
+  &--about,
+  &--starfit {
+    color: $dark-green;
   }
 
   &--header {

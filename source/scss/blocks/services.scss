@@ -116,6 +116,13 @@
         margin-right: 24px;
         margin-bottom: 0;
       }
+
+      &--features {
+        width: 64px;
+        height: 64px;
+
+        margin-bottom: 32px;
+      }
     }
   }
 
@@ -128,5 +135,30 @@
     text-transform: lowercase;
 
     color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      &--cards {
+        @include font(10, 15, 400);
+      }
+
+      &--starfit {
+        @include font(14, 20, 400);
+      }
+
+      &--standart {
+        @include font(14, 14, 400);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--cards {
+        @include font(12, 18, 400);
+      }
+
+      &--starfit,
+      &--rooms {
+        @include font(14, 21, 400);
+      }
+    }
   }
 }

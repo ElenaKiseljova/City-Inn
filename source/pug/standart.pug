@@ -1,20 +1,19 @@
 include includes/variables.pug
 
 - titlePage = 'standart double';
-- pageName = 'standart';;
-- headerLogoClass = 'logo--yellow';
-- showSocialMobile = 'show';
+- pageName = 'standart';
 
 include includes/mixins.pug
 
 include layout/head.pug
 
-body.page.page--standart
+body(class="page page--" + pageName)
   include layout/header.pug
 
   main(class="page-main")
     include pages/standart/promo.pug
     include pages/standart/info.pug
+    include pages/standart/features.pug
     //- include blocks/contacts.pug
 
   include layout/footer.pug
