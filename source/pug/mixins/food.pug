@@ -23,7 +23,7 @@ mixin food(attr = {})
 
             +navigation('food')
 
-            div.food__pagination.food__pagination--tablet.pagination.swiper-pagination
+            div(class="food__pagination food__pagination--tablet pagination swiper-pagination food__pagination--" + pageName)
 
 
 
@@ -41,7 +41,7 @@ mixin food(attr = {})
               | !{textBottom}
 
           if tabs.length > 0
-            ul.food__tabs
+            ul(class="food__tabs food__tabs--" + sectionName)
               for foodTab, index in tabs
                 li(class="food__tab-number food__tab-number--" + (index + 1))
                   | !{index + 1}
@@ -67,4 +67,4 @@ mixin food(attr = {})
                   | !{attr.menu.text}
 
         if images.length > 0
-          div.food__pagination.food__pagination--mobile.pagination.swiper-pagination
+          div(class="food__pagination food__pagination--mobile pagination swiper-pagination food__pagination--" + pageName)

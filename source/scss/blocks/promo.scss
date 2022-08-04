@@ -23,7 +23,8 @@
     background-color: $starfit;
   }
 
-  &--standart {
+  &--standart,
+  &--conference-service {
     min-height: fit-content;
   }
 

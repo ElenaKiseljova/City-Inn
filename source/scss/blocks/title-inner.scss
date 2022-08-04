@@ -11,7 +11,7 @@
 
   color: var(--color-page, #ffffff);
 
-  // pointer-events: none;
+  pointer-events: none;
 
   @media screen and (min-width: $tablet) {
     @include font(96, 86, 300);

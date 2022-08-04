@@ -5,6 +5,14 @@
     --color-page: var(--white);
   }
 
+  @media screen and (min-width: $tablet) {
+    &--conference-service {
+      position: relative;
+
+      padding-top: 162px;
+    }
+  }
+
   @media screen and (min-width: $desktop) {
     padding-bottom: 140px;
 
@@ -19,21 +27,49 @@
 
       padding: 0 0 137px;
     }
+
+    &--conference-service {
+      padding-top: 293px;
+    }
   }
 
   &__container {
-    @extend .cosy__container;
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+
+      align-items: stretch;
+    }
   }
 
   &__top {
-    @extend .cosy__top;
+    position: relative;
 
+    @extend %w100;
+
+    height: 100vw;
+
+    overflow: visible;
+
+    &--conference-service {
+      height: calc((494 / 414)* 100vw);
+    }
 
     @media screen and (min-width: $tablet) {
+      height: auto;
+      min-height: 478px;
 
       &--restaurant,
-      &--about {
+      &--about,
+      &--conference-service {
         order: 2;
+      }
+
+      &--conference-service {
+        position: static;
+
+        min-height: 580px;
       }
     }
 
@@ -43,6 +79,8 @@
       align-items: stretch;
       justify-content: flex-start;
 
+      min-height: 840px;
+
       &--lobby {
         order: 2;
       }
@@ -50,24 +88,45 @@
   }
 
   &__title {
-    @extend .cosy__title;
-
     margin-top: 42px;
 
     &--mobile {
-      @extend .cosy__title--mobile;
+      position: absolute;
+
+      z-index: 3;
     }
 
     &--desktop {
-      @extend .cosy__title--desktop;
+      display: none;
     }
 
     &--about {
       margin-top: 33px;
     }
 
+    &--conference-service {
+      bottom: 45px;
+      left: 0;
+    }
+
     @media screen and (min-width: $tablet) {
+      width: fit-content;
+      min-width: 538px;
+
+      margin-top: 0;
+      margin-right: calc((114px + 100%) - 538px);
+      margin-bottom: 60px;
+      margin-left: -114px;
+
+      opacity: 0.8;
+
+      &--mobile {
+        display: none;
+      }
+
       &--desktop {
+        display: block;
+
         margin-top: 0;
         margin-right: calc(100% - 538px);
         margin-bottom: 128px;
@@ -87,9 +146,27 @@
 
         opacity: 1;
       }
+
+      &--conference-service {
+        min-width: 688px;
+
+        margin-right: calc(100% - 688px);
+        margin-bottom: 35px;
+        margin-left: 0;
+
+        opacity: 0.6;
+      }
     }
 
     @media screen and (min-width: $desktop) {
+      min-width: 720px;
+
+      margin-right: calc(100% - 720px);
+      margin-bottom: 100px;
+      margin-left: 0;
+
+      opacity: 0.6;
+
       &--desktop {
         margin-right: calc(100% - 720px);
         margin-bottom: 100px;
@@ -110,19 +187,46 @@
 
         opacity: 1;
       }
+
+      &--conference-service {
+        min-width: 907px;
+
+        margin-right: calc(100% - 907px);
+        margin-bottom: 116px;
+        margin-left: 0;
+      }
     }
   }
 
   &__slider-container {
-    @extend .cosy__slider;
-
     position: relative;
 
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
     @media screen and (min-width: $tablet) {
+      width: 50vw;
+
+      margin: 0 0 0 calc(100% - 50vw);
+
+      &::before {
+        display: none;
+      }
 
       &--restaurant,
-      &--about {
+      &--about,
+      &--conference-service {
         margin: 0 calc(100% - 50vw) 0 0;
+      }
+
+      &--conference-service {
+        position: static;
       }
     }
 
@@ -161,11 +265,26 @@
 
         padding: 288px 0 0;
       }
+
+      &--conference-service {
+        width: calc(50vw - 72px);
+
+        margin-top: 0;
+        margin-left: 72px;
+
+        padding: 288px 0 0;
+      }
     }
   }
 
   &__slider {
     width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      &--conference-service {
+        position: static;
+      }
+    }
 
     @media screen and (min-width: $desktop) {
       width: 360px;
@@ -204,7 +323,8 @@
           transition: transform 0.3s;
         }
 
-        &.food__slide--about {
+        &.food__slide--about,
+        &.food__slide--conference-service {
           .food__img {
             transform: translateY(-288px) scale(2);
           }
@@ -222,18 +342,42 @@
   }
 
   &__bottom {
-    @extend .cosy__bottom;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @extend %w100;
+
+    min-height: 100vw;
+
+    padding: 40px 0;
+
+    &--conference-service {
+      min-height: calc(271 / 414 * 100vw);
+    }
 
     @media screen and (min-width: $tablet) {
+      position: relative;
+
+      z-index: 1;
+
+      height: auto;
+      min-height: auto;
+
+      padding: 54px 0 54px 37px;
+
+      overflow: visible;
 
       &--restaurant,
-      &--about {
+      &--about,
+      &--conference-service {
         order: 1;
-
-        padding: 40px 34px 38px 0;
       }
 
-      &--lobby {
+      &--restaurant {
         padding: 40px 0 38px 34px;
       }
 
@@ -243,6 +387,10 @@
 
       &--about {
         padding: 57px 36px 38px 0;
+      }
+
+      &--conference-service {
+        padding: 0 40px 80px 0;
       }
     }
 
@@ -260,6 +408,10 @@
       &--about {
         padding: 57px 90px 0 12px;
       }
+
+      &--conference-service {
+        padding: 51px 40px 80px 0;
+      }
     }
   }
 
@@ -270,24 +422,45 @@
   }
 
   &__text {
-    @extend .cosy__text;
+    @extend %w100;
 
     color: var(--color-page, #ffffff);
 
     &--top {
-      @extend .cosy__text--top;
+      @include font(14, 21, 400);
     }
 
     &--bottom {
-      @extend .cosy__text--bottom;
+      margin-top: 20px;
+
+      @include font(14, 20, 600);
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--top {
+        @include font(12, 20, 400);
+      }
+
+      &--bottom {
+        @include font(12, 20, 600);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(14, 20, 400);
+
+      opacity: 0.6;
+
+      &--bottom {
+        margin-top: 36px;
+      }
     }
   }
 
   &__tabs {
     display: grid;
 
-    grid-template-areas:
-      "a b c d"
+    grid-template-areas: "a b c d"
       "e e e e";
 
     grid-template-columns: 40px 40px 40px 40px;
@@ -301,13 +474,20 @@
 
     list-style: none;
 
+    &--conference-service {
+      row-gap: 40px;
+    }
+
     @media screen and (min-width: $tablet) {
       row-gap: 116px;
+
+      &--conference-service {
+        row-gap: 65px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
-      grid-template-areas:
-        "a e"
+      grid-template-areas: "a e"
         "b f"
         "c g"
         "d h";
@@ -318,6 +498,10 @@
       align-items: center;
 
       gap: 41px 47px;
+
+      &--conference-service {
+        gap: 48px 47px;
+      }
     }
   }
 
@@ -449,17 +633,17 @@
   }
 
   &__pagination {
-    @extend .cosy__pagination;
-
     &--mobile {
-      @extend .cosy__pagination--mobile;
-    }
+      position: static;
 
-    &--tablet {
-      @extend .cosy__pagination--tablet;
+      margin-top: 50px;
     }
 
     @media screen and (min-width: $tablet) {
+      &--mobile {
+        display: none;
+      }
+
       &--tablet {
         &.swiper-pagination {
           left: auto;
@@ -469,6 +653,22 @@
           margin-right: calc((100% - 50vw) / 2);
         }
       }
+
+      &--conference-service {
+        &.swiper-pagination {
+          bottom: 40px;
+          left: 0;
+
+          width: 50vw;
+
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
     }
   }
 }

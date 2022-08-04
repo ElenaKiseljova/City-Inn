@@ -191,9 +191,9 @@ export default () => {
 
     // Food sliders
     if (swiperItem.classList.contains('food__slider')) {
-      if (swiperItem.closest('.food--about')) {
-        const foodNumberTabs = swiperItem.closest('.food--about').querySelectorAll('.food__tab-number');
-        const foodTextTabs = swiperItem.closest('.food--about').querySelectorAll('.food__tab-text');
+      if (swiperItem.closest('.food--about') || swiperItem.closest('.food--conference-service')) {
+        const foodNumberTabs = swiperItem.closest('section').querySelectorAll('.food__tab-number');
+        const foodTextTabs = swiperItem.closest('section').querySelectorAll('.food__tab-text');
 
         changeFoodTab(swiperSlider, foodNumberTabs, foodTextTabs);
 
