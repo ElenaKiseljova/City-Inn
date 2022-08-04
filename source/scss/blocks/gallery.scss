@@ -1,0 +1,114 @@
+.gallery {
+  order: 1;
+
+  @extend %w100;
+
+  @media screen and (min-width: $tablet) {
+    order: 2;
+  }
+
+  &__container {
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &__slider {
+    width: 100vw;
+    height: calc((483 / 414) * 100vw);
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    @media screen and (min-width: $tablet) {
+      width: calc(575 / 768 * 100vw);
+      height: calc(680 / 768 * 100vw);
+
+      overflow: visible;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 50vw;
+      height: calc(840 / 1440 * 100vw);
+    }
+  }
+
+  &__slide {
+    @media screen and (min-width: $tablet) {
+      &.swiper-slide-active {
+        .gallery__img {
+          transform-origin: left top;
+          transform: translateY(0) scale(1);
+
+          transition: transform 0.3s;
+        }
+      }
+
+      &.swiper-slide-next {
+        &~.swiper-slide {
+          opacity: 0;
+
+          pointer-events: none;
+        }
+
+        .gallery__img {
+          $scale: calc(280 / 680);
+
+          transform-origin: left top;
+          transform: translateY(80px) scale(#{$scale});
+
+          transition: transform 0.3s;
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &.swiper-slide-next {
+        .gallery__img {
+          $scale: calc(420 / 840);
+
+          transform: translateY(0) scale(#{$scale});
+        }
+      }
+    }
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      bottom: 40px;
+
+      @media screen and (min-width: $tablet) {
+        bottom: 42px;
+
+        width: calc(575 / 768 * 100vw);
+      }
+
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+
+      margin-right: 15px;
+      margin-bottom: 80px;
+    }
+  }
+}

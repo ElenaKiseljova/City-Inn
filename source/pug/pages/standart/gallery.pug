@@ -1,0 +1,13 @@
+-
+  const gallery = ['gallery-1', 'gallery-2', 'gallery-1', 'gallery-2'];
+
+section.gallery
+  h2.visually-hidden gallery
+  div.gallery__container.container
+    +slider('gallery')
+      for image in gallery
+        +slide('gallery')
+          +img('gallery', '', image, 'gallery')
+
+    +pagination('gallery')
+    +navigation('gallery')

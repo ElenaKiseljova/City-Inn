@@ -10,10 +10,12 @@ include layout/head.pug
 body(class="page page--" + pageName)
   include layout/header.pug
 
-  main(class="page-main")
+  main(class="page-main page-main--" + pageName)
     include pages/standart/promo.pug
     include pages/standart/info.pug
     include pages/standart/features.pug
+    include pages/standart/gallery.pug
+    include pages/standart/warm.pug
     //- include blocks/contacts.pug
 
   include layout/footer.pug

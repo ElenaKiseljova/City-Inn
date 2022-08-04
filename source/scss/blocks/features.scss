@@ -1,5 +1,11 @@
 .features {
+  order: 2;
+
   @extend %w100;
+
+  @media screen and (min-width: $tablet) {
+    order: 1;
+  }
 
   &__container {}
 

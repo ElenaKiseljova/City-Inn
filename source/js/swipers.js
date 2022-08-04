@@ -63,6 +63,8 @@ export default () => {
   };
 
   const swiperInit = (swiperItem, attr = {}) => {
+    const newAttr = { ...attr };
+
     // Rooms sliders
     if (swiperItem.classList.contains('rooms__slider') && (DEVICE_WIDTH >= TABLET_WIDTH)) {
       return;
@@ -114,6 +116,28 @@ export default () => {
       }
     }
 
+    // Standart sliders
+    if (swiperItem.classList.contains('gallery__slider')) {
+      newAttr.breakpoints = {
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 36,
+          navigation: {
+            nextEl: nextButton,
+            prevEl: prevButton,
+          },
+        },
+        // when window width is >= 1366px
+        1366: {
+          spaceBetween: 320,
+          navigation: {
+            nextEl: nextButton,
+            prevEl: prevButton,
+          },
+        },
+      };
+    }
+
     if (!pagination) {
       pagination = swiperItem.closest('section').querySelector('.swiper-pagination');
     }
@@ -127,8 +151,8 @@ export default () => {
 
     if (prevButton && nextButton) {
       swiperArgs.breakpoints = {
-        // when window width is >= DESKTOP_WIDTHpx
-        DESKTOP_WIDTH: {
+        // when window width is >= 1366px
+        1366: {
           navigation: {
             nextEl: nextButton,
             prevEl: prevButton,
@@ -139,7 +163,7 @@ export default () => {
 
     const swiperArgsMerged = {
       ...swiperArgs,
-      ...attr,
+      ...newAttr,
     };
 
     const swiperSlider = new Swiper(swiperItem, swiperArgsMerged);
@@ -211,8 +235,8 @@ export default () => {
             crossFade: true,
           },
           breakpoints: {
-            // when window width is >= DESKTOP_WIDTHpx
-            DESKTOP_WIDTH: {
+            // when window width is >= 1366px
+            1366: {
             },
           },
         };
@@ -251,7 +275,6 @@ export default () => {
 
     const featuresIconsSwiper = new Swiper(featuresIconsSlider, swiperArgs);
   }
-
 
   // Reloader
   window.addEventListener('resize', () => {

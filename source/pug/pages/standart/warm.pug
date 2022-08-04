@@ -1,0 +1,64 @@
+-
+  const warm = {
+    subtitle: `
+      входить у вартість
+    `,
+    services: [
+      {
+        icon: 'breakfast',
+        title: 'Сніданок (в залежності від обраного тарифу)',
+      },
+      {
+        icon: 'parking',
+        title: 'Паркінг',
+      },
+      {
+        icon: 'pool',
+        title: 'Басейн СК Starfit',
+      },
+      {
+        icon: 'gym',
+        title: 'Тренажерний зал СК  Starfit',
+      },
+      {
+        icon: 'wi-fi',
+        title: 'Free Wi-Fi з швидкістю 10мб/с ',
+      },
+    ],
+    image: 'warm',
+    title: `
+      буде тепло!
+    `,
+    priceTitle: 'ціна від',
+    priceNumber: '3100',
+    book: {
+      title: 'book now',
+      link: '#'
+    }
+  };
+
+section.warm
+  div.warm__container.container
+    div.warm__included
+      h3.warm__subtitle
+        | !{warm.subtitle}
+
+      +services('warm', 'warm', warm.services)
+
+    div.warm__img-wrapper
+      +img('warm', '', warm.image, warm.title)
+
+    div.warm__content
+      h2.title-inner.warm__title
+        | !{warm.title}
+
+      div(class="warm__price price")
+        h4.price__title
+          | #{warm.priceTitle}
+        p.warm__price-number.price__number
+          | #{warm.priceNumber} ₴
+
+      a(class="warm__button button" href="" + warm.book.link)
+        | !{warm.book.title}
+
+
