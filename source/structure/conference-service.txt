@@ -1,0 +1,93 @@
+const promo = {
+    title: `
+      conference <br />service
+    `,
+    image: 'promo-bg',
+    content: {}
+
+  };
+
+const approach = {
+    // кол-во images и tabs должно совпадать. max count 4
+    images: ['approach-1', 'approach-1', 'approach-1', 'approach-1'],
+    title: `Smart-підхід`,
+    tabs: [
+      {
+        textTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
+        textBottom : '',
+      },
+      {
+        textTop: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни ',
+        textBottom : '',
+      },
+      {
+        textTop: 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
+        textBottom : '',
+      },
+      {
+        textTop: 'Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.',
+        textBottom : '',
+      },
+    ],
+  };
+
+  const locations = {
+    title: `
+      локації
+    `,
+    images: ['locations-1', 'locations-2', 'approach-1'],
+    texts: [
+      {
+        title: 'SMART конференц-зал',
+        topText: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros. In hac habitasse platea dictumst. Nunc convallis felis ac fermentum volutpat. Phasellus at scelerisque est. In sit amet pulvinar mi. Pellentesque ut condimentum ante, et gravida mi. In erat felis, laoreet nec porta eu, vehicula nec diam. ',
+        bottomText: '',
+        button: {
+          text: 'VIEW MORE',
+          link: '#',
+        }
+      },
+      {
+        title: 'бенкет',
+        topText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+        bottomText: '',
+        button: {
+          text: 'VIEW MORE',
+          link: '#',
+        }
+      },
+      {
+        title: 'корпоратив',
+        topText: 'Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни',
+        bottomText: '',
+        button: {
+          text: 'VIEW MORE',
+          link: '#',
+        }
+      },
+    ],
+  };
+
+const types = {
+    title: `
+      типи заходів
+    `,
+    slides: [
+      {
+        image: 'slide-1',
+        title: '',
+        text: `
+
+        `,
+        services: [
+          {
+            icon: 'area',
+            title: 'до 400 чол',
+          }
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        }
+      }
+    ],
+  };

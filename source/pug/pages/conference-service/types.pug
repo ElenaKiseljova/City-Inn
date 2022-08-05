@@ -1,0 +1,110 @@
+-
+  const types = {
+    title: `
+      типи заходів
+    `,
+    slides: [
+      {
+        image: 'slide-1',
+        title: 'КОНФЕРЕНЦІЯ',
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.
+        `,
+        services: [
+          {
+            icon: 'area',
+            title: 'до 400 чол',
+          }
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        }
+      },
+      {
+        image: 'slide-2',
+        title: 'ПРЕЗЕНТАЦІЯ',
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.
+        `,
+        services: [
+          {
+            icon: 'area',
+            title: 'до 400 чол',
+          }
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        }
+      },
+      {
+        image: 'slide-3',
+        title: 'ПЕРЕГОВОРИ',
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.
+        `,
+        services: [
+          {
+            icon: 'area',
+            title: 'до 400 чол',
+          }
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        }
+      },
+      {
+        image: 'slide-4',
+        title: 'ТРЕНІНГ',
+        text: `
+          Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.
+        `,
+        services: [
+          {
+            icon: 'area',
+            title: 'до 400 чол',
+          }
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        }
+      },
+    ],
+  };
+
+section.types
+  div.types__container.container
+    header.types__header
+      h2.title-inner.types__title
+        | !{types.title}
+
+      +navigation('types')
+
+      +pagination('types')
+
+    div.types__slider-container
+      +slider('types', '', types.slides)
+        for slide in types.slides
+          +slide('types')
+            div.types__top
+              h3.types__subtitle.types__subtitle--desktop
+                | !{slide.title}
+
+              +img('types', '', slide.image)
+
+            div.types__bottom
+              h3.types__subtitle.types__subtitle--mobile
+              | !{slide.title}
+
+              div.types__content
+                p.types__text
+                  | !{slide.text}
+
+              +services('types', '', slide.services)
+
+              a(class="types__button button" href="" + slide.book.link)
+                | !{slide.book.title}
+
