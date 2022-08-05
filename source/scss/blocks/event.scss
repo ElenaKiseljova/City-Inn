@@ -29,10 +29,16 @@
     &--starfit {
       padding: 140px 0;
     }
+
+    &--conference-service {
+      padding: 0;
+    }
   }
 
   &__container {
-    &--starfit {
+
+    &--starfit,
+    &--conference-service {
       position: relative;
     }
 
@@ -54,7 +60,8 @@
 
     overflow: visible;
 
-    &--starfit {
+    &--starfit,
+    &--conference-service {
       position: static;
     }
 
@@ -108,6 +115,14 @@
 
     &--attraction {
       margin-top: 28px;
+    }
+
+    &--conference-service {
+      top: calc(100vw - 34px);
+
+      margin: 0;
+
+      transform: translateY(-100%);
     }
 
     @media screen and (min-width: $tablet) {
@@ -180,6 +195,16 @@
         margin-bottom: 128px;
         margin-left: 0;
       }
+
+      &--conference-service {
+        min-width: 536px;
+
+        margin-right: calc((100% + 232px) - 536px);
+        margin-bottom: 96px;
+        margin-left: -232px;
+
+        transform: translateY(0);
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -244,6 +269,15 @@
 
         opacity: 1;
       }
+
+      &--conference-service {
+        min-width: 784px;
+
+        margin-top: 0;
+        margin-left: calc((100% + 106px) - 784px);
+        margin-bottom: 235px;
+        margin-left: -106px;
+      }
     }
   }
 
@@ -259,7 +293,8 @@
 
     @include before-linear-gradient();
 
-    &--starfit {
+    &--starfit,
+    &--conference-service {
       position: static;
     }
 
@@ -291,6 +326,10 @@
 
       &--starfit {
         min-height: 580px;
+      }
+
+      &--conference-service {
+        position: relative;
       }
     }
 
@@ -375,7 +414,8 @@
       --width-img: 360px;
       --height-img: 420px;
 
-      &--lobby {
+      &--lobby,
+      &--conference-service {
         --height-img: 360px;
       }
 
@@ -461,6 +501,10 @@
       padding-bottom: 97px;
     }
 
+    &--conference-service {
+      padding: 40px 0 88px;
+    }
+
     @media screen and (min-width: $tablet) {
       position: relative;
 
@@ -493,6 +537,10 @@
       &--starfit {
         padding: 40px 36px 40px 0;
       }
+
+      &--conference-service {
+        padding: 34px 4px 40px 40px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -523,6 +571,10 @@
 
         padding: 80px 80px 0 0;
       }
+
+      &--conference-service {
+        padding: 34px 74px 0 42px;
+      }
     }
   }
 
@@ -543,7 +595,8 @@
 
     color: var(--color-page, #ffffff);
 
-    &--starfit {
+    &--starfit,
+    &--conference-service {
       margin-bottom: 40px;
     }
 
@@ -555,10 +608,21 @@
       &--starfit {
         margin-bottom: 24px;
       }
+
+      &--conference-service {
+        @include font(24, 29, 700);
+
+        margin-bottom: 51px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       margin-bottom: 40px;
+
+      &--conference-service {
+        margin-bottom: 46px;
+        margin-left: 4px;
+      }
     }
   }
 

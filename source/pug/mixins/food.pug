@@ -43,7 +43,7 @@ mixin food(attr = {})
           if tabs.length > 0
             ul(class="food__tabs food__tabs--" + sectionName)
               for foodTab, index in tabs
-                li(class="food__tab-number food__tab-number--" + (index + 1))
+                li(class="food__tab-number food__tab-number--" + (index + 1) + " food__tab-number--" + sectionName)
                   | !{index + 1}
 
               for foodTab, index in tabs

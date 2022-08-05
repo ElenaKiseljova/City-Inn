@@ -29,7 +29,7 @@
     }
 
     &--conference-service {
-      padding-top: 293px;
+      padding: 293px 0 234px;
     }
   }
 
@@ -540,9 +540,39 @@
       transition: background-color 0.3s;
     }
 
+    @media screen and (min-width: $tablet) {
+      &--conference-service {
+        grid-area: a;
+
+        display: none;
+
+        &.active {
+          display: flex;
+
+          background-color: transparent;
+        }
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       width: 48px;
       height: 48px;
+
+      $areas: ('a', 'b', 'c', 'd');
+
+      @for $i from 0 to length($areas) {
+        &--#{$i+1} {
+          grid-area: unquote(nth($areas, $i+1));
+        }
+      }
+
+      &--conference-service {
+        display: flex;
+
+        &.active {
+          background-color: $white-20;
+        }
+      }
     }
   }
 

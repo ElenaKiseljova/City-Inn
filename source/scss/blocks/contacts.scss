@@ -46,6 +46,8 @@
 
     margin: 0 calc((100% - 100vw) / 2);
 
+    background-color: #000000;
+
     @media screen and (min-width: $desktop) {
       width: 50vw;
 
