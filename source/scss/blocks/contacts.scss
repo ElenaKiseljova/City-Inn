@@ -28,6 +28,8 @@
       grid-template-columns: 50% 50%;
       grid-template-rows: auto;
 
+      align-items: stretch;
+
       min-height: calc(600 / 1440 * 100vw);
 
       &--lobby {
@@ -75,6 +77,8 @@
 
     @media screen and (min-width: $desktop) {
       align-items: flex-start;
+
+      height: auto;
 
       padding: 80px 58px 201px 80px;
     }

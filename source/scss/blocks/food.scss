@@ -34,6 +34,8 @@
   }
 
   &__container {
+    position: relative;
+
     @media screen and (min-width: $tablet) {
       display: grid;
 
@@ -44,8 +46,6 @@
   }
 
   &__top {
-    position: relative;
-
     @extend %w100;
 
     height: 100vw;
@@ -57,6 +57,8 @@
     }
 
     @media screen and (min-width: $tablet) {
+      position: relative;
+
       height: auto;
       min-height: 478px;
 
@@ -199,16 +201,9 @@
   }
 
   &__slider-container {
-    position: relative;
-
     width: 100vw;
 
     margin: 0 calc((100% - 100vw) / 2);
-
-    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
-    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
-
-    @include before-linear-gradient();
 
     @media screen and (min-width: $tablet) {
       width: 50vw;
@@ -278,6 +273,8 @@
   }
 
   &__slider {
+    position: static;
+
     width: 100%;
 
     @media screen and (min-width: $tablet) {
@@ -333,12 +330,17 @@
     }
   }
 
-  &__picture {
-    @extend %picture;
+  &__img {
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    @extend %img;
   }
 
-  &__img {
-    @extend %img;
+  &__picture {
+    @extend %picture;
   }
 
   &__bottom {
@@ -353,7 +355,7 @@
 
     min-height: 100vw;
 
-    padding: 40px 0;
+    padding: 40px 0 96px;
 
     &--conference-service {
       min-height: calc(271 / 414 * 100vw);
@@ -663,25 +665,17 @@
   }
 
   &__pagination {
-    &--mobile {
-      position: static;
-
-      margin-top: 50px;
+    &.swiper-pagination {
+      bottom: 38px;
     }
 
     @media screen and (min-width: $tablet) {
-      &--mobile {
-        display: none;
-      }
+      &.swiper-pagination {
+        left: auto;
+        right: 0;
 
-      &--tablet {
-        &.swiper-pagination {
-          left: auto;
-          right: 0;
-
-          margin-left: auto;
-          margin-right: calc((100% - 50vw) / 2);
-        }
+        margin-left: auto;
+        margin-right: calc((100% - 50vw) / 2);
       }
 
       &--conference-service {

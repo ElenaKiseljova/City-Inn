@@ -21,7 +21,8 @@ section.cosy
             +slide('cosy')
               +img('cosy', '', image, cosy.title)
 
-        div.cosy__pagination.cosy__pagination--tablet.pagination.swiper-pagination
+        +pagination('cosy')
+
     div.cosy__bottom
       h2.title-inner.cosy__title.cosy__title--desktop
         | !{cosy.title}
@@ -33,6 +34,3 @@ section.cosy
           | !{cosy.textBottom}
 
       +navigation('cosy')
-
-      if cosy.images.length > 0
-        div.cosy__pagination.cosy__pagination--mobile.pagination.swiper-pagination

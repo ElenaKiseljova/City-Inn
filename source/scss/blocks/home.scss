@@ -145,10 +145,7 @@
 
       &--smart,
       &--why,
-      &--group,
-      &--starfit,
-      &--conference,
-      &--about {
+      &--conference {
         min-height: calc(840 / 1440 * 100vw);
       }
 
@@ -157,8 +154,16 @@
         min-height: calc(440 / 1440 * 100vw);
       }
 
+      &--group {
+        min-height: calc(726 / 1440 * 100vw);
+      }
+
       &--starfit {
         min-height: calc(600 / 1440 * 100vw);
+      }
+
+      &--about {
+        min-height: calc(720 / 1440 * 100vw);
       }
     }
   }
@@ -653,6 +658,19 @@
         &.home__button--smart {
           display: flex;
         }
+
+        &.home__button--group {
+          --background-color-button: #{$white-10};
+        }
+      }
+
+      &--more {
+
+        &.home__button--smart,
+        &.home__button--lobby,
+        &.home__button--about {
+          --background-color-button: #{$white-10};
+        }
       }
 
       &--restaurant {
@@ -680,16 +698,6 @@
 
     @media screen and (min-width: $desktop) {
       margin-right: 40px;
-    }
-  }
-
-  &__pagination {
-    position: static;
-
-    margin-top: 40px;
-
-    @media screen and (min-width: $tablet) {
-      display: none;
     }
   }
 }

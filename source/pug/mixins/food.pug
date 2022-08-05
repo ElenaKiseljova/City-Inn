@@ -23,7 +23,7 @@ mixin food(attr = {})
 
             +navigation('food')
 
-            div(class="food__pagination food__pagination--tablet pagination swiper-pagination food__pagination--" + pageName)
+            +pagination('food')
 
 
 
@@ -65,6 +65,3 @@ mixin food(attr = {})
               a(class="food__button button food__button--" + sectionName href="" + attr.menu.link)
                 span
                   | !{attr.menu.text}
-
-        if images.length > 0
-          div(class="food__pagination food__pagination--mobile pagination swiper-pagination food__pagination--" + pageName)

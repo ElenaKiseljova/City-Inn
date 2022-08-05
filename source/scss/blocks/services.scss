@@ -68,7 +68,8 @@
       &--spa,
       &--rooms,
       &--info,
-      &--warm {
+      &--warm,
+      &--conference-service {
         flex-direction: row;
       }
 
@@ -114,13 +115,15 @@
       &--spa,
       &--rooms,
       &--info,
-      &--warm {
+      &--warm,
+      &--conference-service {
         margin-bottom: 0;
       }
 
       &--spa,
       &--rooms,
-      &--info {
+      &--info,
+      &--conference-service {
         margin-right: 24px;
       }
 
@@ -152,6 +155,10 @@
 
     &--warm {
       @include font(14, 18, 400);
+    }
+
+    &--conference-service {
+      @include font(14, 21, 400);
     }
 
     @media screen and (min-width: $tablet) {

@@ -2,6 +2,8 @@
   @extend %w100;
 
   &__container {
+    position: relative;
+
     @media screen and (min-width: $tablet) {
       display: grid;
 
@@ -12,8 +14,6 @@
   }
 
   &__top {
-    position: relative;
-
     @extend %w100;
 
     height: 100vw;
@@ -21,6 +21,8 @@
     overflow: visible;
 
     @media screen and (min-width: $tablet) {
+      position: relative;
+
       height: auto;
       min-height: 478px;
     }
@@ -75,6 +77,8 @@
   }
 
   &__slider {
+    position: static;
+
     width: 100vw;
 
     margin: 0 calc((100% - 100vw) / 2);
@@ -119,7 +123,7 @@
 
     min-height: 100vw;
 
-    padding: 40px 0;
+    padding: 40px 0 96px;
 
     @media screen and (min-width: $tablet) {
       position: relative;
@@ -194,23 +198,15 @@
   }
 
   &__pagination {
-    &--mobile {
-      position: static;
-
-      margin-top: 50px;
+    &.swiper-pagination {
+      bottom: 40px;
     }
 
     @media screen and (min-width: $tablet) {
-      &--mobile {
-        display: none;
-      }
+      &.swiper-pagination {
+        bottom: 44px;
 
-      &--tablet {
-        &.swiper-pagination {
-          bottom: 44px;
-
-          margin-left: calc((100% - 50vw) / 2);
-        }
+        margin-left: calc((100% - 50vw) / 2);
       }
     }
 

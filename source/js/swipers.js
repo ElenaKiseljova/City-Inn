@@ -1,6 +1,7 @@
 import gsap from './gsap.min';
 import Swiper from './swiper-bundle.min';
 import changeActiveClass from './changeActiveClass';
+import cardsActivate from './cards';
 
 export default () => {
   const TABLET_WIDTH = 768;
@@ -63,12 +64,18 @@ export default () => {
   };
 
   const swiperInit = (swiperItem, attr = {}) => {
-    const newAttr = { ...attr };
-
-    // Rooms sliders
+    // Sliders destroy
     if (swiperItem.classList.contains('rooms__slider') && (DEVICE_WIDTH >= TABLET_WIDTH)) {
       return;
     }
+
+    if (swiperItem.classList.contains('types__slider') && (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH)) {
+      cardsActivate('types', '.types__slide');
+
+      return;
+    }
+
+    const newAttr = { ...attr };
 
     let prevButton = null;
     let nextButton = null;
@@ -89,21 +96,7 @@ export default () => {
     }
 
     // Restaurant sliders
-    if (swiperItem.classList.contains('cosy__slider')) {
-      if (DEVICE_WIDTH < TABLET_WIDTH) {
-        pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--mobile');
-      } else {
-        pagination = swiperItem.closest('.cosy').querySelector('.cosy__pagination--tablet');
-      }
-    }
-
     if (swiperItem.classList.contains('food__slider')) {
-      if (DEVICE_WIDTH < TABLET_WIDTH) {
-        pagination = swiperItem.closest('.food').querySelector('.food__pagination--mobile');
-      } else {
-        pagination = swiperItem.closest('.food').querySelector('.food__pagination--tablet');
-      }
-
       if (DEVICE_WIDTH > TABLET_WIDTH) {
         swiperArgs.spaceBetween = 75;
       }
@@ -136,6 +129,13 @@ export default () => {
           },
         },
       };
+    }
+
+    // Conference services sliders
+    if (swiperItem.classList.contains('types__slider')) {
+      if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
+        swiperArgs.spaceBetween = 40;
+      }
     }
 
     if (!pagination) {

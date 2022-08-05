@@ -1,12 +1,12 @@
-export default () => {
+const cardsActivate = (sectionName = 'cards', cardSelector = '.cards__item') => {
   let lastTimeout;
 
-  const cards = document.querySelectorAll('.cards__item');
+  const cards = document.querySelectorAll(`${cardSelector}`);
 
   if (cards.length > 0) {
     cards.forEach((card) => {
-      const cardTop = card.querySelector('.cards__top');
-      const cardBottom = card.querySelector('.cards__bottom');
+      const cardTop = card.querySelector(`.${sectionName}__top`);
+      const cardBottom = card.querySelector(`.${sectionName}__bottom`);
 
       if (cardTop && cardBottom) {
         card.addEventListener('click', (evt) => {
@@ -32,3 +32,5 @@ export default () => {
     });
   }
 };
+
+export default cardsActivate;

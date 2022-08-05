@@ -90,18 +90,17 @@ section.types
         for slide in types.slides
           +slide('types')
             div.types__top
-              h3.types__subtitle.types__subtitle--desktop
+              h3.types__subtitle.types__subtitle--tablet
                 | !{slide.title}
 
               +img('types', '', slide.image)
 
             div.types__bottom
               h3.types__subtitle.types__subtitle--mobile
-              | !{slide.title}
+                | !{slide.title}
 
-              div.types__content
-                p.types__text
-                  | !{slide.text}
+              p.types__text
+                | !{slide.text}
 
               +services('types', '', slide.services)
 

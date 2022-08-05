@@ -18,11 +18,11 @@
   }
 
   @media screen and (min-width: $tablet) {
-    @include font(96, 86, 300);
+    @include font(96, 100, 300);
   }
 
   @media screen and (min-width: $desktop) {
-    @include font(200, 156, 500);
+    @include font(200, 250, 500);
 
     color: $white-60;
 

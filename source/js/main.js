@@ -4,7 +4,7 @@ import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
 import map from './map';
-import cards from './cards';
+import cardsActivate from './cards';
 import readMore from './read-more';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   try {
-    cards();
+    cardsActivate();
   } catch (error) {
     console.log(error.message);
   }

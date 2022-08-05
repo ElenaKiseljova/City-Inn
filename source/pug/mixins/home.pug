@@ -51,7 +51,7 @@ mixin home(attr = {})
             a(class="button home__button home__button--more home__button--" + sectionName href= more.link)
               span #{more.title}
 
-          if book && book.link !== '' && book.title !== ''
+          if book && book.link && book.link !== '' && book.title && book.title !== ''
             a(class="button home__button home__button--book-now home__button--" + sectionName href= book.link)
               span #{book.title}
 
