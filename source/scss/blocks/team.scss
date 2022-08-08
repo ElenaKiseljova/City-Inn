@@ -1,0 +1,311 @@
+.team {
+  @extend %w100;
+
+  @media screen and (min-width: $desktop) {
+    padding: 183px 0 150px;
+  }
+
+  &__container {
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 127px;
+    }
+  }
+
+  &__header {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    z-index: 3;
+
+    width: calc(100% - 30px);
+    height: calc((492 / 414) * 100vw);
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    overflow: visible;
+
+    @media screen and (min-width: $mobile) {
+      width: calc(100% - 80px);
+    }
+
+    @media screen and (min-width: $tablet) {
+      left: 0;
+
+      width: 50vw;
+      height: 100%;
+
+      transform: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+
+      display: grid;
+
+      grid-template-areas:
+        "a ."
+        "b c";
+
+      grid-template-columns: calc(771 / (1440 - 254) * 100%) calc(360 / (1440 - 254) * 100%);
+
+      align-items: end;
+
+      column-gap: calc(51 / (1440 - 254) * 100%);
+
+      width: 100%;
+      height: fit-content;
+
+      margin-bottom: 78px;
+
+      pointer-events: all;
+    }
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 32px;
+    left: 0;
+
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      top: 10px;
+      left: calc((302 / 768) * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+
+      grid-area: b;
+
+      margin-left: -18px;
+    }
+  }
+
+  &__subtitle {
+    position: absolute;
+
+    top: calc(100% + 37px);
+    left: 0;
+
+    @extend %w100;
+
+    max-width: 305px;
+
+    @include font(20, 24, 500);
+
+    color: #{$yellow};
+
+    @media screen and (min-width: $tablet) {
+      top: 112px;
+      left: calc((422 / 768) * 100vw);
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+
+      grid-area: a;
+
+      margin-left: -5px;
+
+      max-width: none;
+
+      @include font(30, 37, 500);
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+
+      display: flex;
+
+      grid-area: c;
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      bottom: 53px;
+
+      pointer-events: all;
+
+      @media screen and (min-width: $tablet) {
+        bottom: 37px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__slider-container {
+    width: 100vw;
+
+    margin: 0 calc((100% - 100vw) / 2);
+
+    @media screen and (min-width: $desktop) {
+      width: calc(100% + (50vw - 50%));
+
+      margin: 0 calc(50% - 50vw) 0 0;
+
+      overflow: hidden;
+    }
+  }
+
+  &__slider {
+    height: fit-content;
+
+    @media screen and (min-width: $desktop) {
+      width: 360px;
+
+      margin: 0 auto 0 0;
+
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+
+    height: calc((492 / 414) * 100vw);
+
+    @media screen and (min-width: $tablet) {
+      height: 100%;
+      min-height: calc((446 / 768) * 100vw);
+
+      opacity: 0;
+
+      transform: translateX(-100%);
+    }
+
+    @media screen and (min-width: $desktop) {
+      height: 420px;
+      min-height: fit-content;
+
+      opacity: 1;
+
+      transform: translateX(0);
+    }
+  }
+
+  &__img {
+    @extend %img;
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.1);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.1);
+
+    @include before-linear-gradient();
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    padding: 193px 15px 150px;
+
+    @media screen and (min-width: $mobile) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: 221px 51px 130px 37px;
+
+      opacity: 0;
+
+      transform: translateX(100%);
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      flex-direction: column;
+
+      padding: 46px 0 0;
+
+      opacity: 1;
+
+      transform: translateX(0);
+    }
+  }
+
+  &__position {
+    @extend %w100;
+
+    margin-bottom: 32px;
+
+    @include font(14, 20, 400);
+
+    text-transform: uppercase;
+
+    color: #{$yellow};
+
+    @media screen and (min-width: $desktop) {
+      order: 0;
+
+      margin-bottom: 8px;
+
+      text-transform: none;
+
+      color: var(--color-page, #ffffff);
+    }
+  }
+
+  &__name {
+    @extend %w100;
+
+    @include font(30, 37, 500);
+
+    text-transform: uppercase;
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $desktop) {
+      order: 1;
+
+      margin-bottom: 24px;
+    }
+  }
+
+  &__mail {
+    @include font(14, 25, 400);
+
+    color: var(--color-page, #ffffff);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    @media screen and (min-width: $desktop) {
+      order: 2;
+    }
+  }
+}

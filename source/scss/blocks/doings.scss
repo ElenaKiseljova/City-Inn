@@ -154,7 +154,7 @@
     }
   }
 
-  &__img-wrapper {
+  &__top {
     position: relative;
 
     width: 100vw;
@@ -186,7 +186,7 @@
     @extend %picture;
   }
 
-  &__content {
+  &__bottom {
     @extend %w100;
 
     height: fit-content;

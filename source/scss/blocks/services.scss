@@ -16,6 +16,10 @@
     row-gap: 16px;
   }
 
+  &--group {
+    row-gap: 20px;
+  }
+
   @media screen and (min-width: $tablet) {
     &--spa {
       grid-template-columns: repeat(auto-fit, calc(151 / 310 * 100%));
@@ -54,6 +58,14 @@
     &--info {
       grid-template-columns: repeat(auto-fit, calc(142 / 300 * 100%));
     }
+
+    &--group {
+      grid-template-columns: repeat(auto-fit, minmax(132px, max-content));
+
+      justify-content: start;
+
+      column-gap: 24px;
+    }
   }
 
   &__item {
@@ -69,7 +81,8 @@
       &--rooms,
       &--info,
       &--warm,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         flex-direction: row;
       }
 
@@ -105,6 +118,10 @@
       fill: var(--color-page, #ffffff);
     }
 
+    &--group {
+      margin-right: 25px;
+    }
+
     @media screen and (min-width: $desktop) {
       width: 48px;
       height: 48px;
@@ -116,14 +133,16 @@
       &--rooms,
       &--info,
       &--warm,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         margin-bottom: 0;
       }
 
       &--spa,
       &--rooms,
       &--info,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         margin-right: 24px;
       }
 

@@ -6,7 +6,9 @@
   }
 
   @media screen and (min-width: $tablet) {
-    &--conference-service {
+
+    &--conference-service,
+    &--group {
       position: relative;
 
       padding-top: 162px;
@@ -31,6 +33,10 @@
     &--conference-service {
       padding: 293px 0 234px;
     }
+
+    &--group {
+      padding: 209px 0 249px;
+    }
   }
 
   &__container {
@@ -52,8 +58,9 @@
 
     overflow: visible;
 
-    &--conference-service {
-      height: calc((494 / 414)* 100vw);
+    &--conference-service,
+    &--group {
+      height: calc((494 / 414) * 100vw);
     }
 
     @media screen and (min-width: $tablet) {
@@ -64,7 +71,8 @@
 
       &--restaurant,
       &--about,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         order: 2;
       }
 
@@ -72,6 +80,10 @@
         position: static;
 
         min-height: 580px;
+      }
+
+      &--group {
+        min-height: 488px;
       }
     }
 
@@ -106,9 +118,26 @@
       margin-top: 33px;
     }
 
-    &--conference-service {
-      bottom: 45px;
-      left: 0;
+    &--conference-service,
+    &--group {
+      top: calc(((494 / 414) * 100vw) - 45px);
+      left: 15px;
+
+      width: calc(100% - 30px);
+
+      margin-top: 0;
+
+      transform: translateY(-100%);
+    }
+
+    @media screen and (min-width: $mobile) {
+
+      &--conference-service,
+      &--group {
+        left: 40px;
+
+        width: calc(100% - 80px);
+      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -149,14 +178,17 @@
         opacity: 1;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         min-width: 688px;
 
         margin-right: calc(100% - 688px);
         margin-bottom: 35px;
         margin-left: 0;
 
-        opacity: 0.6;
+        opacity: 1;
+
+        transform: translateY(0);
       }
     }
 
@@ -190,7 +222,8 @@
         opacity: 1;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         min-width: 907px;
 
         margin-right: calc(100% - 907px);
@@ -216,11 +249,13 @@
 
       &--restaurant,
       &--about,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         margin: 0 calc(100% - 50vw) 0 0;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         position: static;
       }
     }
@@ -261,7 +296,8 @@
         padding: 288px 0 0;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         width: calc(50vw - 72px);
 
         margin-top: 0;
@@ -278,7 +314,9 @@
     width: 100%;
 
     @media screen and (min-width: $tablet) {
-      &--conference-service {
+
+      &--conference-service,
+      &--group {
         position: static;
       }
     }
@@ -321,7 +359,8 @@
         }
 
         &.food__slide--about,
-        &.food__slide--conference-service {
+        &.food__slide--conference-service,
+        &.food__slide--group {
           .food__img {
             transform: translateY(-288px) scale(2);
           }
@@ -357,7 +396,8 @@
 
     padding: 40px 0 96px;
 
-    &--conference-service {
+    &--conference-service,
+    &--group {
       min-height: calc(271 / 414 * 100vw);
     }
 
@@ -375,7 +415,8 @@
 
       &--restaurant,
       &--about,
-      &--conference-service {
+      &--conference-service,
+      &--group {
         order: 1;
       }
 
@@ -391,7 +432,8 @@
         padding: 57px 36px 38px 0;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         padding: 0 40px 80px 0;
       }
     }
@@ -413,6 +455,10 @@
 
       &--conference-service {
         padding: 51px 40px 80px 0;
+      }
+
+      &--group {
+        padding: 51px 12px 80px 5px;
       }
     }
   }
@@ -476,14 +522,16 @@
 
     list-style: none;
 
-    &--conference-service {
+    &--conference-service,
+    &--group {
       row-gap: 40px;
     }
 
     @media screen and (min-width: $tablet) {
       row-gap: 116px;
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         row-gap: 65px;
       }
     }
@@ -501,7 +549,8 @@
 
       gap: 41px 47px;
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         gap: 48px 47px;
       }
     }
@@ -543,7 +592,9 @@
     }
 
     @media screen and (min-width: $tablet) {
-      &--conference-service {
+
+      &--conference-service,
+      &--group {
         grid-area: a;
 
         display: none;
@@ -568,7 +619,8 @@
         }
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--group {
         display: flex;
 
         &.active {
@@ -671,6 +723,7 @@
 
     @media screen and (min-width: $tablet) {
       &.swiper-pagination {
+        bottom: 40px;
         left: auto;
         right: 0;
 
@@ -680,7 +733,6 @@
 
       &--conference-service {
         &.swiper-pagination {
-          bottom: 40px;
           left: 0;
 
           width: 50vw;

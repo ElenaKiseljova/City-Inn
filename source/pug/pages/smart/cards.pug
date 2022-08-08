@@ -193,6 +193,88 @@
         link: '#'
       }
     },
+    {
+      title: `
+        корпоративна співпраця
+      `,
+      image: 'corporate',
+      subTitle: `
+        корпоративна співпраця
+      `,
+      description: `
+        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+        <br />
+        <br />
+        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+      `,
+      services: [
+        {
+          icon: 'pool',
+          title: 'бассейн'
+        },
+        {
+          icon: 'spa',
+          title: '6 видів саун'
+        },
+        {
+          icon: 'gym',
+          title: 'тренажерний зал'
+        },
+        {
+          icon: 'mini-bar',
+          title: 'фітобар'
+        },
+      ],
+      book: {
+        title: 'Book now',
+        link: '#'
+      },
+      slides: [
+        {
+          image: 'slide-1',
+          description: `
+            Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+            <br />
+            <br />
+            Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+          `,
+        },
+        {
+          image: 'slide-2',
+          description: `
+            Тепер вам не потрібно платити повну вартість номера!
+          `,
+          services: [
+            {
+              icon: 'pool',
+              title: 'бассейн'
+            },
+            {
+              icon: 'spa',
+              title: '6 видів саун'
+            },
+            {
+              icon: 'gym',
+              title: 'тренажерний зал'
+            },
+            {
+              icon: 'mini-bar',
+              title: 'фітобар'
+            },
+          ],
+        },
+        {
+          image: 'slide-3',
+          description: `
+            Тепер вам не потрібно платити повну вартість номера!
+          `,
+          book: {
+            title: 'Book now',
+            link: '#'
+          },
+        }
+      ]
+    },
   ];
 section.cards
 
@@ -207,17 +289,17 @@ section.cards
       - const slides = card.slides ?? [];
       - const cardsBottomClass = (slides.length > 0) ? ' cards__bottom--slider' : '';
       - const cardsContentClass = (slides.length > 0) ? ' cards__content--desktop' : '';
-      - const oddEven = ((index + 1) % 2 > 0) ? 'odd' : 'even';
+      - const oddEvenLast = ((index + 1) % 2 === 0) ? 'even' : ((index + 1 === cards.length) ? 'last' : 'odd');
 
-      li.cards__item
+      li(class="cards__item cards__item--" + oddEvenLast)
         div.cards__top
-          h3(class="cards__title cards__title--" + (index + 1) + " cards__title--"  + oddEven)
+          h3(class="cards__title cards__title--" + (index + 1) + " cards__title--"  + oddEvenLast)
             | !{cardTitle}
 
-          div(class="cards__img-wrapper")
+          div(class="cards__img-wrapper cards__img-wrapper--" + oddEvenLast)
             +img('cards', '', ('cards-' + cardImage), cardTitle)
 
-        div(class="cards__bottom cards__bottom--" + oddEven)
+        div(class="cards__bottom cards__bottom--" + oddEvenLast)
           if slides.length > 0
             +slider('cards')
               each slide in slides
@@ -229,37 +311,37 @@ section.cards
                 - const slideBook = slide.book ?? {};
 
                 +slide('cards')
-                  div(class="cards__img-wrapper")
+                  div(class="cards__img-wrapper cards__img-wrapper--" + oddEvenLast)
                     +img('cards', '', ('cards-' + slideImage), slideTitle)
 
                   div.cards__content.cards__content--mobile
                     if slideTitle.length > 0
-                      h4.cards__subtitle
+                      h4(class="cards__subtitle cards__subtitle--" + oddEvenLast)
                         | !{slideTitle}
 
                     if slideDescription.length > 0
-                      div.cards__description
+                      div(class="cards__description cards__description--" + oddEvenLast)
                         | !{slideDescription}
 
                     if slideServices.length > 0
-                      +services('cards', 'cards', slideServices)
+                      +services('cards', 'cards', slideServices, oddEvenLast)
 
                     if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
-                      a(class="cards__button button" href="" + slideBook.link)
+                      a(class="cards__button button cards__button--" + oddEvenLast href="" + slideBook.link)
                         span #{slideBook.title}
 
             div.cards__pagination.pagination.swiper-pagination
 
-          div(class="cards__content " + cardsContentClass)
-            h4.cards__subtitle
+          div(class="cards__content cards__content--" + oddEvenLast + cardsContentClass)
+            h4(class="cards__subtitle cards__subtitle--" + oddEvenLast)
               | !{cardSubtitle}
 
-            div.cards__description
+            div(class="cards__description cards__description--" + oddEvenLast)
               | !{cardDescription}
 
             if cardServices.length > 0
-              +services('cards', 'cards', cardServices)
+              +services('cards', 'cards', cardServices, oddEvenLast)
 
             if cardBook.title && cardBook.title.length > 0 && cardBook.link && cardBook.link.length
-              a(class="cards__button button" href="" + cardBook.link)
+              a(class="cards__button button cards__button--" + oddEvenLast href="" + cardBook.link)
                 span #{cardBook.title}

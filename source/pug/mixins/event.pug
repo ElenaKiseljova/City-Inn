@@ -1,8 +1,7 @@
 mixin event(attr = {})
   - const title = attr.title ?? '';
 
-  - const images = attr.images ?? [];
-  - const texts = attr.texts ?? [];
+  - const slides = attr.slides ?? [];
   - const content = attr.content ?? null;
 
   - const sectionName = attr.sectionName ?? pageName;
@@ -13,12 +12,12 @@ mixin event(attr = {})
         h2(class="title-inner event__title event__title--mobile event__title--" + sectionName)
           | !{title}
 
-        if images.length > 0
+        if slides.length > 0 && !content
           div(class="event__slider-container event__slider-container--" + sectionName)
             +slider('event', 'images')
-              each image in images
+              each slide in slides
                 +slide('event', sectionName, 'images')
-                  +img('event', '', image, title)
+                  +img('event', '', slide.image, title)
 
             +pagination('event')
 
@@ -28,34 +27,38 @@ mixin event(attr = {})
 
         +navigation('event', sectionName)
 
-        if texts.length > 0
+        if slides.length > 0 && !content
           +slider('event', 'text')
-            each textsItem in texts
+            each slide in slides
               +slide('event', sectionName, 'text')
-                div.event__content
-                  if textsItem.title && textsItem.title !== ''
-                    h3(class="event__subtitle event__subtitle--" + sectionName)
-                      | !{textsItem.title}
+                if slide.title && slide.title !== ''
+                  h3(class="event__subtitle event__subtitle--" + sectionName)
+                    | !{slide.title}
 
-                  if textsItem.topText && textsItem.topText !== ''
+                div(class="event__content event__content--" + sectionName)
+                  if slide.topText && slide.topText !== ''
                     p.event__text.event__text--top
-                      | !{textsItem.topText}
+                      | !{slide.topText}
 
-                  if textsItem.bottomText && textsItem.bottomText !== ''
+                  if slide.bottomText && slide.bottomText !== ''
                     p.event__text.event__text--bottom
-                      | !{textsItem.bottomText}
+                      | !{slide.bottomText}
 
-                if textsItem.worktime && textsItem.worktime !== ''
+                  if slide.text && slide.text !== ''
+                    p(class="event__text event__text--" + sectionName)
+                      | !{slide.text}
+
+                if slide.worktime && slide.worktime !== ''
                   +worktime('event', pageName, worktime)
 
-                if textsItem.services && textsItem.services.length > 0
-                  +services('event', '', textsItem.services)
+                if slide.services && slide.services.length > 0
+                  +services('event', '', slide.services, sectionName)
 
-                if textsItem.button && textsItem.button.text && textsItem.button.text !== '' && textsItem.button.link && textsItem.button.link !== ''
+                if slide.button && slide.button.text && slide.button.text !== '' && slide.button.link && slide.button.link !== ''
                   div(class="event__buttons event__buttons--" + sectionName)
-                    a(class="button event__button event__button--" + sectionName href="" + textsItem.button.link)
+                    a(class="button event__button event__button--" + sectionName href="" + slide.button.link)
                       span
-                        | !{textsItem.button.text}
+                        | !{slide.button.text}
 
                     div(class="event__arrow-top arrow-top event__arrow-top--" + sectionName)
                       svg(width="48" height="48")

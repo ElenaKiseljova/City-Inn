@@ -138,6 +138,13 @@ export default () => {
       }
     }
 
+    // Group sliders
+    if (swiperItem.classList.contains('team__slider')) {
+      if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
+        swiperArgs.spaceBetween = 51;
+      }
+    }
+
     if (!pagination) {
       pagination = swiperItem.closest('section').querySelector('.swiper-pagination');
     }
@@ -168,13 +175,14 @@ export default () => {
 
     const swiperSlider = new Swiper(swiperItem, swiperArgsMerged);
 
-    // Lobby sliders
+    // Половинчатые двойные (картинка +  текст) слайдеры СТАРТ на 768
+    // Lobby
     if (swiperItem.classList.contains('doings__slider')) {
       if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
-        animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
+        animationSlideElements(swiperSlider, '.doings__top', '.doings__bottom');
 
         swiperSlider.on('beforeTransitionStart', () => {
-          animationSlideElements(swiperSlider, '.doings__img-wrapper', '.doings__content');
+          animationSlideElements(swiperSlider, '.doings__top', '.doings__bottom');
         });
       } else if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         let maxHeightSlide = 0;
@@ -185,16 +193,29 @@ export default () => {
           }
         });
 
-        swiperSlider.el.style.minHeight = `${maxHeightSlide} px`;
+        swiperSlider.el.style.minHeight = `${maxHeightSlide}px`;
       }
     }
 
+    // Group
+    if (swiperItem.classList.contains('team__slider')) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
+        animationSlideElements(swiperSlider, '.team__top', '.team__bottom');
+
+        swiperSlider.on('beforeTransitionStart', () => {
+          animationSlideElements(swiperSlider, '.team__top', '.team__bottom');
+        });
+      }
+    }
+
+    // Половинчатые двойные (картинка +  текст) слайдеры КОНЕЦ
+
     // Food sliders
     if (swiperItem.classList.contains('food__slider')) {
-      if (swiperItem.closest('.food--about') || swiperItem.closest('.food--conference-service')) {
-        const foodNumberTabs = swiperItem.closest('section').querySelectorAll('.food__tab-number');
-        const foodTextTabs = swiperItem.closest('section').querySelectorAll('.food__tab-text');
+      const foodNumberTabs = swiperItem.closest('section').querySelectorAll('.food__tab-number');
+      const foodTextTabs = swiperItem.closest('section').querySelectorAll('.food__tab-text');
 
+      if (foodNumberTabs.length > 0 && foodTextTabs.length > 0) {
         changeFoodTab(swiperSlider, foodNumberTabs, foodTextTabs);
 
         swiperSlider.on('slideChange', () => {
@@ -221,7 +242,11 @@ export default () => {
       const attrImages = {};
 
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
-        attrImages.spaceBetween = 280;
+        if (eventSliderImages.classList.contains('event__slider--group')) {
+          attrImages.spaceBetween = 246;
+        } else {
+          attrImages.spaceBetween = 280;
+        }
       }
 
       const imagesEventSlider = swiperInit(eventSliderImages, attrImages);

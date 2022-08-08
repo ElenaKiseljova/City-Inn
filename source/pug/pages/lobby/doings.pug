@@ -72,10 +72,10 @@ section(class="doings")
             - const subTitle = slide.title ?? '';
             - const text = slide.text ?? '';
 
-            div.doings__img-wrapper
+            div.doings__top
               +img('doings', '', image.jpg.mobile, subTitle)
 
-            div.doings__content
+            div.doings__bottom
               if subTitle && subTitle !== ''
                 h3.doings__subtitle
                   | !{subTitle}
@@ -86,4 +86,4 @@ section(class="doings")
 
       +navigation('doings')
 
-      div.doings__pagination.pagination.swiper-pagination
+      +pagination('doings')

@@ -36,6 +36,14 @@
       z-index: 100;
     }
 
+    @media screen and (min-width: $tablet) {
+      &--last {
+        grid-column: span 2;
+
+        height: fit-content;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       display: flex;
 
@@ -123,6 +131,10 @@
       padding: 36px 40px;
 
       @include font(64, 58, 300);
+
+      &--last {
+        width: 100%;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -135,6 +147,10 @@
       &--odd {
         left: auto;
         right: 0;
+      }
+
+      &--last {
+        width: 100%;
       }
     }
   }
@@ -152,11 +168,19 @@
     @media screen and (min-width: $tablet) {
       width: 50vw;
       min-height: 50vw;
+
+      &--last {
+        width: 100%;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       height: 100%;
       min-height: auto;
+
+      &--last {
+        width: 100%;
+      }
     }
   }
 
@@ -204,6 +228,13 @@
     @media screen and (min-width: $tablet) {
       width: 50vw;
       min-height: 50vw;
+
+      &--last {
+        width: 100%;
+
+        height: fit-content;
+        min-height: auto;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -215,6 +246,12 @@
       &--odd {
         left: auto;
         right: 0;
+      }
+
+      &--last {
+        max-width: 1440px;
+
+        margin: 0 auto;
       }
     }
   }
@@ -294,6 +331,21 @@
       &--desktop {
         display: flex;
       }
+
+      &--last {
+        display: grid;
+
+        grid-template-areas:
+          "a c"
+          "b d";
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        align-items: start;
+
+        column-gap: 160px;
+      }
     }
   }
 
@@ -312,6 +364,12 @@
 
     @media screen and (min-width: $desktop) {
       margin-bottom: 44px;
+
+      &--last {
+        grid-area: a;
+
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -338,6 +396,15 @@
       &:not(:last-child) {
         margin-bottom: 71px;
       }
+
+      &--last {
+        grid-area: b;
+
+        &:not(:last-child) {
+          margin-top: -18px;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -350,12 +417,29 @@
       &:not(:last-child) {
         margin-bottom: 87px;
       }
+
+      &--last {
+        grid-area: c;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
   &__button {
+    min-width: 100%;
+
     @media screen and (min-width: $desktop) {
+      grid-area: d;
+
+      align-self: end;
+
+
       min-width: calc(272 / 560 * 100%);
+
+      margin: 0 0 0 auto;
     }
   }
 }

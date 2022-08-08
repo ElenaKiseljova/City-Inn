@@ -30,7 +30,8 @@
       padding: 140px 0;
     }
 
-    &--conference-service {
+    &--conference-service,
+    &--group {
       padding: 0;
     }
   }
@@ -65,6 +66,10 @@
       position: static;
     }
 
+    &--group {
+      height: calc((363 / 414)* 100vw);
+    }
+
     @media screen and (min-width: $tablet) {
       height: auto;
       min-height: 478px;
@@ -90,6 +95,10 @@
 
       &--starfit {
         min-height: auto;
+      }
+
+      &--group {
+        padding-top: 170px;
       }
     }
   }
@@ -123,6 +132,11 @@
       margin: 0;
 
       transform: translateY(-100%);
+    }
+
+    &--group {
+      top: auto;
+      bottom: 33px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -205,6 +219,14 @@
 
         transform: translateY(0);
       }
+
+      &--group {
+        min-width: 707px;
+
+        margin-right: calc((100% + 377px) - 707px);
+        margin-bottom: 51px;
+        margin-left: -377px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -277,6 +299,15 @@
         margin-left: calc((100% + 106px) - 784px);
         margin-bottom: 235px;
         margin-left: -106px;
+      }
+
+      &--group {
+        min-width: 1128px;
+
+        margin-top: 0;
+        margin-left: calc((100% + 437px) - 1128px);
+        margin-bottom: 486px;
+        margin-left: -437px;
       }
     }
   }
@@ -367,6 +398,8 @@
   &__slider {
     width: 100%;
 
+    cursor: pointer;
+
     &--text {
       height: fit-content;
     }
@@ -413,10 +446,16 @@
     @media screen and (min-width: $desktop) {
       --width-img: 360px;
       --height-img: 420px;
+      --translateY: -72px;
 
       &--lobby,
       &--conference-service {
         --height-img: 360px;
+      }
+
+      &--group {
+        --width-img: 559px;
+        --height-img: 420px;
       }
 
       &--images:not(.event__slide--around):not(.event__slide--attraction):not(.event__slide--starfit) {
@@ -425,7 +464,9 @@
             width: 100%;
             height: 100%;
 
-            transition: height 0.3s, width 0.3s;
+            transform: translateY(0);
+
+            transition: height 0.3s, width 0.3s, transform 0.3s;
           }
         }
 
@@ -434,7 +475,9 @@
             width: var(--width-img);
             height: var(--height-img);
 
-            transition: height 0.3s, width 0.3s;
+            transform: translateY(var(--translateY, 0));
+
+            transition: height 0.3s, width 0.3s, transform 0.3s;
           }
 
           &~.swiper-slide {
@@ -505,6 +548,10 @@
       padding: 40px 0 88px;
     }
 
+    &--group {
+      padding: 135px 0 40px;
+    }
+
     @media screen and (min-width: $tablet) {
       position: relative;
 
@@ -541,6 +588,10 @@
       &--conference-service {
         padding: 34px 4px 40px 40px;
       }
+
+      &--group {
+        padding: 16px 4px 40px 41px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -575,13 +626,13 @@
       &--conference-service {
         padding: 34px 74px 0 42px;
       }
+
+      &--group {
+        position: relative;
+
+        padding: 0 42px 0 77px;
+      }
     }
-  }
-
-  &__content {
-    flex-grow: 1;
-
-    @extend %w100;
   }
 
   &__subtitle {
@@ -600,6 +651,14 @@
       margin-bottom: 40px;
     }
 
+    &--group {
+      --color-page: #{$yellow};
+
+      margin-bottom: 55px;
+
+      @include font(30, 37, 500);
+    }
+
     @media screen and (min-width: $tablet) {
       margin-bottom: 44px;
 
@@ -614,6 +673,10 @@
 
         margin-bottom: 51px;
       }
+
+      &--group {
+        margin-bottom: 13px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -622,6 +685,30 @@
       &--conference-service {
         margin-bottom: 46px;
         margin-left: 4px;
+      }
+
+      &--group {
+        order: 0;
+
+        margin-bottom: 46px;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+
+    @extend %w100;
+
+    @media screen and (min-width: $tablet) {
+      &--group {
+        flex-grow: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--group {
+        order: 2;
       }
     }
   }
@@ -641,6 +728,10 @@
       @include font(14, 20, 600);
     }
 
+    &--group {
+      @include font(16, 24, 400);
+    }
+
     @media screen and (min-width: $tablet) {
       &--top {
         @include font(12, 20, 400);
@@ -648,6 +739,10 @@
 
       &--bottom {
         @include font(12, 20, 600);
+      }
+
+      &--group {
+        @include font(14, 20, 400);
       }
     }
 
@@ -658,6 +753,10 @@
 
       &--bottom {
         margin-top: 36px;
+      }
+
+      &--group {
+        opacity: 1;
       }
     }
   }
@@ -671,6 +770,16 @@
     @extend %w100;
 
     margin-top: 40px;
+
+    &--group {
+      margin-top: 45px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--group {
+        flex-grow: 1;
+      }
+    }
 
     @media screen and (min-width: $desktop) {
       margin-top: 67px;
@@ -688,6 +797,12 @@
 
         margin: 83px 0 0 59px;
       }
+
+      &--group {
+        order: 3;
+
+        margin: 48px 0 0 144px;
+      }
     }
   }
 
@@ -699,6 +814,10 @@
 
       &--lobby {
         --background-color-button: #{$white-20};
+      }
+
+      &--group {
+        min-width: 200px;
       }
     }
   }
@@ -754,6 +873,15 @@
 
         margin: 0;
       }
+
+      &--group {
+        position: absolute;
+
+        bottom: 0;
+        left: 77px;
+
+        margin: 0;
+      }
     }
   }
 
@@ -762,6 +890,12 @@
 
     &.swiper-pagination {
       bottom: 40px;
+    }
+
+    &--group {
+      &.swiper-pagination {
+        bottom: -48px;
+      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -777,6 +911,24 @@
 
   &__services {
     margin-top: 49px;
+
+    &--group {
+      margin-top: 51px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--group {
+        margin-top: 62px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--group {
+        order: 1;
+
+        margin: 0 0 112px;
+      }
+    }
   }
 
   &__worktime {

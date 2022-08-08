@@ -1,3 +1,21 @@
+/* Media */
+$desktop: 1366px;
+$small-desktop: 1200px;
+$tablet: 768px;
+$mobile: 414px;
+$small-mobile: 350px;
+
+/* Computed padding container*/
+$size-desktop: 1440px;
+$size-tablet: 768px;
+$size-mobile: 414px;
+
+$padding-desktop: 80px;
+$padding-tablet: 36px;
+$padding-mobile: 40px;
+$padding-mobile-small: 15px;
+
+/* Colors */
 $white: #FFFFFF;
 $white-90: rgba(255, 255, 255, 0.9);
 $white-80: rgba(255, 255, 255, 0.8);
@@ -56,20 +74,3 @@ $black: #242424;
   --border-color-button: #{$white};
   --background-color-button: transparent;
 }
-
-/* Media */
-$desktop: 1366px;
-$small-desktop: 1200px;
-$tablet: 768px;
-$mobile: 414px;
-$small-mobile: 350px;
-
-/* Computed padding container*/
-$size-desktop: 1440px;
-$size-tablet: 768px;
-$size-mobile: 414px;
-
-$padding-desktop: 80px;
-$padding-tablet: 36px;
-$padding-mobile: 40px;
-$padding-mobile-small: 15px;

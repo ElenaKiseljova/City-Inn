@@ -24,7 +24,8 @@
   }
 
   &--standart,
-  &--conference-service {
+  &--conference-service,
+  &--group {
     min-height: fit-content;
   }
 
@@ -231,6 +232,10 @@
       padding: 127px 0 90px;
     }
 
+    &--group {
+      display: none;
+    }
+
     @media screen and (min-width: $tablet) {
 
       &--restaurant,
@@ -266,6 +271,13 @@
       &--conference,
       &--conference-service {
         padding: 175px 0 80px;
+      }
+
+      &--group {
+        display: flex;
+
+        padding-top: 100px;
+        padding-bottom: 0;
       }
     }
 
@@ -320,6 +332,10 @@
       &--conference,
       &--conference-service {
         padding: 236px 0 90px;
+      }
+
+      &--group {
+        display: none;
       }
     }
   }

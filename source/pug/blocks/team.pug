@@ -1,0 +1,97 @@
+-
+  const team = {
+    title: `
+      команда
+    `,
+    subtitle: 'ваш персональний менеджер',
+    slides: [
+      {
+        image: {
+          webp: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+          jpg: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+        },
+        title: `Мар’яна ніколін`,
+        position: 'Менеджер з продажів',
+        mail: 'reception@city-inn.com.ua'
+      },
+      {
+        image: {
+          webp: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+          jpg: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+        },
+        title: `Андрій ліпак`,
+        position: 'Менеджер з продажів',
+        mail: 'reception@city-inn.com.ua'
+      },
+      {
+        image: {
+          webp: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+          jpg: {
+            mobile: 'team-1',
+            tablet: 'team-1',
+            desktop: 'team-1',
+          },
+        },
+        title: `Мар’яна ніколін`,
+        position: 'Менеджер з продажів',
+        mail: 'reception@city-inn.com.ua'
+      },
+    ],
+  };
+
+section(class="team")
+  div.team__container.container
+    header.team__header
+      p.team__subtitle
+        | !{team.subtitle}
+      h2(class="title-inner team__title")
+        | !{team.title}
+
+      +navigation('team')
+
+      +pagination('team')
+
+    if team.slides && team.slides.length > 0
+      div(class="team__slider-container")
+        +slider('team', '')
+          each slide in team.slides
+            +slide('team', '')
+              - const image = slide.image ?? {};
+              - const name = slide.title ?? '';
+              - const position = slide.position ?? '';
+              - const mail = slide.mail ?? '';
+
+              div.team__top
+                +img('team', '', image.jpg.mobile, subTitle)
+
+              div.team__bottom
+                h3.team__name
+                  | !{name}
+
+                if position && position !== ''
+                  p.team__position
+                    | !{position}
+
+                if mail && mail !== ''
+                  a(class="team__mail" href="mailto:" + mail)
+                    | !{mail}

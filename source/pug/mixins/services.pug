@@ -1,6 +1,7 @@
-mixin services(sectionName = 'cards', modificator = '', services = [])
+mixin services(sectionName = 'cards', modificator = '', services = [], sectionModificator = null)
   - modificator = modificator === '' ? pageName : modificator;
+  - sectionModificator = sectionModificator ? (sectionName + "__services--" + sectionModificator) : '';
 
-  ul(class="" + sectionName + "__services services services--" + modificator)
+  ul(class="" + sectionName + "__services " + sectionModificator + " services services--" + modificator)
     for service in services
       +service(service, modificator)
