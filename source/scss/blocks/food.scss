@@ -8,7 +8,7 @@
   @media screen and (min-width: $tablet) {
 
     &--conference-service,
-    &--group {
+    &--approach {
       position: relative;
 
       padding-top: 162px;
@@ -20,7 +20,8 @@
 
     overflow: visible;
 
-    &--lobby {
+    &--breakfast,
+    &--supply {
       padding: 0;
     }
 
@@ -34,8 +35,12 @@
       padding: 293px 0 234px;
     }
 
-    &--group {
+    &--approach {
       padding: 209px 0 249px;
+    }
+
+    &--supply {
+      padding: 180px 0 118px;
     }
   }
 
@@ -59,8 +64,12 @@
     overflow: visible;
 
     &--conference-service,
-    &--group {
+    &--approach {
       height: calc((494 / 414) * 100vw);
+    }
+
+    &--supply {
+      position: relative;
     }
 
     @media screen and (min-width: $tablet) {
@@ -72,7 +81,8 @@
       &--restaurant,
       &--about,
       &--conference-service,
-      &--group {
+      &--approach,
+      &--supply {
         order: 2;
       }
 
@@ -82,7 +92,7 @@
         min-height: 580px;
       }
 
-      &--group {
+      &--approach {
         min-height: 488px;
       }
     }
@@ -95,7 +105,7 @@
 
       min-height: 840px;
 
-      &--lobby {
+      &--breakfast {
         order: 2;
       }
     }
@@ -119,7 +129,8 @@
     }
 
     &--conference-service,
-    &--group {
+    &--approach,
+    &--supply {
       top: calc(((494 / 414) * 100vw) - 45px);
       left: 15px;
 
@@ -130,10 +141,16 @@
       transform: translateY(-100%);
     }
 
+    &--supply {
+      bottom: 36px;
+
+      margin: 0;
+    }
+
     @media screen and (min-width: $mobile) {
 
       &--conference-service,
-      &--group {
+      &--approach {
         left: 40px;
 
         width: calc(100% - 80px);
@@ -164,7 +181,8 @@
         margin-left: 0;
       }
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         margin-right: calc((100% + 102px) - 538px);
         margin-bottom: 47px;
         margin-left: -102px;
@@ -179,7 +197,7 @@
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         min-width: 688px;
 
         margin-right: calc(100% - 688px);
@@ -187,6 +205,16 @@
         margin-left: 0;
 
         opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      &--supply {
+        min-width: 538px;
+
+        margin-right: calc(100% - 538px);
+        margin-bottom: 44px;
+        margin-left: 0;
 
         transform: translateY(0);
       }
@@ -206,12 +234,16 @@
         margin-bottom: 100px;
       }
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         min-width: 1018px;
 
         margin-right: calc(100% - 1018px);
-        margin-bottom: 48px;
         margin-left: 0;
+      }
+
+      &--breakfast {
+        margin-bottom: 48px;
 
         opacity: 0.8;
       }
@@ -223,12 +255,18 @@
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         min-width: 907px;
 
         margin-right: calc(100% - 907px);
         margin-bottom: 116px;
         margin-left: 0;
+      }
+
+      &--supply {
+        order: 1;
+
+        margin-bottom: 117px;
       }
     }
   }
@@ -250,12 +288,13 @@
       &--restaurant,
       &--about,
       &--conference-service,
-      &--group {
+      &--approach,
+      &--supply {
         margin: 0 calc(100% - 50vw) 0 0;
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         position: static;
       }
     }
@@ -279,7 +318,7 @@
 
       overflow: hidden;
 
-      &--lobby {
+      &--breakfast {
         width: calc(50vw - 165px);
 
         margin: 0 calc(100% - 50vw) 0 165px;
@@ -297,13 +336,21 @@
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         width: calc(50vw - 72px);
 
         margin-top: 0;
         margin-left: 72px;
 
         padding: 288px 0 0;
+      }
+
+      &--supply {
+        width: calc(50vw - 115px);
+
+        margin: 0 calc(100% - 50vw) 0 115px;
+
+        padding-bottom: 172px;
       }
     }
   }
@@ -316,7 +363,7 @@
     @media screen and (min-width: $tablet) {
 
       &--conference-service,
-      &--group {
+      &--approach {
         position: static;
       }
     }
@@ -335,6 +382,14 @@
     box-sizing: border-box;
 
     @media screen and (min-width: $desktop) {
+      --translateY: -154px;
+
+      &--about,
+      &--conference-service,
+      &--approach {
+        --translateY: -288px;
+      }
+
       &.swiper-slide-active {
         .food__img {
           transform-origin: left top;
@@ -353,17 +408,9 @@
 
         .food__img {
           transform-origin: left top;
-          transform: translateY(-154px) scale(2);
+          transform: translateY(var(--translateY)) scale(2);
 
           transition: transform 0.3s;
-        }
-
-        &.food__slide--about,
-        &.food__slide--conference-service,
-        &.food__slide--group {
-          .food__img {
-            transform: translateY(-288px) scale(2);
-          }
         }
       }
     }
@@ -397,8 +444,12 @@
     padding: 40px 0 96px;
 
     &--conference-service,
-    &--group {
+    &--approach {
       min-height: calc(271 / 414 * 100vw);
+    }
+
+    &--supply {
+      padding: 123px 0 40px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -416,7 +467,8 @@
       &--restaurant,
       &--about,
       &--conference-service,
-      &--group {
+      &--approach,
+      &--supply {
         order: 1;
       }
 
@@ -424,7 +476,8 @@
         padding: 40px 0 38px 34px;
       }
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         padding: 25px 0 38px 35px;
       }
 
@@ -433,19 +486,25 @@
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         padding: 0 40px 80px 0;
+      }
+
+      &--supply {
+        padding: 0 40px 40px 0;
       }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 165px 203px 129px 0;
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         order: 1;
       }
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         padding: 101px 88px 169px 0;
       }
 
@@ -457,8 +516,41 @@
         padding: 51px 40px 80px 0;
       }
 
-      &--group {
+      &--approach {
         padding: 51px 12px 80px 5px;
+      }
+
+      &--supply {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        padding: 98px 114px 172px 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    margin-bottom: 17px;
+
+    @include font(30, 37, 500);
+
+    text-transform: uppercase;
+
+    color: $yellow;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 13px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--supply {
+        order: 0;
       }
     }
   }
@@ -467,6 +559,12 @@
     flex-grow: 1;
 
     @extend %w100;
+
+    @media screen and (min-width: $desktop) {
+      &--supply {
+        order: 2;
+      }
+    }
   }
 
   &__text {
@@ -523,7 +621,7 @@
     list-style: none;
 
     &--conference-service,
-    &--group {
+    &--approach {
       row-gap: 40px;
     }
 
@@ -531,7 +629,7 @@
       row-gap: 116px;
 
       &--conference-service,
-      &--group {
+      &--approach {
         row-gap: 65px;
       }
     }
@@ -550,7 +648,7 @@
       gap: 41px 47px;
 
       &--conference-service,
-      &--group {
+      &--approach {
         gap: 48px 47px;
       }
     }
@@ -594,7 +692,7 @@
     @media screen and (min-width: $tablet) {
 
       &--conference-service,
-      &--group {
+      &--approach {
         grid-area: a;
 
         display: none;
@@ -620,7 +718,7 @@
       }
 
       &--conference-service,
-      &--group {
+      &--approach {
         display: flex;
 
         &.active {
@@ -665,11 +763,19 @@
 
     margin-top: 45px;
 
+    &--supply {
+      margin-top: 62px;
+    }
+
     @media screen and (min-width: $tablet) {
       margin-top: 71px;
 
-      &--lobby {
+      &--breakfast {
         margin-top: 51px;
+      }
+
+      &--supply {
+        margin-top: 54px;
       }
     }
 
@@ -681,25 +787,35 @@
 
       margin-top: 123px;
 
-      &--lobby {
+      &--breakfasty {
         margin-top: 32px;
+      }
+
+      &--supply {
+        order: 3;
+
+        margin-top: 45px;
       }
     }
   }
-
-  // &__worktime {}
 
   &__button {
     min-width: 100%;
 
     margin-top: 56px;
 
+    &--breakfast,
+    &--supply {
+      margin-top: 0;
+    }
+
     @media screen and (min-width: $desktop) {
       min-width: calc(200 / 437 * 100%);
 
       margin-top: 0;
 
-      &--lobby {
+      &--breakfast,
+      &--supply {
         --background-color-button: #{$white-20};
       }
     }
@@ -719,6 +835,12 @@
   &__pagination {
     &.swiper-pagination {
       bottom: 38px;
+    }
+
+    &--supply {
+      &.swiper-pagination {
+        bottom: -48px;
+      }
     }
 
     @media screen and (min-width: $tablet) {

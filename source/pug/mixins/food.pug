@@ -1,6 +1,7 @@
 mixin food(attr = {})
   - const images = attr.images ?? [];
   - const title = attr.title ?? '';
+  - const subtitle = attr.subtitle ?? '';
   - const textTop = attr.textTop ?? '';
   - const textBottom  = attr.textBottom ?? '';
   - const sectionName = attr.sectionName ?? pageName;
@@ -16,14 +17,14 @@ mixin food(attr = {})
         if images.length > 0
           div(class="food__slider-container food__slider-container--" + sectionName)
 
-            +slider('food')
+            +slider('food', sectionName)
               each image in images
-                +slide('food')
-                  +img('food', '', image, title)
+                +slide('food', sectionName)
+                  +img('food', sectionName, image, title)
 
-            +navigation('food')
+            +navigation('food', sectionName)
 
-            +pagination('food')
+            +pagination('food', sectionName)
 
 
 
@@ -31,7 +32,11 @@ mixin food(attr = {})
         h2(class="title-inner food__title food__title--desktop food__title--" + sectionName)
           | !{title}
 
-        div.food__content
+        if subtitle !== ''
+          p.food__subtitle
+            | !{subtitle}
+
+        div(class="food__content food__content--" + sectionName)
           if textTop !== ''
             p.food__text.food__text--top
               | !{textTop}

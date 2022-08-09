@@ -446,7 +446,7 @@
     @media screen and (min-width: $desktop) {
       --width-img: 360px;
       --height-img: 420px;
-      --translateY: -72px;
+      --translateY: 0;
 
       &--lobby,
       &--conference-service {
@@ -456,6 +456,7 @@
       &--group {
         --width-img: 559px;
         --height-img: 420px;
+        --translateY: -72px;
       }
 
       &--images:not(.event__slide--around):not(.event__slide--attraction):not(.event__slide--starfit) {

@@ -12,7 +12,7 @@ mixin event(attr = {})
         h2(class="title-inner event__title event__title--mobile event__title--" + sectionName)
           | !{title}
 
-        if slides.length > 0 && !content
+        if slides.length > 0
           div(class="event__slider-container event__slider-container--" + sectionName)
             +slider('event', 'images')
               each slide in slides
