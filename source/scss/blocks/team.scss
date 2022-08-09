@@ -101,6 +101,8 @@
 
     @include font(20, 24, 500);
 
+    text-transform: uppercase;
+
     color: #{$yellow};
 
     @media screen and (min-width: $tablet) {
@@ -113,11 +115,16 @@
 
       grid-area: a;
 
+      margin-bottom: -12px;
       margin-left: -5px;
 
       max-width: none;
 
       @include font(30, 37, 500);
+
+      &--conference {
+        color: var(--color-page, #ffffff);
+      }
     }
   }
 

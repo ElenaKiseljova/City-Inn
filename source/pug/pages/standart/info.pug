@@ -27,16 +27,16 @@
     },
   };
 
-section.info
+section(class="info info--" + pageName)
   div.info__container.container
     if info.services.length > 0
-      +services('info', 'info', info.services)
+      +services('info', 'standart-info', info.services, pageName)
 
-    div.info__content
-      p.info__text
+    div(class="info__content info__content--" + pageName)
+      p(class="info__text info__text--" + pageName)
         |  !{info.text}
 
-      button.info__text.info__more
+      button(class="info__text info__more info__more--" + pageName)
         | #{info.textMore}
 
     div(class="info__price price")
@@ -45,10 +45,10 @@ section.info
       p.price__number
         | #{info.priceNumber} ₴
 
-    a(class="info__button button" href="" + info.book.link)
+    a(class="info__button button info__button--" + pageName href="" + info.book.link)
       span
         | #{info.book.title}
 
-    +img('info', '', 'info')
+    +img('info', pageName, 'info')
 
 

@@ -1,0 +1,18 @@
+-
+  const parking = {
+    title: 'паркінг',
+    text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.',
+    image: 'parking',
+  };
+
+section.parking
+  div.parking__container.container
+    div.parking__content
+      h2.title-inner.parking__title
+        | !{parking.title}
+
+      p.parking__text
+        | !{parking.text}
+
+    div.parking__img-wrapper
+      +img('parking', '', parking.image)

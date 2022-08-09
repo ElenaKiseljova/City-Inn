@@ -1,0 +1,38 @@
+-
+  const info = {
+    image: 'info',
+    services: [
+      {
+        icon: 'guests',
+        title: 'ДО 200 гостей',
+      },
+      {
+        icon: 'area',
+        title: '250 кв.м',
+      },
+    ],
+    text: `
+      Сучасний компактний номер, який ідеально підходить для розміщення 1-2 гостей, які зупиняються на період 1-2 ночі і не планують багато часу проводити в номері. Зазвичай цей номер обирають наші корпоративні партнери для відряджень або групових поселень.
+    `,
+    book: {
+      title: 'book now',
+      link: '#'
+    },
+  };
+
+section(class="info info--" + pageName)
+  div(class="info__container container info__container--" + pageName)
+    if info.services.length > 0
+      +services('info', 'conference-info', info.services, pageName)
+
+    div(class="info__content info__content--" + pageName)
+      p(class="info__text info__text--" + pageName)
+        | !{info.text}
+
+    a(class="info__button button info__button--" + pageName href="" + info.book.link)
+      span
+        | #{info.book.title}
+
+    +img('info', pageName, 'info')
+
+

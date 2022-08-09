@@ -1,0 +1,221 @@
+.seating {
+  position: relative;
+
+  @extend %w100;
+
+  @media screen and (min-width: $desktop) {
+    overflow: visible;
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 40px;
+    left: 15px;
+
+    z-index: 3;
+
+    width: calc(100% - 30px);
+
+    @media screen and (min-width: $mobile) {
+      left: 40px;
+
+      width: calc(100% - 80px);
+    }
+
+    @media screen and (min-width: $tablet) {
+      top: 28px;
+      left: 30px;
+
+      width: fit-content;
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: -96px;
+      left: calc((608 / 1440) * 100vw);
+
+      width: fit-content;
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      top: calc(100vw - 50px);
+      bottom: auto;
+
+      @media screen and (min-width: $tablet) {
+        top: auto;
+        right: 0;
+        bottom: 40px;
+        left: auto;
+
+        width: 50vw;
+      }
+
+      @media screen and (min-width: $desktop) {
+        bottom: 69px;
+
+        width: 100vw;
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+
+      right: 124px;
+      bottom: 69px;
+
+      z-index: 3;
+
+      display: flex;
+    }
+  }
+
+  &__slider {
+    height: fit-content;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+    height: 100vw;
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    @media screen and (min-width: $tablet) {
+      z-index: -1;
+
+      order: 2;
+
+      width: 100vw;
+      height: 100%;
+
+      margin-left: calc(100% - 100vw);
+    }
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    @extend %w100;
+    height: fit-content;
+
+    padding: 45px 15px 35px;
+
+    @media screen and (min-width: $mobile) {
+      padding: 45px 40px 35px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 50vw;
+      min-height: calc((580 / 768) * 100vw);
+
+      padding: 192px 40px 40px;
+
+      background-color: rgba(18, 17, 21, 0.8);
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      width: calc((454 / 1440) * 100vw);
+
+      min-height: calc((780 / 1440) * 100vw);
+      padding: 225px 74px 69px calc((74 / 1440) * 100vw);
+    }
+  }
+
+  &__header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-bottom: 41px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 58px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 102px;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 46px;
+
+    fill: var(--color-page, #ffffff);
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    @include font(30, 27, 500);
+
+    color: var(--color-page, #ffffff);
+  }
+
+  &__services {
+    margin-bottom: 65px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 81px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 131px;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      min-width: 200px;
+
+      margin: auto auto 0;
+    }
+  }
+}

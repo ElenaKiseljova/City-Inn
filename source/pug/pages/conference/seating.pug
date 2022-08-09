@@ -1,0 +1,149 @@
+-
+  const seating = {
+    title: 'розсадка',
+    slides: [
+      {
+        image: 'seating-1',
+        icon: 'buffet',
+        title: 'ФУРШЕТ',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'seating-1',
+        icon: 'banquet',
+        title: 'БАНКЕТ',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'seating-1',
+        icon: 'letter-p',
+        title: 'БУКВА П',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'seating-1',
+        icon: 'table-round',
+        title: 'круглий стіл',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'seating-1',
+        icon: 'classroom',
+        title: 'класна кімната',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'seating-1',
+        icon: 'theater',
+        title: 'театр',
+        services: [
+          {
+            icon: 'guests',
+            title: 'количество гостей: до 200 человек',
+          },
+          {
+            icon: 'table',
+            title: 'коктейльные столы (20 шт) парты (фуршетная линия)',
+          },
+        ],
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+    ],
+  };
+section.seating
+  h2.title-inner.seating__title
+    | !{seating.title}
+
+  +pagination('seating')
+
+  +navigation('seating')
+
+  if seating.slides.length > 0
+    +slider('seating')
+      for slide in seating.slides
+        +slide('seating')
+          div.seating__top
+            +img('seating', '', slide.image)
+
+          div.seating__bottom
+            div.seating__header
+              div.seating__icon
+                svg(width="50" height="50")
+                  use(xlink:href="img/sprites/sprite-mono.svg#icon-" + slide.icon)
+
+              h3.seating__subtitle
+                | !{slide.title}
+
+            +services('seating', 'seating', slide.services)
+
+            a(class="seating__button button" href="" + slide.book.link)
+              span
+                | !{slide.book.title}

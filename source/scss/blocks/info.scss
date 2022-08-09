@@ -5,15 +5,33 @@
 
   padding: 116px 0 64px;
 
+  &--conference {
+    padding: 52px 0 40px;
+  }
+
   @media screen and (min-width: $tablet) {
     padding: 175px 0 120px;
+
+    &--conference {
+      padding: 77px 0 0;
+    }
   }
 
   @media screen and (min-width: $desktop) {
     padding: 249px 0 164px;
+
+    &--conference {
+      padding: 250px 0 123px;
+    }
   }
 
   &__container {
+    &--conference {
+      display: grid;
+
+      grid-template-columns: 100%;
+    }
+
     @media screen and (min-width: $tablet) {
       display: grid;
 
@@ -28,24 +46,50 @@
 
       justify-content: space-between;
       justify-items: end;
+
+      &--conference {
+        grid-template-areas:
+          "d a"
+          "d b"
+          "d c";
+
+        grid-template-columns: 50% calc((305 / 696) * 100%);
+      }
     }
 
     @media screen and (min-width: $desktop) {
+      padding-left: 120px;
+
       grid-template-areas:
-        "c a a"
-        "c a a"
-        "c b d"
-        "c . e";
+        "c . a a"
+        "c . a a"
+        "c . b d"
+        "c . . e";
 
-      grid-template-columns: calc((360 / (1440 - 160)) * 100%) calc((300 / (1440 - 160)) * 100%) calc((272 / (1440 - 160)) * 100%);
+      grid-template-columns: 360px 162px 1fr 272px;
 
-      justify-content: space-between;
-      justify-items: end;
+      &--conference {
+        padding-right: 94px;
+
+        grid-template-areas:
+          "d . . ."
+          "d . a a"
+          "d . b c"
+          "d . . .";
+
+        grid-template-columns: 360px 148px 1fr 272px;
+      }
     }
   }
 
   &__services {
     margin-bottom: 40px;
+
+    &--conference {
+      order: 2;
+
+      margin-bottom: 119px;
+    }
 
     @media screen and (min-width: $tablet) {
       grid-area: b;
@@ -55,6 +99,12 @@
       max-width: calc((538 / 696) * 100%);
 
       margin-bottom: 64px;
+
+      &--conference {
+        max-width: 100%;
+
+        margin-bottom: 116px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -63,6 +113,10 @@
       max-width: 100%;
 
       margin-bottom: 0;
+
+      &--conference {
+        height: fit-content
+      }
     }
   }
 
@@ -71,18 +125,36 @@
 
     margin-bottom: 40px;
 
+    &--conference {
+      order: 1;
+
+      margin-bottom: 38px;
+    }
+
     @media screen and (min-width: $tablet) {
       grid-area: a;
 
       max-width: calc((538 / 696) * 100%);
 
       margin-bottom: 44px;
+
+      &--conference {
+        max-width: 100%;
+
+        margin-bottom: 38px;
+        padding-top: 80px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       margin-bottom: 67px;
 
       max-width: 100%;
+
+      &--conference {
+        margin: 0 0 123px 0;
+        padding: 0;
+      }
     }
   }
 
@@ -140,6 +212,8 @@
     }
 
     @media screen and (min-width: $desktop) {
+      width: fit-content;
+
       margin-bottom: 0;
     }
   }
@@ -147,16 +221,32 @@
   &__button {
     min-width: 100%;
 
+    &--conference {
+      order: 3;
+    }
+
     @media screen and (min-width: $tablet) {
       grid-area: e;
 
       align-self: end;
 
       height: fit-content;
+
+      &--conference {
+        grid-area: c;
+
+        margin-bottom: 40px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
+      min-width: 272px;
+
       margin-top: 67px;
+
+      &--conference {
+        margin: 0;
+      }
     }
   }
 
@@ -174,6 +264,24 @@
       height: 100%;
 
       min-height: 215px;
+
+      &--conference {
+        grid-area: d;
+
+        width: 50vw;
+        min-height: calc((506 / 768) * 100vw);
+
+        margin-left: calc(100% - 50vw);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &--conference {
+        width: 100%;
+        min-height: calc((420 / 1440) * 100vw);
+
+        margin-left: 0;
+      }
     }
   }
 

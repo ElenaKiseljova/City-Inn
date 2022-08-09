@@ -25,16 +25,31 @@
 
   &--standart,
   &--conference-service,
-  &--group {
+  &--group,
+  &--conference {
     min-height: fit-content;
   }
 
   @media screen and (min-width: $tablet) {
     min-height: calc(384 / 768 * 100vw);
+
+    &--standart,
+    &--conference-service,
+    &--group,
+    &--conference {
+      min-height: fit-content;
+    }
   }
 
   @media screen and (min-width: $desktop) {
     min-height: 100vh;
+
+    &--standart,
+    &--conference-service,
+    &--group,
+    &--conference {
+      min-height: fit-content;
+    }
 
     &--smart {
       min-height: calc(520 / 1440 * 100vw);
@@ -236,6 +251,10 @@
       display: none;
     }
 
+    &--conference {
+      display: none;
+    }
+
     @media screen and (min-width: $tablet) {
 
       &--restaurant,
@@ -268,7 +287,6 @@
       &--rooms,
       &--standart,
       &--group,
-      &--conference,
       &--conference-service {
         padding: 175px 0 80px;
       }
@@ -278,6 +296,12 @@
 
         padding-top: 100px;
         padding-bottom: 0;
+      }
+
+      &--conference {
+        display: flex;
+
+        padding: 122px 0 0;
       }
     }
 
@@ -335,6 +359,10 @@
       }
 
       &--group {
+        display: none;
+      }
+
+      &--conference {
         display: none;
       }
     }
