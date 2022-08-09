@@ -1,0 +1,96 @@
+.experience {
+  @extend %w100;
+
+  padding: 44px 0 50px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 40px 0 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 198px 0 215px;
+  }
+
+  &__container {}
+
+  &__title {
+    margin: 0 auto 44px;
+
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 138px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
+      margin-bottom: 78px;
+
+      text-align: right;
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: 100%;
+
+    row-gap: 54px;
+
+    @extend %w100;
+
+    list-style: none;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
+
+      justify-content: space-between;
+
+      column-gap: 40px;
+    }
+  }
+
+  &__item {
+    @extend %w100;
+
+    text-align: center;
+
+    color: var(--color-page, #ffffff);
+  }
+
+  &__text {
+    @extend %w100;
+
+    max-width: 104px;
+
+    margin: 0 auto;
+
+    @include font(12, 18, 400);
+
+    &--top {
+      margin-bottom: -7px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 181px;
+
+      @include font(18, 27, 400);
+    }
+  }
+
+  &__number {
+    @extend %w100;
+
+    margin-bottom: 1px;
+
+    @include font(82, 80, 700);
+
+    opacity: 0.5;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 2px;
+
+      @include font(144, 140, 700);
+    }
+  }
+}

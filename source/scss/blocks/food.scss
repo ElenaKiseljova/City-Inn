@@ -8,6 +8,7 @@
   @media screen and (min-width: $tablet) {
 
     &--conference-service,
+    &--conference,
     &--approach {
       position: relative;
 
@@ -42,6 +43,10 @@
     &--supply {
       padding: 180px 0 118px;
     }
+
+    &--conference {
+      padding: 119px 0 145px;
+    }
   }
 
   &__container {
@@ -64,6 +69,7 @@
     overflow: visible;
 
     &--conference-service,
+    &--conference,
     &--approach {
       height: calc((494 / 414) * 100vw);
     }
@@ -86,7 +92,8 @@
         order: 2;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--conference {
         position: static;
 
         min-height: 580px;
@@ -105,7 +112,8 @@
 
       min-height: 840px;
 
-      &--breakfast {
+      &--breakfast,
+      &--conference {
         order: 2;
       }
     }
@@ -129,6 +137,7 @@
     }
 
     &--conference-service,
+    &--conference,
     &--approach,
     &--supply {
       top: calc(((494 / 414) * 100vw) - 45px);
@@ -150,6 +159,7 @@
     @media screen and (min-width: $mobile) {
 
       &--conference-service,
+      &--conference,
       &--approach {
         left: 40px;
 
@@ -197,6 +207,7 @@
       }
 
       &--conference-service,
+      &--conference,
       &--approach {
         min-width: 688px;
 
@@ -217,6 +228,18 @@
         margin-left: 0;
 
         transform: translateY(0);
+      }
+
+      &--conference {
+        min-width: 538px;
+
+        margin-right: calc((100% + 140px) - 538px);
+        margin-bottom: 94px;
+        margin-left: -140px;
+
+        br {
+          display: none;
+        }
       }
     }
 
@@ -255,6 +278,7 @@
       }
 
       &--conference-service,
+      &--conference,
       &--approach {
         min-width: 907px;
 
@@ -294,6 +318,7 @@
       }
 
       &--conference-service,
+      &--conference,
       &--approach {
         position: static;
       }
@@ -352,6 +377,15 @@
 
         padding-bottom: 172px;
       }
+
+      &--conference {
+        width: calc(50vw - 81px);
+
+        margin-top: 0;
+        margin-left: 81px;
+
+        padding: 288px 0 0;
+      }
     }
   }
 
@@ -363,6 +397,7 @@
     @media screen and (min-width: $tablet) {
 
       &--conference-service,
+      &--conference,
       &--approach {
         position: static;
       }
@@ -386,6 +421,7 @@
 
       &--about,
       &--conference-service,
+      &--conference,
       &--approach {
         --translateY: -288px;
       }
@@ -448,6 +484,12 @@
       min-height: calc(271 / 414 * 100vw);
     }
 
+    &--conference {
+      min-height: calc(340 / 414 * 100vw);
+
+      padding-top: 63px;
+    }
+
     &--supply {
       padding: 123px 0 40px;
     }
@@ -493,13 +535,18 @@
       &--supply {
         padding: 0 40px 40px 0;
       }
+
+      &--conference {
+        padding: 0 4px 40px 41px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 165px 203px 129px 0;
 
       &--breakfast,
-      &--supply {
+      &--supply,
+      &--conference {
         order: 1;
       }
 
@@ -512,7 +559,8 @@
         padding: 57px 90px 0 12px;
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--conference {
         padding: 51px 40px 80px 0;
       }
 
@@ -560,6 +608,17 @@
 
     @extend %w100;
 
+    @media screen and (min-width: $tablet) {
+      &--conference {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       &--supply {
         order: 2;
@@ -606,7 +665,8 @@
   &__tabs {
     display: grid;
 
-    grid-template-areas: "a b c d"
+    grid-template-areas:
+      "a b c d"
       "e e e e";
 
     grid-template-columns: 40px 40px 40px 40px;
@@ -621,6 +681,7 @@
     list-style: none;
 
     &--conference-service,
+    &--conference,
     &--approach {
       row-gap: 40px;
     }
@@ -632,10 +693,17 @@
       &--approach {
         row-gap: 65px;
       }
+
+      &--conference {
+        row-gap: 36px;
+
+        margin-bottom: 40px;
+      }
     }
 
     @media screen and (min-width: $desktop) {
-      grid-template-areas: "a e"
+      grid-template-areas:
+        "a e"
         "b f"
         "c g"
         "d h";
@@ -648,6 +716,7 @@
       gap: 41px 47px;
 
       &--conference-service,
+      &--conference,
       &--approach {
         gap: 48px 47px;
       }
@@ -692,6 +761,7 @@
     @media screen and (min-width: $tablet) {
 
       &--conference-service,
+      &--conference,
       &--approach {
         grid-area: a;
 
@@ -718,6 +788,7 @@
       }
 
       &--conference-service,
+      &--conference,
       &--approach {
         display: flex;
 
@@ -809,6 +880,19 @@
       margin-top: 0;
     }
 
+    &--conference {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--conference {
+        display: flex;
+
+        margin-top: auto;
+        margin-bottom: 0;
+      }
+    }
+
     @media screen and (min-width: $desktop) {
       min-width: calc(200 / 437 * 100%);
 
@@ -817,6 +901,10 @@
       &--breakfast,
       &--supply {
         --background-color-button: #{$white-20};
+      }
+
+      &--conference {
+        display: none;
       }
     }
   }
@@ -843,6 +931,12 @@
       }
     }
 
+    &--conference {
+      &.swiper-pagination {
+        bottom: 44px;
+      }
+    }
+
     @media screen and (min-width: $tablet) {
       &.swiper-pagination {
         bottom: 40px;
@@ -853,7 +947,8 @@
         margin-right: calc((100% - 50vw) / 2);
       }
 
-      &--conference-service {
+      &--conference-service,
+      &--conference {
         &.swiper-pagination {
           left: 0;
 

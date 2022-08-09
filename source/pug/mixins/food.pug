@@ -6,7 +6,8 @@ mixin food(attr = {})
   - const textBottom  = attr.textBottom ?? '';
   - const sectionName = attr.sectionName ?? pageName;
 
-  - const tabs  = attr.tabs ?? [];
+  - const tabs = attr.tabs ?? [];
+  - const more = attr.more ?? null;
 
   section(class="food food--" + sectionName)
     div.food__container.container
@@ -60,6 +61,11 @@ mixin food(attr = {})
                   if foodTab.textBottom !== ''
                     p.food__text.food__text--bottom
                       | !{foodTab.textBottom}
+
+            if more
+              a(class="food__button button food__button--" + sectionName href="" + more.link)
+                span
+                  | !{more.title}
 
         if attr.worktime || attr.menu
           div(class="food__buttons food__buttons--" + sectionName)

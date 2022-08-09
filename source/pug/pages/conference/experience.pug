@@ -1,0 +1,43 @@
+-
+  const experience = {
+    title: 'НАШ ДОСВІД',
+    items: [
+      {
+        textTop: 'більш ніж',
+        number: '500',
+        textBottom: `
+          подій у 2021 році
+        `,
+      },
+      {
+        textTop: 'більш ніж',
+        number: '200',
+        textBottom: `
+          компаній, які нам довіряють
+        `,
+      },
+      {
+        textTop: 'більш ніж',
+        number: '100',
+        textBottom: `
+          щорічний подій
+        `,
+      },
+    ],
+  };
+
+section.experience
+  div.experience__container.container
+    h2.title-inner.experience__title
+      | !{experience.title}
+
+    ul.experience__list
+      for item in experience.items
+        li.experience__item
+          p.experience__text.experience__text--top
+            | !{item.textTop}
+
+          p.experience__number
+            | !{item.number}
+          p.experience__text.experience__text--bottom
+            | !{item.textBottom}

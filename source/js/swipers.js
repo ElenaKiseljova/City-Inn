@@ -104,6 +104,10 @@ export default () => {
 
     // Lobby sliders
     if (swiperItem.classList.contains('doings__slider')) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
+        swiperArgs.effect = 'fade';
+      }
+
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 270;
       }
@@ -140,6 +144,10 @@ export default () => {
 
     // Group sliders
     if (swiperItem.classList.contains('team__slider')) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
+        swiperArgs.effect = 'fade';
+      }
+
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 51;
       }
