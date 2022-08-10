@@ -13,7 +13,7 @@ export default () => {
     || document.documentElement.clientWidth
     || document.getElementsByTagName('body')[0].clientWidth;
 
-  const animationSlideElements = (swiperSlider, selector1, selector2) => {
+  const animationSlideElements = (swiperSlider, selector1, selector2, mode = 1) => {
     const el1 = swiperSlider.slides[swiperSlider.activeIndex].querySelector(selector1);
     const el2 = swiperSlider.slides[swiperSlider.activeIndex].querySelector(selector2);
 
@@ -24,11 +24,28 @@ export default () => {
         duration: 1,
       });
 
-      gsap.to(el2, {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-      });
+      switch (mode) {
+        case 1:
+          gsap.to(el2, {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+          });
+
+          break;
+
+        case 2:
+          gsap.to(el2, {
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeOut,
+          });
+
+          break;
+
+        default:
+          break;
+      }
     }
 
     if (swiperSlider.previousIndex !== undefined) {
@@ -42,11 +59,28 @@ export default () => {
           duration: 1,
         });
 
-        gsap.to(el4, {
-          x: '100%',
-          opacity: 0,
-          duration: 1,
-        });
+        switch (mode) {
+          case 1:
+            gsap.to(el4, {
+              x: '100%',
+              opacity: 0,
+              duration: 1,
+            });
+
+            break;
+
+          case 2:
+            gsap.to(el4, {
+              opacity: 0,
+              duration: 1,
+              ease: Power3.easeOut,
+            });
+
+            break;
+
+          default:
+            break;
+        }
       }
     }
   };
@@ -104,10 +138,6 @@ export default () => {
 
     // Lobby sliders
     if (swiperItem.classList.contains('doings__slider')) {
-      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
-        swiperArgs.effect = 'fade';
-      }
-
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 270;
       }
@@ -144,10 +174,6 @@ export default () => {
 
     // Group sliders
     if (swiperItem.classList.contains('team__slider')) {
-      if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
-        swiperArgs.effect = 'fade';
-      }
-
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 51;
       }
@@ -183,7 +209,7 @@ export default () => {
 
     const swiperSlider = new Swiper(swiperItem, swiperArgsMerged);
 
-    // Половинчатые двойные (картинка +  текст) слайдеры СТАРТ на 768
+    // Половинчатые двойные (картинка +  текст) слайдеры СТАРТ
     // Lobby
     if (swiperItem.classList.contains('doings__slider')) {
       if (DEVICE_WIDTH >= TABLET_WIDTH && DEVICE_WIDTH < DESKTOP_WIDTH) {
@@ -212,6 +238,27 @@ export default () => {
 
         swiperSlider.on('beforeTransitionStart', () => {
           animationSlideElements(swiperSlider, '.team__top', '.team__bottom');
+        });
+      }
+    }
+
+    // Conference
+    if (swiperItem.classList.contains('seating__slider')) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH) {
+        animationSlideElements(swiperSlider, '.seating__bottom', '.seating__top', 2);
+
+        swiperSlider.on('beforeTransitionStart', () => {
+          animationSlideElements(swiperSlider, '.seating__bottom', '.seating__top', 2);
+        });
+      }
+    }
+
+    if (swiperItem.classList.contains('prices__slider')) {
+      if (DEVICE_WIDTH >= TABLET_WIDTH) {
+        animationSlideElements(swiperSlider, '.prices__top', '.prices__bottom', 1);
+
+        swiperSlider.on('beforeTransitionStart', () => {
+          animationSlideElements(swiperSlider, '.prices__top', '.prices__bottom', 1);
         });
       }
     }

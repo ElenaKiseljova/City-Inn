@@ -668,6 +668,10 @@
 
       &--conference {
         transform: translate(-3px, calc((95 / 258) * 100%));
+
+        br:last-of-type {
+          display: none;
+        }
       }
 
       &--conference-service {

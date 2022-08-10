@@ -1,0 +1,174 @@
+-
+  const prices = {
+    title: 'ціна оренди',
+    slides: [
+      {
+        image: 'prices-1',
+        title: 'smart basic',
+        text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac,',
+        services: [
+          {
+            title: 'проектор',
+            icon: 'projector',
+          },
+          {
+            title: 'мікрофон',
+            icon: 'microphone',
+          },
+          {
+            title: 'ноутбук',
+            icon: 'laptop',
+          },
+          {
+            title: 'звукове обладнання',
+            icon: 'sound',
+          },
+          {
+            title: 'екран',
+            icon: 'screen',
+          },
+        ],
+        priceTitle: 'за годину',
+        priceNumber: 500,
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'prices-1',
+        title: 'smart pro',
+        text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac,',
+        services: [
+          {
+            title: 'проектор',
+            icon: 'projector',
+          },
+          {
+            title: 'мікрофон',
+            icon: 'microphone',
+          },
+          {
+            title: 'ноутбук',
+            icon: 'laptop',
+          },
+          {
+            title: 'звук',
+            icon: 'sound',
+          },
+          {
+            title: 'екран',
+            icon: 'screen',
+          },
+        ],
+        priceTitle: 'за годину',
+        priceNumber: 500,
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'prices-1',
+        title: 'smart max',
+        text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac,',
+        services: [
+          {
+            title: 'проектор',
+            icon: 'projector',
+          },
+          {
+            title: 'мікрофон',
+            icon: 'microphone',
+          },
+          {
+            title: 'ноутбук',
+            icon: 'laptop',
+          },
+          {
+            title: 'звук',
+            icon: 'sound',
+          },
+          {
+            title: 'екран',
+            icon: 'screen',
+          },
+        ],
+        priceTitle: 'за годину',
+        priceNumber: 500,
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+      {
+        image: 'prices-1',
+        title: 'smart free',
+        text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac,',
+        services: [
+          {
+            title: 'проектор',
+            icon: 'projector',
+          },
+          {
+            title: 'мікрофон',
+            icon: 'microphone',
+          },
+          {
+            title: 'ноутбук',
+            icon: 'laptop',
+          },
+          {
+            title: 'звук',
+            icon: 'sound',
+          },
+          {
+            title: 'екран',
+            icon: 'screen',
+          },
+        ],
+        priceTitle: 'за годину',
+        priceNumber: 0,
+        book: {
+          title: 'забронювати',
+          link: '#',
+        },
+      },
+    ],
+  };
+
+section.prices
+  h2.title-inner.prices__title
+    | !{prices.title}
+
+  +pagination('prices')
+
+  +navigation('prices')
+
+  if prices.slides.length > 0
+    +slider('prices')
+      for slide in prices.slides
+        +slide('prices')
+          div.prices__top
+            +img('prices', '', slide.image)
+
+          div.prices__bottom
+            h3.prices__subtitle
+              | !{slide.title}
+
+            p.prices__text
+              | !{slide.text}
+
+            +services('prices', 'prices', slide.services)
+
+            div(class="prices__price price")
+              h4.price__title.price__title--prices
+                | #{slide.priceTitle}
+              p.price__number
+                | #{slide.priceNumber} ₴
+
+            a(class="prices__button button" href="" + slide.book.link)
+              span
+                | #{slide.book.title}
+
+

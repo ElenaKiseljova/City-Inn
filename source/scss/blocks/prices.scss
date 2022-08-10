@@ -1,0 +1,294 @@
+.prices {
+  position: relative;
+
+  @extend %w100;
+
+  @media screen and (min-width: $desktop) {
+    padding: 131px 0 0;
+  }
+
+  &__title {
+    position: absolute;
+
+    top: 36px;
+    left: 15px;
+
+    z-index: 3;
+
+    width: calc(100% - 30px);
+
+    @media screen and (min-width: $mobile) {
+      left: 40px;
+
+      width: calc(100% - 80px);
+    }
+
+    @media screen and (min-width: $tablet) {
+      top: 0;
+      left: calc((152 / 768) * 100vw);
+
+      width: fit-content;
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: 185px;
+      left: calc((99 / 1440) * 100vw);
+
+      width: fit-content;
+
+      opacity: 0.8;
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      top: calc(((341 / 414) * 100vw) - 50px);
+      bottom: auto;
+
+      @media screen and (min-width: $tablet) {
+        top: calc(100% - 47px);
+
+        width: 50vw;
+      }
+
+      @media screen and (min-width: $desktop) {
+        top: calc(100% - 48px);
+      }
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+
+      top: 426px;
+      right: calc((128 / 1440) * 100vw);
+
+      z-index: 3;
+
+      display: flex;
+    }
+  }
+
+  &__slider {
+    height: fit-content;
+  }
+
+  &__slider-wrapper {
+    transition: none;
+  }
+
+  &__slide {
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 50% 50%;
+
+      min-height: calc((590 / 768) * 100vw);
+
+      opacity: 0;
+
+      * {
+        pointer-events: none;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+
+        * {
+          pointer-events: all;
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-height: calc((840 / 1440) * 100vw);
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    @extend %w100;
+    height: calc((341 / 414) * 100vw);
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    @media screen and (min-width: $tablet) {
+      height: 100%;
+
+      opacity: 0;
+
+      transform: translateX(-100%);
+    }
+  }
+
+  &__img {
+    @extend %img;
+  }
+
+  &__picture {
+    @extend %picture;
+  }
+
+  &__bottom {
+    @extend %w100;
+
+    height: fit-content;
+
+    padding: 42px 15px 48px;
+
+    @media screen and (min-width: $mobile) {
+      padding: 42px 40px 48px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: grid;
+
+      grid-template-columns: 100%;
+
+      width: 50vw;
+      min-height: fit-content;
+
+      padding: 131px 43px 38px 36px;
+
+      opacity: 0;
+
+      transform: translateX(100%);
+
+      overflow: visible;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-areas:
+        "a a"
+        "b b"
+        "c c"
+        "d e";
+
+      grid-template-columns: 1fr 200px;
+
+      column-gap: 40px;
+
+      padding: 295px calc((128 / 1440) * 100vw) 78px 79px;
+    }
+  }
+
+  &__subtitle {
+    @extend %w100;
+
+    margin-bottom: 51px;
+
+    @include font(30, 37, 500);
+
+    text-transform: uppercase;
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+
+      top: 131px;
+      left: 0;
+
+      z-index: 3;
+
+      margin-bottom: 0;
+
+      transform: translateX(calc(-229 / 384 * 50vw));
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: static;
+
+      grid-area: a;
+
+      max-width: calc(100% - 150px);
+
+      margin-bottom: 20px;
+
+      @include font(45, 55, 500);
+
+      transform: none;
+    }
+  }
+
+  &__text {
+    @extend %w100;
+
+    margin-bottom: 30px;
+
+    @include font(14, 20, 400);
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      order: 2;
+
+      @include font(12, 20, 400);
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-area: b;
+
+      max-width: 333px;
+
+      margin-bottom: 55px;
+    }
+  }
+
+  &__services {
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $tablet) {
+      order: 3;
+
+      margin-bottom: 41px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-area: c;
+
+      margin-bottom: 87px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 38px;
+
+    @media screen and (min-width: $tablet) {
+      order: 1;
+
+      margin-bottom: 52px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-area: d;
+
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    min-width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      order: 4;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-area: e;
+
+      min-width: 200px;
+
+      margin: 0;
+    }
+  }
+}

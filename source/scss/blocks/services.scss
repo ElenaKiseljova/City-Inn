@@ -27,7 +27,8 @@
     row-gap: 20px;
   }
 
-  &--conference-info {
+  &--conference-info,
+  &--prices {
     row-gap: 20px;
   }
 
@@ -103,6 +104,18 @@
 
       row-gap: 25px;
     }
+
+    &--prices {
+      grid-template-columns: repeat(auto-fit, minmax(132px, max-content));
+
+      grid-template-rows: auto;
+
+      align-items: flex-start;
+      justify-content: start;
+
+      column-gap: 14px;
+      row-gap: 30px;
+    }
   }
 
   &__item {
@@ -121,7 +134,8 @@
       &--conference-service,
       &--group,
       &--conference-info,
-      &--seating {
+      &--seating,
+      &--prices {
         flex-direction: row;
       }
 
@@ -160,7 +174,8 @@
 
     &--group,
     &--conference-info,
-    &--seating {
+    &--seating,
+    &--prices {
       margin-right: 25px;
     }
 
@@ -178,7 +193,8 @@
       &--conference-service,
       &--conference-info,
       &--group,
-      &--seating {
+      &--seating,
+      &--prices {
         margin-bottom: 0;
       }
 
@@ -187,7 +203,8 @@
       &--standart-info,
       &--conference-service,
       &--conference-info,
-      &--group {
+      &--group,
+      &--prices {
         margin-right: 24px;
       }
 

@@ -54,6 +54,18 @@
     }
   }
 
+  &__slider-wrapper {
+    transition: all linear;
+
+    @media screen and (min-width: $tablet) {
+      transition: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+      transition: all linear;
+    }
+  }
+
   &__slide {
     height: auto;
 
@@ -63,6 +75,12 @@
       display: grid;
 
       grid-template-columns: 50% 50%;
+
+      opacity: 0;
+
+      &.swiper-slide-active {
+        opacity: 1;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -77,6 +95,8 @@
       justify-content: flex-start;
 
       height: fit-content;
+
+      opacity: 1;
 
       &.swiper-slide-active {
         .doings__top {

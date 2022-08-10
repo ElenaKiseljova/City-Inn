@@ -28,6 +28,20 @@
     padding: 0;
 
     @include font(12, 18, 400);
+
+    &--prices {
+      max-width: 46px;
+
+      margin-right: 19px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      &--prices {
+        max-width: none;
+
+        margin-right: 25px;
+      }
+    }
   }
 
   &__number {
