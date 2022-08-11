@@ -25,30 +25,9 @@
       title: 'book now',
       link: '#'
     },
+    sectionName: 'standart-info',
   };
 
-section(class="info info--" + pageName)
-  div.info__container.container
-    if info.services.length > 0
-      +services('info', 'standart-info', info.services, pageName)
-
-    div(class="info__content info__content--" + pageName)
-      p(class="info__text info__text--" + pageName)
-        |  !{info.text}
-
-      button(class="info__text info__more info__more--" + pageName)
-        | #{info.textMore}
-
-    div(class="info__price price")
-      h4.price__title
-        | #{info.priceTitle}
-      p.price__number
-        | #{info.priceNumber} ₴
-
-    a(class="info__button button info__button--" + pageName href="" + info.book.link)
-      span
-        | #{info.book.title}
-
-    +img('info', pageName, 'info')
++info(info)
 
 

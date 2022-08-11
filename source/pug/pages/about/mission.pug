@@ -7,6 +7,7 @@
       Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros. In hac habitasse platea dictumst. Nunc convallis felis ac fermentum volutpat. Phasellus at scelerisque est. In sit amet pulvinar mi. Pellentesque ut condimentum ante, et gravida mi. In erat felis, laoreet nec porta eu, vehicula nec diam.
     `,
     images: ['mission-1', 'mission-1', 'mission-1'],
+    sectionName: 'mission',
   };
 
 section.mission
@@ -23,6 +24,6 @@ section.mission
     +slider('mission')
       for imageName in mission.images
         +slide('mission')
-          +img('mission', '', imageName, mission.title)
+          +img('mission', mission.sectionName, imageName, mission.title)
 
     div.mission__pagination.pagination.swiper-pagination

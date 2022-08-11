@@ -1,14 +1,14 @@
 .food {
   @extend %w100;
 
-  &--about {
+  &--advantages {
     --color-page: var(--white);
   }
 
   @media screen and (min-width: $tablet) {
 
-    &--conference-service,
-    &--approach {
+    &--approach-conference,
+    &--approach-group {
       position: relative;
 
       padding-top: 162px;
@@ -25,17 +25,17 @@
       padding: 0;
     }
 
-    &--about {
+    &--advantages {
       --color-page: var(--light-yellow);
 
       padding: 0 0 137px;
     }
 
-    &--conference-service {
+    &--approach-conference {
       padding: 293px 0 234px;
     }
 
-    &--approach {
+    &--approach-group {
       padding: 209px 0 249px;
     }
 
@@ -43,7 +43,7 @@
       padding: 180px 0 118px;
     }
 
-    &--conference {
+    &--why-conference {
       padding: 119px 0 145px;
     }
   }
@@ -67,9 +67,9 @@
 
     overflow: visible;
 
-    &--conference-service,
-    &--conference,
-    &--approach {
+    &--approach-conference,
+    &--why-conference,
+    &--approach-group {
       height: calc((494 / 414) * 100vw);
     }
 
@@ -83,22 +83,22 @@
       height: auto;
       min-height: 478px;
 
-      &--restaurant,
-      &--about,
-      &--conference-service,
-      &--approach,
+      &--menu,
+      &--advantages,
+      &--approach-conference,
+      &--approach-group,
       &--supply {
         order: 2;
       }
 
-      &--conference-service,
-      &--conference {
+      &--approach-conference,
+      &--why-conference {
         position: static;
 
         min-height: 580px;
       }
 
-      &--approach {
+      &--approach-group {
         min-height: 488px;
       }
     }
@@ -112,7 +112,7 @@
       min-height: 840px;
 
       &--breakfast,
-      &--conference {
+      &--why-conference {
         order: 2;
       }
     }
@@ -131,14 +131,13 @@
       display: none;
     }
 
-    &--about {
+    &--advantages {
       margin-top: 33px;
     }
 
-    &--conference-service,
-    &--conference,
-    &--approach,
-    &--supply {
+    &--approach-conference,
+    &--why-conference,
+    &--approach-group {
       top: calc(((494 / 414) * 100vw) - 45px);
       left: 15px;
 
@@ -157,9 +156,9 @@
 
     @media screen and (min-width: $mobile) {
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         left: 40px;
 
         width: calc(100% - 80px);
@@ -199,15 +198,15 @@
         opacity: 0.6;
       }
 
-      &--about {
+      &--advantages {
         margin-bottom: 19px;
 
         opacity: 1;
       }
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         min-width: 688px;
 
         margin-right: calc(100% - 688px);
@@ -229,7 +228,7 @@
         transform: translateY(0);
       }
 
-      &--conference {
+      &--why-conference {
         min-width: 538px;
 
         margin-right: calc((100% + 140px) - 538px);
@@ -256,6 +255,12 @@
         margin-bottom: 100px;
       }
 
+      &--advantages,
+      &--approach-group,
+      &--supply {
+        opacity: 1;
+      }
+
       &--breakfast,
       &--supply {
         min-width: 1018px;
@@ -270,15 +275,13 @@
         opacity: 0.8;
       }
 
-      &--about {
+      &--advantages {
         margin-bottom: 89px;
-
-        opacity: 1;
       }
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         min-width: 907px;
 
         margin-right: calc(100% - 907px);
@@ -308,18 +311,22 @@
         display: none;
       }
 
-      &--restaurant,
-      &--about,
-      &--conference-service,
-      &--approach,
+      &--menu,
+      &--advantages,
+      &--approach-conference,
+      &--approach-group,
       &--supply {
         margin: 0 calc(100% - 50vw) 0 0;
       }
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         position: static;
+      }
+
+      &--breakfast {
+        position: relative;
       }
     }
 
@@ -350,7 +357,7 @@
         padding-bottom: 169px;
       }
 
-      &--about {
+      &--advantages {
         width: calc(50vw - 80px);
 
         margin-top: 0;
@@ -359,8 +366,8 @@
         padding: 288px 0 0;
       }
 
-      &--conference-service,
-      &--approach {
+      &--approach-conference,
+      &--approach-group {
         width: calc(50vw - 72px);
 
         margin-top: 0;
@@ -377,7 +384,7 @@
         padding-bottom: 172px;
       }
 
-      &--conference {
+      &--why-conference {
         width: calc(50vw - 81px);
 
         margin-top: 0;
@@ -393,11 +400,13 @@
 
     width: 100%;
 
+    cursor: pointer;
+
     @media screen and (min-width: $tablet) {
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         position: static;
       }
     }
@@ -418,10 +427,10 @@
     @media screen and (min-width: $desktop) {
       --translateY: -154px;
 
-      &--about,
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--advantages,
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         --translateY: -288px;
       }
 
@@ -478,12 +487,12 @@
 
     padding: 40px 0 96px;
 
-    &--conference-service,
-    &--approach {
+    &--approach-conference,
+    &--approach-group {
       min-height: calc(271 / 414 * 100vw);
     }
 
-    &--conference {
+    &--why-conference {
       min-height: calc(340 / 414 * 100vw);
 
       padding-top: 63px;
@@ -505,16 +514,16 @@
 
       overflow: visible;
 
-      &--restaurant,
-      &--about,
-      &--conference-service,
-      &--approach,
+      &--menu,
+      &--advantages,
+      &--approach-conference,
+      &--approach-group,
       &--supply {
         order: 1;
       }
 
-      &--restaurant {
-        padding: 40px 0 38px 34px;
+      &--menu {
+        padding: 40px 34px 38px 0;
       }
 
       &--breakfast,
@@ -522,12 +531,12 @@
         padding: 25px 0 38px 35px;
       }
 
-      &--about {
+      &--advantages {
         padding: 57px 36px 38px 0;
       }
 
-      &--conference-service,
-      &--approach {
+      &--approach-conference,
+      &--approach-group {
         padding: 0 40px 80px 0;
       }
 
@@ -535,7 +544,7 @@
         padding: 0 40px 40px 0;
       }
 
-      &--conference {
+      &--why-conference {
         padding: 0 4px 40px 41px;
       }
     }
@@ -545,7 +554,7 @@
 
       &--breakfast,
       &--supply,
-      &--conference {
+      &--why-conference {
         order: 1;
       }
 
@@ -554,16 +563,16 @@
         padding: 101px 88px 169px 0;
       }
 
-      &--about {
+      &--advantages {
         padding: 57px 90px 0 12px;
       }
 
-      &--conference-service,
-      &--conference {
+      &--approach-conference,
+      &--why-conference {
         padding: 51px 40px 80px 0;
       }
 
-      &--approach {
+      &--approach-group {
         padding: 51px 12px 80px 5px;
       }
 
@@ -596,6 +605,10 @@
     }
 
     @media screen and (min-width: $desktop) {
+      font-weight: 700;
+
+      opacity: 0.8;
+
       &--supply {
         order: 0;
       }
@@ -608,7 +621,7 @@
     @extend %w100;
 
     @media screen and (min-width: $tablet) {
-      &--conference {
+      &--why-conference {
         display: flex;
 
         flex-direction: column;
@@ -679,21 +692,21 @@
 
     list-style: none;
 
-    &--conference-service,
-    &--conference,
-    &--approach {
+    &--approach-conference,
+    &--why-conference,
+    &--approach-group {
       row-gap: 40px;
     }
 
     @media screen and (min-width: $tablet) {
       row-gap: 116px;
 
-      &--conference-service,
-      &--approach {
+      &--approach-conference,
+      &--approach-group {
         row-gap: 65px;
       }
 
-      &--conference {
+      &--why-conference {
         row-gap: 36px;
 
         margin-bottom: 40px;
@@ -714,9 +727,9 @@
 
       gap: 41px 47px;
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         gap: 48px 47px;
       }
     }
@@ -759,9 +772,9 @@
 
     @media screen and (min-width: $tablet) {
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         grid-area: a;
 
         display: none;
@@ -786,9 +799,9 @@
         }
       }
 
-      &--conference-service,
-      &--conference,
-      &--approach {
+      &--approach-conference,
+      &--why-conference,
+      &--approach-group {
         display: flex;
 
         &.active {
@@ -879,12 +892,12 @@
       margin-top: 0;
     }
 
-    &--conference {
+    &--why-conference {
       display: none;
     }
 
     @media screen and (min-width: $tablet) {
-      &--conference {
+      &--why-conference {
         display: flex;
 
         margin-top: auto;
@@ -902,7 +915,7 @@
         --background-color-button: #{$white-20};
       }
 
-      &--conference {
+      &--why-conference {
         display: none;
       }
     }
@@ -930,7 +943,7 @@
       }
     }
 
-    &--conference {
+    &--why-conference {
       &.swiper-pagination {
         bottom: 44px;
       }
@@ -946,8 +959,8 @@
         margin-right: calc((100% - 50vw) / 2);
       }
 
-      &--conference-service,
-      &--conference {
+      &--approach-conference,
+      &--why-conference {
         &.swiper-pagination {
           left: 0;
 

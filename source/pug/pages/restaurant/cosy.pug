@@ -8,6 +8,7 @@
     textBottom: `
       Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.
     `,
+    sectionName: 'cosy',
   };
 section.cosy
   div.cosy__container.container
@@ -19,7 +20,7 @@ section.cosy
         +slider('cosy')
           each image in cosy.images
             +slide('cosy')
-              +img('cosy', '', image, cosy.title)
+              +img('cosy', pageName, image, cosy.title)
 
         +pagination('cosy')
 

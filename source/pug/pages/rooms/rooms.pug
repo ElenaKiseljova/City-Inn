@@ -1,221 +1,224 @@
 -
-  const rooms = [
-    {
-      title: `
-        standart double
-      `,
-      image: 'room-1',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
+  const rooms = {
+    items: [
+      {
+        title: `
+          standart double
+        `,
+        image: 'room-1',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
         },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
         },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
       },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
+      {
+        title: `
+          standart twin
+        `,
+        image: 'room-2',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
+        },
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
+        },
       },
-    },
-    {
-      title: `
-        standart twin
-      `,
-      image: 'room-2',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
+      {
+        title: `
+          superior double
+        `,
+        image: 'room-3',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
         },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
         },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
       },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
+      {
+        title: `
+          supeior twin
+        `,
+        image: 'room-4',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-2',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
+        },
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
+        },
       },
-    },
-    {
-      title: `
-        superior double
-      `,
-      image: 'room-3',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
+      {
+        title: `
+          superior family
+        `,
+        image: 'room-5',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
         },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
         },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
       },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
+      {
+        title: `
+          junior suite
+        `,
+        image: 'room-6',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
+        },
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
+        },
       },
-    },
-    {
-      title: `
-        supeior twin
-      `,
-      image: 'room-4',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
+      {
+        title: `
+          Suite
+        `,
+        image: 'room-7',
+        services: [
+          {
+            icon: 'guests',
+            title: '2 гостей',
+          },
+          {
+            icon: 'bed-big',
+            title: 'велике ліжко',
+          },
+          {
+            icon: 'area',
+            title: '18-25 кв.м',
+          },
+        ],
+        priceTitle: 'ціна від',
+        priceNumber: 3100,
+        book: {
+          title: 'book now',
+          link: '#'
         },
-        {
-          icon: 'bed-2',
-          title: 'велике ліжко',
+        more: {
+          title: 'дізнатись більше',
+          link: '#'
         },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
       },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
-      },
-    },
-    {
-      title: `
-        superior family
-      `,
-      image: 'room-5',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
-        },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
-        },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
-      },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
-      },
-    },
-    {
-      title: `
-        junior suite
-      `,
-      image: 'room-6',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
-        },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
-        },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
-      },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
-      },
-    },
-    {
-      title: `
-        Suite
-      `,
-      image: 'room-7',
-      services: [
-        {
-          icon: 'guests',
-          title: '2 гостей',
-        },
-        {
-          icon: 'bed-big',
-          title: 'велике ліжко',
-        },
-        {
-          icon: 'area',
-          title: '18-25 кв.м',
-        },
-      ],
-      priceTitle: 'ціна від',
-      priceNumber: 3100,
-      book: {
-        title: 'book now',
-        link: '#'
-      },
-      more: {
-        title: 'дізнатись більше',
-        link: '#'
-      },
-    },
-  ];
+    ],
+    sectionName: 'rooms',
+  };
 
 section.rooms
-  if rooms.length > 0
+  if rooms.items.length > 0
     +slider('rooms')
-      for room, index in rooms
+      for room, index in rooms.items
         - const title = room.title ?? '';
         - const image = room.image ?? '';
         - const priceTitle = room.priceTitle ?? '';
@@ -242,7 +245,7 @@ section.rooms
 
                 if services.length > 0
                   div(class="room__services-wrapper room__services-wrapper--" + mode)
-                    +services('room', 'rooms', services)
+                    +services('room', rooms.sectionName, services)
 
                 div(class="room__buttons room__buttons--" + mode)
                   div(class="price room__price room__price--" + mode)

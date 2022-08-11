@@ -1,10 +1,10 @@
-mixin service(service = {}, modificator = '', additionalClass = '')
-  - modificator = modificator === '' ? pageName : modificator;
+mixin service(service = {}, sectionModification = '', additionalClass = '')
+  - sectionModification = (sectionModification === '') ? pageName : sectionModification;
 
-  li(class="services__item services__item--" + modificator + " " + additionalClass)
-    div(class="services__icon services__icon--" + modificator)
+  li(class="services__item services__item--" + sectionModification + " " + additionalClass)
+    div(class="services__icon services__icon--" + sectionModification)
       svg(width="40" height="40")
         use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
 
-    h5(class="services__name services__name--" + modificator)
+    h5(class="services__name services__name--" + sectionModification)
       | #{service.title}

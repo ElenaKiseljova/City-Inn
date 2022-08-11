@@ -1,0 +1,26 @@
+mixin info(attr)
+  section(class="info info--" + pageName)
+    div(class="info__container container info__container--" + pageName)
+      if info.services.length > 0
+        +services('info', info.sectionName, info.services)
+
+      div(class="info__content info__content--" + pageName)
+        p(class="info__text info__text--" + pageName)
+          |  !{attr.text}
+
+        if attr.textMore
+          button(class="info__text info__more info__more--" + pageName)
+            | #{attr.textMore}
+
+      if attr.priceTitle && attr.priceNumber
+        div(class="info__price price")
+          h4.price__title
+            | #{attr.priceTitle}
+          p.price__number
+            | #{attr.priceNumber} ₴
+
+      a(class="info__button button info__button--" + pageName href="" + info.book.link)
+        span
+          | #{info.book.title}
+
+      +img('info', pageName, 'info')

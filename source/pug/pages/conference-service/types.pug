@@ -73,6 +73,7 @@
         }
       },
     ],
+    sectionName: 'types',
   };
 
 section.types
@@ -93,7 +94,7 @@ section.types
               h3.types__subtitle.types__subtitle--tablet
                 | !{slide.title}
 
-              +img('types', '', slide.image)
+              +img('types', pageName, slide.image)
 
             div.types__bottom
               h3.types__subtitle.types__subtitle--mobile
@@ -102,7 +103,7 @@ section.types
               p.types__text
                 | !{slide.text}
 
-              +services('types', '', slide.services)
+              +services('types', types.sectionName, slide.services)
 
               a(class="types__button button" href="" + slide.book.link)
                 | !{slide.book.title}

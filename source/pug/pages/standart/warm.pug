@@ -34,7 +34,8 @@
     book: {
       title: 'book now',
       link: '#'
-    }
+    },
+    sectionName: 'warm',
   };
 
 section.warm
@@ -43,10 +44,10 @@ section.warm
       h3.warm__subtitle
         | !{warm.subtitle}
 
-      +services('warm', 'warm', warm.services)
+      +services('warm', warm.sectionName, warm.services)
 
     div.warm__img-wrapper
-      +img('warm', '', warm.image, warm.title)
+      +img('warm', pageName, warm.image, warm.title)
 
     div.warm__content
       h2.title-inner.warm__title

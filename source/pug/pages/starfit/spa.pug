@@ -83,7 +83,8 @@
           text: 'правила відвідування',
           link: '#'
         },
-    }
+    },
+    sectionName: 'spa',
   };
 
 section.spa
@@ -101,7 +102,7 @@ section.spa
 
         +slide('spa')
           div.spa__top
-            +img('spa', '', image, spa.title)
+            +img('spa', pageName, image, spa.title)
 
           div.spa__bottom
             if description !== ''
@@ -109,15 +110,7 @@ section.spa
                 |  !{description}
 
             if services.length > 0
-              ul.spa__services.services.services--spa
-                for service in services
-                  li.services__item
-                    div.services__icon
-                      svg(width="40" height="40")
-                        use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
-
-                    h5.services__name
-                      | #{service.title}
+              +services('spa', spa.sectionName, services)
 
             if worktime !== ''
               +worktime('spa', '', worktime)
@@ -147,19 +140,7 @@ section.spa
         | !{textBottom}
 
     if services.length > 0
-      ul.spa__services.services.services--spa
-        for service in services
-          li.services__item.services__item--spa
-            div.services__icon.services__icon--spa
-              svg(width="40" height="40")
-                use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
-
-            h5.services__name
-              | #{service.title}
-
-        if worktime !== ''
-          li.services__item.services__item--worktime
-            +worktime('spa', 'tablet', worktime)
+      +services('spa', spa.sectionName, services, null, {worktime})
 
     div.spa__buttons
       if worktime !== ''

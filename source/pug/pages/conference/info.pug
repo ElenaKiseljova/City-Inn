@@ -18,21 +18,9 @@
       title: 'book now',
       link: '#'
     },
+    sectionName: 'conference-info',
   };
 
-section(class="info info--" + pageName)
-  div(class="info__container container info__container--" + pageName)
-    if info.services.length > 0
-      +services('info', 'conference-info', info.services, pageName)
-
-    div(class="info__content info__content--" + pageName)
-      p(class="info__text info__text--" + pageName)
-        | !{info.text}
-
-    a(class="info__button button info__button--" + pageName href="" + info.book.link)
-      span
-        | #{info.book.title}
-
-    +img('info', pageName, 'info')
++info(info)
 
 

@@ -1,285 +1,289 @@
 -
-  const cards = [
-    {
-      title: `
-        корпоративна співпраця
-      `,
-      image: 'corporate',
-      subTitle: `
-        корпоративна співпраця
-      `,
-      description: `
-        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-        <br />
-        <br />
-        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-      `,
-      services: [
-        {
-          icon: 'pool',
-          title: 'бассейн'
-        },
-        {
-          icon: 'spa',
-          title: '6 видів саун'
-        },
-        {
-          icon: 'gym',
-          title: 'тренажерний зал'
-        },
-        {
-          icon: 'mini-bar',
-          title: 'фітобар'
-        },
-      ],
-      book: {
-        title: 'Book now',
-        link: '#'
-      },
-      slides: [
-        {
-          image: 'slide-1',
-          description: `
-            Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-            <br />
-            <br />
-            Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-          `,
-        },
-        {
-          image: 'slide-2',
-          description: `
-            Тепер вам не потрібно платити повну вартість номера!
-          `,
-          services: [
-            {
-              icon: 'pool',
-              title: 'бассейн'
-            },
-            {
-              icon: 'spa',
-              title: '6 видів саун'
-            },
-            {
-              icon: 'gym',
-              title: 'тренажерний зал'
-            },
-            {
-              icon: 'mini-bar',
-              title: 'фітобар'
-            },
-          ],
-        },
-        {
-          image: 'slide-3',
-          description: `
-            Тепер вам не потрібно платити повну вартість номера!
-          `,
-          book: {
-            title: 'Book now',
-            link: '#'
+  const cards = {
+    sectionName: 'cards',
+    items: [
+      {
+        title: `
+          корпоративна співпраця
+        `,
+        image: 'corporate',
+        subTitle: `
+          корпоративна співпраця
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
           },
-        }
-      ]
-    },
-    {
-      title: `
-        spa day use offer
-      `,
-      image: 'spa',
-      subTitle: `
-        spa day use offer
-      `,
-      description: `
-        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-        <br />
-        <br />
-        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-      `,
-      services: [
-        {
-          icon: 'pool',
-          title: 'бассейн'
-        },
-        {
-          icon: 'spa',
-          title: '6 видів саун'
-        },
-        {
-          icon: 'gym',
-          title: 'тренажерний зал'
-        },
-        {
-          icon: 'mini-bar',
-          title: 'фітобар'
-        },
-      ],
-      book: {
-        title: 'Book now',
-        link: '#'
-      }
-    },
-    {
-      title: `
-        дегустаційний вікенд
-      `,
-      image: 'degustation',
-      subTitle: `
-        дегустаційний вікенд
-      `,
-      description: `
-        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-        <br />
-        <br />
-        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-      `,
-      services: [
-        {
-          icon: 'pool',
-          title: 'бассейн'
-        },
-        {
-          icon: 'spa',
-          title: '6 видів саун'
-        },
-        {
-          icon: 'gym',
-          title: 'тренажерний зал'
-        },
-        {
-          icon: 'mini-bar',
-          title: 'фітобар'
-        },
-      ],
-      book: {
-        title: 'Book now',
-        link: '#'
-      }
-    },
-    {
-      title: `
-        романтичний вікенд
-      `,
-      image: 'romantic',
-      subTitle: `
-        романтичний вікенд
-      `,
-      description: `
-        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-        <br />
-        <br />
-        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-      `,
-      services: [
-        {
-          icon: 'pool',
-          title: 'бассейн'
-        },
-        {
-          icon: 'spa',
-          title: '6 видів саун'
-        },
-        {
-          icon: 'gym',
-          title: 'тренажерний зал'
-        },
-        {
-          icon: 'mini-bar',
-          title: 'фітобар'
-        },
-      ],
-      book: {
-        title: 'Book now',
-        link: '#'
-      }
-    },
-    {
-      title: `
-        корпоративна співпраця
-      `,
-      image: 'corporate',
-      subTitle: `
-        корпоративна співпраця
-      `,
-      description: `
-        Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-        <br />
-        <br />
-        Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-      `,
-      services: [
-        {
-          icon: 'pool',
-          title: 'бассейн'
-        },
-        {
-          icon: 'spa',
-          title: '6 видів саун'
-        },
-        {
-          icon: 'gym',
-          title: 'тренажерний зал'
-        },
-        {
-          icon: 'mini-bar',
-          title: 'фітобар'
-        },
-      ],
-      book: {
-        title: 'Book now',
-        link: '#'
-      },
-      slides: [
-        {
-          image: 'slide-1',
-          description: `
-            Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
-            <br />
-            <br />
-            Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
-          `,
-        },
-        {
-          image: 'slide-2',
-          description: `
-            Тепер вам не потрібно платити повну вартість номера!
-          `,
-          services: [
-            {
-              icon: 'pool',
-              title: 'бассейн'
-            },
-            {
-              icon: 'spa',
-              title: '6 видів саун'
-            },
-            {
-              icon: 'gym',
-              title: 'тренажерний зал'
-            },
-            {
-              icon: 'mini-bar',
-              title: 'фітобар'
-            },
-          ],
-        },
-        {
-          image: 'slide-3',
-          description: `
-            Тепер вам не потрібно платити повну вартість номера!
-          `,
-          book: {
-            title: 'Book now',
-            link: '#'
+          {
+            icon: 'spa',
+            title: '6 видів саун'
           },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
+        },
+        slides: [
+          {
+            image: 'slide-1',
+            description: `
+              Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+              <br />
+              <br />
+              Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+            `,
+          },
+          {
+            image: 'slide-2',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            services: [
+              {
+                icon: 'pool',
+                title: 'бассейн'
+              },
+              {
+                icon: 'spa',
+                title: '6 видів саун'
+              },
+              {
+                icon: 'gym',
+                title: 'тренажерний зал'
+              },
+              {
+                icon: 'mini-bar',
+                title: 'фітобар'
+              },
+            ],
+          },
+          {
+            image: 'slide-3',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            book: {
+              title: 'Book now',
+              link: '#'
+            },
+          }
+        ]
+      },
+      {
+        title: `
+          spa day use offer
+        `,
+        image: 'spa',
+        subTitle: `
+          spa day use offer
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
+          },
+          {
+            icon: 'spa',
+            title: '6 видів саун'
+          },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
         }
-      ]
-    },
-  ];
+      },
+      {
+        title: `
+          дегустаційний вікенд
+        `,
+        image: 'degustation',
+        subTitle: `
+          дегустаційний вікенд
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
+          },
+          {
+            icon: 'spa',
+            title: '6 видів саун'
+          },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
+        }
+      },
+      {
+        title: `
+          романтичний вікенд
+        `,
+        image: 'romantic',
+        subTitle: `
+          романтичний вікенд
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
+          },
+          {
+            icon: 'spa',
+            title: '6 видів саун'
+          },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
+        }
+      },
+      {
+        title: `
+          корпоративна співпраця
+        `,
+        image: 'corporate',
+        subTitle: `
+          корпоративна співпраця
+        `,
+        description: `
+          Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+          <br />
+          <br />
+          Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+        `,
+        services: [
+          {
+            icon: 'pool',
+            title: 'бассейн'
+          },
+          {
+            icon: 'spa',
+            title: '6 видів саун'
+          },
+          {
+            icon: 'gym',
+            title: 'тренажерний зал'
+          },
+          {
+            icon: 'mini-bar',
+            title: 'фітобар'
+          },
+        ],
+        book: {
+          title: 'Book now',
+          link: '#'
+        },
+        slides: [
+          {
+            image: 'slide-1',
+            description: `
+              Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!
+              <br />
+              <br />
+              Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:
+            `,
+          },
+          {
+            image: 'slide-2',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            services: [
+              {
+                icon: 'pool',
+                title: 'бассейн'
+              },
+              {
+                icon: 'spa',
+                title: '6 видів саун'
+              },
+              {
+                icon: 'gym',
+                title: 'тренажерний зал'
+              },
+              {
+                icon: 'mini-bar',
+                title: 'фітобар'
+              },
+            ],
+          },
+          {
+            image: 'slide-3',
+            description: `
+              Тепер вам не потрібно платити повну вартість номера!
+            `,
+            book: {
+              title: 'Book now',
+              link: '#'
+            },
+          }
+        ]
+      },
+    ],
+  };
+
 section.cards
 
   ul.cards__list
-    for card, index in cards
+    for card, index in cards.items
       - const cardImage = card.image ?? '';
       - const cardTitle = card.title ?? '';
       - const cardSubtitle = card.subTitle ?? '';
@@ -289,7 +293,7 @@ section.cards
       - const slides = card.slides ?? [];
       - const cardsBottomClass = (slides.length > 0) ? ' cards__bottom--slider' : '';
       - const cardsContentClass = (slides.length > 0) ? ' cards__content--desktop' : '';
-      - const oddEvenLast = ((index + 1) % 2 === 0) ? 'even' : ((index + 1 === cards.length) ? 'last' : 'odd');
+      - const oddEvenLast = ((index + 1) % 2 === 0) ? 'even' : ((index + 1 === cards.items.length) ? 'last' : 'odd');
 
       li(class="cards__item cards__item--" + oddEvenLast)
         div.cards__top
@@ -297,7 +301,7 @@ section.cards
             | !{cardTitle}
 
           div(class="cards__img-wrapper cards__img-wrapper--" + oddEvenLast)
-            +img('cards', '', ('cards-' + cardImage), cardTitle)
+            +img('cards', pageName, ('cards-' + cardImage), cardTitle)
 
         div(class="cards__bottom cards__bottom--" + oddEvenLast)
           if slides.length > 0
@@ -312,7 +316,7 @@ section.cards
 
                 +slide('cards')
                   div(class="cards__img-wrapper cards__img-wrapper--" + oddEvenLast)
-                    +img('cards', '', ('cards-' + slideImage), slideTitle)
+                    +img('cards', pageName, ('cards-' + slideImage), slideTitle)
 
                   div.cards__content.cards__content--mobile
                     if slideTitle.length > 0
@@ -324,7 +328,7 @@ section.cards
                         | !{slideDescription}
 
                     if slideServices.length > 0
-                      +services('cards', 'cards', slideServices, oddEvenLast)
+                      +services('cards', cards.sectionName, slideServices, oddEvenLast)
 
                     if slideBook !== {} && slideBook.title && slideBook.title.length > 0 && slideBook.link && slideBook.link.length > 0
                       a(class="cards__button button cards__button--" + oddEvenLast href="" + slideBook.link)
@@ -340,7 +344,7 @@ section.cards
               | !{cardDescription}
 
             if cardServices.length > 0
-              +services('cards', 'cards', cardServices, oddEvenLast)
+              +services('cards', cards.sectionName, cardServices, oddEvenLast)
 
             if cardBook.title && cardBook.title.length > 0 && cardBook.link && cardBook.link.length
               a(class="cards__button button cards__button--" + oddEvenLast href="" + cardBook.link)

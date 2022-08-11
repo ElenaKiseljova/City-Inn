@@ -1,7 +1,7 @@
-mixin slider(sectionName = 'home', sectionModificator = '')
-  - const additionalClassesSwiper = sectionName + '__slider ' + ((sectionModificator !== '') ? (sectionName + '__slider--' + sectionModificator ) : '') + ' ' + sectionName + '__slider--' + pageName;
-  - const additionalClassesSwiperWrapper = sectionName + '__slider-wrapper ' + ((sectionModificator !== '') ? (sectionName + '__slider-wrapper--' + sectionModificator) : '');
-  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((sectionModificator !== '') ? (sectionName + '__slide--' + sectionModificator) : '');
+mixin slider(sectionName = 'home', type = '', sectionModificator = pageName)
+  - const additionalClassesSwiper = sectionName + '__slider ' + ((type !== '') ? (sectionName + '__slider--' + type ) : '') + ' ' + sectionName + '__slider--' + sectionModificator;
+  - const additionalClassesSwiperWrapper = sectionName + '__slider-wrapper ' + ((type !== '') ? (sectionName + '__slider-wrapper--' + type) : '');
+  - const additionalClassesSwiperSlide = sectionName + '__slide ' + ((type !== '') ? (sectionName + '__slide--' + type) : '');
 
   div(class="swiper " +  additionalClassesSwiper)
     div(class="swiper-wrapper " + additionalClassesSwiperWrapper)

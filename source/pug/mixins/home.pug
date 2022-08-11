@@ -31,7 +31,7 @@ mixin home(attr = {})
           | !{title}
 
         div(class="home__img-wrapper home__img-wrapper--" + sectionName)
-          +img('home', '', imageName, title)
+          +img('home', sectionName, imageName, title)
 
       div(class="home__bottom home__bottom--" + sectionName)
         h2(class=" home__title home__title--desktop title home__title--" + sectionName)

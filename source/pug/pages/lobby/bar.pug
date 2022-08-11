@@ -27,6 +27,7 @@
       text: 'забронювати',
       link: '#',
     },
+    sectionName: 'bar',
   };
 
 section.bar
@@ -36,7 +37,7 @@ section.bar
         | !{bar.title}
 
       div.bar__img-wrapper
-        +img('bar', '', bar.image.jpg.mobile, bar.title)
+        +img('bar', pageName, bar.image.jpg.mobile, bar.title)
 
     div.bar__bottom
       div.bar__content

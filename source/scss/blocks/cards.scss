@@ -34,6 +34,10 @@
 
     &.active {
       z-index: 100;
+
+      .cards__pagination {
+        opacity: 0;
+      }
     }
 
     @media screen and (min-width: $tablet) {

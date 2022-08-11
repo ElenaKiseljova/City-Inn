@@ -29,7 +29,7 @@ mixin promo(attr)
         if sectionName === 'home' || sectionName === 'smart'
           div(class="promo__buttons")
             if offer && offer.title && offer.title !== '' && offer.link && offer.link !== ''
-              a(class="promo__button button button--big button--book-now" href="" + offer.link)
+              a(class="promo__button button" href="" + offer.link)
                 span
                   |  #{offer.title}
 

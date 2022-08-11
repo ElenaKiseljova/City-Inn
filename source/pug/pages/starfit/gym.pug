@@ -14,41 +14,8 @@
     images: [
       'slide-3', 'slide-2', 'slide-1'
     ],
+    sectionName: 'gym',
   };
 
-section.gym
-  div.gym__container.container
-    div.gym__top
-      h2.title-inner.gym__title.gym__title--mobile
-        | !{gym.title.mobile}
-
-      if gym.images.length > 0
-        +slider('gym')
-          for image in gym.images
-            +slide('gym')
-              +img('gym', '', image, gym.title)
-
-        +pagination('gym')
-
-    div.gym__bottom
-      h2.title-inner.gym__title.gym__title--desktop
-        | !{gym.title}
-
-      if gym.description !== ''
-        p.gym__description
-          | !{gym.description}
-
-      if gym.worktime !== ''
-        +worktime('gym', '', gym.worktime)
-
-      div.gym__buttons
-        if gym.rules && gym.rules.text && gym.rules.text !== '' && gym.rules.link && gym.rules.link !== ''
-          a(class="gym__button button" href="" + gym.rules.link)
-            span
-              | !{gym.rules.text}
-
-          div.gym__arrow-top.arrow-top
-            svg(width="48" height="48")
-              use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-top")
-
++gym(gym)
 

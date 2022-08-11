@@ -13,7 +13,7 @@
 
     overflow: visible;
 
-    &--lobby {
+    &--kitchen {
       padding: 98px 0;
     }
 
@@ -26,20 +26,28 @@
       padding: 0;
     }
 
-    &--starfit {
+    &--saunas {
       padding: 140px 0;
     }
 
-    &--conference-service,
-    &--group {
+    &--locations,
+    &--smart-rooms {
+      padding: 0;
+    }
+
+    &--coffee {
+      padding: 115px 0 0;
+    }
+
+    &--halls {
       padding: 0;
     }
   }
 
   &__container {
 
-    &--starfit,
-    &--conference-service {
+    &--saunas,
+    &--locations {
       position: relative;
     }
 
@@ -61,12 +69,13 @@
 
     overflow: visible;
 
-    &--starfit,
-    &--conference-service {
+    &--saunas,
+    &--locations {
       position: static;
     }
 
-    &--group {
+    &--smart-rooms,
+    &--halls {
       height: calc((363 / 414)* 100vw);
     }
 
@@ -74,18 +83,25 @@
       height: auto;
       min-height: 478px;
 
-      &--lobby,
+      &--kitchen,
       &--attraction,
-      &--starfit {
+      &--saunas,
+      &--coffee {
         order: 2;
+      }
+
+      &--smart-rooms,
+      &--halls {
+        min-height: 585px;
       }
     }
 
     @media screen and (min-width: $desktop) {
       min-height: 840px;
 
-      &--lobby,
-      &--attraction {
+      &--kitchen,
+      &--attraction,
+      &--coffee {
         order: 1;
       }
 
@@ -93,11 +109,11 @@
         order: 2;
       }
 
-      &--starfit {
+      &--saunas {
         min-height: auto;
       }
 
-      &--group {
+      &--smart-rooms {
         padding-top: 170px;
       }
     }
@@ -126,7 +142,7 @@
       margin-top: 28px;
     }
 
-    &--conference-service {
+    &--locations {
       top: calc(100vw - 34px);
 
       margin: 0;
@@ -134,9 +150,15 @@
       transform: translateY(-100%);
     }
 
-    &--group {
+    &--smart-rooms {
       top: auto;
       bottom: 33px;
+    }
+
+    &--halls {
+      bottom: 53px;
+
+      letter-spacing: -0.09em;
     }
 
     @media screen and (min-width: $tablet) {
@@ -163,7 +185,7 @@
         margin-left: -117px;
       }
 
-      &--lobby {
+      &--kitchen {
         margin-top: 0;
         margin-right: calc((100% + 9px) - 538px);
         margin-bottom: 47px;
@@ -201,7 +223,7 @@
         margin-left: 0;
       }
 
-      &--starfit {
+      &--saunas {
         min-width: 538px;
 
         margin-top: 0;
@@ -210,7 +232,7 @@
         margin-left: 0;
       }
 
-      &--conference-service {
+      &--locations {
         min-width: 536px;
 
         margin-right: calc((100% + 232px) - 536px);
@@ -220,12 +242,24 @@
         transform: translateY(0);
       }
 
-      &--group {
+      &--smart-rooms {
         min-width: 707px;
 
         margin-right: calc((100% + 377px) - 707px);
         margin-bottom: 51px;
         margin-left: -377px;
+      }
+
+      &--halls {
+        width: 100%;
+        min-width: 785px;
+        min-height: 257px;
+
+        margin-right: calc((100% + 265px) - 785px);
+        margin-bottom: -113px;
+        margin-left: -265px;
+
+        letter-spacing: normal;
       }
     }
 
@@ -245,7 +279,7 @@
         margin-left: -184px;
       }
 
-      &--lobby {
+      &--kitchen {
         min-width: 784px;
 
         margin-top: 0;
@@ -257,7 +291,9 @@
       }
 
       &--around,
-      &--attraction {
+      &--attraction,
+      &--smart-rooms,
+      &--halls {
         opacity: 1;
       }
 
@@ -281,7 +317,7 @@
         margin-left: -318px;
       }
 
-      &--starfit {
+      &--saunas {
         min-width: 719px;
 
         margin-top: 0;
@@ -292,22 +328,107 @@
         opacity: 1;
       }
 
-      &--conference-service {
+      &--locations {
         min-width: 784px;
 
         margin-top: 0;
-        margin-left: calc((100% + 106px) - 784px);
+        margin-right: calc((100% + 106px) - 784px);
         margin-bottom: 235px;
         margin-left: -106px;
       }
 
-      &--group {
+      &--smart-rooms {
         min-width: 1128px;
 
         margin-top: 0;
-        margin-left: calc((100% + 437px) - 1128px);
+        margin-right: calc((100% + 437px) - 1128px);
         margin-bottom: 486px;
         margin-left: -437px;
+      }
+
+      &--halls {
+        min-width: 1128px;
+        min-height: 280px;
+
+        margin-top: -23px;
+        margin-right: calc((100% + 735px) - 1128px);
+        margin-bottom: 197px;
+        margin-left: -735px;
+      }
+    }
+  }
+
+  &__title-small {
+    display: none;
+
+    @extend %w100;
+
+    @media screen and (min-width: $desktop) {
+      display: block;
+
+      margin-bottom: 115px;
+
+      @include font(30, 37, 700);
+
+      text-transform: uppercase;
+
+      color: $light-yellow;
+
+      opacity: 0.8;
+
+      &--halls {
+        margin-bottom: 41px;
+
+        color: $yellow;
+      }
+    }
+  }
+
+  &__title-image {
+    position: absolute;
+
+    top: 40px;
+    left: 15px;
+
+    z-index: 3;
+
+    width: calc(100% - 30px);
+
+    &--tablet {
+      display: none;
+    }
+
+    @media screen and (min-width: $mobile) {
+      left: 40px;
+
+      width: calc(100% - 80px);
+    }
+
+    @media screen and (min-width: $tablet) {
+      position: static;
+
+      width: fit-content;
+
+      margin-bottom: 35px;
+
+      &--tablet {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+
+      &--tablet {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
       }
     }
   }
@@ -319,21 +440,9 @@
 
     margin: 0 calc((100% - 100vw) / 2);
 
-    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
-    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
-
-    @include before-linear-gradient();
-
-    &--starfit,
-    &--conference-service {
+    &--saunas,
+    &--locations {
       position: static;
-    }
-
-    &--around,
-    &--attraction {
-      &::before {
-        display: none;
-      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -341,25 +450,22 @@
 
       margin: 0 0 0 calc(100% - 50vw);
 
-      &::before {
-        display: none;
-      }
-
-      &--lobby,
+      &--kitchen,
       &--attraction,
-      &--starfit {
+      &--saunas,
+      &--coffee {
         margin: 0 calc(100% - 50vw) 0 0;
       }
 
-      &--starfit {
+      &--saunas {
         position: relative;
       }
 
-      &--starfit {
+      &--saunas {
         min-height: 580px;
       }
 
-      &--conference-service {
+      &--locations {
         position: relative;
       }
     }
@@ -368,8 +474,9 @@
       height: auto;
       min-height: 840px;
 
-      &--lobby,
-      &--attraction {
+      &--kitchen,
+      &--attraction,
+      &--coffee {
         margin: 0 0 0 calc(100% - 50vw);
       }
 
@@ -380,11 +487,11 @@
       }
 
       &--attraction,
-      &--starfit {
+      &--saunas {
         overflow: hidden;
       }
 
-      &--starfit {
+      &--saunas {
         width: 360px;
         height: 420px;
 
@@ -407,6 +514,10 @@
     @media screen and (min-width: $tablet) {
       &--text {
         flex-grow: 1;
+
+        &.event__slider {
+          overflow: visible;
+        }
       }
     }
 
@@ -433,9 +544,9 @@
 
     box-sizing: border-box;
 
-    &--text {
-      height: fit-content;
-    }
+    // &--text {
+    //   height: fit-content;
+    // }
 
     @media screen and (min-width: $tablet) {
       &--text {
@@ -448,18 +559,23 @@
       --height-img: 420px;
       --translateY: 0;
 
-      &--lobby,
-      &--conference-service {
+      &--kitchen,
+      &--locations,
+      &--halls {
         --height-img: 360px;
       }
 
-      &--group {
+      &--smart-rooms {
         --width-img: 559px;
         --height-img: 420px;
         --translateY: -72px;
       }
 
-      &--images:not(.event__slide--around):not(.event__slide--attraction):not(.event__slide--starfit) {
+      &--halls {
+        --translateY: 142px;
+      }
+
+      &--images:not(.event__slide--around):not(.event__slide--attraction):not(.event__slide--saunas) {
         &.swiper-slide-active {
           .event__img {
             width: 100%;
@@ -468,6 +584,15 @@
             transform: translateY(0);
 
             transition: height 0.3s, width 0.3s, transform 0.3s;
+          }
+
+          .event__title-image {
+            top: 0;
+            left: calc((409 / 1440) * 100vw);
+
+            @include font(144, 140, 300);
+
+            transition: font 0.3s linear, top 0.3s linear, left 0.3s linear;
           }
         }
 
@@ -479,6 +604,15 @@
             transform: translateY(var(--translateY, 0));
 
             transition: height 0.3s, width 0.3s, transform 0.3s;
+          }
+
+          .event__title-image {
+            top: calc(var(--height-img) + 15px);
+            left: 0;
+
+            @include font(30, 45, 300);
+
+            transition: font 0.3s linear, top 0.3s linear, left 0.3s linear;
           }
 
           &~.swiper-slide {
@@ -496,9 +630,22 @@
 
         align-items: flex-start;
         justify-content: flex-start;
+
+        &.event__slide--coffee {
+          display: grid;
+
+          grid-template-areas:
+            "a a"
+            "b c";
+
+          grid-template-columns: 1fr 200px;
+          grid-template-rows: 1fr auto;
+
+          column-gap: 49px;
+        }
       }
 
-      &--starfit {
+      &--saunas {
         flex-direction: row;
 
         flex-wrap: wrap;
@@ -506,12 +653,30 @@
     }
   }
 
-  &__picture {
-    @extend %picture;
-  }
-
   &__img {
     @extend %img;
+
+    --before-linear-gradient-from: rgba(0, 0, 0, 0.2);
+    --before-linear-gradient-to: rgba(0, 0, 0, 0.2);
+
+    @include before-linear-gradient();
+
+    &--around,
+    &--attraction {
+      &::before {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__picture {
+    @extend %picture;
   }
 
   &__bottom {
@@ -528,8 +693,8 @@
 
     padding: 95px 0 40px 0;
 
-    &--lobby,
-    &--starfit {
+    &--kitchen,
+    &--saunas {
       padding-top: 40px;
     }
 
@@ -541,16 +706,26 @@
       padding-top: 71px;
     }
 
-    &--starfit {
+    &--saunas {
       padding-bottom: 97px;
     }
 
-    &--conference-service {
+    &--locations {
       padding: 40px 0 88px;
     }
 
-    &--group {
+    &--smart-rooms {
       padding: 135px 0 40px;
+    }
+
+    &--halls {
+      padding: 94px 0 40px;
+    }
+
+    &--coffee {
+      min-height: fit-content;
+
+      padding-top: 40px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -565,10 +740,15 @@
 
       overflow: visible;
 
-      &--lobby,
-      &--starfit {
+      &--kitchen,
+      &--saunas,
+      &--attraction,
+      &--coffee {
         order: 1;
+      }
 
+      &--kitchen,
+      &--saunas {
         padding: 47px 31px 38px 0;
       }
 
@@ -577,30 +757,40 @@
       }
 
       &--attraction {
-        order: 1;
-
         padding: 13px 36px 38px 0;
       }
 
-      &--starfit {
+      &--saunas {
         padding: 40px 36px 40px 0;
       }
 
-      &--conference-service {
+      &--locations {
         padding: 34px 4px 40px 40px;
       }
 
-      &--group {
+      &--smart-rooms {
         padding: 16px 4px 40px 41px;
+      }
+
+      &--coffee {
+        padding: 50px 40px 40px 0;
+      }
+
+      &--halls {
+        padding: 14px 9px 38px 37px;
       }
     }
 
     @media screen and (min-width: $desktop) {
       padding: 0 0 0 87px;
 
-      &--lobby {
+      &--kitchen,
+      &--attraction,
+      &--coffee {
         order: 2;
+      }
 
+      &--kitchen {
         padding: 35px 78px 40px 42px;
       }
 
@@ -613,25 +803,27 @@
       }
 
       &--attraction {
-        order: 2;
-
         padding: 44px 25px 136px 119px;
       }
 
-      &--starfit {
+      &--saunas {
         position: static;
 
         padding: 80px 80px 0 0;
       }
 
-      &--conference-service {
+      &--locations {
         padding: 34px 74px 0 42px;
       }
 
-      &--group {
+      &--smart-rooms {
         position: relative;
 
         padding: 0 42px 0 77px;
+      }
+
+      &--coffee {
+        padding: 435px 48px 66px 60px;
       }
     }
   }
@@ -647,35 +839,44 @@
 
     color: var(--color-page, #ffffff);
 
-    &--starfit,
-    &--conference-service {
+    &--saunas,
+    &--locations {
       margin-bottom: 40px;
     }
 
-    &--group {
+    &--smart-rooms,
+    &--halls {
       --color-page: #{$yellow};
 
-      margin-bottom: 55px;
-
       @include font(30, 37, 500);
+    }
+
+    &--smart-rooms {
+      margin-bottom: 55px;
+    }
+
+    &--halls {
+      margin-bottom: 31px;
     }
 
     @media screen and (min-width: $tablet) {
       margin-bottom: 44px;
 
-      @include font(30, 37, 700);
-
-      &--starfit {
+      &--saunas {
         margin-bottom: 24px;
       }
 
-      &--conference-service {
+      &--locations {
         @include font(24, 29, 700);
 
         margin-bottom: 51px;
       }
 
-      &--group {
+      &--smart-rooms {
+        margin-bottom: 13px;
+      }
+
+      &--halls {
         margin-bottom: 13px;
       }
     }
@@ -683,15 +884,23 @@
     @media screen and (min-width: $desktop) {
       margin-bottom: 40px;
 
-      &--conference-service {
+      font-weight: 700;
+
+      opacity: 0.8;
+
+      &--locations {
         margin-bottom: 46px;
         margin-left: 4px;
       }
 
-      &--group {
+      &--smart-rooms {
         order: 0;
 
         margin-bottom: 46px;
+      }
+
+      &--halls {
+        display: none;
       }
     }
   }
@@ -701,15 +910,41 @@
 
     @extend %w100;
 
+    &--coffee {
+      margin-bottom: 40px;
+    }
+
+    &--halls {
+      flex-grow: 0;
+    }
+
     @media screen and (min-width: $tablet) {
-      &--group {
+      &--smart-rooms {
         flex-grow: 0;
+      }
+
+      &--coffee {
+        margin-bottom: 20px;
+      }
+
+      &--kitchen {
+        margin-bottom: 100px;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      &--group {
+      &--smart-rooms {
         order: 2;
+      }
+
+      &--coffee {
+        grid-area: a;
+
+        margin-bottom: 64px;
+      }
+
+      &--kitchen {
+        margin-bottom: 32px;
       }
     }
   }
@@ -729,7 +964,7 @@
       @include font(14, 20, 600);
     }
 
-    &--group {
+    &--smart-rooms {
       @include font(16, 24, 400);
     }
 
@@ -742,7 +977,7 @@
         @include font(12, 20, 600);
       }
 
-      &--group {
+      &--smart-rooms {
         @include font(14, 20, 400);
       }
     }
@@ -756,7 +991,7 @@
         margin-top: 36px;
       }
 
-      &--group {
+      &--smart-rooms {
         opacity: 1;
       }
     }
@@ -772,13 +1007,28 @@
 
     margin-top: 40px;
 
-    &--group {
+    &--halls {
+      flex-grow: 1;
+
+      align-items: flex-end;
+    }
+
+    &--smart-rooms {
       margin-top: 45px;
     }
 
+    &--halls {
+      margin-top: 56px;
+    }
+
     @media screen and (min-width: $tablet) {
-      &--group {
+      &--smart-rooms {
         flex-grow: 1;
+      }
+
+      &--coffee,
+      &--halls {
+        margin-top: 32px;
       }
     }
 
@@ -793,16 +1043,26 @@
         margin: 40px auto 0 168px;
       }
 
-      &--starfit {
+      &--saunas {
         width: fit-content;
 
         margin: 83px 0 0 59px;
       }
 
-      &--group {
+      &--smart-rooms {
         order: 3;
 
         margin: 48px 0 0 144px;
+      }
+
+      &--coffee {
+        grid-area: c;
+
+        margin-top: 0;
+      }
+
+      &--halls {
+        margin-top: 36px;
       }
     }
   }
@@ -811,14 +1071,11 @@
     min-width: 100%;
 
     @media screen and (min-width: $desktop) {
-      min-width: calc(200 / 554 * 100%);
+      min-width: 200px;
 
-      &--lobby {
+      &--kitchen,
+      &--coffee {
         --background-color-button: #{$white-20};
-      }
-
-      &--group {
-        min-width: 200px;
       }
     }
   }
@@ -827,7 +1084,7 @@
     display: none;
 
     @media screen and (min-width: $desktop) {
-      &--starfit {
+      &--saunas {
         display: flex;
 
         margin-left: 24px;
@@ -844,7 +1101,7 @@
       margin-bottom: 55px;
       margin-left: 193px;
 
-      &--lobby {
+      &--kitchen {
         margin-left: 238px;
       }
 
@@ -866,7 +1123,7 @@
         margin: 0;
       }
 
-      &--starfit {
+      &--saunas {
         position: absolute;
 
         bottom: 0;
@@ -875,13 +1132,22 @@
         margin: 0;
       }
 
-      &--group {
+      &--smart-rooms {
         position: absolute;
 
         bottom: 0;
         left: 77px;
 
         margin: 0;
+      }
+
+      &--coffee {
+        margin-bottom: 55px;
+        margin-left: -18px;
+      }
+
+      &--halls {
+        margin: 0 auto 68px 0;
       }
     }
   }
@@ -893,7 +1159,8 @@
       bottom: 40px;
     }
 
-    &--group {
+    &--smart-rooms,
+    &--halls {
       &.swiper-pagination {
         bottom: -48px;
       }
@@ -913,21 +1180,29 @@
   &__services {
     margin-top: 49px;
 
-    &--group {
+    &--smart-rooms {
       margin-top: 51px;
     }
 
+    &--halls {
+      margin-top: 30px;
+    }
+
     @media screen and (min-width: $tablet) {
-      &--group {
+      &--smart-rooms {
         margin-top: 62px;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      &--group {
+      &--smart-rooms {
         order: 1;
 
         margin: 0 0 112px;
+      }
+
+      &--halls {
+        margin-top: 43px;
       }
     }
   }
@@ -936,9 +1211,34 @@
     margin-top: 45px;
 
     @media screen and (min-width: $desktop) {
-      &--starfit {
+      &--saunas {
         margin-top: 83px;
       }
+    }
+  }
+
+  &__list {
+    width: 100%;
+
+    margin: 0;
+    padding-left: 15px;
+
+    @include font(14, 20, 400);
+
+    color: var(--color-page, #ffffff);
+
+    @media screen and (min-width: $tablet) {
+      @include font(12, 20, 400);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(14, 20, 400);
+    }
+  }
+
+  &__price {
+    @media screen and (min-width: $desktop) {
+      grid-area: b;
     }
   }
 }

@@ -57,6 +57,7 @@
         `,
       },
     ],
+    sectionName: 'doings',
   };
 
 section(class="doings")
@@ -73,7 +74,7 @@ section(class="doings")
             - const text = slide.text ?? '';
 
             div.doings__top
-              +img('doings', '', image.jpg.mobile, subTitle)
+              +img('doings', pageName, image.jpg.mobile, subTitle)
 
             div.doings__bottom
               if subTitle && subTitle !== ''

@@ -489,17 +489,16 @@
   }
 
   &__btn {
-    &--restaurant {
-      min-width: calc(240 / 478 * 100%);
-    }
-
-    &--about {
-      min-width: 208px;
-
-      margin: 0 auto 0 0;
-    }
+    min-width: 100%;
 
     @media screen and (min-width: $tablet) {
+      &--about {
+        min-width: 208px;
+
+        margin: 0 auto 0 0;
+      }
+
+      &--restaurant,
       &--lobby {
         min-width: 162px;
       }
@@ -783,6 +782,8 @@
   }
 
   &__button {
+    min-width: 100%;
+
     &:first-of-type {
       margin-bottom: 40px;
     }

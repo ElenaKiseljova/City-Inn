@@ -1,7 +1,11 @@
-mixin services(sectionName = 'cards', modificator = '', services = [], sectionModificator = null)
-  - modificator = modificator === '' ? pageName : modificator;
-  - sectionModificator = sectionModificator ? (sectionName + "__services--" + sectionModificator) : '';
+mixin services(sectionClass = 'cards', sectionModification = '', services = [], additionalListModificator = null, additionalItem = {})
+  - sectionModification = (sectionModification === '') ? pageName : sectionModification;
+  - additionalListModificator = additionalListModificator ? (' ' + sectionClass + '__services--' + additionalListModificator + ' ') : '';
 
-  ul(class="" + sectionName + "__services " + sectionModificator + " services services--" + modificator)
+  ul(class="" + sectionClass + "__services " + sectionClass + "__services--" + sectionModification + additionalListModificator + " services services--" + sectionModification)
     for service in services
-      +service(service, modificator)
+      +service(service, sectionModification)
+
+    if additionalItem.worktime
+      li.services__item.services__item--worktime
+        +worktime('spa', 'tablet', additionalItem.worktime)

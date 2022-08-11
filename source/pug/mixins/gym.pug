@@ -1,0 +1,39 @@
+mixin gym(attr = {})
+  section(class="gym gym--" + pageName)
+    div(class="gym__container container gym__container--" + pageName)
+      div(class="gym__top gym__top--" + pageName)
+        h2(class="title-inner gym__title gym__title--mobile gym__title--" + pageName)
+          | !{attr.title}
+
+        if attr.images.length > 0
+          +slider('gym')
+            for image in attr.images
+              +slide('gym')
+                +img('gym', pageName, image, attr.title)
+
+          +pagination('gym')
+
+      div(class="gym__bottom gym__bottom--" + pageName)
+        h2(class="title-inner gym__title gym__title--desktop gym__title--" + pageName)
+          | !{attr.title}
+
+        if attr.subTitle && attr.subTitle !== ''
+          h3(class="gym__subtitle gym__subtitle--" + pageName)
+            | !{attr.subTitle}
+
+        if attr.description && attr.description !== ''
+          p(class="gym__description gym__description--" + pageName)
+            | !{attr.description}
+
+        if attr.worktime && attr.worktime !== ''
+          +worktime('gym', '', attr.worktime)
+
+        div(class="gym__buttons gym__buttons--" + pageName)
+          if attr.rules && attr.rules.text && attr.rules.text !== '' && attr.rules.link && attr.rules.link !== ''
+            a(class="gym__button button gym__button--" + pageName href="" + attr.rules.link)
+              span
+                | !{attr.rules.text}
+
+            div(class="gym__arrow-top arrow-top gym__arrow-top--" + pageName)
+              svg(width="48" height="48")
+                use(xlink:href="img/sprites/sprite-mono.svg#icon-arrow-top")

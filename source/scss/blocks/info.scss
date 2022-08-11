@@ -42,7 +42,7 @@
         "c d"
         "c e";
 
-      grid-template-columns: calc((305 / 696) * 100%) calc((256 / 696) * 100%);
+      grid-template-columns: calc((305 / 696) * 100%) 1fr;
 
       justify-content: space-between;
       justify-items: end;
@@ -94,24 +94,14 @@
     @media screen and (min-width: $tablet) {
       grid-area: b;
 
-      justify-content: end;
-
-      max-width: calc((538 / 696) * 100%);
-
       margin-bottom: 64px;
 
       &--conference {
-        max-width: 100%;
-
         margin-bottom: 116px;
       }
     }
 
     @media screen and (min-width: $desktop) {
-      justify-content: start;
-
-      max-width: 100%;
-
       margin-bottom: 0;
 
       &--conference {
@@ -229,6 +219,8 @@
       grid-area: e;
 
       align-self: end;
+
+      min-width: 200px;
 
       height: fit-content;
 

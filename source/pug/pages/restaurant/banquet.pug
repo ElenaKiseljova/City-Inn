@@ -6,6 +6,7 @@
       зал
     `,
     images: ['banquet-1', 'banquet-1', 'banquet-1'],
+    sectionName: 'banquet',
   };
 section.banquet
   div.banquet__container.container
@@ -16,6 +17,6 @@ section.banquet
       +slider('banquet')
         each image in banquet.images
           +slide('banquet')
-            +img('banquet', '', image, banquet.title)
+            +img('banquet', pageName, image, banquet.title)
 
       div.banquet__pagination.pagination.swiper-pagination

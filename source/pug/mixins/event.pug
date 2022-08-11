@@ -1,5 +1,7 @@
 mixin event(attr = {})
   - const title = attr.title ?? '';
+  - const titleSmall = attr.titleSmall ?? '';
+  - const subTitle = attr.subTitle ?? '';
 
   - const slides = attr.slides ?? [];
   - const content = attr.content ?? null;
@@ -8,22 +10,33 @@ mixin event(attr = {})
 
   section(class="event event--" + sectionName)
     div(class="event__container container event__container--" + sectionName)
+      if (titleSmall && titleSmall !== '') || (subTitle && subTitle !== '')
+        h2(class="event__title-small event__title-small--" + sectionName)
+          | !{titleSmall || subTitle}
+
+    div(class="event__container container event__container--" + sectionName)
       div(class="event__top event__top--" + sectionName)
-        h2(class="title-inner event__title event__title--mobile event__title--" + sectionName)
-          | !{title}
+        if title && title !== ''
+          h2(class="title-inner event__title event__title--mobile event__title--" + sectionName)
+            | !{title}
 
         if slides.length > 0
           div(class="event__slider-container event__slider-container--" + sectionName)
-            +slider('event', 'images')
+            +slider('event', 'images', sectionName)
               each slide in slides
                 +slide('event', sectionName, 'images')
-                  +img('event', '', slide.image, title)
+                  +img('event', sectionName, slide.image, title)
 
-            +pagination('event')
+                  if slide.titleImage && slide.titleImage !== ''
+                    h3(class="title-inner event__title-image event__title-image--mobile")
+                      | !{slide.titleImage}
+
+            +pagination('event', sectionName)
 
       div(class="event__bottom event__bottom--" + sectionName)
-        h2(class="title-inner event__title event__title--desktop event__title--" + sectionName)
-          | !{title}
+        if title && title !== ''
+          h2(class="title-inner event__title event__title--desktop event__title--" + sectionName)
+            | !{title}
 
         +navigation('event', sectionName)
 
@@ -31,28 +44,48 @@ mixin event(attr = {})
           +slider('event', 'text')
             each slide in slides
               +slide('event', sectionName, 'text')
-                if slide.title && slide.title !== ''
+                if (slide.title && slide.title !== '') || subTitle
                   h3(class="event__subtitle event__subtitle--" + sectionName)
-                    | !{slide.title}
+                    | !{slide.title || subTitle}
 
-                div(class="event__content event__content--" + sectionName)
-                  if slide.topText && slide.topText !== ''
-                    p.event__text.event__text--top
-                      | !{slide.topText}
+                if slide.titleImage && slide.titleImage !== ''
+                  h3(class="title-inner event__title-image event__title-image--tablet")
+                    | !{slide.titleImage}
 
-                  if slide.bottomText && slide.bottomText !== ''
-                    p.event__text.event__text--bottom
-                      | !{slide.bottomText}
+                if slide.topText || slide.bottomText || slide.text || slide.list
+                  div(class="event__content event__content--" + sectionName)
+                    if slide.topText && slide.topText !== ''
+                      p.event__text.event__text--top
+                        | !{slide.topText}
 
-                  if slide.text && slide.text !== ''
-                    p(class="event__text event__text--" + sectionName)
-                      | !{slide.text}
+                    if slide.bottomText && slide.bottomText !== ''
+                      p.event__text.event__text--bottom
+                        | !{slide.bottomText}
+
+                    if slide.text && slide.text !== ''
+                      p(class="event__text event__text--" + sectionName)
+                        | !{slide.text}
+
+                    if slide.list
+                      - const list = slide.list.split('\r\n');
+                      if list.length > 0
+                        ul(class="event__list")
+                          for item in list
+                            li.event__item
+                              | !{item}
 
                 if slide.worktime && slide.worktime !== ''
-                  +worktime('event', pageName, worktime)
+                  +worktime('event', sectionName, worktime)
 
                 if slide.services && slide.services.length > 0
-                  +services('event', '', slide.services, sectionName)
+                  +services('event', sectionName, slide.services)
+
+                if slide.priceTitle && slide.priceNumber
+                  div(class="event__price price")
+                    h4(class="price__title price__title--" + sectionName)
+                      | #{slide.priceTitle}
+                    p.price__number
+                      | #{slide.priceNumber} ₴
 
                 if slide.button && slide.button.text && slide.button.text !== '' && slide.button.link && slide.button.link !== ''
                   div(class="event__buttons event__buttons--" + sectionName)
@@ -66,7 +99,7 @@ mixin event(attr = {})
 
 
         else if content
-          div.event__content
+          div(class="event__content event__content--" + sectionName)
             if content.title && content.title !== ''
               h3(class="event__subtitle event__subtitle--" + sectionName)
                 | !{content.title}

@@ -3,6 +3,7 @@
     title: 'паркінг',
     text: 'Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.',
     image: 'parking',
+    sectionName: 'parking',
   };
 
 section.parking
@@ -15,4 +16,4 @@ section.parking
         | !{parking.text}
 
     div.parking__img-wrapper
-      +img('parking', '', parking.image)
+      +img('parking', pageName, parking.image)

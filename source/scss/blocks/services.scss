@@ -16,7 +16,7 @@
     row-gap: 16px;
   }
 
-  &--group {
+  &--smart-rooms {
     row-gap: 20px;
   }
 
@@ -37,14 +37,18 @@
   }
 
   @media screen and (min-width: $tablet) {
-    &--spa {
-      grid-template-columns: repeat(auto-fit, calc(151 / 310 * 100%));
+
+    &--spa,
+    &--halls {
+      grid-template-columns: repeat(auto-fit, minmax(151px, max-content));
 
       row-gap: 24px;
     }
 
     &--standart-info {
-      grid-template-columns: repeat(auto-fit, calc(151 / 696 * 100%));
+      grid-template-columns: repeat(auto-fit, minmax(151px, max-content));
+
+      justify-content: flex-end;
 
       row-gap: 24px;
     }
@@ -82,6 +86,8 @@
     &--standart-info {
       grid-template-columns: repeat(auto-fit, minmax(142px, max-content));
 
+      justify-content: flex-start;
+
       column-gap: 26px;
     }
 
@@ -91,7 +97,7 @@
       column-gap: 61px;
     }
 
-    &--group {
+    &--smart-rooms {
       grid-template-columns: repeat(auto-fit, minmax(132px, max-content));
 
       justify-content: start;
@@ -131,11 +137,12 @@
       &--rooms,
       &--standart-info,
       &--warm,
-      &--conference-service,
-      &--group,
+      &--types,
+      &--smart-rooms,
       &--conference-info,
       &--seating,
-      &--prices {
+      &--prices,
+      &--halls {
         flex-direction: row;
       }
 
@@ -172,11 +179,15 @@
       stroke: var(--color-page, #ffffff);
     }
 
-    &--group,
+    &--smart-rooms,
     &--conference-info,
     &--seating,
     &--prices {
       margin-right: 25px;
+    }
+
+    &--halls {
+      margin-right: 32px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -190,21 +201,23 @@
       &--rooms,
       &--standart-info,
       &--warm,
-      &--conference-service,
+      &--types,
       &--conference-info,
-      &--group,
+      &--smart-rooms,
       &--seating,
-      &--prices {
+      &--prices,
+      &--halls {
         margin-bottom: 0;
       }
 
       &--spa,
       &--rooms,
       &--standart-info,
-      &--conference-service,
+      &--types,
       &--conference-info,
-      &--group,
-      &--prices {
+      &--smart-rooms,
+      &--prices,
+      &--halls {
         margin-right: 24px;
       }
 
@@ -242,8 +255,9 @@
       @include font(14, 18, 400);
     }
 
-    &--conference-service,
-    &--seating {
+    &--types,
+    &--seating,
+    &--halls {
       @include font(14, 21, 400);
     }
 

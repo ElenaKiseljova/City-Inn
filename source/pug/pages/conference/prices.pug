@@ -135,6 +135,7 @@
         },
       },
     ],
+    sectionName: 'prices',
   };
 
 section.prices
@@ -150,7 +151,7 @@ section.prices
       for slide in prices.slides
         +slide('prices')
           div.prices__top
-            +img('prices', '', slide.image)
+            +img('prices', pageName, slide.image)
 
           div.prices__bottom
             h3.prices__subtitle
@@ -159,7 +160,7 @@ section.prices
             p.prices__text
               | !{slide.text}
 
-            +services('prices', 'prices', slide.services)
+            +services('prices', prices.sectionName, slide.services)
 
             div(class="prices__price price")
               h4.price__title.price__title--prices
