@@ -28,7 +28,7 @@ mixin event(attr = {})
                   +img('event', sectionName, slide.image, title)
 
                   if slide.titleImage && slide.titleImage !== ''
-                    h3(class="title-inner event__title-image event__title-image--mobile")
+                    h3(class="title-inner event__title-image event__title-image--mobile event__title-image--" + sectionName)
                       | !{slide.titleImage}
 
             +pagination('event', sectionName)
@@ -49,7 +49,7 @@ mixin event(attr = {})
                     | !{slide.title || subTitle}
 
                 if slide.titleImage && slide.titleImage !== ''
-                  h3(class="title-inner event__title-image event__title-image--tablet")
+                  h3(class="title-inner event__title-image event__title-image--tablet event__title-image--" + sectionName)
                     | !{slide.titleImage}
 
                 if slide.topText || slide.bottomText || slide.text || slide.list

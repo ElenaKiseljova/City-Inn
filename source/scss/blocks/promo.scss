@@ -286,7 +286,6 @@
 
       &--rooms,
       &--standart,
-      &--group,
       &--conference-service {
         padding: 175px 0 80px;
       }
@@ -294,14 +293,11 @@
       &--group {
         display: flex;
 
-        padding-top: 100px;
-        padding-bottom: 0;
+        padding: 100px 0 121px;
       }
 
       &--conference {
-        display: flex;
-
-        padding: 122px 0 0;
+        display: none;
       }
     }
 
@@ -314,10 +310,34 @@
 
       margin: 0;
 
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--restaurant &--group,
+      &--conference,
+      &--conference-service {
+        align-items: center;
+      }
+
+      &--about,
+      &--starfit,
+      &--rooms,
+      &--standart,
+      &--conference,
+      &--conference-service {
+        grid-template-columns: 1fr calc(719 / (1440 - 160) * 100%);
+      }
+
+      &--rooms,
+      &--standart,
+      &--conference,
+      &--conference-service {
+        padding: 236px 0 90px;
+      }
+
       &--restaurant {
         grid-template-columns: 1fr calc(690 / (1440 - 160) * 100%);
-
-        align-items: center;
 
         padding: 203px 0 150px 0;
       }
@@ -330,18 +350,6 @@
         padding: 100px 0 127px 0;
       }
 
-      &--about,
-      &--starfit,
-      &--rooms,
-      &--standart,
-      &--group,
-      &--conference,
-      &--conference-service {
-        grid-template-columns: 1fr calc(719 / (1440 - 160) * 100%);
-
-        align-items: center;
-      }
-
       &--about {
         padding: 116px 0 112px 0;
       }
@@ -350,16 +358,10 @@
         padding: 237px 0 142px;
       }
 
-      &--rooms,
-      &--standart,
-      &--group,
-      &--conference,
-      &--conference-service {
-        padding: 236px 0 90px;
-      }
-
       &--group {
-        display: none;
+        grid-template-columns: 260px calc(719 / (1440 - 160) * 100%);
+
+        padding: 161px 0 109px;
       }
 
       &--conference {
