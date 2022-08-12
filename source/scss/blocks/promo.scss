@@ -241,14 +241,13 @@
 
     &--rooms,
     &--standart,
-    &--group,
     &--conference,
     &--conference-service {
       padding: 127px 0 90px;
     }
 
     &--group {
-      display: none;
+      padding: 58px 0 90px;
     }
 
     &--conference {
