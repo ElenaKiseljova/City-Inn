@@ -289,7 +289,7 @@ export default () => {
     const mapEl = document.querySelector('#map');
 
     if (mapEl) {
-      const map = new google.maps.Map(document.querySelector('#map'), options);
+      new google.maps.Map(document.querySelector('#map'), options);
     }
   });
 };

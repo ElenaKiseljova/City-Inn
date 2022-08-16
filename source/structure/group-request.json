@@ -1,0 +1,538 @@
+{
+  "status": "success",
+  "content": {
+    "title": "group request",
+    "seoTitle": "group request",
+    "seoDescription": "group request from city inn",
+    "template": "group",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "content": {
+      "bottom": [],
+      "top": {
+        "description": ""
+      }
+    },
+    "sections": [
+      {
+        "title": "smart-підхід",
+        "tabs": [
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          }
+        ],
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/alesha-4.webp",
+              "tablet": "/storage/media/2022/07/alesha-4.webp",
+              "desktop": "/storage/media/2022/07/alesha-4.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/alesha-3.jpg",
+              "tablet": "/storage/media/2022/07/alesha-3.jpg",
+              "desktop": "/storage/media/2022/07/alesha-3.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "title": "smart номери",
+        "rooms": [
+          {
+            "id": 1,
+            "title": "standart double",
+            "code": "standart_double",
+            "price": 3100,
+            "description": "Сучасний компактний номер, який ідеально підходить для розміщення 1-2 гостей, які зупиняються на період 1-2 ночі і не планують багато часу проводити в номері. Зазвичай цей номер обирають наші корпоротивні партнери для відряджень або групових поселень. \r\n\r\nВ кожному номері є ванна кімната з душем та санвузлом. Зона для сну з 1 великим або 2 ліжками.",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/standart_double"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "standart twin",
+            "code": "standart_twin",
+            "price": 3100,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/standart_twin"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "2 ліжка",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "superior double",
+            "code": "superior_double",
+            "price": 3000,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/superior_double"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "superior twin",
+            "code": "superior_twin",
+            "price": 3100,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network-2.webp",
+                "tablet": "/storage/media/2022/07/network-2.webp",
+                "desktop": "/storage/media/2022/07/network-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network-2.jpg",
+                "tablet": "/storage/media/2022/07/network-2.jpg",
+                "desktop": "/storage/media/2022/07/network-2.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/superior_twin"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "2 ліжка",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "superior family",
+            "code": "superior_family",
+            "price": 3100,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network-2.webp",
+                "tablet": "/storage/media/2022/07/network-2.webp",
+                "desktop": "/storage/media/2022/07/network-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network-2.jpg",
+                "tablet": "/storage/media/2022/07/network-2.jpg",
+                "desktop": "/storage/media/2022/07/network-2.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/superior_family"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "junior suite",
+            "code": "junior_suite",
+            "price": 3100,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/junior_suite"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "2 ліжка",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "title": "suite",
+            "code": "suite",
+            "price": 3100,
+            "description": "test",
+            "previewImage": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "more": {
+              "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+              "link": "/rooms/suite"
+            },
+            "services": [
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "СНІДАНКИ",
+        "subTitle": "організувуємо харчування під ваші потреби",
+        "button": {
+          "text": "MENU",
+          "link": "google.com"
+        },
+        "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.",
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/alesha-4.webp",
+              "tablet": "/storage/media/2022/07/alesha-4.webp",
+              "desktop": "/storage/media/2022/07/alesha-4.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/alesha-3.jpg",
+              "tablet": "/storage/media/2022/07/alesha-3.jpg",
+              "desktop": "/storage/media/2022/07/alesha-3.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "title": "",
+        "subTitle": "проведіть зустріч у",
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "КОНФЕРЕНЦ ЗАЛИ",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.",
+            "button": {
+              "text": "VIEW MORE",
+              "link": "/conference-service/conference-hall/"
+            },
+            "services": [
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "Meeting Room",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.",
+            "button": {
+              "text": "VIEW MORE",
+              "link": "/conference-service/meeting-room/"
+            },
+            "services": [
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "КОМПЛЕКСІ SMARTFIT",
+        "subTitle": "відпочинок гостей у спортивному",
+        "button": {
+          "text": "Про STARFIT",
+          "link": "/starfit/"
+        },
+        "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit. Nunc velit dui, tristique sed enim nec, fringilla interdum eros.",
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "title": "команда",
+        "subTitle": "ваш персональний менеджер",
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "Мар'яна Ніколін",
+            "description": "Менеджер з продажів",
+            "contacts": [
+              {
+                "text": "reception@city-inn.com.ua",
+                "link": "mailto:reception@city-inn.com.ua"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "Андрій Ліпак",
+            "description": "Менеджер з продажів",
+            "contacts": [
+              {
+                "text": "reception@city-inn.com.ua",
+                "link": "mailto:reception@city-inn.com.ua"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

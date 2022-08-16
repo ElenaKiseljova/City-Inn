@@ -80,6 +80,11 @@
 
     margin-bottom: 40px;
 
+    a {
+      --color-social: #{$white};
+      --border-color-social: #{$white};
+    }
+
     @media screen and (min-width: $desktop) {
       margin-bottom: 0;
     }

@@ -1,0 +1,310 @@
+{
+  "status": "success",
+  "content": {
+    "title": "Номери та апартаменти",
+    "seoTitle": "Номери та апартаменти",
+    "seoDescription": "Тепло, затишно, безпечно, комфортно. City Inn The Best!!!",
+    "language": "en",
+    "template": "rooms",
+    "content": {
+      "bottom": [],
+      "top": {
+        "description": "Тепло, затишно, безпечно, комфортно. Ми можемо продовжувати цей список до нескінченності, але одна справа читати, а зовсім інша це відчути. Ми станемо вашим домом, а не просто готелем. 82 номера, 4 категорії площа від 22 до 85 квадратних метрів, номери з 1,2,3 ліжками. Хочете з душем - це легко. Хочете з ванною організуємо. Ми можемо майже все."
+      }
+    },
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "standart double",
+        "code": "standart_double",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/standart_double"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "standart twin",
+        "code": "standart_twin",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/standart_twin"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "2 ліжка",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "superior double",
+        "code": "superior_double",
+        "price": 3000,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/superior_double"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "superior twin",
+        "code": "superior_twin",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/network-2.webp",
+            "tablet": "/storage/media/2022/07/network-2.webp",
+            "desktop": "/storage/media/2022/07/network-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/network-2.jpg",
+            "tablet": "/storage/media/2022/07/network-2.jpg",
+            "desktop": "/storage/media/2022/07/network-2.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/superior_twin"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "2 ліжка",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "superior family",
+        "code": "superior_family",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/network-2.webp",
+            "tablet": "/storage/media/2022/07/network-2.webp",
+            "desktop": "/storage/media/2022/07/network-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/network-2.jpg",
+            "tablet": "/storage/media/2022/07/network-2.jpg",
+            "desktop": "/storage/media/2022/07/network-2.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/superior_family"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "junior suite",
+        "code": "junior_suite",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/junior_suite"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "2 ліжка",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "suite",
+        "code": "suite",
+        "price": 3100,
+        "previewImage": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/network1-2.webp",
+            "tablet": "/storage/media/2022/07/network1-2.webp",
+            "desktop": "/storage/media/2022/07/network1-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/network1-2.jpg",
+            "tablet": "/storage/media/2022/07/network1-2.jpg",
+            "desktop": "/storage/media/2022/07/network1-2.jpg"
+          }
+        },
+        "book": {
+          "title": "BOOK NOW",
+          "link": "google.com"
+        },
+        "more": {
+          "title": "ДІЗНАТИСЬ БІЛЬШЕ",
+          "link": "/rooms/suite"
+        },
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ]
+      }
+    ]
+  }
+}

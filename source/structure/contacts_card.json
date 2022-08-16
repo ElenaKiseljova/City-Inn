@@ -1,0 +1,67 @@
+{
+  "status": "success",
+  "content": {
+    "title": "Contacts",
+    "map": {
+      "center": {
+        "lat": 49.81173756211972,
+        "lng": 24.141566493630982
+      },
+      "zoom": 13
+    },
+    "columns": [
+      {
+        "title": "Адреса",
+        "items": [
+          {
+            "text": "79495 Ivan Franko street, 53b, Vinniki, Lvivska oblast",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "ПРОДАЖІ",
+        "items": [
+          {
+            "text": "sales@city-inn.com.ua",
+            "link": "mailto:sales@city-inn.com.ua"
+          },
+          {
+            "text": "+38 032 247 15 51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      },
+      {
+        "title": "БРОНЮВАННЯ",
+        "items": [
+          {
+            "text": "reservation@city-inn.com.ua",
+            "link": "mailto:reservation@city-inn.com.ua"
+          },
+          {
+            "text": "+38 032 247 15 51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      },
+      {
+        "title": "РЕЦЕПЦІЯ",
+        "items": [
+          {
+            "text": "reception@city-inn.com.ua",
+            "link": "mailto:reception@city-inn.com.ua"
+          },
+          {
+            "text": "+38 032 247 15 51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      }
+    ],
+    "book": {
+      "title": "BOOK NOW",
+      "link": "google.com"
+    }
+  }
+}

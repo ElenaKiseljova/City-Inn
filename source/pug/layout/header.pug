@@ -21,13 +21,13 @@ header(class="page-header")
           button(class="page-header__burger burger __js")
             span(class="visually-hidden") Open/Close menu
             //active
-            <div class="burger__left __js"></div>
+            div(class="burger__left __js")
             //active
-            <div class="burger__right __js"></div>
+            div(class="burger__right __js")
 
           div(class="page-header__social __js page-header__social--" + pageName)
             - social = ['phone', 'offer'];
-            - classSocialDirection = 'vertical';
+            - socialDirection = 'vertical';
             include ../blocks/social.pug
   //active
   div(class="page-header__menu __js")

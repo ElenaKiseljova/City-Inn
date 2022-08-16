@@ -1,0 +1,180 @@
+{
+  "status": "success",
+  "content": {
+    "title": "conference service",
+    "seoTitle": "conference service",
+    "seoDescription": "conference service from city inn",
+    "template": "conference-service",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "content": {
+      "bottom": [],
+      "top": {
+        "description": ""
+      }
+    },
+    "sections": [
+      {
+        "title": "SMART ПІДХІД",
+        "tabs": [
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          }
+        ],
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          }
+        ]
+      },
+      {
+        "title": "ЛОКАЦІЇ",
+        "slides": [
+          {
+            "title": "smart конференц-зал",
+            "description": "Сучасний компактний номер, який ідеально підходить для розміщення 1-2 гостей, які зупиняються на період 1-2 ночі і не планують багато часу проводити в номері. Зазвичай цей номер обирають наші корпоративні партнери для відряджень або групових поселень.",
+            "button": {
+              "text": "VIEW MORE",
+              "link": "/conference-service/conference-hall/"
+            },
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network-2.webp",
+                "tablet": "/storage/media/2022/07/network-2.webp",
+                "desktop": "/storage/media/2022/07/network-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network-2.jpg",
+                "tablet": "/storage/media/2022/07/network-2.jpg",
+                "desktop": "/storage/media/2022/07/network-2.jpg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "ТИПИ ЗАХОДІВ",
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "КОНФЕРЕНЦІЯ",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "button": {
+              "text": "ЗАБРОНЮВАТИ",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "2 ліжка",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "ПЕРЕГОВОРИ",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "button": {
+              "text": "ЗАБРОНЮВАТИ",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "ПРЕЗЕНТАЦІЯ",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "button": {
+              "text": "ЗАБРОНЮВАТИ",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

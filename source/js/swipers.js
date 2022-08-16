@@ -1,5 +1,5 @@
-import gsap from './gsap.min';
-import Swiper from './swiper-bundle.min';
+import { gsap, Power3 } from './libs/gsap.min';
+import Swiper from './libs/swiper-bundle.min';
 import changeActiveClass from './changeActiveClass';
 import cardsActivate from './cards';
 

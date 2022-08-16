@@ -1,0 +1,400 @@
+{
+  "status": "success",
+  "content": {
+    "title": "smart\r\nконференц-зал",
+    "seoTitle": "smart конференц-зал",
+    "seoDescription": "smart конференц-зал від city inn",
+    "template": "conference",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "content": {
+      "bottom": [],
+      "top": []
+    },
+    "sections": [
+      {
+        "description": "Сучасний компактний номер, який ідеально підходить для розміщення 1-2 гостей, які зупиняються на період 1-2 ночі і не планують багато часу проводити в номері. Зазвичай цей номер обирають наші корпоративні партнери для відряджень або групових поселень.",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/network-2.webp",
+            "tablet": "/storage/media/2022/07/network-2.webp",
+            "desktop": "/storage/media/2022/07/network-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/network-2.jpg",
+            "tablet": "/storage/media/2022/07/network-2.jpg",
+            "desktop": "/storage/media/2022/07/network-2.jpg"
+          }
+        },
+        "services": [
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "button": {
+          "text": "BOOK NOW",
+          "link": "google.com"
+        }
+      },
+      {
+        "title": "Розсадка",
+        "slides": [
+          {
+            "title": "Театр",
+            "SVG": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg",
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "18-25 кв. м",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "title": "Фуршет",
+            "SVG": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg",
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Цінова політика оренди",
+        "slides": [
+          {
+            "title": "smart basic",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "prePrice": "",
+            "priceFor": "за годину",
+            "price": 500,
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "велике ліжко",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "title": "SMART FREE",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "prePrice": "",
+            "priceFor": "",
+            "price": "FREE",
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            },
+            "services": [
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "2 гостей",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Варіанти харчування, які ми організуємо під ваша потреби",
+        "slides": [
+          {
+            "title": "КАВО-перерви",
+            "description": "Варіантів 10+\r\nМінімальна кількість 10\r\nМаксимальна кількість 20\r\nПрефакшн зона",
+            "prePrice": "від",
+            "priceFor": "",
+            "price": 90,
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "MENU",
+              "link": "google.com"
+            }
+          },
+          {
+            "title": "комплексні обіди",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "prePrice": "від",
+            "priceFor": "",
+            "price": 1001,
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "button": {
+              "text": "MENU",
+              "link": "google.com"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Чому ми?",
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/alesha-4.webp",
+              "tablet": "/storage/media/2022/07/alesha-4.webp",
+              "desktop": "/storage/media/2022/07/alesha-4.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/alesha-3.jpg",
+              "tablet": "/storage/media/2022/07/alesha-3.jpg",
+              "desktop": "/storage/media/2022/07/alesha-3.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          }
+        ],
+        "tabs": [
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          },
+          {
+            "text": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit. Наші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни.\r\n\r\nЄ один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення."
+          }
+        ]
+      },
+      {
+        "title": "Паркінг",
+        "description": "Сучасний компактний номер, який ідеально підходить для розміщення 1-2 гостей, які зупиняються на період 1-2 ночі і не планують багато часу проводити в номері. Зазвичай цей номер обирають наші корпоративні партнери для відряджень або групових поселень.",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "Наш досвід",
+        "items": [
+          {
+            "textTop": "більш ніж",
+            "textBottom": "організованих подій у 2021",
+            "number": 500
+          },
+          {
+            "textTop": "більш ніж",
+            "textBottom": "компаній, які нам довіряють",
+            "number": 200
+          },
+          {
+            "textTop": "більш ніж",
+            "textBottom": "щорічних подій",
+            "number": 100
+          }
+        ]
+      },
+      {
+        "title": "Команда",
+        "subTitle": "Ваш персональний менеджер",
+        "slides": [
+          {
+            "title": "МАР'ЯНА НІКОЛІН",
+            "description": "менеджер з продажів",
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "contacts": [
+              {
+                "text": "reception@city-inn.com.ua",
+                "link": "mailto:reception@city-inn.com.ua"
+              }
+            ]
+          },
+          {
+            "title": "Андрій Ліпак",
+            "description": "Менеджер з продажів",
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "contacts": [
+              {
+                "text": "reception@city-inn.com.ua",
+                "link": "mailto:reception@city-inn.com.ua"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

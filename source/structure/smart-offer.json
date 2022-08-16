@@ -1,0 +1,465 @@
+{
+  "status": "success",
+  "content": {
+    "title": "smart <br>пропозиції",
+    "seoTitle": "SMART пропозиції від City Inn!!!",
+    "seoDescription": "SMART пропозиції від City Inn!!! Лише топові пропозиції, для топового відпочинку!",
+    "template": "smart",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "content": {
+      "bottom": [],
+      "top": {
+        "description": ""
+      }
+    },
+    "sections": [
+      {
+        "title": "корпоративна співпраця",
+        "book": {
+          "text": "BOOK NOW",
+          "link": "google.com"
+        },
+        "textTop": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!",
+        "textBottom": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+        "services": [
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "міні-холодильник",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "міні парфюмерія",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!\r\n\r\nОплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Тепер вам не потрібно платити повну вартість номера!",
+            "book": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            }
+          }
+        ]
+      },
+      {
+        "title": "SPA DAY USE OFFER",
+        "book": {
+          "text": "BOOK NOW",
+          "link": "google.com"
+        },
+        "textTop": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!",
+        "textBottom": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+        "services": [
+          {
+            "title": "міні парфюмерія",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "міні-холодильник",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Кондиціонер",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!\r\n\r\nОплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Тепер вам не потрібно платити повну вартість номера!",
+            "book": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            }
+          }
+        ]
+      },
+      {
+        "title": "дегустаційний вікенд",
+        "textTop": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!",
+        "textBottom": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+        "services": [
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Кондиціонер",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "велике ліжко",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "міні-холодильник",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "tablet": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "tablet": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        },
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!\r\n\r\nОплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Тепер вам не потрібно платити повну вартість номера!",
+            "book": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            }
+          }
+        ]
+      },
+      {
+        "title": "романтичний вікенд",
+        "textTop": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!Оплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!",
+        "textBottom": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+        "services": [
+          {
+            "title": "2 гостей",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "2 ліжка",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "18-25 кв. м",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/network-2.webp",
+            "tablet": "/storage/media/2022/07/network-2.webp",
+            "desktop": "/storage/media/2022/07/network-2.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/network-2.jpg",
+            "tablet": "/storage/media/2022/07/network-2.jpg",
+            "desktop": "/storage/media/2022/07/network-2.jpg"
+          }
+        },
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Найкраще СПА в центрі Львова вже від 2500 грн! Cпа-день в Oasis Infinity Pool & SPA (з 6:00 до 20:00, не більше 6 годин). Плануєте день відпочинку у нашому розкішному Oasis Infinity Pool & SPA без ночівлі? Не пропустіть свій шанс відпочити!\r\n\r\nОплатіть номер за спеціальною ціною та відпочивайте протягом 6 годин з 6:00 до 20:00. для власного задоволення. Тепер вам не потрібно платити повну вартість номера!"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Grand hotel lviv luxury&spa має у розпорядженні унікальний для львова spa-центр категорії люкс, до якого входять:",
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні парфюмерія",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            },
+            "title": "SPA DAY USE OFFER",
+            "description": "Тепер вам не потрібно платити повну вартість номера!",
+            "book": {
+              "text": "BOOK NOW",
+              "link": "google.com"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "status": "success",
+  "content": {
+    "language": "en",
+    "book": {
+      "title": "BOOK NOW",
+      "link": "google.com"
+    },
+    "offer": {
+      "title": "SMART OFFER",
+      "link": "google.com"
+    },
+    "address": {
+      "icon": "map-pin",
+      "link": "google.maps"
+    },
+    "call": {
+      "text": "Call us",
+      "phone": "+38 032 247 15 51",
+      "link": "tel:+380322471551"
+    },
+    "social": [
+      {
+        "icon": "icon-facebook",
+        "link": "facebook.com"
+      },
+      {
+        "icon": "icon-instagram",
+        "link": "instagram.com"
+      }
+    ],
+    "menu": [
+      {
+        "title": "Menu default background",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "ПРО НАС",
+        "link": "/about",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "restaurant",
+        "link": "/restaurant",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "smart пропозиція",
+        "link": "/smart-offer",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "star fit",
+        "link": "/starfit",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "lobby bar",
+        "link": "/lobby",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "conference service",
+        "link": "conference-service",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "group request",
+        "link": "/group-request",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      },
+      {
+        "title": "контакти",
+        "link": "/contacts",
+        "image": {
+          "webp": {
+            "mobile": "/storage/media/2022/07/alesha-4.webp",
+            "desktop": "/storage/media/2022/07/alesha-4.webp"
+          },
+          "jpg": {
+            "mobile": "/storage/media/2022/07/alesha-3.jpg",
+            "desktop": "/storage/media/2022/07/alesha-3.jpg"
+          }
+        }
+      }
+    ]
+  }
+}

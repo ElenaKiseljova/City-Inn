@@ -1,0 +1,81 @@
+{
+  "status": "success",
+  "content": {
+    "columns": [
+      {
+        "title": "Terms & Service",
+        "items": [
+          {
+            "text": "Політика конфіденціальності",
+            "link": "#"
+          },
+          {
+            "text": "Публічна оферта",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "title": "Адреса",
+        "items": [
+          {
+            "text": "79495 Ivan Franko street, 53b, Vinniki, Lvivska oblast",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "title": "Продажі",
+        "items": [
+          {
+            "text": "sales@city-inn.com.ua",
+            "link": "mailto:sales@city-inn.com.ua"
+          },
+          {
+            "text": "+ 38 (032) 247-15-51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      },
+      {
+        "title": "Про нас",
+        "items": [
+          {
+            "text": "Про готель",
+            "link": "#"
+          },
+          {
+            "text": "Чому SMART?",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "title": "Бронювання",
+        "items": [
+          {
+            "text": "reservation@city-inn.com.ua",
+            "link": "mailto:reservation@city-inn.com.ua"
+          },
+          {
+            "text": "+ 38 (032) 247-15-51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      },
+      {
+        "title": "Рецепція",
+        "items": [
+          {
+            "text": "reception@city-inn.com.ua",
+            "link": "mailto:reception@city-inn.com.ua"
+          },
+          {
+            "text": "+ 38 (032) 247-15-51",
+            "link": "tel:+380322471551"
+          }
+        ]
+      }
+    ]
+  }
+}

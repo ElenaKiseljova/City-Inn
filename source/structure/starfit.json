@@ -1,0 +1,217 @@
+{
+  "status": "success",
+  "content": {
+    "title": "Спортивний<br>комплекс<br>StarFit",
+    "seoTitle": "Starfit - ставки на спорт!",
+    "seoDescription": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.\r\nНаші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни",
+    "template": "starfit",
+    "image": {
+      "webp": {
+        "mobile": "/storage/media/2022/07/alesha-4.webp",
+        "tablet": "/storage/media/2022/07/alesha-4.webp",
+        "desktop": "/storage/media/2022/07/alesha-4.webp"
+      },
+      "jpg": {
+        "mobile": "/storage/media/2022/07/alesha-3.jpg",
+        "tablet": "/storage/media/2022/07/alesha-3.jpg",
+        "desktop": "/storage/media/2022/07/alesha-3.jpg"
+      }
+    },
+    "content": {
+      "bottom": [],
+      "top": {
+        "description": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.\r\nНаші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни"
+      }
+    },
+    "sections": [
+      {
+        "title": "БУДЕ СПА",
+        "rules": {
+          "text": "правила відвідування",
+          "link": "google.com"
+        },
+        "textTop": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.\r\nНаші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни",
+        "textBottom": "Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви поринете в світ релаксу, відпочинку та відновлення.",
+        "worktime": "07:00 до 22:00",
+        "services": [
+          {
+            "title": "Wi-fi",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "Кондиціонер",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          },
+          {
+            "title": "міні-холодильник",
+            "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+          }
+        ],
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "description": "Заради наших гостей ми зробили колоборацію з комплексом для відпочинку Starfit.\r\nНаші гості можуть компліментарно користуватись усією інфраструктурою: басейн, тренажерний зал, сауни",
+            "services": [
+              {
+                "title": "Wi-fi",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network-2.webp",
+                "tablet": "/storage/media/2022/07/network-2.webp",
+                "desktop": "/storage/media/2022/07/network-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network-2.jpg",
+                "tablet": "/storage/media/2022/07/network-2.jpg",
+                "desktop": "/storage/media/2022/07/network-2.jpg"
+              }
+            },
+            "description": "Є один нюанс, що потрібно вийти з готелю і пройти 20 метрів до входу, але після цього ви порините в світ релаксу, відпочинку та відновлення",
+            "button": {
+              "text": "Правила відвідування",
+              "link": "google.com"
+            },
+            "worktime": "7:00 до 22:00"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/network1-2.webp",
+                "tablet": "/storage/media/2022/07/network1-2.webp",
+                "desktop": "/storage/media/2022/07/network1-2.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/network1-2.jpg",
+                "tablet": "/storage/media/2022/07/network1-2.jpg",
+                "desktop": "/storage/media/2022/07/network1-2.jpg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "САУНИ",
+        "slides": [
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "Інфрачервона сауна",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "button": {
+              "text": "правила відвідування",
+              "link": "google.com"
+            },
+            "worktime": "7:00 до 22:00"
+          },
+          {
+            "image": {
+              "webp": {
+                "mobile": "/storage/media/2022/07/alesha-4.webp",
+                "tablet": "/storage/media/2022/07/alesha-4.webp",
+                "desktop": "/storage/media/2022/07/alesha-4.webp"
+              },
+              "jpg": {
+                "mobile": "/storage/media/2022/07/alesha-3.jpg",
+                "tablet": "/storage/media/2022/07/alesha-3.jpg",
+                "desktop": "/storage/media/2022/07/alesha-3.jpg"
+              }
+            },
+            "title": "Фінська сауна",
+            "description": "Nullam consequat lacus risus, non lobortis mi feugiat id. Praesent a odio semper, pulvinar ex ac, ullamcorper erat. Phasellus porta euismod massa sit amet hendrerit.",
+            "services": [
+              {
+                "title": "Кондиціонер",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              },
+              {
+                "title": "міні-холодильник",
+                "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "СПОРТЗАЛ",
+        "rules": {
+          "text": "Правила відвідування",
+          "link": "google.com"
+        },
+        "textTop": "Найкраще розпочинати або завершувати день у тренажерному залі. Сучасне обладнання підходить як для новачків, так і для професійних спортсменів. Просторий зал, роздягальня та душ зроблять відвідування залу ще приємнішим. Спортзал працює щодня з 7:00 до 22:00.",
+        "worktime": "07:00 до 22:00",
+        "images": [
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network1-2.webp",
+              "tablet": "/storage/media/2022/07/network1-2.webp",
+              "desktop": "/storage/media/2022/07/network1-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network1-2.jpg",
+              "tablet": "/storage/media/2022/07/network1-2.jpg",
+              "desktop": "/storage/media/2022/07/network1-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/network-2.webp",
+              "tablet": "/storage/media/2022/07/network-2.webp",
+              "desktop": "/storage/media/2022/07/network-2.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/network-2.jpg",
+              "tablet": "/storage/media/2022/07/network-2.jpg",
+              "desktop": "/storage/media/2022/07/network-2.jpg"
+            }
+          },
+          {
+            "webp": {
+              "mobile": "/storage/media/2022/07/alesha-4.webp",
+              "tablet": "/storage/media/2022/07/alesha-4.webp",
+              "desktop": "/storage/media/2022/07/alesha-4.webp"
+            },
+            "jpg": {
+              "mobile": "/storage/media/2022/07/alesha-3.jpg",
+              "tablet": "/storage/media/2022/07/alesha-3.jpg",
+              "desktop": "/storage/media/2022/07/alesha-3.jpg"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

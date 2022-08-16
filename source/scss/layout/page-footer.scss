@@ -3,8 +3,6 @@
 
   padding: 40px 0 45px 0;
 
-  @include font;
-
   background-color: $gray;
 
   &--restaurant,
@@ -110,9 +108,7 @@
 
     margin-bottom: 4px;
 
-    font-weight: 400;
-    font-size: rem(14);
-    line-height: rem(24);
+    @include font(14, 24, 400);
 
     color: $green;
 
@@ -123,8 +119,7 @@
     @media screen and (min-width: $desktop) {
       margin-bottom: 16px;
 
-      font-size: rem(18);
-      line-height: rem(24);
+      @include font(14, 24, 400);
     }
   }
 
@@ -134,20 +129,20 @@
     margin: 0;
     padding: 0;
 
-    font-weight: 400;
-    font-size: rem(10);
-    line-height: rem(18);
+    @include font(10, 18, 400);
 
     color: $light-green;
 
+    span {
+      margin-left: rem(5);
+    }
+
     @media screen and (min-width: $tablet) {
-      font-size: rem(12);
-      line-height: rem(22);
+      @include font(12, 22, 400);
     }
 
     @media screen and (min-width: $desktop) {
-      font-size: rem(14);
-      line-height: rem(25);
+      @include font(14, 25, 400);
     }
   }
 

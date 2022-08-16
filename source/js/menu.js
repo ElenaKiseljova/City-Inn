@@ -68,6 +68,16 @@ export default () => {
       navItem.addEventListener('mouseenter', onMouseEnter);
 
       navItem.addEventListener('mouseleave', onMouseLeave);
+
+      const onClick = () => {
+        if (burger) {
+          burger.click();
+        }
+      };
+
+      const navLink = navItem.querySelector('a');
+
+      navLink.addEventListener('click', onClick);
     });
   }
 };
