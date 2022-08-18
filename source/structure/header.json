@@ -1,7 +1,6 @@
 {
   "status": "success",
   "content": {
-    "language": "en",
     "book": {
       "title": "BOOK NOW",
       "link": "google.com"

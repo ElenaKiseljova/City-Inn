@@ -18,26 +18,20 @@ div(class="menu")
             svg(width="48" height="48")
               use(xlink:href="img/sprites/sprite-mono.svg#icon-phone")
 
-  div(class="menu__img")
-    - let show = '';
-      each navItemHeader, index in navHeader
-        if index === 0
-          - show = 'active';
-        else
-          - show = '';
+  each navItemHeader in navHeader
+    div(class="menu__img __js")
+      picture(class="menu__picture ")
+        if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop && navItemHeader.images.webp.mobile
+          source(media="(min-width: 768px)" type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
+          source(media="(min-width: 100px)" type="image/webp" srcset="" + navItemHeader.images.webp.mobile)
+        else if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop
+          source(type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
 
-        picture(class="menu__picture __js " + show)
-          if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop && navItemHeader.images.webp.mobile
-            source(media="(min-width: 768px)" type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
-            source(media="(min-width: 100px)" type="image/webp" srcset="" + navItemHeader.images.webp.mobile)
-          else if navItemHeader.images && navItemHeader.images.webp && navItemHeader.images.webp.desktop
-            source(type="image/webp" srcset="" + navItemHeader.images.webp.desktop)
+        if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop && navItemHeader.images.jpg.mobile
+          source(media="(min-width: 768px)" srcset="" + navItemHeader.images.jpg.desktop)
 
-          if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop && navItemHeader.images.jpg.mobile
-            source(media="(min-width: 768px)" srcset="" + navItemHeader.images.jpg.desktop)
-
-            img(src="" + navItemHeader.images.jpg.mobile alt="" + navItemHeader.title)
-          else if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop
-            img(src="" + navItemHeader.images.jpg.desktop alt="" + navItemHeader.title)
+          img(src="" + navItemHeader.images.jpg.mobile alt="" + navItemHeader.title)
+        else if navItemHeader.images && navItemHeader.images.jpg && navItemHeader.images.jpg.desktop
+          img(src="" + navItemHeader.images.jpg.desktop alt="" + navItemHeader.title)
 
 

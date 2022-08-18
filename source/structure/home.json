@@ -1,6 +1,7 @@
 {
   "status": "success",
   "content": {
+    "language": "en",
     "seoTitle": "City Inn",
     "seoDescription": "City Inn the Best!!!",
     "template": "home",

@@ -64,6 +64,14 @@
     &--image {
       z-index: 3;
     }
+
+    &--content {
+
+      &.promo__container--home,
+      &.promo__container--smart {
+        display: none;
+      }
+    }
   }
 
   &__img-wrapper {
@@ -344,7 +352,7 @@
       &--lobby {
         grid-template-columns: 1fr calc(805 / (1440 - 160) * 100%);
 
-        align-items: start;
+        align-items: flex-start;
 
         padding: 100px 0 127px 0;
       }
@@ -439,16 +447,47 @@
 
     color: var(--color-page);
 
+    &--group,
+    &--conference {
+      @include font(12, 20, 400);
+    }
+
+    &--lobby {
+      @include font(16, 14, 400);
+    }
+
     &--starfit {
       --color-page: #{$dark-starfit};
     }
 
     @media screen and (min-width: $tablet) {
       @include font(18, 27, 400);
+
+      &--conference {
+        @include font(12, 20, 400);
+      }
+
+      &--standart {
+        @include font(14, 21, 400);
+      }
     }
 
     @media screen and (min-width: $desktop) {
       @include font(24, 36, 400);
+
+      &--conference,
+      &--group,
+      &--standart {
+        @include font(18, 27, 400);
+      }
+
+      &--about {
+        @include font(14, 20, 400);
+      }
+
+      &--lobby {
+        @include font(14, 21, 400);
+      }
     }
   }
 
@@ -469,7 +508,7 @@
         display: flex;
 
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
       }
     }
 
@@ -773,9 +812,7 @@
   }
 
   &__buttons {
-    @media screen and (min-width: $mobile) {
-      // width: calc(100% - 80px);
-    }
+    width: 100%;
 
     @media screen and (min-width: $tablet) {
       display: none;

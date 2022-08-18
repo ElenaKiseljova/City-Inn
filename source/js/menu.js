@@ -15,7 +15,18 @@ export default () => {
 
     const pageHeaderButtons = document.querySelectorAll('.page-header__button');
 
-    if (burgerLeft && burgerRight) {
+    const navItems = document.querySelectorAll('.nav__item');
+    const navImages = document.querySelectorAll('.menu__img');
+
+    if (burgerLeft && burgerRight && navItems.length > 0 && navImages.length > 0) {
+      const defaultImage = navImages[0];
+
+      const onClickRoot = (evt) => {
+        if (evt.target !== burger) {
+          burger.click();
+        }
+      };
+
       burger.addEventListener('click', () => {
         if (burger.classList.contains('active')) {
           pageHeaderMenu.classList.remove('active');
@@ -29,7 +40,13 @@ export default () => {
           changeActiveClass(pageHeaderButtons, 'remove', 'active');
 
           rootElement.classList.remove('active');
+
+          rootElement.removeEventListener('click', onClickRoot);
         } else {
+          changeActiveClass(navImages);
+
+          defaultImage.classList.add('active');
+
           changeActiveClass(pageHeaderButtons, 'add', 'active');
 
           logoHeader.classList.add('active');
@@ -41,43 +58,28 @@ export default () => {
           burger.classList.add('active');
 
           rootElement.classList.add('active');
+
+          rootElement.addEventListener('click', onClickRoot);
         }
       });
+
+      navItems.forEach((navItem, index) => {
+        const onMouseEnter = () => {
+          changeActiveClass(navImages);
+
+          navImages[index + 1].classList.add('active');
+        };
+
+        const onMouseLeave = () => {
+          changeActiveClass(navImages);
+
+          defaultImage.classList.add('active');
+        };
+
+        navItem.addEventListener('mouseenter', onMouseEnter);
+
+        navItem.addEventListener('mouseleave', onMouseLeave);
+      });
     }
-  }
-
-  const navItems = document.querySelectorAll('.nav__item');
-  const navImages = document.querySelectorAll('.menu__picture');
-
-  if (navItems.length > 0 && navImages.length > 0) {
-    const defaultImage = navImages[0];
-
-    navItems.forEach((navItem, index) => {
-      const onMouseEnter = () => {
-        changeActiveClass(navImages);
-
-        navImages[index + 1].classList.add('active');
-      };
-
-      const onMouseLeave = () => {
-        changeActiveClass(navImages);
-
-        defaultImage.classList.add('active');
-      };
-
-      navItem.addEventListener('mouseenter', onMouseEnter);
-
-      navItem.addEventListener('mouseleave', onMouseLeave);
-
-      const onClick = () => {
-        if (burger) {
-          burger.click();
-        }
-      };
-
-      const navLink = navItem.querySelector('a');
-
-      navLink.addEventListener('click', onClick);
-    });
   }
 };

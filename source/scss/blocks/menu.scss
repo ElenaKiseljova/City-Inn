@@ -31,10 +31,6 @@
 
   &__img {
     @extend %img;
-  }
-
-  &__picture {
-    @extend %picture;
 
     opacity: 0;
 
@@ -45,6 +41,10 @@
 
       transition: opacity 0.7s ease-in;
     }
+  }
+
+  &__picture {
+    @extend %picture;
   }
 
   &__nav {

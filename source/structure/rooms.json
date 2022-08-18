@@ -1,10 +1,10 @@
 {
   "status": "success",
   "content": {
+    "language": "en",
     "title": "Номери та апартаменти",
     "seoTitle": "Номери та апартаменти",
     "seoDescription": "Тепло, затишно, безпечно, комфортно. City Inn The Best!!!",
-    "language": "en",
     "template": "rooms",
     "content": {
       "bottom": [],

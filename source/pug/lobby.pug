@@ -7,10 +7,10 @@ include includes/mixins.pug
 
 include layout/head.pug
 
-body(class="page page--" + pageName)
+body
   include layout/header.pug
 
-  main(class="page-main")
+  main(class="page-main page-main--" + pageName)
     include pages/lobby/promo.pug
     include pages/lobby/doings.pug
     include pages/lobby/bar.pug
