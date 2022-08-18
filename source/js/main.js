@@ -3,7 +3,7 @@ import gsapAnimations from './gsap-animations';
 import menu from './menu';
 import callUs from './call-us';
 import swipers from './swipers';
-import map from './map';
+import { map, mapInit } from './map';
 import cardsActivate from './cards';
 import readMore from './read-more';
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   try {
-    map();
+    mapInit(map('AIzaSyCU8GzLIx6EGCRicra_jXwLfQe_Mieze3Y'));
   } catch (error) {
     console.log(error.message);
   }

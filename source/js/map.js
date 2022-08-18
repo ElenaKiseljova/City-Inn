@@ -1,22 +1,6 @@
 import { Loader } from 'google-maps';
 
-export default () => {
-  // // Initialize and add the map
-  // const initMap = () => {
-  //   console.log('marker');
-  //   // The location of Uluru
-  //   const uluru = { lat: -25.344, lng: 131.031 };
-  //   // The map, centered at Uluru
-  //   const map = new google.maps.Map(document.querySelector('#map'), {
-  //     zoom: 4,
-  //     center: uluru,
-  //   });
-  //   // The marker, positioned at Uluru
-  //   const marker = new google.maps.Marker({
-  //     position: uluru,
-  //     map,
-  //   });
-  // };
+const mapInit = (google, options = { lat: 49.81173756211972, lng: 24.141566493630982 }) => {
   let styles = `
   [
     {
@@ -263,11 +247,8 @@ export default () => {
 
   styles = JSON.parse(styles);
 
-  const KEY = 'AIzaSyCU8GzLIx6EGCRicra_jXwLfQe_Mieze3Y';
-  const myLatLng = { lat: 49.81173756211972, lng: 24.141566493630982 };
-  const options = {
-    zoom: 13,
-    center: myLatLng,
+  const fullOptions = {
+    ...options,
     panControl: false,
     zoomControl: false,
     mapTypeControl: false,
@@ -280,16 +261,18 @@ export default () => {
     styles,
   };
 
-  const loader = new Loader(KEY, {
-    region: 'UA',
-    language: 'uk',
-  });
-
-  loader.load().then((google) => {
-    const mapEl = document.querySelector('#map');
-
-    if (mapEl) {
-      new google.maps.Map(document.querySelector('#map'), options);
-    }
-  });
+  new google.maps.Map(document.querySelector('#map'), fullOptions);
 };
+
+const map = async (key = '', lang = 'en') => {
+  const loader = new Loader(key, {
+    region: lang,
+    language: lang,
+  });
+
+  const google = await loader.load();
+
+  return google;
+};
+
+export { map, mapInit };
