@@ -72,6 +72,20 @@
         display: none;
       }
     }
+
+    @media screen and (min-width: $tablet) {
+      &--image {
+        transform: translate(50px, 50px);
+
+        opacity: 0;
+
+        &.promo__container--home {
+          transform: none;
+
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__img-wrapper {
@@ -263,6 +277,7 @@
     }
 
     @media screen and (min-width: $tablet) {
+      overflow: visible;
 
       &--restaurant,
       &--lobby,
@@ -414,6 +429,7 @@
     }
 
     @media screen and (min-width: $tablet) {
+      overflow: visible;
 
       &--restaurant,
       &--lobby,
@@ -463,6 +479,10 @@
     @media screen and (min-width: $tablet) {
       @include font(18, 27, 400);
 
+      transform: translate(50px, 50px);
+
+      opacity: 0;
+
       &--conference {
         @include font(12, 20, 400);
       }
@@ -495,6 +515,7 @@
     @extend %w100;
 
     @media screen and (min-width: $tablet) {
+      overflow: visible;
 
       &--restaurant,
       &--lobby,
@@ -786,10 +807,30 @@
 
   &__lang {
     margin-right: 18px;
+
+    @media screen and (min-width: $tablet) {
+      opacity: 0;
+
+      transform: translate(20px, 20px);
+
+      .social__item {
+        opacity: 0;
+
+        transform: translate(20px, 20px);
+      }
+    }
   }
 
   &__social {
     display: none;
+
+    @media screen and (min-width: $tablet) {
+      .social__item {
+        opacity: 0;
+
+        transform: translate(20px, 20px);
+      }
+    }
 
     @media screen and (min-width: $desktop) {
 

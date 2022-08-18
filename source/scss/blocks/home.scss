@@ -190,6 +190,8 @@
 
       flex-direction: column;
 
+      overflow: visible;
+
       &--smart,
       &--group,
       &--starfit {
@@ -285,6 +287,10 @@
     }
 
     @media screen and (min-width: $tablet) {
+      transform: translate(50px, 50px);
+
+      opacity: 0;
+
       &--desktop {
         position: static;
 
@@ -561,6 +567,7 @@
     }
 
     @media screen and (min-width: $tablet) {
+      overflow: visible;
 
       &--lobby,
       &--restaurant {
@@ -643,6 +650,10 @@
       min-width: calc(155 / 347 * 100%);
 
       margin-left: 24px;
+
+      transform: translate(20px, 20px);
+
+      opacity: 0;
 
       &--restaurant {
         margin-top: 0;

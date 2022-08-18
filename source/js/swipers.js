@@ -1,4 +1,4 @@
-import { gsap, Power3 } from './libs/gsap.min';
+import { gsap } from './libs/gsap.min';
 import Swiper from './libs/swiper-bundle.min';
 import changeActiveClass from './changeActiveClass';
 import cardsActivate from './cards';
@@ -38,7 +38,7 @@ export default () => {
           gsap.to(el2, {
             opacity: 1,
             duration: 1,
-            ease: Power3.easeOut,
+            ease: 'Power3.easeOut',
           });
 
           break;
@@ -73,7 +73,7 @@ export default () => {
             gsap.to(el4, {
               opacity: 0,
               duration: 1,
-              ease: Power3.easeOut,
+              ease: 'Power3.easeOut',
             });
 
             break;
@@ -176,6 +176,33 @@ export default () => {
     if (swiperItem.classList.contains('team__slider')) {
       if (DEVICE_WIDTH >= DESKTOP_WIDTH) {
         swiperArgs.spaceBetween = 51;
+      }
+    }
+
+    // Autoplay + fade sliders
+    if (swiperItem.classList.contains('banquet__slider')
+      || swiperItem.classList.contains('mission__slider')
+      || swiperItem.classList.contains('seating__slider')) {
+      newAttr.effect = 'fade';
+      newAttr.fadeEffect = {
+        crossFade: true,
+      };
+
+      if (DEVICE_WIDTH > TABLET_WIDTH) {
+        newAttr.autoplay = {
+          delay: 5000,
+        };
+      }
+    }
+
+    // Autoplay sliders
+    if (swiperItem.classList.contains('spa__slider')
+      || swiperItem.classList.contains('gym__slider')
+      || swiperItem.classList.contains('prices__slider')) {
+      if (DEVICE_WIDTH > TABLET_WIDTH) {
+        newAttr.autoplay = {
+          delay: 5000,
+        };
       }
     }
 

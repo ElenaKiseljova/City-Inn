@@ -13,7 +13,7 @@ mixin promo(attr)
         | !{titlePage}
 
     div(class="promo__img-wrapper promo__img-wrapper--" + sectionName)
-      div(class="promo__container promo__container--image container")
+      div(class="promo__container promo__container--image container promo__container--" + sectionName)
         if title !== ''
           h1(class="promo__title promo__title--" + sectionName)
             | !{title}

@@ -146,6 +146,8 @@
 
     @media screen and (min-width: $tablet) {
       margin-bottom: 40px;
+
+      overflow: visible;
     }
 
     @media screen and (min-width: $desktop) {
@@ -190,6 +192,12 @@
       &:nth-of-type(even) {
         display: none;
       }
+    }
+
+    @media screen and (min-width: $tablet) {
+      transform: translate(20px, 20px);
+
+      opacity: 0;
     }
   }
 

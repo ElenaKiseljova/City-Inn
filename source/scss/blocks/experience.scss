@@ -42,7 +42,7 @@
     list-style: none;
 
     @media screen and (min-width: $tablet) {
-      grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
+      grid-template-columns: repeat(3, 1fr);
 
       justify-content: space-between;
 

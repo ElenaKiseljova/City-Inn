@@ -1,11 +1,25 @@
 .room {
   @extend %w100;
 
+  @media screen and (min-width: $tablet) {
+    overflow: visible;
+  }
+
   &__container {
+    @media screen and (min-width: $tablet) {
+      overflow: visible;
+    }
+
     @media screen and (min-width: $desktop) {
       display: grid;
 
       grid-template-columns: 50% 50%;
+    }
+  }
+
+  &__slide {
+    @media screen and (min-width: $tablet) {
+      overflow: visible;
     }
   }
 
@@ -44,6 +58,10 @@
 
       &--desktop {
         display: block;
+
+        transform: translate(50px, 50px);
+
+        opacity: 0;
       }
 
       &--mobile {
@@ -236,6 +254,8 @@
       justify-content: flex-end;
 
       margin-top: 40px;
+
+      overflow: visible;
     }
 
     @media screen and (min-width: $desktop) {
@@ -278,6 +298,10 @@
 
     @media screen and (min-width: $tablet) {
       min-width: 200px;
+
+      transform: translate(20px, 20px);
+
+      opacity: 0;
 
       &:not(:last-of-type) {
         margin-bottom: 0;
