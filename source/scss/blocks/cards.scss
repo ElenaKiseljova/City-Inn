@@ -362,6 +362,8 @@
 
     color: $white;
 
+    text-transform: uppercase;
+
     @media screen and (min-width: $tablet) {
       margin-bottom: 20px;
     }

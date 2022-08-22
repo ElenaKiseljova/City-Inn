@@ -25,6 +25,12 @@
         "classes": true,
         "variables": true
       }
+    ],
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
     ]
   }
 }

@@ -30,7 +30,7 @@ export default () => {
     });
   };
 
-  const animationHomeSmart = (elements) => {
+  const animationPromoButtons = (elements) => {
     gsap.to(elements, {
       y: 192,
       duration: 1,
@@ -62,7 +62,7 @@ export default () => {
     const imageContainers = document.querySelectorAll('.promo--home .promo__container--image, .promo--smart .promo__container--image');
 
     if (imageContainers.length > 0) {
-      animationHomeSmart(imageContainers);
+      animationPromoButtons(imageContainers);
     }
   }
 
@@ -93,40 +93,48 @@ export default () => {
       });
     }
 
-    let init = true;
+    // Experiences
+    const list = document.querySelector('.experience__list');
 
-    const listObjStart = {};
+    if (list) {
+      let init = true;
 
-    const updateList = (obj) => {
-      const list = document.querySelector('.experience__list');
+      const listObjStart = {};
+      const listObjEnd = {};
+
       const items = list.querySelectorAll('.experience__number');
 
-      items.forEach((item, index) => {
-        if (init) {
-          listObjStart[index] = 0;
-          item.textContent = 0;
-        } else {
-          item.textContent = parseInt(obj[index], 10);
-        }
-      });
+      const updateList = (obj = null) => {
+        items.forEach((item, index) => {
+          if (init && !obj) {
+            listObjEnd[index] = parseInt(item.textContent, 10);
+            listObjStart[index] = 0;
+            item.textContent = 0;
+          } else if (!init && obj) {
+            item.textContent = parseInt(obj[index], 10);
+          }
+        });
+      };
 
-      init = false;
-    };
+      if (init) {
+        updateList();
 
-    gsap.to(listObjStart, {
-      0: 500,
-      1: 200,
-      2: 100,
-      duration: 2,
-      scrollTrigger: {
-        trigger: '.experience',
-        // markers: true,
-        start: 'top center',
-        end: 'bottom center',
-      },
-      onUpdate() {
-        updateList(listObjStart);
-      },
-    });
+        gsap.to(listObjStart, {
+          ...listObjEnd,
+          duration: 2,
+          scrollTrigger: {
+            trigger: '.experience',
+            // markers: true,
+            start: 'top center',
+            end: 'bottom center',
+          },
+          onUpdate() {
+            updateList(listObjStart);
+          },
+        });
+
+        init = false;
+      }
+    }
   }
 };
