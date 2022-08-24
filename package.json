@@ -81,6 +81,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "google-maps": "^4.3.3"
+    "google-maps": "^4.3.3",
+    "regenerator-runtime": "^0.13.9"
   }
 }

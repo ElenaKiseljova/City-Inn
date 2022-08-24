@@ -32,6 +32,10 @@
 
     transition: height 0.5s;
 
+    &--last {
+      background-color: $gray;
+    }
+
     &.active {
       z-index: 100;
 
@@ -218,6 +222,10 @@
     transform: rotateY(180deg);
 
     transition: transform 1s;
+
+    &--last {
+      background-color: $gray;
+    }
 
     &.active {
       position: relative;

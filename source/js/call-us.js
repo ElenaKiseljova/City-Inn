@@ -1,3 +1,5 @@
+// import regeneratorRuntime from "regenerator-runtime/runtime.js";
+
 export default () => {
   const callLink = document.querySelector('.call__link');
 
@@ -18,4 +20,17 @@ export default () => {
       });
     }
   }
+
+  // async function fetchData() {
+  //   const response = await fetch('https://osnova.webnauts.pro/city-inn/structure/header.json');
+  //   if (!response.ok) {
+  //     const message = `An error has occured: ${response.status}`;
+  //     throw new Error(message);
+  //   }
+  //   // waits until the request completes...
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
+
+  // fetchData();
 };
