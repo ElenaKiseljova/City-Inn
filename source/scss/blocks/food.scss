@@ -754,7 +754,7 @@
 
     border-radius: 50%;
 
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in;
 
     $areas: ('a', 'b', 'c', 'd', 'e');
 

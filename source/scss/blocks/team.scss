@@ -183,14 +183,8 @@
   }
 
   &__slider-wrapper {
-    transition: all linear;
-
     @media screen and (min-width: $tablet) {
       transition: none;
-    }
-
-    @media screen and (min-width: $desktop) {
-      transition: all linear;
     }
   }
 

@@ -38,10 +38,6 @@
 
     &.active {
       z-index: 100;
-
-      .cards__pagination {
-        opacity: 0;
-      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -235,6 +231,10 @@
       transform: rotateY(360deg);
 
       transition: transform 1s;
+
+      .cards__pagination {
+        opacity: 1;
+      }
     }
 
     @media screen and (min-width: $tablet) {
@@ -252,7 +252,6 @@
     @media screen and (min-width: $desktop) {
       position: relative;
 
-      max-width: 720px;
       min-height: auto;
 
       &--odd {
@@ -268,18 +267,20 @@
     }
   }
 
-  &__slider {
-    width: 100%;
+  &__pagination {
+    position: static;
+
+    margin-bottom: 40px;
+
+    opacity: 0;
 
     @media screen and (min-width: $desktop) {
       display: none;
     }
   }
 
-  &__pagination {
-    position: static;
-
-    margin-bottom: 40px;
+  &__slider {
+    width: 100%;
 
     @media screen and (min-width: $desktop) {
       display: none;
@@ -338,10 +339,20 @@
     @media screen and (min-width: $desktop) {
       align-items: flex-end;
 
+      max-width: 720px;
+
       padding: 80px;
 
       &--desktop {
         display: flex;
+      }
+
+      &--odd {
+        margin: 0 0 0 auto;
+      }
+
+      &--even {
+        margin: 0 auto 0 0;
       }
 
       &--last {
@@ -357,6 +368,8 @@
         align-items: start;
 
         column-gap: 160px;
+
+        max-width: none;
       }
     }
   }

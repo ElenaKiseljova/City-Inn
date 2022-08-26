@@ -74,17 +74,17 @@
     }
 
     @media screen and (min-width: $tablet) {
-      &--image {
-        transform: translate(50px, 50px);
+      // &--image {
+      //   transform: translateX(-100px);
 
-        opacity: 0;
+      //   opacity: 0;
 
-        &.promo__container--home {
-          transform: none;
+      //   &.promo__container--home {
+      //     transform: none;
 
-          opacity: 1;
-        }
-      }
+      //     opacity: 1;
+      //   }
+      // }
     }
   }
 
@@ -479,9 +479,9 @@
     @media screen and (min-width: $tablet) {
       @include font(18, 27, 400);
 
-      transform: translate(50px, 50px);
+      // transform: translate(50px, 50px);
 
-      opacity: 0;
+      // opacity: 0;
 
       &--conference {
         @include font(12, 20, 400);
@@ -729,7 +729,7 @@
       &--conference {
         transform: translate(-3px, calc((95 / 258) * 100%));
 
-        br:last-of-type {
+        br:not:first-of-type {
           display: none;
         }
       }
@@ -829,6 +829,12 @@
         opacity: 0;
 
         transform: translate(20px, 20px);
+      }
+
+      &--about {
+        .social {
+          flex-direction: row-reverse;
+        }
       }
     }
 

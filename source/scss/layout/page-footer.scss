@@ -40,9 +40,9 @@
     }
 
     @media screen and (min-width: $desktop) {
-      grid-template-columns: calc(198 / (1440 - 160) * 100%) calc((1440 - 160 - 198 - 202) / (1440 - 160) * 100%);
+      grid-template-columns: calc(210 / (1440 - 160) * 100%) calc((1440 - 160 - 198 - 202) / (1440 - 160) * 100%);
 
-      column-gap: calc(202 / (1440 - 160) * 100%);
+      column-gap: calc(190 / (1440 - 160) * 100%);
     }
   }
 

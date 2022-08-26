@@ -264,6 +264,8 @@
 
       @include font(144, 140, 300);
 
+      text-transform: lowercase;
+
       opacity: 0.8;
     }
   }

@@ -8,28 +8,32 @@
 
   &__prev,
   &__next {
-    position: relative;
 
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    &.swiper-button-prev,
+    &.swiper-button-next {
+      position: relative;
 
-    width: 48px;
-    height: 48px;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
 
-    margin: 0;
-    padding: 5px;
+      width: 48px;
+      height: 48px;
 
-    transform: none;
+      margin: 0;
+      padding: 5px;
 
-    &::after {
-      display: none;
-    }
+      transform: none;
 
-    svg {
-      width: 100%;
-      height: auto;
+      &::after {
+        display: none;
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

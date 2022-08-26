@@ -13,27 +13,19 @@
 
   &--horizontal {
     flex-direction: row;
+
+    column-gap: 18px;
   }
 
   &--vertical {
     flex-direction: column;
+
+    row-gap: 16px;
   }
 
   &__item {
     margin: 0;
     padding: 0;
-
-    &--horizontal {
-      &:not(:first-of-type) {
-        margin-left: 18px;
-      }
-    }
-
-    &--vertical {
-      &:not(:first-of-type) {
-        margin-top: 16px;
-      }
-    }
   }
 
   &__link {

@@ -71,8 +71,18 @@
   &--starfit {
     --color-button: var(--starfit);
     --border-color-button: var(--starfit);
+
     --color-page: var(--starfit);
     --background-color-page: var(--dark-gray);
     --color-pagination: var(--starfit);
+
+    &:hover:not(:active) {
+      --background-color-button: rgba(230, 181, 8, 0.2);
+    }
+
+    &:active {
+      --color-button: #{$white};
+      --background-color-button: rgba(230, 181, 8, 0.8);
+    }
   }
 }

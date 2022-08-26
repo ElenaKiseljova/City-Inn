@@ -42,6 +42,12 @@
         margin-right: 25px;
       }
     }
+
+    @media screen and (min-width: $desktop) {
+      &--coffee {
+        opacity: 0.8;
+      }
+    }
   }
 
   &__number {
