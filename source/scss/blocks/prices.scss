@@ -27,7 +27,7 @@
       top: 0;
       left: calc((152 / 768) * 100vw);
 
-      width: fit-content;
+      width: max-content;
     }
 
     @media screen and (min-width: $desktop) {

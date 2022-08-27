@@ -186,6 +186,10 @@
     @media screen and (min-width: $tablet) {
       transition: none;
     }
+
+    @media screen and (min-width: $tablet) {
+      transition: all linear;
+    }
   }
 
   &__slide {
@@ -318,7 +322,7 @@
   &__mail {
     @include font(14, 25, 400);
 
-    color: var(--color-page, #ffffff);
+    color: $light-green;
 
     &:hover,
     &:focus {

@@ -11,10 +11,6 @@
 
   pointer-events: none;
 
-  &--light-green {
-    color: $white-80;
-  }
-
   @media screen and (min-width: $small-mobile) {
     @include font(64, 70, 400);
   }
@@ -27,9 +23,5 @@
     @include font(200, 156, 500);
 
     color: $white-60;
-
-    &--light-green {
-      color: $light-green-40;
-    }
   }
 }

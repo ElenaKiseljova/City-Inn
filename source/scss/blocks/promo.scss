@@ -643,6 +643,8 @@
     &--group,
     &--conference,
     &--conference-service {
+      max-height: calc(100vh - 216px);
+
       @include font(96, 86, 700);
 
       writing-mode: vertical-rl;
@@ -719,6 +721,8 @@
       &--group,
       &--conference,
       &--conference-service {
+        max-height: none;
+
         writing-mode: horizontal-tb;
       }
 
