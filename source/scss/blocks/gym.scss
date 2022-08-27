@@ -2,7 +2,9 @@
   @extend %w100;
 
   @media screen and (min-width: $desktop) {
-    padding: 177px 0 183px;
+    &--group {
+      padding: 177px 0 183px;
+    }
   }
 
   &__container {
@@ -368,10 +370,10 @@
   }
 
   &__arrow-top {
-    display: none;
+    display: none !important;
 
     @media screen and (min-width: $desktop) {
-      display: flex;
+      display: flex !important;
 
       margin-left: 24px;
 

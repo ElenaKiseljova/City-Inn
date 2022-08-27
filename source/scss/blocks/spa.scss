@@ -76,9 +76,9 @@
     height: fit-content;
 
     @media screen and (min-width: $tablet) {
-      height: auto;
+      height: 100%;
 
-      min-height: 100%;
+      min-height: fit-content;
     }
   }
 
@@ -249,10 +249,10 @@
   }
 
   &__arrow-top {
-    display: none;
+    display: none !important;
 
     @media screen and (min-width: $desktop) {
-      display: flex;
+      display: flex !important;
 
       margin-left: 24px;
     }

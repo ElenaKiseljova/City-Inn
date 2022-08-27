@@ -124,6 +124,10 @@
       column-gap: 14px;
       row-gap: 30px;
     }
+
+    &--types {
+      grid-template-columns: repeat(2, 48%);
+    }
   }
 
   &__item {
@@ -133,9 +137,9 @@
     justify-content: flex-start;
 
     @media screen and (min-width: $tablet) {
-      transform: translate(20px, 20px);
+      // transform: translate(20px, 20px);
 
-      opacity: 0;
+      // opacity: 0;
     }
 
     @media screen and (min-width: $desktop) {

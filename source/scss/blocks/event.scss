@@ -27,7 +27,7 @@
     }
 
     &--saunas {
-      padding: 140px 0;
+      padding: 138px 0 131px;
     }
 
     &--locations,
@@ -317,6 +317,8 @@
         margin-right: calc((100% + 106px) - 784px);
         margin-bottom: 235px;
         margin-left: -106px;
+
+        opacity: 0.8;
       }
 
       &--smart-rooms {
@@ -365,6 +367,7 @@
     z-index: 3;
 
     width: calc(100% - 30px);
+    height: fit-content;
 
     &--tablet {
       display: none;
@@ -585,7 +588,7 @@
 
             transform: translateY(0);
 
-            transition: height 0.3s linear, width 0.3s linear, transform 0.3s linear;
+            transition: height 0.5s linear, width 0.5s linear, transform 0.5s linear;
           }
 
           .event__title-image {
@@ -594,7 +597,7 @@
 
             @include font(144, 140, 300);
 
-            transition: font 0.3s linear, top 0.3s linear, left 0.3s linear;
+            transition: font 0.5s linear, top 0.5s linear, left 0.5s linear;
 
             &--halls {
               top: -23px;
@@ -604,19 +607,20 @@
 
               opacity: 1;
 
-              transition: opacity 0.3s linear;
+              transition: opacity 0.5s linear;
             }
           }
         }
 
-        &.swiper-slide-next {
+        &.swiper-slide-next,
+        &.swiper-slide-next~.swiper-slide {
           .event__img {
             width: var(--width-img);
             height: var(--height-img);
 
             transform: translateY(var(--translateY, 0));
 
-            transition: height 0.3s linear, width 0.3s linear, transform 0.3s linear;
+            transition: height 0.5s linear, width 0.5s linear, transform 0.5s linear;
           }
 
           .event__title-image {
@@ -625,17 +629,21 @@
 
             @include font(30, 45, 300);
 
-            transition: font 0.3s linear, top 0.3s linear, left 0.3s linear;
+            transition: font 0.5s linear, top 0.5s linear, left 0.5s linear;
 
             &--halls {
               opacity: 0;
             }
           }
+        }
 
-          &~.swiper-slide {
-            opacity: 0;
+        &.swiper-slide-next {
+          .event__img {
+            transition: height 0.5s linear, width 0.5s linear, transform 0.5s linear;
+          }
 
-            pointer-events: none;
+          .event__title-image {
+            transition: font 0.5s linear, top 0.5s linear, left 0.5s linear;
           }
         }
       }
@@ -942,6 +950,10 @@
       flex-grow: 0;
     }
 
+    &--smart-rooms {
+      flex-grow: 0;
+    }
+
     @media screen and (min-width: $tablet) {
       &--smart-rooms {
         flex-grow: 0;
@@ -976,11 +988,9 @@
   &__text {
     @extend %w100;
 
-    color: var(--color-page, #ffffff);
+    @include font(14, 21, 400);
 
-    &--top {
-      @include font(14, 21, 400);
-    }
+    color: var(--color-page, #ffffff);
 
     &--bottom {
       margin-top: 20px;
@@ -993,9 +1003,7 @@
     }
 
     @media screen and (min-width: $tablet) {
-      &--top {
-        @include font(12, 20, 400);
-      }
+      @include font(12, 20, 400);
 
       &--bottom {
         @include font(12, 20, 600);
@@ -1016,7 +1024,8 @@
       }
 
       &--smart-rooms,
-      &--halls {
+      &--halls,
+      &--locations {
         opacity: 1;
       }
     }
@@ -1032,7 +1041,8 @@
 
     margin-top: 40px;
 
-    &--halls {
+    &--halls,
+    &--smart-rooms {
       flex-grow: 1;
 
       align-items: flex-end;
@@ -1047,9 +1057,6 @@
     }
 
     @media screen and (min-width: $tablet) {
-      &--smart-rooms {
-        flex-grow: 1;
-      }
 
       &--coffee,
       &--halls {
