@@ -370,15 +370,11 @@
   }
 
   &__arrow-top {
-    display: none !important;
-
     @media screen and (min-width: $desktop) {
-      display: flex !important;
+      &--starfit {
+        display: flex !important;
 
-      margin-left: 24px;
-
-      &--group {
-        display: none;
+        margin-left: 24px;
       }
     }
   }
