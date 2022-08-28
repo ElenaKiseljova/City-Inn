@@ -7,9 +7,11 @@
     order: 1;
   }
 
-  &__container {}
+  &__container {
+    position: relative;
+  }
 
-  &__icons {
+  &__slider {
     position: relative;
 
     @extend %w100;
@@ -27,7 +29,7 @@
     }
   }
 
-  &__wrapper {
+  &__slider-wrapper {
     margin: 0;
     padding: 0;
 

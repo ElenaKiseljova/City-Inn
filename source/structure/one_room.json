@@ -120,6 +120,7 @@
         ]
       },
       {
+        "subTitle": "ВХОДИТЬ У ВАРТІСТЬ",
         "services": [
           {
             "title": "велике ліжко",
@@ -142,9 +143,6 @@
             "icon": "/storage/media/2022/07/furniture-interior-cabinet-table-desk-home-kitchen-icon-226181.svg"
           }
         ],
-        "title": "ВХОДИТЬ У ВАРТІСТЬ"
-      },
-      {
         "title": "Буде тепло!",
         "image": {
           "webp": {

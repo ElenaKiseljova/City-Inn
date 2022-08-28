@@ -4,7 +4,8 @@ mixin services(sectionClass = 'cards', sectionModification = '', services = [], 
 
   ul(class="" + sectionClass + "__services " + sectionClass + "__services--" + sectionModification + additionalListModificator + " services services--" + sectionModification)
     for service in services
-      +service(service, sectionModification)
+      li(class="services__item services__item--" + sectionModification)
+        +service(service, sectionModification)
 
     if additionalItem.worktime
       li.services__item.services__item--worktime

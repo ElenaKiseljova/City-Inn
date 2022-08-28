@@ -1,10 +1,9 @@
 mixin service(service = {}, sectionModification = '', additionalClass = '')
   - sectionModification = (sectionModification === '') ? pageName : sectionModification;
-
-  li(class="services__item services__item--" + sectionModification + " " + additionalClass)
-    div(class="services__icon services__icon--" + sectionModification)
+  .service(class="service--" + sectionModification)
+    div(class="service__icon service__icon--" + sectionModification)
       svg(width="40" height="40")
         use(xlink:href="img/sprites/sprite-mono.svg#icon-" + service.icon)
 
-    h5(class="services__name services__name--" + sectionModification)
+    h5(class="service__name service__name--" + sectionModification)
       | #{service.title}

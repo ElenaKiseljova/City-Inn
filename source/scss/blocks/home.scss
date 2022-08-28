@@ -287,9 +287,9 @@
     }
 
     @media screen and (min-width: $tablet) {
-      transform: translate(50px, 50px);
+      // transform: translate(50px, 50px);
 
-      opacity: 0;
+      // opacity: 0;
 
       &--desktop {
         position: static;
@@ -560,6 +560,8 @@
 
     @extend %w100;
 
+    column-gap: calc(24 / 334 * 100%);
+
     &--restaurant {
       flex-direction: column;
 
@@ -567,6 +569,8 @@
     }
 
     @media screen and (min-width: $tablet) {
+      column-gap: 24px;
+
       overflow: visible;
 
       &--lobby,
@@ -630,12 +634,6 @@
 
     min-width: calc(155 / 334 * 100%);
 
-    margin-left: calc(24 / 334 * 100%);
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-
     &--book-now {
       &.home__button--smart {
         display: none;
@@ -649,11 +647,9 @@
     @media screen and (min-width: $tablet) {
       min-width: calc(155 / 347 * 100%);
 
-      margin-left: 24px;
+      // transform: translate(20px, 20px);
 
-      transform: translate(20px, 20px);
-
-      opacity: 0;
+      // opacity: 0;
 
       &--restaurant {
         margin-top: 0;

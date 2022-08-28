@@ -53,10 +53,10 @@
 section.features
   h2.visually-hidden Features
   div.features__container.container
-    div.features__icons
-      ul.services.features__wrapper.swiper-wrapper
-        for service in features.services
-          +service(service, features.sectionName, 'swiper-slide features__icons-slide')
+    +slider('features')
+      for service in features.services
+        +slide('features')
+          +service(service, features.sectionName)
 
-      +pagination('features')
+    +pagination('features')
 
