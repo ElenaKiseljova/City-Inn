@@ -156,7 +156,7 @@
     @media screen and (min-width: $desktop) {
       min-width: 200px;
 
-      &:first-of-type {
+      &.bar__button--more {
         --background-color-button: #{$white-20};
       }
     }

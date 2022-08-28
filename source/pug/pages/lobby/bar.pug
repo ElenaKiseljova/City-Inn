@@ -46,9 +46,9 @@ section.bar
 
       div.bar__buttons
         if bar.more.text !== ''
-          a(class="bar__button button" href="" + bar.more.link)
+          a(class="bar__button button bar__button--more" href="" + bar.more.link)
             | !{bar.more.text}
 
         if bar.book.text !== ''
-          a(class="bar__button button" href="" + bar.book.link)
+          a(class="bar__button button bar__button--book" href="" + bar.book.link)
             | !{bar.book.text}
