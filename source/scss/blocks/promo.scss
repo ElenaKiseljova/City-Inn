@@ -72,20 +72,6 @@
         display: none;
       }
     }
-
-    @media screen and (min-width: $tablet) {
-      // &--image {
-      //   transform: translateX(-100px);
-
-      //   opacity: 0;
-
-      //   &.promo__container--home {
-      //     transform: none;
-
-      //     opacity: 1;
-      //   }
-      // }
-    }
   }
 
   &__img-wrapper {
@@ -479,9 +465,9 @@
     @media screen and (min-width: $tablet) {
       @include font(18, 27, 400);
 
-      // transform: translate(50px, 50px);
+      transform: translate(50px, 50px);
 
-      // opacity: 0;
+      opacity: 0;
 
       &--conference {
         @include font(12, 20, 400);
@@ -600,21 +586,16 @@
     }
   }
 
-  &__title {
+  &__title-wrapper {
     position: relative;
 
     z-index: 3;
 
-    width: fit-content;
-
-    margin: 0;
-    padding: 0;
-
-    @include font(64, 58, 600);
+    @extend %w100;
 
     opacity: 0.6;
 
-    color: var(--color-page);
+    overflow: visible;
 
     &--restaurant {
       transform: translate(-5px, 6px);
@@ -645,8 +626,6 @@
     &--conference-service {
       max-height: calc(100vh - 216px);
 
-      @include font(96, 86, 700);
-
       writing-mode: vertical-rl;
 
       transform: rotate(-180deg) translate(0px, 40px);
@@ -654,22 +633,15 @@
 
     &--smart {
       margin-bottom: 41px;
-
-      @include font(90, 80, 700);
     }
 
     @media screen and (min-width: $mobile) {
-
       &--restaurant {
         transform: translate(-4px, 6px);
       }
 
       &--lobby {
         transform: translate(0, 40px);
-
-        br {
-          display: none;
-        }
       }
 
       &--about {
@@ -680,22 +652,10 @@
         transform: translate(0, calc((122 / 174) * 100%));
       }
 
-      &--smart {
-        @include font(96, 86, 700);
-      }
     }
 
     @media screen and (min-width: $tablet) {
-      @include font(96, 86, 600);
-
       opacity: 0.5;
-
-      &--about,
-      &--rooms {
-        br {
-          display: none;
-        }
-      }
 
       &--restaurant {
         transform: translate(0, 45%);
@@ -732,10 +692,6 @@
 
       &--conference {
         transform: translate(-3px, calc((95 / 258) * 100%));
-
-        br:not:first-of-type {
-          display: none;
-        }
       }
 
       &--conference-service {
@@ -745,17 +701,11 @@
       &--smart {
         margin: 0;
 
-        @include font(112, 90, 700);
-
         transform: translate(0, 45px);
       }
-
-
     }
 
     @media screen and (min-width: $desktop) {
-      @include font(144, 140, 600);
-
       opacity: 0.6;
 
       &--restaurant {
@@ -784,10 +734,6 @@
 
       &--group {
         transform: translate(-6px, calc((70 / 140) * 100%));
-
-        br {
-          display: none;
-        }
       }
 
       &--conference,
@@ -800,12 +746,80 @@
       }
 
       &--smart {
-        @include font(200, 140, 700);
-
         transform: translate(-112px, 37px);
       }
+    }
+  }
 
+  &__title {
+    width: fit-content;
 
+    margin: 0;
+    padding: 0;
+
+    @include font(64, 58, 600);
+
+    color: var(--color-page);
+
+    &--group,
+    &--conference,
+    &--conference-service {
+      @include font(96, 86, 700);
+    }
+
+    &--smart {
+      @include font(90, 80, 700);
+    }
+
+    @media screen and (min-width: $mobile) {
+      &--lobby {
+        br {
+          display: none;
+        }
+      }
+
+      &--smart {
+        @include font(96, 86, 700);
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      @include font(96, 86, 600);
+
+      transform: translateX(-100px);
+
+      opacity: 0;
+
+      &--about,
+      &--rooms {
+        br {
+          display: none;
+        }
+      }
+
+      &--conference {
+        br:not:first-of-type {
+          display: none;
+        }
+      }
+
+      &--smart {
+        @include font(112, 90, 700);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(144, 140, 600);
+
+      &--group {
+        br {
+          display: none;
+        }
+      }
+
+      &--smart {
+        @include font(200, 140, 700);
+      }
     }
   }
 
@@ -836,6 +850,9 @@
       }
 
       &--about {
+        --color-social: #{$starfit};
+        --border-color-social: #{$starfit};
+
         .social {
           flex-direction: row-reverse;
         }

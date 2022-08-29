@@ -54,11 +54,6 @@
 
     overflow: hidden;
 
-    &--about {
-      --color-social: #{$starfit};
-      --border-color-social: #{$starfit};
-    }
-
     span,
     svg {
       position: relative;
