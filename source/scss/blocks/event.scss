@@ -81,7 +81,7 @@
 
     @media screen and (min-width: $tablet) {
       height: auto;
-      min-height: 478px;
+      min-height: calc((478 / 768)* 100vw);
 
       &--kitchen,
       &--attraction,
@@ -92,7 +92,7 @@
 
       &--smart-rooms,
       &--halls {
-        min-height: 585px;
+        min-height: calc((585 / 768)* 100vw);
       }
     }
 

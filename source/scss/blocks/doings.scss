@@ -31,7 +31,7 @@
 
     @media screen and (min-width: $tablet) {
       height: fit-content;
-      min-height: 478px;
+      min-height: calc((478 / 768)* 100vw);
 
       padding-bottom: 0;
     }
