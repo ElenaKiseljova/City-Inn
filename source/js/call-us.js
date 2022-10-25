@@ -4,6 +4,7 @@ export default () => {
   const callLink = document.querySelector('.call__link');
 
   if (callLink) {
+    // текст
     const callText = callLink.querySelector('.call__text');
 
     if (callText) {
